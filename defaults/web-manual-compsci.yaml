@@ -1,15 +1,14 @@
 
 
-# Archivo de defaults para manuales y otra documentación relacionada con las ciencias de
-# la computación.
+# Archivo de defaults para manuales y otra documentación relacionada con las ciencias de la
+# computación.
 
 
 
 from: markdown+raw_tex
 to: html
 
-# Lo activo cuando deseo verlo también en otros dispositivos, aunque MathJax no funciona
-# bien en los navegadores de móvil.
+# Lo activo cuando deseo verlo también en otros dispositivos. Creo que no es necesario.
 # embed-resources: true
 
 number-sections: false
@@ -48,9 +47,9 @@ resource-path:
   - figuras
 #   - .
 #   - ${.}
-#   - ${HOME}/Documents/disenno-tipografia./salida-web/html
-#   - ${HOME}/Documents/disenno-tipografia./salida-web/css
-#   - ${HOME}/Documents/disenno-tipografia./salida-web/javascript
+#   - ../salida-web/html
+#   - ../salida-web/css
+#   - ../salida-web/javascript
 
 
 html-q-tags: true
