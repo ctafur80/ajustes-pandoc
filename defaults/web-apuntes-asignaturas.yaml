@@ -1,15 +1,15 @@
 
 
-# Archivo de defaults para manuales y otra documentación relacionada con las ciencias de
-# la computación.
+# Archivo de defaults para apuntes de asignaturas. Tiene código JavaScript para hacer más
+# cómoda la navegación por el documento, incluyendo referencias cruzadas.
 
 
 
 from: markdown+raw_tex
 to: html
 
-# Lo activo cuando deseo verlo también en otros dispositivos, aunque MathJax no funciona
-# bien en los navegadores de móvil.
+# Lo activo cuando deseo verlo también en otros dispositivos. Creo que en realidad no es
+# necesario para esto.
 # embed-resources: true
 
 standalone: true
