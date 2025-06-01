@@ -1,0 +1,61 @@
+
+
+# Archivo de defaults para manuales y otra documentación relacionada con las ciencias de
+# la computación.
+
+
+
+from: markdown+raw_tex
+to: pdf
+
+standalone: true
+toc: true
+number-sections: true
+
+# Aunque lo incluya aquí, tengo que añadirlo en el comando `pandoc`.
+cite-method: citeproc
+
+verbosity: INFO
+log-file: log.json
+
+table-of-contents: true
+toc-depth: 4
+
+# strip-empty-paragraphs: false
+
+# eol: lf # lf, crlf, or native
+# strip-comments: false
+# ascii: true
+# default-image-extension: ".png"
+
+# email-obfuscation: javascript
+
+tab-stop: 4
+preserve-tabs: true
+
+reference-links: true
+reference-location: document
+markdown-headings: atx
+
+resource-path:
+  - figuras
+#   - .
+#   - ${.}
+
+
+html-q-tags: true
+
+
+fail-if-warnings: false
+dump-args: false
+ignore-args: false
+trace: false
+
+# Las secciones comienzan en `##`.
+shift-heading-level-by: -1
+
+track-changes: accept
+
+
+
+
