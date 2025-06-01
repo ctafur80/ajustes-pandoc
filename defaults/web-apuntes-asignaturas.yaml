@@ -52,23 +52,23 @@ resource-path:
   - figuras
 #   - .
 #   - ${.}
-#   - ../salida-web/html
-#   - ../salida-web/css
-#   - ../salida-web/javascript
+#   - ./ajustes-pandoc/salida-web/html
+#   - ./ajustes-pandoc/salida-web/css
+#   - ./ajustes-pandoc/salida-web/javascript
 
 
 html-q-tags: true
 
 css:
-  - ../salida-web/css/variables/apuntes-asignaturas.css
-  - ../salida-web/css/base-mobile-first.css
-  - ../salida-web/css/tablas.css
-  - ../salida-web/css/codigo.css
-  - ../salida-web/css/matematicas.css
-  - ../salida-web/css/desktop.css
+  - ./ajustes-pandoc/salida-web/css/variables/apuntes-asignaturas.css
+  - ./ajustes-pandoc/salida-web/css/base-mobile-first.css
+  - ./ajustes-pandoc/salida-web/css/tablas.css
+  - ./ajustes-pandoc/salida-web/css/codigo.css
+  - ./ajustes-pandoc/salida-web/css/matematicas.css
+  - ./ajustes-pandoc/salida-web/css/desktop.css
 
 
-highlight-style: ../salida-web/resaltado-codigo/zf-darker.theme
+highlight-style: ./ajustes-pandoc/salida-web/resaltado-codigo/zf-darker.theme
 
 
 fail-if-warnings: false
@@ -83,15 +83,15 @@ track-changes: accept
 
 
 # Ajustes para la web de salida.
-include-before-body: ../salida-web/html/elemento-breadcrumbs.html
-include-after-body: ../salida-web/html/etiqueta-final-main.html
+include-before-body: ./ajustes-pandoc/salida-web/html/elemento-breadcrumbs.html
+include-after-body: ./ajustes-pandoc/salida-web/html/etiqueta-final-main.html
 include-in-header:
-   - ../salida-web/html/elemento-nav.html
-   - ../salida-web/html/elemento-boton-nav-bar.html
-   - ../salida-web/html/carga-breadcrumbs.html
-   - ../salida-web/html/carga-nav-bar.html
-   - ../salida-web/html/nameref.html
-   # - ../salida-web/html/carga-ajustes-mathjax.html
+   - ./ajustes-pandoc/salida-web/html/elemento-nav.html
+   - ./ajustes-pandoc/salida-web/html/elemento-boton-nav-bar.html
+   - ./ajustes-pandoc/salida-web/html/carga-breadcrumbs.html
+   - ./ajustes-pandoc/salida-web/html/carga-nav-bar.html
+   - ./ajustes-pandoc/salida-web/html/nameref.html
+   # - ./ajustes-pandoc/salida-web/html/carga-ajustes-mathjax.html
 
 
 
