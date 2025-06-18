@@ -56,6 +56,7 @@ html-q-tags: true
 
 css:
   - ./ajustes-pandoc/salida-web/css/variables.css
+  - ./ajustes-pandoc/salida-web/css/variables/manuales-comp-sci.css
   - ./ajustes-pandoc/salida-web/css/base-mobile-first.css
   - ./ajustes-pandoc/salida-web/css/tablas.css
   - ./ajustes-pandoc/salida-web/css/tabla-contenidos.css
