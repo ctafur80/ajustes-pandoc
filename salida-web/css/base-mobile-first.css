@@ -287,7 +287,7 @@ span.ph::after {
 
 /* Headings */
 h1, h2, h3, h4, h5, h6 {
-    font-family: var(--Headings-font);
+    font-family: var(--headings-font);
 }
 
 
