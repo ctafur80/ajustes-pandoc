@@ -163,7 +163,7 @@ div.theorem,
 div.lemma,
 div.corollary,
 div.proposition,
-div.deffinition {
+div.definition {
     display: block;
     padding: 0.5rem;
     border-radius: 6px;
@@ -192,7 +192,7 @@ div.theorem::before,
 div.lemma::before,
 div.corollary::before,
 div.proposition::before,
-div.deffinition::before {
+div.definition::before {
     content: attr(data-label) " ";
     font-weight: bold;
 }
@@ -204,7 +204,7 @@ div.theorem *:last-of-type,
 div.lemma *:last-of-type,
 div.corollary *:last-of-type,
 div.proposition *:last-of-type,
-div.deffinition *:last-of-type {
+div.definition *:last-of-type {
     margin-bottom: 0.2rem;
 }
 
@@ -218,7 +218,7 @@ div.theorem ol > li,
 div.lemma ol > li,
 div.corollary ol > li,
 div.proposition ol > li,
-div.deffinition ol > li {
+div.definition ol > li {
     counter-increment: list;
 }
 
@@ -227,7 +227,7 @@ div.theorem ol > li::marker,
 div.lemma ol > li::marker,
 div.corollary ol > li::marker,
 div.proposition ol > li::marker,
-div.deffinition ol > li::marker {
+div.definition ol > li::marker {
     content: "(" counter(list, lower-roman) ") ";
 }
 
