@@ -2,6 +2,8 @@
 
 @import url('https://fonts.googleapis.com/css2?family=STIX+Two+Text:ital,wght@0,400..700;1,400..700&display=swap');
 
+@import url('https://fonts.cdnfonts.com/css/latin-modern-math');
+
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Math&display=swap');
 
@@ -10,7 +12,8 @@
 * {
 
     /* Fuentes */
-    --main-font: "STIXTwoText", serif;
+    /* --main-font: "STIXTwoText", serif; */
+    --main-font: "Latin Modern Math", serif;
     /* --main-font: "Noto Sans", sans-serif; */
     --main-font-size: 1.1em;
     --main-font-letter-spacing: 0.05rem;
