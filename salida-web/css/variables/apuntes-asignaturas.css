@@ -4,6 +4,7 @@
 
 @import url('https://fonts.cdnfonts.com/css/latin-modern-roman');
 @import url('https://fonts.cdnfonts.com/css/latin-modern-math');
+@import url('https://fonts.cdnfonts.com/css/latin-modern-sans');
 
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Math&display=swap');
@@ -16,6 +17,7 @@
     /* --main-font: "STIXTwoText", serif; */
     --main-font: "LMRoman10", serif;
     /* --main-font: "Noto Sans", sans-serif; */
+    --headings-font: "LMSans10" sans;
     --main-font-size: 1.1em;
     --main-font-letter-spacing: 0.05rem;
     /* --math-font: "Noto Sans Math", serif; */
