@@ -73,12 +73,12 @@ mencionar a un segmento, es como si mencionáramos a dos puntos (por la
 biyectividad).
 
 Tal y como se explica en la **Observación 2.4** (pág. 24), en realidad en el
-punto (ii) del Axioma $\mathbf{P}$`<!-- -->`{=html}2 se podría haber
-limitado a decir que entre dos puntos no coincidentes siempre hay (al menos)
-una recta; que sea única es algo que se puede deducir y, por tanto, se
-podría haber presentado como un teorema. Veamos la demostración de este.
+punto (ii) del Axioma P2 se podría haber limitado a decir que entre dos
+puntos no coincidentes siempre hay (al menos) una recta; que sea única es
+algo que se puede deducir y, por tanto, se podría haber presentado como un
+teorema. Veamos la demostración de este.
 
-::: { .proof }
+::: {.proof}
   Suponemos que existen dos rectas $r$ y $s$ que contienen a dos puntos $A,B
   \in \mathbf{P}$.
 

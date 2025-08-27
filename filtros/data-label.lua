@@ -1,8 +1,22 @@
+
+
+
+
 function Div(div)
+
+  -- Proof environment
+  if div.class == "proof" then
+    if div.content[1] then
+      div.content[1].content:insert(1, pandoc.Strong({pandoc.Emph(pandoc.Str("Demostración.— "))}))
+    end
+  end
+
+
+  -- `data-label` attribute
   local label = div.attr.attributes['data-label']
   if label and label ~= "" then
     -- Crea el elemento en negrita e itálica, añadiendo dos puntos y un espacio
-    local new_inline = pandoc.Strong({pandoc.Emph(pandoc.Str(label .. ": "))})
+    local new_inline = pandoc.Strong({pandoc.Emph(pandoc.Str(label .. ".— "))})
 
     -- Comprueba si hay contenido y si el primer bloque es un párrafo
     if div.content[1] and div.content[1].t == "Para" then
@@ -13,5 +27,11 @@ function Div(div)
       div.attr.attributes['data-label'] = nil
     end
   end
+
+
+
   return div
 end
+
+
+

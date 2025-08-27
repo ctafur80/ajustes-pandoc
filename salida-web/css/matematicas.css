@@ -199,6 +199,14 @@ div.definition::before {
 }
 
 
+div.axiom *:first-of-type,
+div.theorem *:first-of-type,
+div.lemma *:first-of-type,
+div.corollary *:first-of-type,
+div.proposition *:first-of-type,
+div.definition *:first-of-type {
+    margin-top: 0;
+}
 
 div.axiom *:last-of-type,
 div.theorem *:last-of-type,
@@ -207,6 +215,13 @@ div.corollary *:last-of-type,
 div.proposition *:last-of-type,
 div.definition *:last-of-type {
     margin-bottom: 0.2rem;
+    /* margin-bottom: 0; */
+}
+
+
+/* Removing innecessary extra vertical margin. */
+math mrow, math semantics {
+    margin-bottom: 0 !important;
 }
 
 
