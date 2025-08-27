@@ -27,7 +27,7 @@ mismo como ejercicios.
 **pág. 11**. **Definición 1.1**. En lo que respecta a la **Definición 1.1
 (Métrica)**, me gusta más la siguiente, ya que me parece más "elegante".
 
-::: { .definition #def-metrica data-label="Definición 1.1 (Métrica)" }
+::: {.definition #def-metrica data-label="1.1: Métrica"}
   Dado un conjunto $\mathbf{P}$ no vacío, una _métrica_ (también llamada
   _distancia_) es toda aplicación $d: \mathbf{P} \times \mathbf{P}
   \longrightarrow \mathbb{R}^+ \cup \{0\}$ en la que para cualesquiera $x,

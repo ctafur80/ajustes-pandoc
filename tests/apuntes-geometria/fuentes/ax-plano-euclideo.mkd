@@ -252,7 +252,7 @@ incluir los números reales y sus operaciones.
 En lugar de como se presenta en el libro (pág. 25), se puede hacer uso del
 concepto de _isometría_, tal y como hago a continuación.
 
-::: {.axiom #ax-p3 data-label="Axioma P3 (de la Regla Graduada)"}
+::: {.axiom #ax-p3 data-label="P3: de la Regla Graduada"}
   En $(\mathbf{P}, d)$, para toda recta $r \subseteq \mathbf{P}$ existe una
   isometría $\gamma: (r, d) \longrightarrow ({\mathbb{R}}, d')$ siendo $d'$
   la distancia definida del modo siguiente, para cualesquiera $x, y \in
@@ -384,32 +384,34 @@ En lo que respecta a los semiplanos, que se presentan en el Axioma P4, antes
 de pasar a ver sus propiedades, presentadas en el **Teorema 2.12**, hay un
 resultado que me gustaría presentar y que se deduce directamente de este y
 que se usa en muchas demostraciones. Sería básicamente el recíproco del
-punto (3) de este.
+punto 3 de este.
 
 ::: {.theorem #thm-ampliacion-ax-p4
-       data-label="Teorema (Ampliación del Punto (3) del Axioma P4)"}
+       data-label="Ampliación del Punto 3 del Axioma P4"}
   Dados $X, Y \in \mathbf{P} \setminus r$ siendo $X \neq Y$. Si $[X, Y] \cap
   r \neq \emptyset$, entonces $X$ e $Y$ se encuentran en semiplanos
   distintos.
 :::
 
-Este teorema se enuncia al final de la demostración de la propiedad (4)
+Tal y como se explica en el [](#thm-ampliacion-ax-p4) TKTK.
+
+Este teorema se enuncia al final de la demostración de la propiedad 4
 (Teorema 2.12), pero no lo demuestran.
 
 ::: {.proof}
-  Este se deduce de los puntos (1) y (2) del Axioma P4.
+  Este se deduce de los puntos 1 y 2 del Axioma P4.
 
   De $[X, Y] \cap r \neq \emptyset$ se tiene que existe un punto $U \in r$
   tal que $U \in [X, Y]$. Al encontrarse en $r$, se tiene, como consecuencia
   del punto (1), que $U \notin H^1$ y $U \notin H^2$. De esto se tiene que
   $\lbrack X, Y\rbrack \nsubseteq H^i$ para $i = 1, 2$. Entonces, por el
-  (condicional contrarrecíproco del) punto (2) del Axioma, se tiene que $X$
-  e $Y$ se encuentran en semiplanos distintos.
+  (condicional contrarrecíproco del) punto 2 del Axioma, se tiene que $X$ e
+  $Y$ se encuentran en semiplanos distintos.
 :::
 
 Veamos algunas observaciones del **Teorema 2.12** (Propiedades de los
-Semiplanos). En la (4), el primer paso se justifica concretamente por el
-punto (i) del Axioma P2.
+Semiplanos). En la 4, el primer paso se justifica concretamente por el punto
+i del Axioma P2.
 
 Creo que se debería justificar que $C \in \mathbf{P} \setminus r$. Como $r$
 y la única recta que pasa por $A$ y $B$ tienen en común a $B$ pero no a $A$
@@ -417,10 +419,10 @@ y la única recta que pasa por $A$ y $B$ tienen en común a $B$ pero no a $A$
 Dos Rectas) se tendrá que son secantes, con lo que se tiene que $C \notin r$
 y, por tanto, $C \in \mathbf{P} \setminus r$.
 
-Tras esto, basta con aplicar el Teorema Ampliación del Punto (3) del Axioma
+Tras esto, basta con aplicar el Teorema Ampliación del Punto 3 del Axioma
 P4.
 
-La propiedad (6) sería como un teorema de caracterización de los semiplanos.
+La propiedad 6 sería como un teorema de caracterización de los semiplanos.
 En cuanto a su demostración, advierta que, tal y como hemos comentado
 anteriormente, esos bicondicionales permiten ir en las dos direcciones en la
 demostración. Por tanto, en esta ---aunque quizás no lo parezca--- se están
@@ -456,7 +458,7 @@ llevar al extremo el uso de la simbología matemática. A continuación lo
 presento con más prosa; creo que sirve un poco para aclararlo.
 
 ::: {.theorem
-       data-label="Teorema (de Conservaciones de Figuras por Isometrías)"}
+       data-label="de Conservaciones de Figuras por Isometrías"}
   Teorema "de Conservaciones de Figuras por Isometrías" Sean $A, B \in
   \mathbf{P}$, $g \in \text{Isom}(\mathbf{P}, d)$ y usando la notación de
   prima para un elemento transformado, por ejemplo, $X' = g(X)$ para un
