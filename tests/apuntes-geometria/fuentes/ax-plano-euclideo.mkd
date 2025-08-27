@@ -250,11 +250,11 @@ axiomas sea mixto (o que es el que "contamina" a la geometría pura), al
 incluir los números reales y sus operaciones.
 
 En lugar de como se presenta en el libro (pág. 25), se puede hacer uso del
-concepto de *isometría*, tal y como hago a continuación.
+concepto de _isometría_, tal y como hago a continuación.
 
 ::: {.axiom #ax-p3 data-label="Axioma P3 (de la Regla Graduada)"}
   En $(\mathbf{P}, d)$, para toda recta $r \subseteq \mathbf{P}$ existe una
-  isometría $\gamma: (r,d) \longrightarrow ({\mathbb{R}}, d')$ siendo $d'$
+  isometría $\gamma: (r, d) \longrightarrow ({\mathbb{R}}, d')$ siendo $d'$
   la distancia definida del modo siguiente, para cualesquiera $x, y \in
   {\mathbb{R}}$,
 

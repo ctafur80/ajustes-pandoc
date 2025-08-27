@@ -4,9 +4,17 @@
 
 
 
+
+
+
+/* ----------------------------------------- */
+math {
+    font-family: var(--math-font);
+    font-size: var(--math-font-size);
+}
+
 span.math.display,
 span.math.inline {
-    /*font-family: "STIX Two Text";*/
     font-size: 100% !important;
     margin-bottom: 0 !important;
 }
@@ -17,15 +25,106 @@ p > span.math.display {
     display: block;
 }
 
-math {
-    font-family: var(--math-font);
-    font-size: var(--math-font-size);
-}
-
 mtext {
     letter-spacing: 0.03rem;
 }
 
+
+
+
+/* ----------------------------------------- */
+
+/* Entornos de tipo teorema */
+
+div.theorem,
+div.lemma,
+div.corollary,
+div.proposition,
+div.definition {
+    display: block;
+    padding: 0.5rem;
+    border-radius: 6px;
+    color: var(--main-fg-color);
+    background: var(--math-thm-env-bg);
+}
+
+div.axiom {
+    display: block;
+    padding: 0.5rem;
+    border-radius: 6px;
+    color: var(--main-fg-color);
+    background: var(--ax-env-bg);
+}
+
+
+
+div.axiom *:first-of-type,
+div.theorem *:first-of-type,
+div.lemma *:first-of-type,
+div.corollary *:first-of-type,
+div.proposition *:first-of-type,
+div.definition *:first-of-type {
+    margin-top: 0;
+}
+
+div.axiom *:last-of-type,
+div.theorem *:last-of-type,
+div.lemma *:last-of-type,
+div.corollary *:last-of-type,
+div.proposition *:last-of-type,
+div.definition *:last-of-type {
+    margin-bottom: 0.2rem;
+}
+
+
+/* Removing the accumulation ob bottom margins in MathML elements. */
+math[display='inline'] * {
+    margin-bottom: 0 !important;
+}
+
+
+/* TODO Ver si hay un modo más elegante de hacerlo que con este font-size. */
+math mtext {
+    font-family: var(--main-font);
+    font-size: 0.85em;
+    font-weight: var(--main-font-weight);
+}
+
+
+
+/* Cambio la estética de las listas en los entornos. */
+div.axiom ol > li,
+div.theorem ol > li,
+div.lemma ol > li,
+div.corollary ol > li,
+div.proposition ol > li,
+div.definition ol > li {
+    counter-increment: list;
+}
+
+div.axiom ol > li::marker,
+div.theorem ol > li::marker,
+div.lemma ol > li::marker,
+div.corollary ol > li::marker,
+div.proposition ol > li::marker,
+div.definition ol > li::marker {
+    content: counter(list, lower-roman) ". ";
+}
+
+
+
+/* Demostraciones */
+.qed {
+    float: right;
+}
+
+
+
+
+
+
+
+/* ----------------------------------------- */
 
 
 
@@ -133,110 +232,6 @@ table.propositions td:first-child::after {
 
 
 
-/* Entornos de tipo teorema */
-
-div.axiom,
-div.theorem,
-div.lemma,
-div.corollary,
-div.proposition,
-div.definition {
-    display: block;
-    padding: 0.5rem;
-    border-radius: 6px;
-    color: var(--main-fg-color);
-    background:
-        linear-gradient(
-            to right,
-            var(--math-env-bg-from),
-            var(--math-env-bg-to)
-        );
-}
-
-div.axiom {
-    background:
-        linear-gradient(
-            to right,
-            var(--euclid-ax-env-from),
-            var(--euclid-ax-env-to)
-        );
-}
-
-
-
-div.axiom::before,
-div.theorem::before,
-div.lemma::before,
-div.corollary::before,
-div.proposition::before,
-div.definition::before {
-    content: attr(data-label) " ";
-    font-weight: bold;
-}
-
-
-div.axiom *:first-of-type,
-div.theorem *:first-of-type,
-div.lemma *:first-of-type,
-div.corollary *:first-of-type,
-div.proposition *:first-of-type,
-div.definition *:first-of-type {
-    margin-top: 0;
-}
-
-div.axiom *:last-of-type,
-div.theorem *:last-of-type,
-div.lemma *:last-of-type,
-div.corollary *:last-of-type,
-div.proposition *:last-of-type,
-div.definition *:last-of-type {
-    margin-bottom: 0.2rem;
-    /* margin-bottom: 0; */
-}
-
-
-/* Removing innecessary extra vertical margin. */
-math mrow, math semantics {
-    margin-bottom: 0 !important;
-}
-
-math mtext {
-    font-family: var(--main-font);
-    font-size: 0.9em;
-    font-weight: var(--main-font-weight);
-}
-
-
-
-
-
-/* Cambio la estética de las listas en los entornos. */
-div.axiom ol > li,
-div.theorem ol > li,
-div.lemma ol > li,
-div.corollary ol > li,
-div.proposition ol > li,
-div.definition ol > li {
-    counter-increment: list;
-}
-
-div.axiom ol > li::marker,
-div.theorem ol > li::marker,
-div.lemma ol > li::marker,
-div.corollary ol > li::marker,
-div.proposition ol > li::marker,
-div.definition ol > li::marker {
-    content: counter(list, lower-roman) ". ";
-}
-
-
-
-
-
-/* Demostraciones */
-.qed {
-    float: right;
-}
 
 /*
 div.proof > *:first-child::before {

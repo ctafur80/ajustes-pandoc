@@ -38,10 +38,18 @@
     --main-bg-color: #1e1e1e;
     --main-fg-color: #b3adad;
     --boton: rgba(132, 116, 140, 0.95);
-    --math-env-bg-from: rgba(44, 44, 61, 0.95);
-    --math-env-bg-to: rgba(59, 59, 48, 0.95);
-    --euclid-ax-env-from: rgba(61, 44, 51, 0.95),
-    --euclid-ax-env-to: rgba(59, 59, 48, 0.95),
+    --math-thm-env-bg:
+        linear-gradient(
+            to right,
+            rgba(44, 44, 61, 0.95),
+            rgba(59, 59, 48, 0.95)
+        );
+    --ax-env-bg:
+        linear-gradient(
+            to right,
+            rgba(61, 44, 51, 0.95),
+            rgba(59, 59, 48, 0.95)
+        );
 
 
     /* Tema claro */
