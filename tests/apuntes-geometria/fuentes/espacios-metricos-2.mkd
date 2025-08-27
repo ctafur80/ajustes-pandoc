@@ -27,7 +27,7 @@ mismo como ejercicios.
 **pág. 11**. **Definición 1.1**. En lo que respecta a la **Definición 1.1
 (Métrica)**, me gusta más la siguiente, ya que me parece más "elegante".
 
-::: {.definition #def-metrica data-label="1.1: Métrica"}
+::: {.definition #def-metrica data-label="1.1 / Métrica (alt.)"}
   Dado un conjunto $\mathbf{P}$ no vacío, una _métrica_ (también llamada
   _distancia_) es toda aplicación $d: \mathbf{P} \times \mathbf{P}
   \longrightarrow \mathbb{R}^+ \cup \{0\}$ en la que para cualesquiera $x,
@@ -37,6 +37,8 @@ mismo como ejercicios.
   2. $d(x, y) = d(y, x)$. (Simetría.)
   3. $d(x, y) \leq d(x, z) + d(z, y)$. (Desigualdad triangular.)
 :::
+
+Tal y como se explica en la [](#def-metrica), se ve que TKTK.
 
 La definición que dan en [@costa] establece como codominio a todo
 $\mathbb{R}$ y luego hace una corrección de este en el punto 1. Quizás se

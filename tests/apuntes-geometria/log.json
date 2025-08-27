@@ -76,6 +76,6 @@
         "type": "FilterCompleted",
         "verbosity": "INFO",
         "path": "./ajustes-pandoc/filtros/math-envs.lua",
-        "milliseconds": "13"
+        "milliseconds": "16"
     }
 ]
