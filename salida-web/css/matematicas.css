@@ -114,7 +114,7 @@ div.definition ol > li::marker {
 
 
 /* Demostraciones */
-.qed {
+.env-last-symbol {
     float: right;
 }
 

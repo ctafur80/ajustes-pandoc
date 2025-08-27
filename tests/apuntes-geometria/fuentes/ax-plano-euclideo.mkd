@@ -116,7 +116,7 @@ En cualquier caso, tengo claro, por el uso que hace posteriormente de este
 teorema en algunas demostraciones, que se trata de una _o_ exclusiva. Yo lo
 enunciaría del modo siguiente.
 
-::: { .theorem #thm-pos-rel-rectas
+::: {.theorem #thm-pos-rel-rectas
         datal-label="Teorema (de las Posiciones Relativas de Dos Rectas)" }
   Las dos únicas posiciones relativas que pueden tener dos rectas es ser
   secantes o bien ser paralelas (coincidentes o no coincidentes), pero no
@@ -126,7 +126,7 @@ enunciaría del modo siguiente.
 Para la demostración del teorema a mi manera, prefiero hacer un uso más
 explícito de la lógica y la teoría de conjuntos.
 
-::: { .proof }
+::: {.proof}
   Tenemos que demostrar que no se puede dar ninguno de los dos casos
   siguientes, para dos rectas cualesquiera $r$ y $s$:
 
@@ -210,12 +210,12 @@ como la figura más básica después del punto.
 Veamos otro resultado de las posiciones relativas de un segmento y una
 recta.
 
-::: { .theorem }
+::: {.theorem}
   Sea un segmento $[A, B]$ siendo $A \neq B$ y una recta $r$. Si $[A, B]
   \cap r \neq \emptyset$, entonces $[A, B]$ y $r$ son secantes.
 :::
 
-::: { .proof }
+::: {.proof}
 TKTK.
 :::
 
@@ -362,7 +362,7 @@ los puntos de $r$. Hay que tener también en cuenta que ese pundo debe
 encontrarse en el segmento; en este caso, en $[A, A]$. Esto nos conduce a
 una única solución:
 
-$$\text{medio}[A, A] = A$$
+$$ \text{medio}[A, A] = A $$
 
 ya que el único punto en $[A, A]$ es el propio $A$. Al hacerlo así, no tiene
 por qué establecerse esta igualdad por convenio, como se hace en el texto.

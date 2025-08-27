@@ -1,0 +1,9002 @@
+[ Header
+    2
+    ( "cap\237tulo-2" , [] , [] )
+    [ Str "Cap\237tulo" , Space , Str "2" ]
+, Header
+    3
+    ( "introducci\243n" , [] , [] )
+    [ Str "2.1." , Space , Str "Introducci\243n" ]
+, Para
+    [ Str "Este"
+    , Space
+    , Str "cap\237tulo"
+    , Space
+    , Str "se"
+    , Space
+    , Str "podr\237a"
+    , Space
+    , Str "considerar"
+    , Space
+    , Str "el"
+    , Space
+    , Str "inicio"
+    , Space
+    , Str "del"
+    , Space
+    , Str "segundo"
+    , Space
+    , Str "bloque"
+    , Space
+    , Str "de"
+    , Space
+    , Str "la"
+    , SoftBreak
+    , Str "asignatura:"
+    , Space
+    , Str "la"
+    , Space
+    , Str "geometr\237a"
+    , Space
+    , Str "euclidea"
+    , Space
+    , Str "plana,"
+    , Space
+    , Str "es"
+    , Space
+    , Str "decir,"
+    , Space
+    , Str "en"
+    , Space
+    , Str "dos"
+    , Space
+    , Str "dimensiones"
+    , Space
+    , Str "(2D)."
+    ]
+, Para
+    [ Str "Al"
+    , Space
+    , Str "contrario"
+    , Space
+    , Str "que"
+    , Space
+    , Str "en"
+    , Space
+    , Str "el"
+    , Space
+    , Str "cap\237tulo"
+    , Space
+    , Str "anterior"
+    , Space
+    , Str "(sobre"
+    , Space
+    , Str "espacios"
+    , Space
+    , Str "m\233tricos),"
+    , Space
+    , Str "nos"
+    , SoftBreak
+    , Str "encontramos"
+    , Space
+    , Str "en"
+    , Space
+    , Str "una"
+    , Space
+    , Str "geometr\237a"
+    , Space
+    , Str "en"
+    , Space
+    , Str "particular."
+    ]
+, Para
+    [ Str "Como"
+    , Space
+    , Str "se"
+    , Space
+    , Str "explica"
+    , Space
+    , Str "en"
+    , Space
+    , Str "la"
+    , Space
+    , Str "introducci\243n"
+    , Space
+    , Str "del"
+    , Space
+    , Str "texto,"
+    , Space
+    , Str "se"
+    , Space
+    , Str "abordar\225"
+    , Space
+    , Str "esta"
+    , Space
+    , Str "geometr\237a"
+    , SoftBreak
+    , Str "desde"
+    , Space
+    , Str "un"
+    , Space
+    , Str "punto"
+    , Space
+    , Str "de"
+    , Space
+    , Str "vista"
+    , Space
+    , Emph [ Str "sint\233tico" ]
+    , Str ","
+    , Space
+    , Str "en"
+    , Space
+    , Str "contraste"
+    , Space
+    , Str "con"
+    , Space
+    , Str "el"
+    , Space
+    , Str "enfoque"
+    , SoftBreak
+    , Emph [ Str "anal\237tico" ]
+    , Str ","
+    , Space
+    , Str "que"
+    , Space
+    , Str "es"
+    , Space
+    , Str "al"
+    , Space
+    , Str "que"
+    , Space
+    , Str "quiz\225s"
+    , Space
+    , Str "est\233"
+    , Space
+    , Str "m\225s"
+    , Space
+    , Str "acostumbrado."
+    , Space
+    , Str "A"
+    , Space
+    , Str "este"
+    , Space
+    , Str "resepecto,"
+    , SoftBreak
+    , Str "en"
+    , Space
+    , Cite
+        [ Citation
+            { citationId = "venema"
+            , citationPrefix = []
+            , citationSuffix = []
+            , citationMode = NormalCitation
+            , citationNoteNum = 1
+            , citationHash = 0
+            }
+        ]
+        [ Str "[@venema]" ]
+    , Str ","
+    , Space
+    , Str "en"
+    , Space
+    , Str "lugar"
+    , Space
+    , Str "de"
+    , Space
+    , Quoted DoubleQuote [ Str "enfoque" ]
+    , Space
+    , Str "o"
+    , Space
+    , Quoted
+        DoubleQuote
+        [ Str "punto" , Space , Str "de" , Space , Str "vista" ]
+    , Space
+    , Str "dicen"
+    , Space
+    , Quoted DoubleQuote [ Str "modelo" ]
+    , Str "."
+    ]
+, Para
+    [ Str "Como"
+    , Space
+    , Str "quiz\225s"
+    , Space
+    , Str "ya"
+    , Space
+    , Str "sepa,"
+    , Space
+    , Str "la"
+    , Space
+    , Str "geometr\237a"
+    , Space
+    , Str "anal\237tica"
+    , Space
+    , Str "es"
+    , Space
+    , Str "la"
+    , Space
+    , Str "que"
+    , Space
+    , Str "hace"
+    , Space
+    , Str "uso"
+    , Space
+    , Str "de"
+    , SoftBreak
+    , Str "coordenadas"
+    , Space
+    , Str "y,"
+    , Space
+    , Str "por"
+    , Space
+    , Str "tanto,"
+    , Space
+    , Str "se"
+    , Space
+    , Str "basa"
+    , Space
+    , Str "m\225s"
+    , Space
+    , Str "en"
+    , Space
+    , Str "nuestro"
+    , Space
+    , Str "conocimiento"
+    , Space
+    , Str "del"
+    , Space
+    , Str "\225lgebra"
+    , Space
+    , Str "de"
+    , SoftBreak
+    , Str "los"
+    , Space
+    , Str "n\250meros"
+    , Space
+    , Str "reales."
+    , Space
+    , Str "La"
+    , Space
+    , Str "sint\233tica,"
+    , Space
+    , Str "por"
+    , Space
+    , Str "su"
+    , Space
+    , Str "parte,"
+    , Space
+    , Str "prescinde"
+    , Space
+    , Str "del"
+    , Space
+    , Str "\225lgebra"
+    , Space
+    , Str "y"
+    , Space
+    , Str "se"
+    , SoftBreak
+    , Str "basa"
+    , Space
+    , Str "en"
+    , Space
+    , Str "manipular"
+    , Space
+    , Str "expresiones"
+    , Space
+    , Str "conjuntistas"
+    , Space
+    , Str "en"
+    , Space
+    , Str "base"
+    , Space
+    , Str "a"
+    , Space
+    , Str "los"
+    , Space
+    , Str "axiomas."
+    , Space
+    , Str "Es"
+    , Space
+    , Str "decir,"
+    , SoftBreak
+    , Str "en"
+    , Space
+    , Str "la"
+    , Space
+    , Str "sint\233tica"
+    , Space
+    , Str "se"
+    , Space
+    , Str "suele"
+    , Space
+    , Str "estar"
+    , Space
+    , Str "m\225s"
+    , Space
+    , Str "en"
+    , Space
+    , Str "contacto"
+    , Space
+    , Str "con"
+    , Space
+    , Str "los"
+    , Space
+    , Str "axiomas"
+    , Note
+        [ Para
+            [ Str "que"
+            , Space
+            , Str "en"
+            , Space
+            , Str "la"
+            , Space
+            , Str "\233poca"
+            , Space
+            , Str "de"
+            , Space
+            , Str "Euclides"
+            , Space
+            , Str "recib\237an"
+            , Space
+            , Str "la"
+            , Space
+            , Str "denominaci\243n"
+            , Space
+            , Str "de"
+            , SoftBreak
+            , Emph [ Str "postulados" ]
+            ]
+        ]
+    , Str ","
+    , Space
+    , Str "mientras"
+    , SoftBreak
+    , Str "que,"
+    , Space
+    , Str "en"
+    , Space
+    , Str "la"
+    , Space
+    , Str "anal\237tica,"
+    , Space
+    , Str "nos"
+    , Space
+    , Str "solemos"
+    , Space
+    , Str "encontrar"
+    , Space
+    , Str "a"
+    , Space
+    , Str "un"
+    , Space
+    , Str "nivel"
+    , Space
+    , Str "de"
+    , Space
+    , Str "abstracci\243n"
+    , SoftBreak
+    , Str "superior."
+    ]
+, Para
+    [ Str "En"
+    , Space
+    , Str "cualquier"
+    , Space
+    , Str "caso,"
+    , Space
+    , Str "el"
+    , Space
+    , Str "enfoque"
+    , Space
+    , Str "sint\233tico"
+    , Space
+    , Str "presentado"
+    , Space
+    , Str "aqu\237"
+    , Space
+    , Str "no"
+    , Space
+    , Str "llega"
+    , Space
+    , Str "a"
+    , Space
+    , Str "ser"
+    , SoftBreak
+    , Quoted DoubleQuote [ Str "puro" ]
+    , Str ","
+    , Space
+    , Str "pues"
+    , Space
+    , Str "hacemos"
+    , Space
+    , Str "uso"
+    , Space
+    , Str "de"
+    , Space
+    , Str "n\250meros"
+    , Space
+    , Str "reales"
+    , Space
+    , Str "y"
+    , Space
+    , Str "sus"
+    , Space
+    , Str "operaciones,"
+    , Space
+    , Str "tal"
+    , Space
+    , Str "y"
+    , Space
+    , Str "como"
+    , Space
+    , Str "se"
+    , SoftBreak
+    , Str "muestra"
+    , Space
+    , Str "en"
+    , Space
+    , Str "el"
+    , Space
+    , Str "Axioma"
+    , Space
+    , Str "P3"
+    , Space
+    , Str "(de"
+    , Space
+    , Str "la"
+    , Space
+    , Str "Regla"
+    , Space
+    , Str "Graduada)."
+    ]
+, Para
+    [ Str "Lo"
+    , Space
+    , Str "primero"
+    , Space
+    , Str "que"
+    , Space
+    , Str "debe"
+    , Space
+    , Str "saber"
+    , Space
+    , Str "es"
+    , Space
+    , Str "que"
+    , Space
+    , Str "los"
+    , Space
+    , Str "elementos"
+    , Space
+    , Str "de"
+    , Space
+    , Str "este"
+    , Space
+    , Str "espacio"
+    , Space
+    , Str "m\233trico"
+    , Space
+    , Str "(el"
+    , SoftBreak
+    , Str "plano"
+    , Space
+    , Str "euclideo)"
+    , Space
+    , Str "reciben"
+    , Space
+    , Str "el"
+    , Space
+    , Str "nombre"
+    , Space
+    , Str "de"
+    , Space
+    , Emph [ Str "puntos" ]
+    , Space
+    , Str "("
+    , Emph [ Str "points" ]
+    , Str "),"
+    , Space
+    , Str "y"
+    , Space
+    , Str "se"
+    , Space
+    , Str "usa"
+    , Space
+    , Str "la"
+    , SoftBreak
+    , Str "notaci\243n"
+    , Space
+    , Str "de"
+    , Space
+    , Str "los"
+    , Space
+    , Str "elementos"
+    , Space
+    , Str "para"
+    , Space
+    , Str "estos,"
+    , Space
+    , Str "es"
+    , Space
+    , Str "decir,"
+    , Space
+    , Str "cosas"
+    , Space
+    , Str "como"
+    , Space
+    , Math InlineMath "X \\in\n\\mathbf{P}"
+    , Str "."
+    , Space
+    , Str "Otros"
+    , Space
+    , Str "conjuntos"
+    , Space
+    , Str "m\225s"
+    , Space
+    , Str "complejos"
+    , Space
+    , Str "de"
+    , Space
+    , Str "elementos"
+    , Space
+    , Str "reciben,"
+    , Space
+    , Str "en"
+    , Space
+    , Str "general,"
+    , SoftBreak
+    , Str "la"
+    , Space
+    , Str "designaci\243n"
+    , Space
+    , Str "de"
+    , Space
+    , Emph [ Str "figuras" ]
+    , Space
+    , Str "("
+    , Emph [ Str "figures" ]
+    , Str ")."
+    , Space
+    , Str "Evidentemente,"
+    , Space
+    , Str "ver\225"
+    , Space
+    , Str "cosas"
+    , Space
+    , Str "como"
+    , Space
+    , Math InlineMath "r\n\\subseteq \\mathbf{P}"
+    , Space
+    , Str "para"
+    , Space
+    , Str "las"
+    , Space
+    , Str "figuras."
+    ]
+, Para
+    [ Str "De"
+    , Space
+    , Str "forma"
+    , Space
+    , Str "m\225s"
+    , Space
+    , Str "general,"
+    , Space
+    , Str "a"
+    , Space
+    , Str "cualquier"
+    , Space
+    , Str "agrupaci\243n"
+    , Space
+    , Str "en"
+    , Space
+    , Str "el"
+    , Space
+    , Str "plano"
+    , Space
+    , Str "euclidiano,"
+    , Space
+    , Str "ya"
+    , Space
+    , Str "sea"
+    , SoftBreak
+    , Str "una"
+    , Space
+    , Str "figura"
+    , Space
+    , Str "o"
+    , Space
+    , Str "un"
+    , Space
+    , Str "punto,"
+    , Space
+    , Str "o"
+    , Space
+    , Str "nada,"
+    , Space
+    , Str "a"
+    , Space
+    , Str "veces"
+    , Space
+    , Str "recibe"
+    , Space
+    , Str "la"
+    , Space
+    , Str "designaci\243n"
+    , Space
+    , Str "de"
+    , Space
+    , Emph [ Str "lugar" , SoftBreak , Str "geom\233trico" ]
+    , Space
+    , Str "("
+    , Emph [ Str "locus" ]
+    , Str ")."
+    , Space
+    , Str "Este"
+    , Space
+    , Str "concepto"
+    , Space
+    , Str "se"
+    , Space
+    , Str "define"
+    , Space
+    , Str "en"
+    , Space
+    , Str "la"
+    , Space
+    , Str "p\225g."
+    , Space
+    , Str "35."
+    ]
+, Header
+    3 ( "recta" , [] , [] ) [ Str "2.2" , Space , Str "Recta" ]
+, Para
+    [ Str "En"
+    , Space
+    , Str "la"
+    , Space
+    , Str "definici\243n"
+    , Space
+    , Str "de"
+    , Space
+    , Emph [ Str "recta" ]
+    , Space
+    , Str "(p\225g."
+    , Space
+    , Str "23),"
+    , Space
+    , Str "el"
+    , Space
+    , Str "punto"
+    , Space
+    , Str "(i)"
+    , Space
+    , Str "se"
+    , Space
+    , Str "incluye"
+    , Space
+    , Str "para"
+    , Space
+    , Str "que"
+    , Space
+    , Str "un"
+    , SoftBreak
+    , Str "conjunto"
+    , Space
+    , Str "formado"
+    , Space
+    , Str "por"
+    , Space
+    , Str "un"
+    , Space
+    , Str "\250nico"
+    , Space
+    , Str "punto"
+    , Space
+    , Str "no"
+    , Space
+    , Str "cumpla"
+    , Space
+    , Str "las"
+    , Space
+    , Str "condiciones"
+    , Space
+    , Str "para"
+    , Space
+    , Str "ser"
+    , Space
+    , Str "una"
+    , SoftBreak
+    , Str "recta."
+    ]
+, Para
+    [ Str "Algo"
+    , Space
+    , Str "similar"
+    , Space
+    , Str "sucede"
+    , Space
+    , Str "con"
+    , Space
+    , Str "el"
+    , Space
+    , Str "punto"
+    , Space
+    , Str "(i)"
+    , Space
+    , Str "del"
+    , Space
+    , Str "Axioma"
+    , Space
+    , Str "P2"
+    , Space
+    , Str "(p\225g."
+    , Space
+    , Str "24)."
+    , Space
+    , Str "De"
+    , Space
+    , Str "no"
+    , SoftBreak
+    , Str "incluirlo,"
+    , Space
+    , Str "una"
+    , Space
+    , Str "recta"
+    , Space
+    , Str "podr\237a"
+    , Space
+    , Str "ser"
+    , Space
+    , Str "todo"
+    , Space
+    , Str "el"
+    , Space
+    , Str "plano"
+    , Space
+    , Str "euclideo,"
+    , Space
+    , Math InlineMath "\\mathbf{P}"
+    , Str "."
+    ]
+, Para
+    [ Str "Se"
+    , Space
+    , Str "podr\237a"
+    , Space
+    , Str "enunciar"
+    , Space
+    , Str "de"
+    , Space
+    , Str "forma"
+    , Space
+    , Str "menos"
+    , Space
+    , Str "simb\243lica"
+    , Space
+    , Str "\8212y,"
+    , Space
+    , Str "por"
+    , Space
+    , Str "tanto,"
+    , Space
+    , Str "m\225s"
+    , Space
+    , Str "prosaica\8212"
+    , SoftBreak
+    , Str "la"
+    , Space
+    , Strong [ Str "Observaci\243n" , Space , Str "2.3" ]
+    , Str ":"
+    , Space
+    , Quoted
+        DoubleQuote
+        [ Str "Si"
+        , Space
+        , Str "los"
+        , Space
+        , Str "extremos"
+        , Space
+        , Str "de"
+        , Space
+        , Str "un"
+        , Space
+        , Str "segmento"
+        , Space
+        , Str "pertenecen"
+        , Space
+        , Str "a"
+        , Space
+        , Str "una"
+        , SoftBreak
+        , Str "recta,"
+        , Space
+        , Str "entonces"
+        , Space
+        , Str "todo"
+        , Space
+        , Str "el"
+        , Space
+        , Str "segmento"
+        , Space
+        , Str "es"
+        , Space
+        , Str "parte"
+        , Space
+        , Str "de"
+        , Space
+        , Str "esta."
+        ]
+    ]
+, Para
+    [ Str "Una"
+    , Space
+    , Str "vez"
+    , Space
+    , Str "vista"
+    , Space
+    , Str "la"
+    , Space
+    , Str "Observaci\243n"
+    , Space
+    , Str "2.3"
+    , Space
+    , Str "y"
+    , Space
+    , Str "el"
+    , Space
+    , Str "Axioma"
+    , Space
+    , Str "P2,"
+    , Space
+    , Str "me"
+    , Space
+    , Str "gustar\237a"
+    , Space
+    , Str "aclarar"
+    , Space
+    , Str "las"
+    , SoftBreak
+    , Str "relaciones"
+    , Space
+    , Str "que"
+    , Space
+    , Str "se"
+    , Space
+    , Str "dan"
+    , Space
+    , Str "entre"
+    , Space
+    , Str "pares"
+    , Space
+    , Str "(no"
+    , Space
+    , Str "ordenados)"
+    , Space
+    , Str "de"
+    , Space
+    , Str "puntos"
+    , Space
+    , Str "y"
+    , Space
+    , Str "los"
+    , Space
+    , Str "segmentos"
+    , Space
+    , Str "y"
+    , SoftBreak
+    , Str "las"
+    , Space
+    , Str "rectas."
+    ]
+, Para
+    [ Str "Dos"
+    , Space
+    , Str "puntos"
+    , Space
+    , Str "definen"
+    , Space
+    , Str "los"
+    , Space
+    , Str "extremos"
+    , Space
+    , Str "de"
+    , Space
+    , Str "un"
+    , Space
+    , Str "bsegmento."
+    , Space
+    , Str "Esta"
+    , Space
+    , Str "relaci\243n"
+    , Space
+    , Str "es"
+    , Space
+    , Str "una"
+    , SoftBreak
+    , Str "aplicaci\243n"
+    , Space
+    , Str "biyectiva."
+    , Space
+    , Str "Dos"
+    , Space
+    , Str "puntos,"
+    , Space
+    , Str "tambi\233n"
+    , Space
+    , Str "definen"
+    , Space
+    , Str "a"
+    , Space
+    , Str "una"
+    , Space
+    , Str "\250nica"
+    , Space
+    , Str "recta,"
+    , Space
+    , Str "con"
+    , Space
+    , Str "lo"
+    , SoftBreak
+    , Str "que"
+    , Space
+    , Str "se"
+    , Space
+    , Str "tiene"
+    , Space
+    , Str "una"
+    , Space
+    , Str "aplicaci\243n,"
+    , Space
+    , Str "pero"
+    , Space
+    , Str "esta"
+    , Space
+    , Str "no"
+    , Space
+    , Str "es"
+    , Space
+    , Str "inyectiva"
+    , Space
+    , Str "ya"
+    , Space
+    , Str "que"
+    , Space
+    , Str "se"
+    , Space
+    , Str "pueden"
+    , SoftBreak
+    , Str "tener"
+    , Space
+    , Str "dos"
+    , Space
+    , Str "pares"
+    , Space
+    , Str "de"
+    , Space
+    , Str "puntos"
+    , Space
+    , Str "que"
+    , Space
+    , Str "definan"
+    , Space
+    , Str "a"
+    , Space
+    , Str "una"
+    , Space
+    , Str "misma"
+    , Space
+    , Str "recta."
+    ]
+, Para
+    [ Str "Evidentemente,"
+    , Space
+    , Str "un"
+    , Space
+    , Str "segmento"
+    , Space
+    , Str "define"
+    , Space
+    , Str "tambi\233n"
+    , Space
+    , Str "a"
+    , Space
+    , Str "una"
+    , Space
+    , Str "\250nica"
+    , Space
+    , Str "recta"
+    , Space
+    , Str "ya"
+    , Space
+    , Str "que,"
+    , Space
+    , Str "al"
+    , SoftBreak
+    , Str "mencionar"
+    , Space
+    , Str "a"
+    , Space
+    , Str "un"
+    , Space
+    , Str "segmento,"
+    , Space
+    , Str "es"
+    , Space
+    , Str "como"
+    , Space
+    , Str "si"
+    , Space
+    , Str "mencion\225ramos"
+    , Space
+    , Str "a"
+    , Space
+    , Str "dos"
+    , Space
+    , Str "puntos"
+    , Space
+    , Str "(por"
+    , Space
+    , Str "la"
+    , SoftBreak
+    , Str "biyectividad)."
+    ]
+, Para
+    [ Str "Tal"
+    , Space
+    , Str "y"
+    , Space
+    , Str "como"
+    , Space
+    , Str "se"
+    , Space
+    , Str "explica"
+    , Space
+    , Str "en"
+    , Space
+    , Str "la"
+    , Space
+    , Strong [ Str "Observaci\243n" , Space , Str "2.4" ]
+    , Space
+    , Str "(p\225g."
+    , Space
+    , Str "24),"
+    , Space
+    , Str "en"
+    , Space
+    , Str "realidad"
+    , Space
+    , Str "en"
+    , Space
+    , Str "el"
+    , SoftBreak
+    , Str "punto"
+    , Space
+    , Str "(ii)"
+    , Space
+    , Str "del"
+    , Space
+    , Str "Axioma"
+    , Space
+    , Str "P2"
+    , Space
+    , Str "se"
+    , Space
+    , Str "podr\237a"
+    , Space
+    , Str "haber"
+    , Space
+    , Str "limitado"
+    , Space
+    , Str "a"
+    , Space
+    , Str "decir"
+    , Space
+    , Str "que"
+    , Space
+    , Str "entre"
+    , Space
+    , Str "dos"
+    , SoftBreak
+    , Str "puntos"
+    , Space
+    , Str "no"
+    , Space
+    , Str "coincidentes"
+    , Space
+    , Str "siempre"
+    , Space
+    , Str "hay"
+    , Space
+    , Str "(al"
+    , Space
+    , Str "menos)"
+    , Space
+    , Str "una"
+    , Space
+    , Str "recta;"
+    , Space
+    , Str "que"
+    , Space
+    , Str "sea"
+    , Space
+    , Str "\250nica"
+    , Space
+    , Str "es"
+    , SoftBreak
+    , Str "algo"
+    , Space
+    , Str "que"
+    , Space
+    , Str "se"
+    , Space
+    , Str "puede"
+    , Space
+    , Str "deducir"
+    , Space
+    , Str "y,"
+    , Space
+    , Str "por"
+    , Space
+    , Str "tanto,"
+    , Space
+    , Str "se"
+    , Space
+    , Str "podr\237a"
+    , Space
+    , Str "haber"
+    , Space
+    , Str "presentado"
+    , Space
+    , Str "como"
+    , Space
+    , Str "un"
+    , SoftBreak
+    , Str "teorema."
+    , Space
+    , Str "Veamos"
+    , Space
+    , Str "la"
+    , Space
+    , Str "demostraci\243n"
+    , Space
+    , Str "de"
+    , Space
+    , Str "este."
+    ]
+, Div
+    ( "" , [ "proof" ] , [] )
+    [ Para
+        [ Str "Suponemos"
+        , Space
+        , Str "que"
+        , Space
+        , Str "existen"
+        , Space
+        , Str "dos"
+        , Space
+        , Str "rectas"
+        , Space
+        , Math InlineMath "r"
+        , Space
+        , Str "y"
+        , Space
+        , Math InlineMath "s"
+        , Space
+        , Str "que"
+        , Space
+        , Str "contienen"
+        , Space
+        , Str "a"
+        , Space
+        , Str "dos"
+        , Space
+        , Str "puntos"
+        , Space
+        , Math InlineMath "A,B\n  \\in \\mathbf{P}"
+        , Str "."
+        ]
+    , Para
+        [ Str "Dado"
+        , Space
+        , Str "un"
+        , Space
+        , Str "punto"
+        , Space
+        , Str "arbitrario"
+        , Space
+        , Math InlineMath "X \\in \\mathbf{P}"
+        , Space
+        , Str "tal"
+        , Space
+        , Str "que"
+        , Space
+        , Math InlineMath "X \\in r"
+        , Str ","
+        , Space
+        , Str "por"
+        , Space
+        , Str "el"
+        , SoftBreak
+        , Str "punto"
+        , Space
+        , Str "(ii)"
+        , Space
+        , Str "de"
+        , Space
+        , Str "la"
+        , Space
+        , Str "Definici\243n"
+        , Space
+        , Str "2.2"
+        , Space
+        , Str "(de"
+        , Space
+        , Str "Recta)"
+        , Space
+        , Str "se"
+        , Space
+        , Str "tiene"
+        , Space
+        , Str "que"
+        , Space
+        , Math InlineMath "A"
+        , Str ","
+        , Space
+        , Math InlineMath "B"
+        , Space
+        , Str "y"
+        , Space
+        , Math InlineMath "X"
+        , SoftBreak
+        , Str "est\225n"
+        , Space
+        , Str "alineados."
+        ]
+    , Para
+        [ Str "Desde"
+        , Space
+        , Str "otro"
+        , Space
+        , Str "punto"
+        , Space
+        , Str "de"
+        , Space
+        , Str "vista,"
+        , Space
+        , Str "sabemos"
+        , Space
+        , Str "que"
+        , Space
+        , Math InlineMath "A, B \\in s"
+        , Str "."
+        , Space
+        , Str "Entonces,"
+        , Space
+        , Str "por"
+        , Space
+        , Str "el"
+        , SoftBreak
+        , Str "punto"
+        , Space
+        , Str "(iii)"
+        , Space
+        , Str "de"
+        , Space
+        , Str "la"
+        , Space
+        , Str "Definici\243n"
+        , Space
+        , Str "2.2"
+        , Space
+        , Str "(de"
+        , Space
+        , Str "Recta)"
+        , Space
+        , Str "tenemos"
+        , Space
+        , Str "que,"
+        , Space
+        , Str "como"
+        , Space
+        , Math InlineMath "A"
+        , Str ","
+        , Space
+        , Math InlineMath "B"
+        , Space
+        , Str "y"
+        , SoftBreak
+        , Math InlineMath "X"
+        , Space
+        , Str "est\225n"
+        , Space
+        , Str "alineados,"
+        , Space
+        , Str "se"
+        , Space
+        , Str "da"
+        , Space
+        , Str "que"
+        , Space
+        , Math InlineMath "X \\in s"
+        , Str "."
+        , Space
+        , Str "Con"
+        , Space
+        , Str "este"
+        , Space
+        , Str "razonamiento,"
+        , Space
+        , Str "hemos"
+        , SoftBreak
+        , Str "llegado"
+        , Space
+        , Str "a"
+        , Space
+        , Str "demostrar"
+        , Space
+        , Str "que"
+        , Space
+        , Math InlineMath "r \\subseteq s"
+        , Str "."
+        ]
+    , Para
+        [ Str "De"
+        , Space
+        , Str "forma"
+        , Space
+        , Str "an\225loga,"
+        , Space
+        , Str "llegamos"
+        , Space
+        , Str "a"
+        , Space
+        , Str "demosrtar"
+        , Space
+        , Str "que"
+        , Space
+        , Math InlineMath "s \\subseteq r"
+        , Str "."
+        , Space
+        , Str "Uniendo"
+        , Space
+        , Str "ambas,"
+        , SoftBreak
+        , Str "tenemos"
+        , Space
+        , Str "que"
+        , Space
+        , Math InlineMath "r = s"
+        , Str "."
+        ]
+    ]
+, Para
+    [ Str "Por"
+    , Space
+    , Str "lo"
+    , Space
+    , Str "que"
+    , Space
+    , Str "explicamos"
+    , Space
+    , Str "antes"
+    , Space
+    , Str "sobre"
+    , Space
+    , Str "las"
+    , Space
+    , Str "relaciones"
+    , Space
+    , Str "entre"
+    , Space
+    , Str "pares"
+    , Space
+    , Str "de"
+    , Space
+    , Str "puntos"
+    , Space
+    , Str "y"
+    , SoftBreak
+    , Str "segmentos"
+    , Space
+    , Str "y"
+    , Space
+    , Str "rectas,"
+    , Space
+    , Str "de"
+    , Space
+    , Str "este"
+    , Space
+    , Str "axioma"
+    , Space
+    , Str "se"
+    , Space
+    , Str "deduce"
+    , Space
+    , Str "tambi\233n"
+    , Space
+    , Str "que"
+    , Space
+    , Str "que"
+    , Space
+    , Str "la"
+    , Space
+    , Str "recta"
+    , Space
+    , Str "que"
+    , SoftBreak
+    , Str "contiene"
+    , Space
+    , Str "a"
+    , Space
+    , Str "un"
+    , Space
+    , Str "segmento"
+    , Space
+    , Str "es"
+    , Space
+    , Str "\250nica."
+    , Space
+    , Str "Se"
+    , Space
+    , Str "podr\237a"
+    , Space
+    , Str "haber"
+    , Space
+    , Str "puesto"
+    , Space
+    , Str "quiz\225s"
+    , Space
+    , Str "tambi\233n"
+    , Space
+    , Str "como"
+    , SoftBreak
+    , Str "corolario"
+    , Space
+    , Str "esta"
+    , Space
+    , Str "afirmaci\243n."
+    ]
+, Para
+    [ Str "En"
+    , Space
+    , Str "lo"
+    , Space
+    , Str "que"
+    , Space
+    , Str "respecta"
+    , Space
+    , Str "a"
+    , Space
+    , Str "la"
+    , Space
+    , Strong [ Str "Definici\243n" , Space , Str "2.6" ]
+    , Space
+    , Str "(de"
+    , Space
+    , Str "Rectas"
+    , Space
+    , Str "Secantes"
+    , Space
+    , Str "y"
+    , Space
+    , Str "Paralelas),"
+    , SoftBreak
+    , Str "advierta"
+    , Space
+    , Str "que"
+    , Space
+    , Str "se"
+    , Space
+    , Str "admite"
+    , Space
+    , Str "que"
+    , Space
+    , Str "tambi\233n"
+    , Space
+    , Str "se"
+    , Space
+    , Str "califica"
+    , Space
+    , Str "de"
+    , Space
+    , Emph [ Str "paralelas" ]
+    , Space
+    , Str "a"
+    , Space
+    , Str "dos"
+    , Space
+    , Str "rectas"
+    , SoftBreak
+    , Str "coincidentes."
+    ]
+, Para
+    [ Str "En"
+    , Space
+    , Str "cuanto"
+    , Space
+    , Str "al"
+    , Space
+    , Strong [ Str "Teorema" , Space , Str "2.7" ]
+    , Str ","
+    , Space
+    , Str "creo"
+    , Space
+    , Str "que"
+    , Space
+    , Str "adolece"
+    , Space
+    , Str "de"
+    , Space
+    , Str "no"
+    , Space
+    , Str "hacer"
+    , Space
+    , Str "incapi\233"
+    , Space
+    , Str "en"
+    , Space
+    , Str "que"
+    , SoftBreak
+    , Str "esa"
+    , Space
+    , Emph [ Str "o" ]
+    , Space
+    , Str "(disyunci\243n)"
+    , Space
+    , Str "es"
+    , Space
+    , Str "exclusiva"
+    , Space
+    , Str "en"
+    , Space
+    , Str "este"
+    , Space
+    , Str "caso;"
+    , Space
+    , Str "y"
+    , Space
+    , Str "no"
+    , Space
+    , Str "inclusiva,"
+    , Space
+    , Str "como"
+    , Space
+    , Str "suele"
+    , SoftBreak
+    , Str "ser"
+    , Space
+    , Str "habitual"
+    , Space
+    , Str "en"
+    , Space
+    , Str "matem\225ticas"
+    , Space
+    , Str "si"
+    , Space
+    , Str "no"
+    , Space
+    , Str "se"
+    , Space
+    , Str "especifica"
+    , Space
+    , Str "nada"
+    , Space
+    , Str "a"
+    , Space
+    , Str "este"
+    , Space
+    , Str "respecto."
+    ]
+, Para
+    [ Str "Adem\225s,"
+    , Space
+    , Str "la"
+    , Space
+    , Str "demostraci\243n"
+    , Space
+    , Str "que"
+    , Space
+    , Str "da"
+    , Space
+    , Str "no"
+    , Space
+    , Str "llega"
+    , Space
+    , Str "a"
+    , Space
+    , Str "convencerme."
+    , Space
+    , Str "Entre"
+    , Space
+    , Str "otras"
+    , Space
+    , Str "cosas,"
+    , SoftBreak
+    , Str "faltar\237a"
+    , Space
+    , Str "por"
+    , Space
+    , Str "demostrar"
+    , Space
+    , Str "que"
+    , Space
+    , Str "no"
+    , Space
+    , Str "se"
+    , Space
+    , Str "puede"
+    , Space
+    , Str "dar"
+    , Space
+    , Str "el"
+    , Space
+    , Str "caso"
+    , Space
+    , Str "que"
+    , Space
+    , Str "no"
+    , Space
+    , Str "sean"
+    , Space
+    , Str "secantes"
+    , Space
+    , Str "ni"
+    , SoftBreak
+    , Str "paralelas"
+    , Space
+    , Str "simult\225neamente."
+    ]
+, Para
+    [ Str "En"
+    , Space
+    , Str "cualquier"
+    , Space
+    , Str "caso,"
+    , Space
+    , Str "tengo"
+    , Space
+    , Str "claro,"
+    , Space
+    , Str "por"
+    , Space
+    , Str "el"
+    , Space
+    , Str "uso"
+    , Space
+    , Str "que"
+    , Space
+    , Str "hace"
+    , Space
+    , Str "posteriormente"
+    , Space
+    , Str "de"
+    , Space
+    , Str "este"
+    , SoftBreak
+    , Str "teorema"
+    , Space
+    , Str "en"
+    , Space
+    , Str "algunas"
+    , Space
+    , Str "demostraciones,"
+    , Space
+    , Str "que"
+    , Space
+    , Str "se"
+    , Space
+    , Str "trata"
+    , Space
+    , Str "de"
+    , Space
+    , Str "una"
+    , Space
+    , Emph [ Str "o" ]
+    , Space
+    , Str "exclusiva."
+    , Space
+    , Str "Yo"
+    , Space
+    , Str "lo"
+    , SoftBreak
+    , Str "enunciar\237a"
+    , Space
+    , Str "del"
+    , Space
+    , Str "modo"
+    , Space
+    , Str "siguiente."
+    ]
+, Div
+    ( "thm-pos-rel-rectas"
+    , [ "theorem" ]
+    , [ ( "datal-label"
+        , "Teorema (de las Posiciones Relativas de Dos Rectas)"
+        )
+      ]
+    )
+    [ Para
+        [ Str "Las"
+        , Space
+        , Str "dos"
+        , Space
+        , Str "\250nicas"
+        , Space
+        , Str "posiciones"
+        , Space
+        , Str "relativas"
+        , Space
+        , Str "que"
+        , Space
+        , Str "pueden"
+        , Space
+        , Str "tener"
+        , Space
+        , Str "dos"
+        , Space
+        , Str "rectas"
+        , Space
+        , Str "es"
+        , Space
+        , Str "ser"
+        , SoftBreak
+        , Str "secantes"
+        , Space
+        , Str "o"
+        , Space
+        , Str "bien"
+        , Space
+        , Str "ser"
+        , Space
+        , Str "paralelas"
+        , Space
+        , Str "(coincidentes"
+        , Space
+        , Str "o"
+        , Space
+        , Str "no"
+        , Space
+        , Str "coincidentes),"
+        , Space
+        , Str "pero"
+        , Space
+        , Str "no"
+        , SoftBreak
+        , Str "pueden"
+        , Space
+        , Str "ser"
+        , Space
+        , Str "ambas"
+        , Space
+        , Str "cosas"
+        , Space
+        , Str "simult\225neamente"
+        , Space
+        , Str "as\237"
+        , Space
+        , Str "como"
+        , Space
+        , Str "ninguna."
+        ]
+    ]
+, Para
+    [ Str "Para"
+    , Space
+    , Str "la"
+    , Space
+    , Str "demostraci\243n"
+    , Space
+    , Str "del"
+    , Space
+    , Str "teorema"
+    , Space
+    , Str "a"
+    , Space
+    , Str "mi"
+    , Space
+    , Str "manera,"
+    , Space
+    , Str "prefiero"
+    , Space
+    , Str "hacer"
+    , Space
+    , Str "un"
+    , Space
+    , Str "uso"
+    , Space
+    , Str "m\225s"
+    , SoftBreak
+    , Str "expl\237cito"
+    , Space
+    , Str "de"
+    , Space
+    , Str "la"
+    , Space
+    , Str "l\243gica"
+    , Space
+    , Str "y"
+    , Space
+    , Str "la"
+    , Space
+    , Str "teor\237a"
+    , Space
+    , Str "de"
+    , Space
+    , Str "conjuntos."
+    ]
+, Div
+    ( "" , [ "proof" ] , [] )
+    [ Para
+        [ Str "Tenemos"
+        , Space
+        , Str "que"
+        , Space
+        , Str "demostrar"
+        , Space
+        , Str "que"
+        , Space
+        , Str "no"
+        , Space
+        , Str "se"
+        , Space
+        , Str "puede"
+        , Space
+        , Str "dar"
+        , Space
+        , Str "ninguno"
+        , Space
+        , Str "de"
+        , Space
+        , Str "los"
+        , Space
+        , Str "dos"
+        , Space
+        , Str "casos"
+        , SoftBreak
+        , Str "siguientes,"
+        , Space
+        , Str "para"
+        , Space
+        , Str "dos"
+        , Space
+        , Str "rectas"
+        , Space
+        , Str "cualesquiera"
+        , Space
+        , Math InlineMath "r"
+        , Space
+        , Str "y"
+        , Space
+        , Math InlineMath "s"
+        , Str ":"
+        ]
+    , OrderedList
+        ( 1 , Decimal , Period )
+        [ [ Plain
+              [ Str "Que"
+              , Space
+              , Str "sean"
+              , Space
+              , Str "secantes"
+              , Space
+              , Str "y"
+              , Space
+              , Str "paralelas."
+              ]
+          ]
+        , [ Plain
+              [ Str "Que"
+              , Space
+              , Str "no"
+              , Space
+              , Str "sean"
+              , Space
+              , Str "secantes"
+              , Space
+              , Str "ni"
+              , Space
+              , Str "paralelas."
+              ]
+          ]
+        ]
+    , Para
+        [ Str "Vamos"
+        , Space
+        , Str "a"
+        , Space
+        , Str "hacer"
+        , Space
+        , Str "las"
+        , Space
+        , Str "dos"
+        , Space
+        , Str "demostraciones"
+        , Space
+        , Str "por"
+        , Space
+        , Str "el"
+        , Space
+        , Str "m\233todo"
+        , Space
+        , Str "de"
+        , Space
+        , Str "contradicci\243n"
+        , SoftBreak
+        , Str "(tambi\233n"
+        , Space
+        , Str "llamado"
+        , Space
+        , Emph
+            [ Str "por"
+            , Space
+            , Str "reducci\243n"
+            , Space
+            , Str "al"
+            , Space
+            , Str "absurdo"
+            ]
+        , Str ")."
+        ]
+    , Para
+        [ Str "Vamos"
+        , Space
+        , Str "a"
+        , Space
+        , Str "hacer"
+        , Space
+        , Str "uso"
+        , Space
+        , Str "de"
+        , Space
+        , Str "la"
+        , Space
+        , Str "l\243gica"
+        , Space
+        , Str "proposicional"
+        , Space
+        , Str "simb\243lica,"
+        , Space
+        , Str "para"
+        , Space
+        , Str "que"
+        , Space
+        , Str "queden"
+        , SoftBreak
+        , Str "claros"
+        , Space
+        , Str "los"
+        , Space
+        , Str "razonamientos."
+        , Space
+        , Str "Tenemos"
+        , Space
+        , Str "las"
+        , Space
+        , Str "proposiciones"
+        , Space
+        , Str "siguientes:"
+        ]
+    , BulletList
+        [ [ Plain
+              [ Math InlineMath "p"
+              , Str ":"
+              , Space
+              , Math InlineMath "r"
+              , Space
+              , Str "y"
+              , Space
+              , Math InlineMath "s"
+              , Space
+              , Str "no"
+              , Space
+              , Str "tienen"
+              , Space
+              , Str "ning\250n"
+              , Space
+              , Str "punto"
+              , Space
+              , Str "en"
+              , Space
+              , Str "com\250n."
+              , Space
+              , Str "Es"
+              , Space
+              , Str "decir,"
+              , Space
+              , Math InlineMath "r \\cap s =\n\\emptyset"
+              ]
+          ]
+        , [ Plain
+              [ Math InlineMath "q"
+              , Str ":"
+              , Space
+              , Math InlineMath "r"
+              , Space
+              , Str "y"
+              , Space
+              , Math InlineMath "s"
+              , Space
+              , Str "se"
+              , Space
+              , Str "cortan."
+              , Space
+              , Str "Es"
+              , Space
+              , Str "decir,"
+              , Space
+              , Str "existe"
+              , Space
+              , Str "un"
+              , Space
+              , Str "\250nico"
+              , Space
+              , Math InlineMath "X \\in \\mathbb{P}"
+              , SoftBreak
+              , Str "tal"
+              , Space
+              , Str "que"
+              , Space
+              , Math InlineMath "\\{X\\} = r \\cap s"
+              , Space
+              , Str "siendo"
+              , Space
+              , Math InlineMath "\\{X\\} \\neq \\emptyset"
+              , Str "."
+              ]
+          ]
+        , [ Plain
+              [ Math InlineMath "m"
+              , Str ":"
+              , Space
+              , Math InlineMath "r"
+              , Space
+              , Str "y"
+              , Space
+              , Math InlineMath "s"
+              , Space
+              , Str "son"
+              , Space
+              , Str "la"
+              , Space
+              , Str "misma"
+              , Space
+              , Str "(son"
+              , Space
+              , Str "coincidentes)."
+              , Space
+              , Str "Es"
+              , Space
+              , Str "decir,"
+              , Space
+              , Math InlineMath "r = s"
+              , Str "."
+              ]
+          ]
+        , [ Plain
+              [ Math InlineMath "n"
+              , Str ":"
+              , Space
+              , Math InlineMath "r"
+              , Space
+              , Str "y"
+              , Space
+              , Math InlineMath "s"
+              , Space
+              , Str "son"
+              , Space
+              , Str "paralelas."
+              , Space
+              , Str "Por"
+              , Space
+              , Str "definici\243n"
+              , Space
+              , Str "del"
+              , Space
+              , Str "paralelismo"
+              , Space
+              , Str "de"
+              , Space
+              , Str "rectas,"
+              , SoftBreak
+              , Str "se"
+              , Space
+              , Str "tiene"
+              , Space
+              , Str "que"
+              , Space
+              , Math InlineMath "n \\Longleftrightarrow p \\vee m"
+              , Str "."
+              ]
+          ]
+        ]
+    , Para
+        [ Str "Caso"
+        , Space
+        , Str "1."
+        , Space
+        , Str "Nuestra"
+        , Space
+        , Str "hip\243tesis"
+        , Space
+        , Str "es"
+        , Space
+        , Str "que"
+        , Space
+        , Math InlineMath "r"
+        , Space
+        , Str "y"
+        , Space
+        , Math InlineMath "s"
+        , Space
+        , Str "se"
+        , Space
+        , Str "cortan"
+        , Space
+        , Str "y"
+        , Space
+        , Str "son"
+        , Space
+        , Str "paralelas."
+        , Space
+        , Str "La"
+        , SoftBreak
+        , Str "hip\243tesis"
+        , Space
+        , Str "ser\225,"
+        , Space
+        , Str "por"
+        , Space
+        , Str "tanto,"
+        , Space
+        , Str "para"
+        , Space
+        , Str "este"
+        , Space
+        , Str "caso,"
+        , Space
+        , Str "la"
+        , Space
+        , Str "siguiente:"
+        ]
+    , Para
+        [ Math
+            DisplayMath
+            " q \\land n \\: \\Longleftrightarrow \\: q \\land (p \\vee m) \\:\n  \\Longleftrightarrow \\: (q \\land m) \\vee (q \\land p) "
+        ]
+    , Para
+        [ Str "haciendo"
+        , Space
+        , Str "uso"
+        , Space
+        , Str "de"
+        , Space
+        , Str "la"
+        , Space
+        , Str "propiedad"
+        , Space
+        , Str "distributiva"
+        , Space
+        , Str "para"
+        , Space
+        , Str "los"
+        , Space
+        , Str "operadores"
+        , Space
+        , Str "conjunci\243n"
+        , Space
+        , Str "y"
+        , SoftBreak
+        , Str "disyunci\243n."
+        ]
+    , Para
+        [ Str "Veamos"
+        , Space
+        , Str "si"
+        , Space
+        , Str "puede"
+        , Space
+        , Str "ser"
+        , Space
+        , Str "cierto"
+        , Space
+        , Str "esto."
+        , Space
+        , Str "Por"
+        , Space
+        , Str "la"
+        , Space
+        , Str "definici\243n"
+        , Space
+        , Str "de"
+        , Space
+        , Str "disyunci\243n,"
+        , Space
+        , Str "con"
+        , Space
+        , Str "que"
+        , SoftBreak
+        , Str "se"
+        , Space
+        , Str "d\233"
+        , Space
+        , Str "una"
+        , Space
+        , Str "de"
+        , Space
+        , Str "las"
+        , Space
+        , Str "dos"
+        , Space
+        , Str "proposiciones"
+        , Space
+        , Str "que"
+        , Space
+        , Str "une"
+        , Space
+        , Str "esta,"
+        , Space
+        , Str "bastar\237a"
+        , Space
+        , Str "para"
+        , Space
+        , Str "que"
+        , Space
+        , Str "fuese"
+        , SoftBreak
+        , Str "cierta"
+        , Space
+        , Str "la"
+        , Space
+        , Str "proposici\243n"
+        , Space
+        , Str "global."
+        ]
+    , Para
+        [ Str "Primero,"
+        , Space
+        , Math InlineMath "q \\land m"
+        , Str "."
+        , Space
+        , Str "Por"
+        , Space
+        , Str "un"
+        , Space
+        , Str "lado,"
+        , Space
+        , Math InlineMath "q"
+        , Space
+        , Str "impone"
+        , Space
+        , Str "\8212entre"
+        , Space
+        , Str "otras"
+        , Space
+        , Str "cosas\8212"
+        , Space
+        , Str "que"
+        , SoftBreak
+        , Str "existe"
+        , Space
+        , Str "un"
+        , Space
+        , Math InlineMath "X \\in r"
+        , Space
+        , Str "tal"
+        , Space
+        , Str "que"
+        , Space
+        , Math InlineMath "X \\notin s"
+        , Str ","
+        , Space
+        , Str "pero"
+        , Space
+        , Str "esto"
+        , Space
+        , Str "se"
+        , Space
+        , Str "contradice"
+        , Space
+        , Str "con"
+        , Space
+        , Math InlineMath "m"
+        , SoftBreak
+        , Str "ya"
+        , Space
+        , Str "que"
+        , Space
+        , Str "esta"
+        , Space
+        , Str "\250ltima"
+        , Space
+        , Str "dice"
+        , Space
+        , Str "\8212entre"
+        , Space
+        , Str "otras"
+        , Space
+        , Str "cosas\8212"
+        , Space
+        , Str "que,"
+        , Space
+        , Str "para"
+        , Space
+        , Str "todo"
+        , Space
+        , Math InlineMath "X \\in r"
+        , Str ","
+        , SoftBreak
+        , Math InlineMath "X \\in s"
+        , Str "."
+        ]
+    , Para
+        [ Str "Por"
+        , Space
+        , Str "la"
+        , Space
+        , Str "parte"
+        , Space
+        , Str "de"
+        , Space
+        , Math InlineMath "q \\land p"
+        , Space
+        , Str "es"
+        , Space
+        , Str "evidente"
+        , Space
+        , Str "que"
+        , Space
+        , Str "se"
+        , Space
+        , Str "contradicen"
+        , Space
+        , Str "y,"
+        , Space
+        , Str "por"
+        , Space
+        , Str "tanto,"
+        , SoftBreak
+        , Str "da"
+        , Space
+        , Str "falso"
+        , Space
+        , Str "como"
+        , Space
+        , Str "resultado."
+        ]
+    , Para
+        [ Str "Por"
+        , Space
+        , Str "tanto,"
+        , Space
+        , Str "al"
+        , Space
+        , Str "ser"
+        , Space
+        , Str "ambas"
+        , Space
+        , Str "falsas,"
+        , Space
+        , Str "aun"
+        , Space
+        , Str "cuando"
+        , Space
+        , Str "est\233n"
+        , Space
+        , Str "unidas"
+        , Space
+        , Str "por"
+        , Space
+        , Str "una"
+        , SoftBreak
+        , Str "disyunci\243n,"
+        , Space
+        , Str "la"
+        , Space
+        , Str "proposici\243n"
+        , Space
+        , Str "general"
+        , Space
+        , Str "ser\225"
+        , Space
+        , Str "siempre"
+        , Space
+        , Str "falsa."
+        ]
+    , Para
+        [ Str "Caso"
+        , Space
+        , Str "2."
+        , Space
+        , Str "Nuestra"
+        , Space
+        , Str "hip\243tesis"
+        , Space
+        , Str "es"
+        , Space
+        , Str "que"
+        , Space
+        , Math InlineMath "r"
+        , Space
+        , Str "y"
+        , Space
+        , Math InlineMath "s"
+        , Space
+        , Str "no"
+        , Space
+        , Str "se"
+        , Space
+        , Str "cortan"
+        , Space
+        , Str "ni"
+        , Space
+        , Str "son"
+        , Space
+        , Str "paralelas."
+        ]
+    , Para [ Str "TKTK." ]
+    ]
+, Para
+    [ Str "O"
+    , Space
+    , Str "sea,"
+    , Space
+    , Str "este"
+    , Space
+    , Str "teorema"
+    , Space
+    , Str "viene"
+    , Space
+    , Str "a"
+    , Space
+    , Str "decir"
+    , Space
+    , Str "que"
+    , Space
+    , Str "dos"
+    , Space
+    , Str "rectas"
+    , Space
+    , Str "tienen"
+    , Space
+    , Str "\250nicamente"
+    , Space
+    , Str "tres"
+    , SoftBreak
+    , Str "posiciones"
+    , Space
+    , Str "relativas"
+    , Space
+    , Str "entre"
+    , Space
+    , Str "s\237:"
+    , Space
+    , Str "no"
+    , Space
+    , Str "se"
+    , Space
+    , Str "tocan"
+    , Space
+    , Str "en"
+    , Space
+    , Str "ning\250n"
+    , Space
+    , Str "punto"
+    , Space
+    , Str "(paralelas"
+    , Space
+    , Str "no"
+    , SoftBreak
+    , Str "coincidentes),"
+    , Space
+    , Str "se"
+    , Space
+    , Str "tocan"
+    , Space
+    , Str "en"
+    , Space
+    , Str "un"
+    , Space
+    , Str "\250nico"
+    , Space
+    , Str "punto"
+    , Space
+    , Str "(secantes)"
+    , Space
+    , Str "o"
+    , Space
+    , Str "son"
+    , Space
+    , Str "la"
+    , Space
+    , Str "misma"
+    , SoftBreak
+    , Str "(paralelas"
+    , Space
+    , Str "y"
+    , Space
+    , Str "coincidentes)."
+    , Space
+    , Str "No"
+    , Space
+    , Str "pueden"
+    , Space
+    , Str "tener"
+    , Space
+    , Str "en"
+    , Space
+    , Str "com\250n"
+    , Space
+    , Str "\250nicamente"
+    , Space
+    , Str "dos"
+    , Space
+    , Str "puntos,"
+    , SoftBreak
+    , Str "ni"
+    , Space
+    , Str "tres,"
+    , Space
+    , Str "etc."
+    ]
+, Para
+    [ Str "Antes"
+    , Space
+    , Str "de"
+    , Space
+    , Str "seguir,"
+    , Space
+    , Str "me"
+    , Space
+    , Str "gustar\237a"
+    , Space
+    , Str "mencionar"
+    , Space
+    , Str "que"
+    , Space
+    , Str "quiz\225s"
+    , Space
+    , Str "lo"
+    , Space
+    , Str "mejor"
+    , Space
+    , Str "ser\237a"
+    , Space
+    , Str "considerar"
+    , SoftBreak
+    , Str "que"
+    , Space
+    , Str "un"
+    , Space
+    , Str "segmento"
+    , Space
+    , Str "cuyos"
+    , Space
+    , Str "extremos"
+    , Space
+    , Str "son"
+    , Space
+    , Str "el"
+    , Space
+    , Str "mismo"
+    , Space
+    , Str "no"
+    , Space
+    , Str "es"
+    , Space
+    , Str "en"
+    , Space
+    , Str "realidad"
+    , Space
+    , Str "un"
+    , Space
+    , Str "segmento"
+    , SoftBreak
+    , Str "sino"
+    , Space
+    , Str "un"
+    , Space
+    , Str "punto."
+    , Space
+    , Str "Esto"
+    , Space
+    , Str "quiz\225s"
+    , Space
+    , Str "nos"
+    , Space
+    , Str "facilitar\237a"
+    , Space
+    , Str "ciertas"
+    , Space
+    , Str "cosas."
+    , Space
+    , Str "No"
+    , Space
+    , Str "se"
+    , Space
+    , Str "considera"
+    , SoftBreak
+    , Str "as\237"
+    , Space
+    , Str "en"
+    , Space
+    , Str "el"
+    , Space
+    , Str "libro."
+    , Space
+    , Str "Por"
+    , Space
+    , Str "cierto,"
+    , Space
+    , Str "esto"
+    , Space
+    , Str "tiene"
+    , Space
+    , Str "tambi\233n"
+    , Space
+    , Str "relaci\243n"
+    , Space
+    , Str "con"
+    , Space
+    , Str "el"
+    , Space
+    , Str "punto"
+    , Space
+    , Str "medio"
+    , SoftBreak
+    , Str "de"
+    , Space
+    , Str "un"
+    , Space
+    , Str "segmento,"
+    , Space
+    , Str "concepto"
+    , Space
+    , Str "que"
+    , Space
+    , Str "se"
+    , Space
+    , Str "define"
+    , Space
+    , Str "un"
+    , Space
+    , Str "poco"
+    , Space
+    , Str "despu\233s."
+    ]
+, Para
+    [ Str "Ahora,"
+    , Space
+    , Str "nos"
+    , Space
+    , Str "podr\237amos"
+    , Space
+    , Str "preguntar"
+    , Space
+    , Str "sobre"
+    , Space
+    , Str "las"
+    , Space
+    , Str "posiciones"
+    , Space
+    , Str "relativas"
+    , Space
+    , Str "de"
+    , Space
+    , Str "una"
+    , Space
+    , Str "recta"
+    , Space
+    , Str "y"
+    , SoftBreak
+    , Str "un"
+    , Space
+    , Str "segmento."
+    , Space
+    , Str "Aqu\237,"
+    , Space
+    , Str "s\237"
+    , Space
+    , Str "que"
+    , Space
+    , Str "hay"
+    , Space
+    , Str "m\225s"
+    , Space
+    , Str "casos"
+    , Space
+    , Str "posibles"
+    , Space
+    , Str "de"
+    , Space
+    , Str "sus"
+    , Space
+    , Str "posiciones"
+    , SoftBreak
+    , Str "relativas."
+    ]
+, OrderedList
+    ( 1 , Decimal , Period )
+    [ [ Para
+          [ Str "Se"
+          , Space
+          , Str "cortan."
+          , Space
+          , Str "Un"
+          , Space
+          , Str "\250nico"
+          , Space
+          , Str "punto"
+          , Space
+          , Str "en"
+          , Space
+          , Str "com\250n."
+          ]
+      ]
+    , [ Para
+          [ Str "La"
+          , Space
+          , Str "recta"
+          , Space
+          , Str "contiene"
+          , Space
+          , Str "al"
+          , Space
+          , Str "segmento."
+          , Space
+          , Str "Es"
+          , Space
+          , Str "coincidente"
+          , Space
+          , Str "con"
+          , Space
+          , Str "la"
+          , Space
+          , Str "\250nica"
+          , Space
+          , Str "recta"
+          , Space
+          , Str "que"
+          , SoftBreak
+          , Str "contiene"
+          , Space
+          , Str "al"
+          , Space
+          , Str "segmento."
+          , Space
+          , Str "La"
+          , Space
+          , Str "recta"
+          , Space
+          , Str "contiene"
+          , Space
+          , Str "a"
+          , Space
+          , Str "sus"
+          , Space
+          , Str "extremos."
+          , Space
+          , Str "Advierta"
+          , Space
+          , Str "que"
+          , SoftBreak
+          , Str "esto"
+          , Space
+          , Str "\250ltimo"
+          , Space
+          , Str "solo"
+          , Space
+          , Str "es"
+          , Space
+          , Str "cierto"
+          , Space
+          , Str "si"
+          , Space
+          , Str "el"
+          , Space
+          , Str "segmento"
+          , Space
+          , Str "no"
+          , Space
+          , Str "es"
+          , Space
+          , Str "un"
+          , Space
+          , Str "punto."
+          ]
+      ]
+    , [ Para
+          [ Str "Son"
+          , Space
+          , Str "paralelos."
+          , Space
+          , Str "La"
+          , Space
+          , Str "recta"
+          , Space
+          , Str "es"
+          , Space
+          , Str "paralela"
+          , Space
+          , Str "a"
+          , Space
+          , Str "la"
+          , Space
+          , Str "recta"
+          , Space
+          , Str "que"
+          , Space
+          , Str "contiene"
+          , Space
+          , Str "al"
+          , Space
+          , Str "segmento."
+          ]
+      ]
+    , [ Para
+          [ Str "No"
+          , Space
+          , Str "se"
+          , Space
+          , Str "cortan"
+          , Space
+          , Str "ni"
+          , Space
+          , Str "son"
+          , Space
+          , Str "paralelos."
+          , Space
+          , Str "Aqu\237"
+          , Space
+          , Str "es"
+          , Space
+          , Str "distinto"
+          , Space
+          , Str "a"
+          , Space
+          , Str "las"
+          , Space
+          , Str "posiciones"
+          , SoftBreak
+          , Str "relativas"
+          , Space
+          , Str "entre"
+          , Space
+          , Str "dos"
+          , Space
+          , Str "rectas."
+          ]
+      ]
+    ]
+, Para
+    [ Str "Si"
+    , Space
+    , Str "lo"
+    , Space
+    , Str "piensa,"
+    , Space
+    , Str "un"
+    , Space
+    , Str "segmento"
+    , Space
+    , Str "es"
+    , Space
+    , Str "un"
+    , Space
+    , Str "objeto"
+    , Space
+    , Str "(tambi\233n"
+    , Space
+    , Str "llamado"
+    , Space
+    , Emph [ Str "figura" ]
+    , Str ")"
+    , Space
+    , Str "m\225s"
+    , SoftBreak
+    , Str "complejo"
+    , Space
+    , Str "que"
+    , Space
+    , Str "una"
+    , Space
+    , Str "recta."
+    , Space
+    , Str "De"
+    , Space
+    , Str "hecho,"
+    , Space
+    , Str "creo"
+    , Space
+    , Str "que"
+    , Space
+    , Str "se"
+    , Space
+    , Str "podr\237a"
+    , Space
+    , Str "considerar"
+    , Space
+    , Str "a"
+    , Space
+    , Str "la"
+    , Space
+    , Str "recta"
+    , SoftBreak
+    , Str "como"
+    , Space
+    , Str "la"
+    , Space
+    , Str "figura"
+    , Space
+    , Str "m\225s"
+    , Space
+    , Str "b\225sica"
+    , Space
+    , Str "despu\233s"
+    , Space
+    , Str "del"
+    , Space
+    , Str "punto."
+    ]
+, Para
+    [ Str "Veamos"
+    , Space
+    , Str "otro"
+    , Space
+    , Str "resultado"
+    , Space
+    , Str "de"
+    , Space
+    , Str "las"
+    , Space
+    , Str "posiciones"
+    , Space
+    , Str "relativas"
+    , Space
+    , Str "de"
+    , Space
+    , Str "un"
+    , Space
+    , Str "segmento"
+    , Space
+    , Str "y"
+    , Space
+    , Str "una"
+    , SoftBreak
+    , Str "recta."
+    ]
+, Div
+    ( "" , [ "theorem" ] , [] )
+    [ Para
+        [ Str "Sea"
+        , Space
+        , Str "un"
+        , Space
+        , Str "segmento"
+        , Space
+        , Math InlineMath "[A, B]"
+        , Space
+        , Str "siendo"
+        , Space
+        , Math InlineMath "A \\neq B"
+        , Space
+        , Str "y"
+        , Space
+        , Str "una"
+        , Space
+        , Str "recta"
+        , Space
+        , Math InlineMath "r"
+        , Str "."
+        , Space
+        , Str "Si"
+        , Space
+        , Math InlineMath "[A, B]\n  \\cap r \\neq \\emptyset"
+        , Str ","
+        , Space
+        , Str "entonces"
+        , Space
+        , Math InlineMath "[A, B]"
+        , Space
+        , Str "y"
+        , Space
+        , Math InlineMath "r"
+        , Space
+        , Str "son"
+        , Space
+        , Str "secantes."
+        ]
+    ]
+, Div ( "" , [ "proof" ] , [] ) [ Para [ Str "TKTK." ] ]
+, Para
+    [ Str "Una"
+    , Space
+    , Str "vez"
+    , Space
+    , Str "que"
+    , Space
+    , Str "se"
+    , Space
+    , Str "han"
+    , Space
+    , Str "presentado"
+    , Space
+    , Str "los"
+    , Space
+    , Str "conceptos"
+    , Space
+    , Str "de"
+    , Space
+    , Emph [ Str "rectas" , Space , Str "secantes" ]
+    , Space
+    , Str "y"
+    , SoftBreak
+    , Emph [ Str "paralelas" ]
+    , Str ","
+    , Space
+    , Str "se"
+    , Space
+    , Str "puede"
+    , Space
+    , Str "deducir"
+    , Space
+    , Str "una"
+    , Space
+    , Str "consecuencia"
+    , Space
+    , Str "directa"
+    , Space
+    , Str "de"
+    , Space
+    , Str "la"
+    , Space
+    , Strong [ Str "Observaci\243n" , SoftBreak , Str "2.3" ]
+    , Str "."
+    ]
+, Para
+    [ Str "Corolario"
+    , Space
+    , Str "Dada"
+    , Space
+    , Str "una"
+    , Space
+    , Str "recta"
+    , Space
+    , Str "y"
+    , Space
+    , Str "un"
+    , Space
+    , Str "segmento"
+    , Space
+    , Str "que"
+    , Space
+    , Str "no"
+    , Space
+    , Str "es"
+    , Space
+    , Str "un"
+    , Space
+    , Str "solo"
+    , Space
+    , Str "punto,"
+    , Space
+    , Str "si"
+    , Space
+    , Str "son"
+    , SoftBreak
+    , Str "secantes"
+    , Space
+    , Str "entonces"
+    , Space
+    , Str "tambi\233n"
+    , Space
+    , Str "lo"
+    , Space
+    , Str "ser\225n"
+    , Space
+    , Str "esta"
+    , Space
+    , Str "y"
+    , Space
+    , Str "la"
+    , Space
+    , Str "recta"
+    , Space
+    , Str "soporte"
+    , Space
+    , Str "del"
+    , Space
+    , Str "segmento."
+    ]
+, Para
+    [ Str "Lo"
+    , Space
+    , Str "cierto"
+    , Space
+    , Str "es"
+    , Space
+    , Str "que"
+    , Space
+    , Str "es"
+    , Space
+    , Str "algo"
+    , Space
+    , Str "muy"
+    , Space
+    , Str "evidente"
+    , Space
+    , Str "y"
+    , Space
+    , Str "entiendo"
+    , Space
+    , Str "perfectamente"
+    , Space
+    , Str "que"
+    , Space
+    , Str "no"
+    , SoftBreak
+    , Str "aparezca"
+    , Space
+    , Str "este"
+    , Space
+    , Str "resultado"
+    , Space
+    , Str "en"
+    , Space
+    , Str "el"
+    , Space
+    , Str "libro."
+    ]
+, Div
+    ( "" , [ "proof" ] , [] )
+    [ Para
+        [ Str "Si"
+        , Space
+        , Str "se"
+        , Space
+        , Str "cortan"
+        , Space
+        , Math InlineMath "r"
+        , Space
+        , Str "y"
+        , Space
+        , Math InlineMath "[A, B]"
+        , Str ","
+        , Space
+        , Str "tienen"
+        , Space
+        , Str "un"
+        , Space
+        , Str "\250nico"
+        , Space
+        , Str "punto"
+        , Space
+        , Str "en"
+        , Space
+        , Str "com\250n,"
+        , Space
+        , Str "es"
+        , Space
+        , Str "decir,"
+        ]
+    , Para [ Math DisplayMath " [A, B] \\cap r = \\{X\\} = X " ]
+    , Para
+        [ Str "Es"
+        , Space
+        , Str "evidente,"
+        , Space
+        , Str "al"
+        , Space
+        , Str "ser"
+        , Space
+        , Math InlineMath "A"
+        , Space
+        , Str "y"
+        , Space
+        , Math InlineMath "B"
+        , Space
+        , Str "no"
+        , Space
+        , Str "coincidentes,"
+        , Space
+        , Str "que"
+        , Space
+        , Str "habr\225"
+        , Space
+        , Str "alg\250n"
+        , Space
+        , Str "punto"
+        , Space
+        , Str "en"
+        , SoftBreak
+        , Math InlineMath "[A, B]"
+        , Space
+        , Str "que"
+        , Space
+        , Str "no"
+        , Space
+        , Str "est\233"
+        , Space
+        , Str "en"
+        , Space
+        , Math InlineMath "r"
+        , Space
+        , Str "ya"
+        , Space
+        , Str "que"
+        , Space
+        , Str "hemos"
+        , Space
+        , Str "dicho"
+        , Space
+        , Str "que"
+        , Space
+        , Str "el"
+        , Space
+        , Str "punto"
+        , Space
+        , Str "de"
+        , Space
+        , Str "corte"
+        , Space
+        , Str "es"
+        , SoftBreak
+        , Str "uno"
+        , Space
+        , Str "solo,"
+        , Space
+        , Str "y"
+        , Space
+        , Str "este"
+        , Space
+        , Str "segmento"
+        , Space
+        , Str "contiene"
+        , Space
+        , Str "al"
+        , Space
+        , Str "menos"
+        , Space
+        , Str "a"
+        , Space
+        , Str "dos"
+        , Space
+        , Str "puntos."
+        , Space
+        , Str "Entonces,"
+        , Space
+        , Str "por"
+        , Space
+        , Str "el"
+        , SoftBreak
+        , Str "Teorema"
+        , Space
+        , Str "2.7"
+        , Space
+        , Str "(de"
+        , Space
+        , Str "las"
+        , Space
+        , Str "Posiciones"
+        , Space
+        , Str "Relativas"
+        , Space
+        , Str "de"
+        , Space
+        , Str "Dos"
+        , Space
+        , Str "Rectas),"
+        , Space
+        , Str "no"
+        , Space
+        , Str "queda"
+        , Space
+        , Str "otra"
+        , Space
+        , Str "que"
+        , SoftBreak
+        , Str "r"
+        , Space
+        , Str "y"
+        , Space
+        , Math InlineMath "r_{AB}"
+        , Space
+        , Str "sean"
+        , Space
+        , Str "secantes,"
+        , Space
+        , Str "siendo"
+        , Space
+        , Math InlineMath "r_{AB}"
+        , Space
+        , Str "la"
+        , Space
+        , Str "recta"
+        , Space
+        , Str "soporte"
+        , Space
+        , Str "de"
+        , Space
+        , Math InlineMath "[A, B]"
+        , Str "."
+        ]
+    ]
+, Para
+    [ Str "Advierta"
+    , Space
+    , Str "que"
+    , Space
+    , Str "lo"
+    , Space
+    , Str "contrario"
+    , Space
+    , Str "no"
+    , Space
+    , Str "tiene"
+    , Space
+    , Str "por"
+    , Space
+    , Str "qu\233"
+    , Space
+    , Str "ser"
+    , Space
+    , Str "cierto."
+    , Space
+    , Str "Es"
+    , Space
+    , Str "decir,"
+    , Space
+    , Str "pueden"
+    , SoftBreak
+    , Str "cortarse"
+    , Space
+    , Str "dos"
+    , Space
+    , Str "rectas"
+    , Space
+    , Str "pero"
+    , Space
+    , Str "no"
+    , Space
+    , Str "cortarse"
+    , Space
+    , Str "una"
+    , Space
+    , Str "de"
+    , Space
+    , Str "estas"
+    , Space
+    , Str "con"
+    , Space
+    , Str "un"
+    , Space
+    , Str "segmento"
+    , Space
+    , Str "incluido"
+    , SoftBreak
+    , Str "en"
+    , Space
+    , Str "la"
+    , Space
+    , Str "otra."
+    , Space
+    , Str "Esto"
+    , Space
+    , Str "es"
+    , Space
+    , Str "f\225cil"
+    , Space
+    , Str "de"
+    , Space
+    , Str "imaginar."
+    ]
+, Para
+    [ Str "En"
+    , Space
+    , Str "lo"
+    , Space
+    , Str "que"
+    , Space
+    , Str "respecta"
+    , Space
+    , Str "al"
+    , Space
+    , Str "Axioma"
+    , Space
+    , Str "P3,"
+    , Space
+    , Str "este"
+    , Space
+    , Str "es"
+    , Space
+    , Str "el"
+    , Space
+    , Str "que"
+    , Space
+    , Str "hace"
+    , Space
+    , Str "que"
+    , Space
+    , Str "nuestro"
+    , Space
+    , Str "sistema"
+    , Space
+    , Str "de"
+    , SoftBreak
+    , Str "axiomas"
+    , Space
+    , Str "sea"
+    , Space
+    , Str "mixto"
+    , Space
+    , Str "(o"
+    , Space
+    , Str "que"
+    , Space
+    , Str "es"
+    , Space
+    , Str "el"
+    , Space
+    , Str "que"
+    , Space
+    , Quoted DoubleQuote [ Str "contamina" ]
+    , Space
+    , Str "a"
+    , Space
+    , Str "la"
+    , Space
+    , Str "geometr\237a"
+    , Space
+    , Str "pura),"
+    , Space
+    , Str "al"
+    , SoftBreak
+    , Str "incluir"
+    , Space
+    , Str "los"
+    , Space
+    , Str "n\250meros"
+    , Space
+    , Str "reales"
+    , Space
+    , Str "y"
+    , Space
+    , Str "sus"
+    , Space
+    , Str "operaciones."
+    ]
+, Para
+    [ Str "En"
+    , Space
+    , Str "lugar"
+    , Space
+    , Str "de"
+    , Space
+    , Str "como"
+    , Space
+    , Str "se"
+    , Space
+    , Str "presenta"
+    , Space
+    , Str "en"
+    , Space
+    , Str "el"
+    , Space
+    , Str "libro"
+    , Space
+    , Str "(p\225g."
+    , Space
+    , Str "25),"
+    , Space
+    , Str "se"
+    , Space
+    , Str "puede"
+    , Space
+    , Str "hacer"
+    , Space
+    , Str "uso"
+    , Space
+    , Str "del"
+    , SoftBreak
+    , Str "concepto"
+    , Space
+    , Str "de"
+    , Space
+    , Emph [ Str "isometr\237a" ]
+    , Str ","
+    , Space
+    , Str "tal"
+    , Space
+    , Str "y"
+    , Space
+    , Str "como"
+    , Space
+    , Str "hago"
+    , Space
+    , Str "a"
+    , Space
+    , Str "continuaci\243n."
+    ]
+, Div
+    ( "ax-p3"
+    , [ "axiom" ]
+    , [ ( "data-label" , "Axioma P3 (de la Regla Graduada)" ) ]
+    )
+    [ Para
+        [ Str "En"
+        , Space
+        , Math InlineMath "(\\mathbf{P}, d)"
+        , Str ","
+        , Space
+        , Str "para"
+        , Space
+        , Str "toda"
+        , Space
+        , Str "recta"
+        , Space
+        , Math InlineMath "r \\subseteq \\mathbf{P}"
+        , Space
+        , Str "existe"
+        , Space
+        , Str "una"
+        , SoftBreak
+        , Str "isometr\237a"
+        , Space
+        , Math
+            InlineMath
+            "\\gamma: (r, d) \\longrightarrow ({\\mathbb{R}}, d')"
+        , Space
+        , Str "siendo"
+        , Space
+        , Math InlineMath "d'"
+        , SoftBreak
+        , Str "la"
+        , Space
+        , Str "distancia"
+        , Space
+        , Str "definida"
+        , Space
+        , Str "del"
+        , Space
+        , Str "modo"
+        , Space
+        , Str "siguiente,"
+        , Space
+        , Str "para"
+        , Space
+        , Str "cualesquiera"
+        , Space
+        , Math InlineMath "x, y \\in\n  {\\mathbb{R}}"
+        , Str ","
+        ]
+    , Para [ Math DisplayMath " d'(x,y) = |x - y| " ]
+    ]
+, Para
+    [ Str "Ha"
+    , Space
+    , Str "de"
+    , Space
+    , Str "tener"
+    , Space
+    , Str "en"
+    , Space
+    , Str "cuenta"
+    , Space
+    , Str "que"
+    , Space
+    , Str "en"
+    , Space
+    , Str "realidad"
+    , Space
+    , Str "existen"
+    , Space
+    , Str "muchas"
+    , Space
+    , Str "de"
+    , Space
+    , Str "esas"
+    , Space
+    , Str "isometr\237as"
+    , SoftBreak
+    , Math InlineMath "\\gamma"
+    , Str ";"
+    , Space
+    , Str "es"
+    , Space
+    , Str "decir,"
+    , Space
+    , Str "muchas"
+    , Space
+    , Quoted
+        DoubleQuote [ Str "reglas" , Space , Str "graduadas" ]
+    , Str "."
+    , Space
+    , Str "Est\225n"
+    , Space
+    , Str "todas"
+    , Space
+    , Str "sobre"
+    , Space
+    , Str "la"
+    , Space
+    , Str "recta"
+    , SoftBreak
+    , Math InlineMath "r"
+    , Str ","
+    , Space
+    , Str "pero"
+    , Space
+    , Str "es"
+    , Space
+    , Str "como"
+    , Space
+    , Str "si,"
+    , Space
+    , Str "para"
+    , Space
+    , Str "cada"
+    , Space
+    , Str "posici\243n"
+    , Space
+    , Str "de"
+    , Space
+    , Str "medida"
+    , Space
+    , Math InlineMath "0"
+    , Space
+    , Str "de"
+    , Space
+    , Str "la"
+    , Space
+    , Quoted
+        DoubleQuote [ Str "regla" , SoftBreak , Str "graduada" ]
+    , Space
+    , Str "("
+    , Emph [ Str "ruler" ]
+    , Str "),"
+    , Space
+    , Str "se"
+    , Space
+    , Str "tuviese"
+    , Space
+    , Str "una"
+    , Space
+    , Str "isometr\237a"
+    , Space
+    , Str "distinta."
+    , Space
+    , Str "E"
+    , Space
+    , Str "incluso"
+    , Space
+    , Str "se"
+    , Space
+    , Str "doblar\225"
+    , SoftBreak
+    , Str "el"
+    , Space
+    , Str "n\250mero"
+    , Space
+    , Str "de"
+    , Space
+    , Str "isometr\237as"
+    , Space
+    , Str "posibles"
+    , Space
+    , Str "al"
+    , Space
+    , Str "tener"
+    , Space
+    , Str "en"
+    , Space
+    , Str "cuenta"
+    , Space
+    , Str "que"
+    , Space
+    , Str "podemos"
+    , Space
+    , Str "cambiar"
+    , Space
+    , Str "el"
+    , SoftBreak
+    , Str "sentido"
+    , Space
+    , Str "de"
+    , Space
+    , Str "la"
+    , Space
+    , Quoted DoubleQuote [ Str "regla" ]
+    , Str "."
+    , Space
+    , Str "Advierta"
+    , Space
+    , Str "tambi\233n"
+    , Space
+    , Str "que"
+    , Space
+    , Str "estas"
+    , Space
+    , Quoted DoubleQuote [ Str "reglas" ]
+    , Space
+    , Str "son"
+    , Space
+    , Str "algo"
+    , SoftBreak
+    , Str "especiales,"
+    , Space
+    , Str "pues"
+    , Space
+    , Str "tienen"
+    , Space
+    , Str "tambi\233n"
+    , Space
+    , Str "marcados"
+    , Space
+    , Str "n\250meros"
+    , Space
+    , Str "negativos."
+    ]
+, Para
+    [ Str "Por"
+    , Space
+    , Str "cierto,"
+    , Space
+    , Str "si"
+    , Space
+    , Str "se"
+    , Space
+    , Str "fija,"
+    , Space
+    , Math InlineMath "(r, d)"
+    , Space
+    , Str "es"
+    , Space
+    , Str "un"
+    , Space
+    , Str "espacio"
+    , Space
+    , Str "m\233trico"
+    , Space
+    , Str "inducido"
+    , Space
+    , Str "("
+    , Strong [ Str "Teorema" , SoftBreak , Str "1.4" ]
+    , Str ")"
+    , Space
+    , Str "de"
+    , Space
+    , Math InlineMath "\\mathbf{P},d"
+    , Space
+    , Str "ya"
+    , Space
+    , Str "que"
+    , Space
+    , Math InlineMath "r \\subseteq \\mathbf{P}"
+    , Str "."
+    ]
+, Para
+    [ Str "En"
+    , Space
+    , Str "cuanto"
+    , Space
+    , Str "al"
+    , Space
+    , Str "punto"
+    , Space
+    , Str "(i)"
+    , Space
+    , Str "de"
+    , Space
+    , Str "la"
+    , Space
+    , Strong [ Str "Observaci\243n" , Space , Str "2.8" ]
+    , Str ","
+    , Space
+    , Str "se"
+    , Space
+    , Str "incluyen"
+    , Space
+    , Str "tanto"
+    , Space
+    , Str "un"
+    , SoftBreak
+    , Str "teorma"
+    , Space
+    , Str "como"
+    , Space
+    , Str "una"
+    , Space
+    , Str "definici\243n."
+    , Space
+    , Str "Ser\237a"
+    , Space
+    , Str "la"
+    , Space
+    , Str "definici\243n"
+    , Space
+    , Str "del"
+    , Space
+    , Str "punto"
+    , Space
+    , Str "medio"
+    , Space
+    , Str "de"
+    , Space
+    , Str "un"
+    , SoftBreak
+    , Str "segmento."
+    , Space
+    , Str "Para"
+    , Space
+    , Str "esta"
+    , Space
+    , Str "se"
+    , Space
+    , Str "requiere"
+    , Space
+    , Str "de"
+    , Space
+    , Str "demostrar"
+    , Space
+    , Str "que"
+    , Space
+    , Str "dicho"
+    , Space
+    , Str "punto"
+    , Space
+    , Str "es"
+    , Space
+    , Str "\250nico"
+    , Space
+    , Str "para"
+    , SoftBreak
+    , Str "cada"
+    , Space
+    , Str "segmento."
+    ]
+, Para
+    [ Str "En"
+    , Space
+    , Str "esta"
+    , Space
+    , Str "demostraci\243n,"
+    , Space
+    , Str "aunque"
+    , Space
+    , Str "no"
+    , Space
+    , Str "lo"
+    , Space
+    , Str "mencione,"
+    , Space
+    , Str "hace"
+    , Space
+    , Str "uso"
+    , Space
+    , Str "en"
+    , Space
+    , Str "varios"
+    , Space
+    , Str "puntos"
+    , Space
+    , Str "de"
+    , SoftBreak
+    , Str "que"
+    , Space
+    , Math InlineMath "\\gamma"
+    , Space
+    , Str "es"
+    , Space
+    , Str "una"
+    , Space
+    , Str "biyecci\243n"
+    , Space
+    , Str "y,"
+    , Space
+    , Str "por"
+    , Space
+    , Str "tanto,"
+    , Space
+    , Str "tambi\233n"
+    , Space
+    , Str "una"
+    , Space
+    , Str "inyecci\243n."
+    , Space
+    , Str "Por"
+    , SoftBreak
+    , Str "ejemplo,"
+    , Space
+    , Str "esto"
+    , Space
+    , Str "justifica"
+    , Space
+    , Str "que"
+    , Space
+    , Str "de"
+    , Space
+    , Math InlineMath "A \\neq B"
+    , Space
+    , Str "se"
+    , Space
+    , Str "tenga"
+    , Space
+    , Str "que"
+    , Space
+    , Math InlineMath "a \\neq b"
+    , Str "."
+    ]
+, Para
+    [ Str "Me"
+    , Space
+    , Str "gustar\237a"
+    , Space
+    , Str "explicar"
+    , Space
+    , Str "tambi\233n"
+    , Space
+    , Str "c\243mo"
+    , Space
+    , Str "se"
+    , Space
+    , Str "puede"
+    , Space
+    , Str "llegar,"
+    , Space
+    , Str "por"
+    , Space
+    , Str "medio"
+    , Space
+    , Str "de"
+    , SoftBreak
+    , Str "manipulaciones"
+    , Space
+    , Str "algebraicas,"
+    , Space
+    , Str "al"
+    , Space
+    , Str "\250ltimo"
+    , Space
+    , Str "paso"
+    , Space
+    , Str "de"
+    , Space
+    , Str "la"
+    , Space
+    , Str "primera"
+    , Space
+    , Str "expresi\243n"
+    , SoftBreak
+    , Str "matem\225tica"
+    , Space
+    , Str "que"
+    , Space
+    , Str "presenta."
+    ]
+, RawBlock
+    (Format "html")
+    "<!--\n$$\\begin{array}{rlr}\n  |t - a| &= |t - b| \\\\\n  \\sqrt{(t - a)^2} & = \\sqrt{(t - b)^2} \\\\\n    \\begin{array}{r} \\\\ (t - a)\n    \\end{array}^2 & = (t - b)^{2} \\\\\n  t^{2} + a^{2} - 2ta & = t^{2} + b^{2} - 2tb \\\\\n  a^{2} - 2ta & = b^{2} - 2tb \\\\\n  a^{2} - b^{2} & = 2ta - 2tb \\\\\n  (a + b)(a - b) & = 2t(a - b) \\\\\n  a + b & = 2t \\\\\n  t & = \\frac{a + b}{2}\n\\end{array}$$\n-->"
+, Para
+    [ Str "Al"
+    , Space
+    , Str "ser"
+    , Space
+    , Math InlineMath "\\gamma"
+    , Space
+    , Str "una"
+    , Space
+    , Str "biyecci\243n,"
+    , Space
+    , Str "el"
+    , Space
+    , Str "valor"
+    , Space
+    , Math InlineMath "\\gamma^{-1}(\\frac{a + b}{2})"
+    , Space
+    , Str "es"
+    , SoftBreak
+    , Str "\250nico,"
+    , Space
+    , Str "y"
+    , Space
+    , Str "lo"
+    , Space
+    , Str "designamos"
+    , Space
+    , Str "por"
+    , Space
+    , Math InlineMath "M"
+    , Str "."
+    ]
+, Para
+    [ Str "Alternativamente,"
+    , Space
+    , Str "la"
+    , Space
+    , Str "manipulaci\243n"
+    , Space
+    , Str "algebraica"
+    , Space
+    , Str "anterior"
+    , Space
+    , Str "se"
+    , Space
+    , Str "podr\237a"
+    , Space
+    , Str "haber"
+    , SoftBreak
+    , Str "procedido"
+    , Space
+    , Str "por"
+    , Space
+    , Str "una"
+    , Space
+    , Str "manipulaci\243n"
+    , Space
+    , Str "m\225s"
+    , Space
+    , Str "directa"
+    , Space
+    , Str "de"
+    , Space
+    , Str "los"
+    , Space
+    , Str "valores"
+    , Space
+    , Str "absolutos."
+    , Space
+    , Str "Por"
+    , SoftBreak
+    , Str "ejemplo,"
+    , Space
+    , Str "de"
+    , Space
+    , Math InlineMath "|t - a| = |t - b|"
+    , Space
+    , Str "tenemos"
+    , Space
+    , Str "dos"
+    , Space
+    , Str "resultados:"
+    ]
+, Para
+    [ Math
+        DisplayMath
+        "\\begin{aligned}\n  t - a   &= t - b \\\\\n  t - a   &= {-(t - b)}\n\\end{aligned}"
+    ]
+, Para
+    [ Str "El"
+    , Space
+    , Str "primero"
+    , Space
+    , Str "nos"
+    , Space
+    , Str "conduce"
+    , Space
+    , Str "a"
+    , Space
+    , Str "la"
+    , Space
+    , Str "igualdad"
+    , Space
+    , Math InlineMath "a = b"
+    , Str ","
+    , Space
+    , Str "con"
+    , Space
+    , Str "lo"
+    , Space
+    , Str "que"
+    , Space
+    , Str "se"
+    , Space
+    , Str "tendr\237a"
+    , SoftBreak
+    , Str "entonces,"
+    , Space
+    , Str "por"
+    , Space
+    , Str "la"
+    , Space
+    , Str "inyectividad"
+    , Space
+    , Str "de"
+    , Space
+    , Math InlineMath "\\gamma"
+    , Str ","
+    , Space
+    , Str "a"
+    , Space
+    , Str "que"
+    , Space
+    , Math InlineMath "A = B"
+    , Str ",cosa"
+    , Space
+    , Str "que"
+    , Space
+    , Str "contradice"
+    , SoftBreak
+    , Str "la"
+    , Space
+    , Str "hip\243tesis"
+    , Space
+    , Str "de"
+    , Space
+    , Str "partida,"
+    , Space
+    , Str "por"
+    , Space
+    , Str "lo"
+    , Space
+    , Str "que"
+    , Space
+    , Str "descartamos"
+    , Space
+    , Str "este"
+    , Space
+    , Str "resultado."
+    , Space
+    , Str "El"
+    , Space
+    , Str "otro"
+    , Space
+    , Str "nos"
+    , SoftBreak
+    , Str "dar\225"
+    , Space
+    , Str "lo"
+    , Space
+    , Str "mismo"
+    , Space
+    , Str "que"
+    , Space
+    , Str "antes:"
+    , Space
+    , Math InlineMath "t = (a + b)/2"
+    , Str "."
+    ]
+, Para
+    [ Str "La"
+    , Space
+    , Str "demostraci\243n"
+    , Space
+    , Str "del"
+    , Space
+    , Str "punto"
+    , Space
+    , Str "(ii)"
+    , Space
+    , Str "es"
+    , Space
+    , Str "muy"
+    , Space
+    , Str "parecida"
+    , Space
+    , Str "a"
+    , Space
+    , Str "la"
+    , Space
+    , Str "del"
+    , Space
+    , Str "punto"
+    , Space
+    , Str "(i)."
+    ]
+, Div
+    ( "" , [ "proof" ] , [] )
+    [ Para
+        [ Str "Por"
+        , Space
+        , Str "ejemplo,"
+        , Space
+        , Str "usando"
+        , Space
+        , Str "las"
+        , Space
+        , Str "designaciones"
+        ]
+    , Para
+        [ Math
+            DisplayMath
+            " \\gamma(A') = x,\\quad \\gamma(A) = a,\\quad \\gamma(B) = b "
+        ]
+    , Para
+        [ Str "deseamos"
+        , Space
+        , Str "demostrar"
+        , Space
+        , Str "que"
+        , Space
+        , Str "existe"
+        , Space
+        , Str "un"
+        , Space
+        , Str "\250nico"
+        , Space
+        , Math InlineMath "A' \\in r"
+        , Space
+        , Str "para"
+        , Space
+        , Str "el"
+        , Space
+        , Str "que"
+        , Space
+        , Str "se"
+        , Space
+        , Str "cumple"
+        ]
+    , Para [ Math DisplayMath " d(B, A) = d(B, A') " ]
+    , Para
+        [ Str "Al"
+        , Space
+        , Str "ser"
+        , Space
+        , Math InlineMath "\\gamma"
+        , Space
+        , Str "una"
+        , Space
+        , Str "isometr\237a,"
+        , Space
+        , Str "se"
+        , Space
+        , Str "cumple"
+        , Space
+        , Str "que"
+        ]
+    , Para
+        [ Math
+            DisplayMath
+            "\\begin{aligned}\n    d(B,A)  &= d'(\\gamma(B), \\gamma(A)) = |b - a| \\\\\n    d(B,A') &= d'(\\gamma(B), \\gamma(A')) = |b - x|\n  \\end{aligned}"
+        ]
+    , Para
+        [ Str "con"
+        , Space
+        , Str "lo"
+        , Space
+        , Str "que"
+        , Space
+        , Str "se"
+        , Space
+        , Str "tiene"
+        , Space
+        , Str "que"
+        ]
+    , Para
+        [ Math
+            DisplayMath
+            "\\begin{aligned}\n    |b - a| &= |b - x|\n  \\end{aligned}"
+        ]
+    , Para
+        [ Str "Mediante"
+        , Space
+        , Str "manipulaciones"
+        , Space
+        , Str "algebraicas"
+        , Space
+        , Str "similares"
+        , Space
+        , Str "a"
+        , Space
+        , Str "las"
+        , Space
+        , Str "del"
+        , Space
+        , Str "punto"
+        , Space
+        , Str "(i),"
+        , Space
+        , Str "se"
+        , SoftBreak
+        , Str "llega"
+        , Space
+        , Str "a"
+        ]
+    , Para [ Math DisplayMath " x = 2b - a " ]
+    , Para
+        [ Str "con"
+        , Space
+        , Str "lo"
+        , Space
+        , Str "que"
+        , Space
+        , Math InlineMath "A' = \\gamma^{-1}(2b - a)"
+        , Space
+        , Str "ser\225"
+        , Space
+        , Str "\250nico"
+        , Space
+        , Str "por"
+        , Space
+        , Str "ser"
+        , Space
+        , Math InlineMath "\\gamma"
+        , SoftBreak
+        , Str "biyectiva."
+        ]
+    , Para
+        [ Str "A"
+        , Space
+        , Str "partir"
+        , Space
+        , Str "de"
+        , Space
+        , Str "esto,"
+        , Space
+        , Str "es"
+        , Space
+        , Str "f\225cil"
+        , Space
+        , Str "demostrar"
+        , Space
+        , Str "que"
+        , Space
+        , Math InlineMath "B = \\text{medio}[A, A']"
+        , Str "."
+        ]
+    ]
+, Para
+    [ Str "En"
+    , Space
+    , Str "esta"
+    , Space
+    , Str "definici\243n,"
+    , Space
+    , Str "se"
+    , Space
+    , Str "debe"
+    , Space
+    , Str "hacer"
+    , Space
+    , Str "cierta"
+    , Space
+    , Str "puntualizaci\243n"
+    , Space
+    , Str "para"
+    , Space
+    , Str "analizar"
+    , Space
+    , Str "el"
+    , SoftBreak
+    , Str "caso"
+    , Space
+    , Str "extremo"
+    , Space
+    , Str "en"
+    , Space
+    , Str "el"
+    , Space
+    , Str "que"
+    , Space
+    , Str "los"
+    , Space
+    , Str "extremos"
+    , Space
+    , Str "sean"
+    , Space
+    , Str "el"
+    , Space
+    , Str "mismo"
+    , Space
+    , Str "punto,"
+    , Space
+    , Str "es"
+    , Space
+    , Str "decir,"
+    , Space
+    , Str "para"
+    , SoftBreak
+    , Str "definir"
+    , Space
+    , Math InlineMath "\\text{medio}[A, A]"
+    , Space
+    , Str "para"
+    , Space
+    , Str "un"
+    , Space
+    , Math InlineMath "A \\in \\mathbf{P}"
+    , Str "."
+    ]
+, Para
+    [ Str "No"
+    , Space
+    , Str "basta"
+    , Space
+    , Str "con"
+    , Space
+    , Str "definirlo"
+    , Space
+    , Str "como"
+    , Space
+    , Str "el"
+    , Space
+    , Str "punto"
+    , Space
+    , Str "equidistante"
+    , Space
+    , Str "de"
+    , Space
+    , Str "los"
+    , Space
+    , Str "extremos,"
+    , Space
+    , Str "en"
+    , Space
+    , Str "la"
+    , SoftBreak
+    , Str "recta"
+    , Space
+    , Math InlineMath "r"
+    , Str ","
+    , Space
+    , Str "pues,"
+    , Space
+    , Str "en"
+    , Space
+    , Str "este"
+    , Space
+    , Str "caso"
+    , Space
+    , Str "extremo,"
+    , Space
+    , Str "esto"
+    , Space
+    , Str "es"
+    , Space
+    , Str "algo"
+    , Space
+    , Str "que"
+    , Space
+    , Str "se"
+    , Space
+    , Str "cumpla"
+    , Space
+    , Str "para"
+    , Space
+    , Str "todos"
+    , SoftBreak
+    , Str "los"
+    , Space
+    , Str "puntos"
+    , Space
+    , Str "de"
+    , Space
+    , Math InlineMath "r"
+    , Str "."
+    , Space
+    , Str "Hay"
+    , Space
+    , Str "que"
+    , Space
+    , Str "tener"
+    , Space
+    , Str "tambi\233n"
+    , Space
+    , Str "en"
+    , Space
+    , Str "cuenta"
+    , Space
+    , Str "que"
+    , Space
+    , Str "ese"
+    , Space
+    , Str "pundo"
+    , Space
+    , Str "debe"
+    , SoftBreak
+    , Str "encontrarse"
+    , Space
+    , Str "en"
+    , Space
+    , Str "el"
+    , Space
+    , Str "segmento;"
+    , Space
+    , Str "en"
+    , Space
+    , Str "este"
+    , Space
+    , Str "caso,"
+    , Space
+    , Str "en"
+    , Space
+    , Math InlineMath "[A, A]"
+    , Str "."
+    , Space
+    , Str "Esto"
+    , Space
+    , Str "nos"
+    , Space
+    , Str "conduce"
+    , Space
+    , Str "a"
+    , SoftBreak
+    , Str "una"
+    , Space
+    , Str "\250nica"
+    , Space
+    , Str "soluci\243n:"
+    ]
+, Para [ Math DisplayMath "\\text{medio}[A, A] = A" ]
+, Para
+    [ Str "ya"
+    , Space
+    , Str "que"
+    , Space
+    , Str "el"
+    , Space
+    , Str "\250nico"
+    , Space
+    , Str "punto"
+    , Space
+    , Str "en"
+    , Space
+    , Math InlineMath "[A, A]"
+    , Space
+    , Str "es"
+    , Space
+    , Str "el"
+    , Space
+    , Str "propio"
+    , Space
+    , Math InlineMath "A"
+    , Str "."
+    , Space
+    , Str "Al"
+    , Space
+    , Str "hacerlo"
+    , Space
+    , Str "as\237,"
+    , Space
+    , Str "no"
+    , Space
+    , Str "tiene"
+    , SoftBreak
+    , Str "por"
+    , Space
+    , Str "qu\233"
+    , Space
+    , Str "establecerse"
+    , Space
+    , Str "esta"
+    , Space
+    , Str "igualdad"
+    , Space
+    , Str "por"
+    , Space
+    , Str "convenio,"
+    , Space
+    , Str "como"
+    , Space
+    , Str "se"
+    , Space
+    , Str "hace"
+    , Space
+    , Str "en"
+    , Space
+    , Str "el"
+    , Space
+    , Str "texto."
+    ]
+, Para
+    [ Str "Tal"
+    , Space
+    , Str "y"
+    , Space
+    , Str "como"
+    , Space
+    , Str "expliqu\233"
+    , Space
+    , Str "antes,"
+    , Space
+    , Str "si"
+    , Space
+    , Str "excluy\233semos"
+    , Space
+    , Str "este"
+    , Space
+    , Str "caso"
+    , Space
+    , Quoted DoubleQuote [ Str "degenerado" ]
+    , Space
+    , Str "de"
+    , Space
+    , Str "la"
+    , SoftBreak
+    , Str "definici\243n"
+    , Space
+    , Str "de"
+    , Space
+    , Emph [ Str "segmento" ]
+    , Str ","
+    , Space
+    , Str "no"
+    , Space
+    , Str "tendr\237amos"
+    , Space
+    , Str "este"
+    , Space
+    , Str "problema."
+    ]
+, Para
+    [ Str "En"
+    , Space
+    , Str "lo"
+    , Space
+    , Str "que"
+    , Space
+    , Str "respecta"
+    , Space
+    , Str "a"
+    , Space
+    , Str "la"
+    , Space
+    , Str "definici\243n"
+    , Space
+    , Str "de"
+    , Space
+    , Emph [ Str "semirrecta" ]
+    , Space
+    , Str "(p\225g."
+    , Space
+    , Str "26),"
+    , Space
+    , Str "advierta"
+    , Space
+    , Str "que"
+    , SoftBreak
+    , Str "el"
+    , Space
+    , Str "punto"
+    , Space
+    , Str "que"
+    , Space
+    , Str "se"
+    , Space
+    , Str "usa"
+    , Space
+    , Str "para"
+    , Space
+    , Str "hacer"
+    , Space
+    , Str "esa"
+    , Space
+    , Str "separaci\243n"
+    , Space
+    , Str "no"
+    , Space
+    , Str "se"
+    , Space
+    , Str "encuentra"
+    , Space
+    , Str "en"
+    , Space
+    , Str "ninguna"
+    , Space
+    , Str "de"
+    , SoftBreak
+    , Str "las"
+    , Space
+    , Str "dos"
+    , Space
+    , Str "semirrectas."
+    ]
+, Header
+    3
+    ( "semiplanos" , [] , [] )
+    [ Str "2.3." , Space , Str "Semiplanos" ]
+, Para
+    [ Str "En"
+    , Space
+    , Str "lo"
+    , Space
+    , Str "que"
+    , Space
+    , Str "respecta"
+    , Space
+    , Str "a"
+    , Space
+    , Str "los"
+    , Space
+    , Str "semiplanos,"
+    , Space
+    , Str "que"
+    , Space
+    , Str "se"
+    , Space
+    , Str "presentan"
+    , Space
+    , Str "en"
+    , Space
+    , Str "el"
+    , Space
+    , Str "Axioma"
+    , Space
+    , Str "P4,"
+    , Space
+    , Str "antes"
+    , SoftBreak
+    , Str "de"
+    , Space
+    , Str "pasar"
+    , Space
+    , Str "a"
+    , Space
+    , Str "ver"
+    , Space
+    , Str "sus"
+    , Space
+    , Str "propiedades,"
+    , Space
+    , Str "presentadas"
+    , Space
+    , Str "en"
+    , Space
+    , Str "el"
+    , Space
+    , Strong [ Str "Teorema" , Space , Str "2.12" ]
+    , Str ","
+    , Space
+    , Str "hay"
+    , Space
+    , Str "un"
+    , SoftBreak
+    , Str "resultado"
+    , Space
+    , Str "que"
+    , Space
+    , Str "me"
+    , Space
+    , Str "gustar\237a"
+    , Space
+    , Str "presentar"
+    , Space
+    , Str "y"
+    , Space
+    , Str "que"
+    , Space
+    , Str "se"
+    , Space
+    , Str "deduce"
+    , Space
+    , Str "directamente"
+    , Space
+    , Str "de"
+    , Space
+    , Str "este"
+    , Space
+    , Str "y"
+    , SoftBreak
+    , Str "que"
+    , Space
+    , Str "se"
+    , Space
+    , Str "usa"
+    , Space
+    , Str "en"
+    , Space
+    , Str "muchas"
+    , Space
+    , Str "demostraciones."
+    , Space
+    , Str "Ser\237a"
+    , Space
+    , Str "b\225sicamente"
+    , Space
+    , Str "el"
+    , Space
+    , Str "rec\237proco"
+    , Space
+    , Str "del"
+    , SoftBreak
+    , Str "punto"
+    , Space
+    , Str "(3)"
+    , Space
+    , Str "de"
+    , Space
+    , Str "este."
+    ]
+, Div
+    ( "thm-ampliacion-ax-p4"
+    , [ "theorem" ]
+    , [ ( "data-label"
+        , "Teorema (Ampliaci\243n del Punto (3) del Axioma P4)"
+        )
+      ]
+    )
+    [ Para
+        [ Str "Dados"
+        , Space
+        , Math InlineMath "X, Y \\in \\mathbf{P} \\setminus r"
+        , Space
+        , Str "siendo"
+        , Space
+        , Math InlineMath "X \\neq Y"
+        , Str "."
+        , Space
+        , Str "Si"
+        , Space
+        , Math InlineMath "[X, Y] \\cap\n  r \\neq \\emptyset"
+        , Str ","
+        , Space
+        , Str "entonces"
+        , Space
+        , Math InlineMath "X"
+        , Space
+        , Str "e"
+        , Space
+        , Math InlineMath "Y"
+        , Space
+        , Str "se"
+        , Space
+        , Str "encuentran"
+        , Space
+        , Str "en"
+        , Space
+        , Str "semiplanos"
+        , SoftBreak
+        , Str "distintos."
+        ]
+    ]
+, Para
+    [ Str "Este"
+    , Space
+    , Str "teorema"
+    , Space
+    , Str "se"
+    , Space
+    , Str "enuncia"
+    , Space
+    , Str "al"
+    , Space
+    , Str "final"
+    , Space
+    , Str "de"
+    , Space
+    , Str "la"
+    , Space
+    , Str "demostraci\243n"
+    , Space
+    , Str "de"
+    , Space
+    , Str "la"
+    , Space
+    , Str "propiedad"
+    , Space
+    , Str "(4)"
+    , SoftBreak
+    , Str "(Teorema"
+    , Space
+    , Str "2.12),"
+    , Space
+    , Str "pero"
+    , Space
+    , Str "no"
+    , Space
+    , Str "lo"
+    , Space
+    , Str "demuestran."
+    ]
+, Div
+    ( "" , [ "proof" ] , [] )
+    [ Para
+        [ Str "Este"
+        , Space
+        , Str "se"
+        , Space
+        , Str "deduce"
+        , Space
+        , Str "de"
+        , Space
+        , Str "los"
+        , Space
+        , Str "puntos"
+        , Space
+        , Str "(1)"
+        , Space
+        , Str "y"
+        , Space
+        , Str "(2)"
+        , Space
+        , Str "del"
+        , Space
+        , Str "Axioma"
+        , Space
+        , Str "P4."
+        ]
+    , Para
+        [ Str "De"
+        , Space
+        , Math InlineMath "[X, Y] \\cap r \\neq \\emptyset"
+        , Space
+        , Str "se"
+        , Space
+        , Str "tiene"
+        , Space
+        , Str "que"
+        , Space
+        , Str "existe"
+        , Space
+        , Str "un"
+        , Space
+        , Str "punto"
+        , Space
+        , Math InlineMath "U \\in r"
+        , SoftBreak
+        , Str "tal"
+        , Space
+        , Str "que"
+        , Space
+        , Math InlineMath "U \\in [X, Y]"
+        , Str "."
+        , Space
+        , Str "Al"
+        , Space
+        , Str "encontrarse"
+        , Space
+        , Str "en"
+        , Space
+        , Math InlineMath "r"
+        , Str ","
+        , Space
+        , Str "se"
+        , Space
+        , Str "tiene,"
+        , Space
+        , Str "como"
+        , Space
+        , Str "consecuencia"
+        , SoftBreak
+        , Str "del"
+        , Space
+        , Str "punto"
+        , Space
+        , Str "(1),"
+        , Space
+        , Str "que"
+        , Space
+        , Math InlineMath "U \\notin H^1"
+        , Space
+        , Str "y"
+        , Space
+        , Math InlineMath "U \\notin H^2"
+        , Str "."
+        , Space
+        , Str "De"
+        , Space
+        , Str "esto"
+        , Space
+        , Str "se"
+        , Space
+        , Str "tiene"
+        , Space
+        , Str "que"
+        , SoftBreak
+        , Math InlineMath "\\lbrack X, Y\\rbrack \\nsubseteq H^i"
+        , Space
+        , Str "para"
+        , Space
+        , Math InlineMath "i = 1, 2"
+        , Str "."
+        , Space
+        , Str "Entonces,"
+        , Space
+        , Str "por"
+        , Space
+        , Str "el"
+        , SoftBreak
+        , Str "(condicional"
+        , Space
+        , Str "contrarrec\237proco"
+        , Space
+        , Str "del)"
+        , Space
+        , Str "punto"
+        , Space
+        , Str "(2)"
+        , Space
+        , Str "del"
+        , Space
+        , Str "Axioma,"
+        , Space
+        , Str "se"
+        , Space
+        , Str "tiene"
+        , Space
+        , Str "que"
+        , Space
+        , Math InlineMath "X"
+        , SoftBreak
+        , Str "e"
+        , Space
+        , Math InlineMath "Y"
+        , Space
+        , Str "se"
+        , Space
+        , Str "encuentran"
+        , Space
+        , Str "en"
+        , Space
+        , Str "semiplanos"
+        , Space
+        , Str "distintos."
+        ]
+    ]
+, Para
+    [ Str "Veamos"
+    , Space
+    , Str "algunas"
+    , Space
+    , Str "observaciones"
+    , Space
+    , Str "del"
+    , Space
+    , Strong [ Str "Teorema" , Space , Str "2.12" ]
+    , Space
+    , Str "(Propiedades"
+    , Space
+    , Str "de"
+    , Space
+    , Str "los"
+    , SoftBreak
+    , Str "Semiplanos)."
+    , Space
+    , Str "En"
+    , Space
+    , Str "la"
+    , Space
+    , Str "(4),"
+    , Space
+    , Str "el"
+    , Space
+    , Str "primer"
+    , Space
+    , Str "paso"
+    , Space
+    , Str "se"
+    , Space
+    , Str "justifica"
+    , Space
+    , Str "concretamente"
+    , Space
+    , Str "por"
+    , Space
+    , Str "el"
+    , SoftBreak
+    , Str "punto"
+    , Space
+    , Str "(i)"
+    , Space
+    , Str "del"
+    , Space
+    , Str "Axioma"
+    , Space
+    , Str "P2."
+    ]
+, Para
+    [ Str "Creo"
+    , Space
+    , Str "que"
+    , Space
+    , Str "se"
+    , Space
+    , Str "deber\237a"
+    , Space
+    , Str "justificar"
+    , Space
+    , Str "que"
+    , Space
+    , Math InlineMath "C \\in \\mathbf{P} \\setminus r"
+    , Str "."
+    , Space
+    , Str "Como"
+    , Space
+    , Math InlineMath "r"
+    , SoftBreak
+    , Str "y"
+    , Space
+    , Str "la"
+    , Space
+    , Str "\250nica"
+    , Space
+    , Str "recta"
+    , Space
+    , Str "que"
+    , Space
+    , Str "pasa"
+    , Space
+    , Str "por"
+    , Space
+    , Math InlineMath "A"
+    , Space
+    , Str "y"
+    , Space
+    , Math InlineMath "B"
+    , Space
+    , Str "tienen"
+    , Space
+    , Str "en"
+    , Space
+    , Str "com\250n"
+    , Space
+    , Str "a"
+    , Space
+    , Math InlineMath "B"
+    , Space
+    , Str "pero"
+    , Space
+    , Str "no"
+    , Space
+    , Str "a"
+    , Space
+    , Math InlineMath "A"
+    , SoftBreak
+    , Str "\8212ya"
+    , Space
+    , Str "que"
+    , Space
+    , Math InlineMath "A \\in H^1"
+    , Str "\8212,"
+    , Space
+    , Str "por"
+    , Space
+    , Str "el"
+    , Space
+    , Str "Teorema"
+    , Space
+    , Str "2.7"
+    , Space
+    , Str "(de"
+    , Space
+    , Str "las"
+    , Space
+    , Str "Posiciones"
+    , Space
+    , Str "Relativas"
+    , Space
+    , Str "de"
+    , SoftBreak
+    , Str "Dos"
+    , Space
+    , Str "Rectas)"
+    , Space
+    , Str "se"
+    , Space
+    , Str "tendr\225"
+    , Space
+    , Str "que"
+    , Space
+    , Str "son"
+    , Space
+    , Str "secantes,"
+    , Space
+    , Str "con"
+    , Space
+    , Str "lo"
+    , Space
+    , Str "que"
+    , Space
+    , Str "se"
+    , Space
+    , Str "tiene"
+    , Space
+    , Str "que"
+    , Space
+    , Math InlineMath "C \\notin r"
+    , SoftBreak
+    , Str "y,"
+    , Space
+    , Str "por"
+    , Space
+    , Str "tanto,"
+    , Space
+    , Math InlineMath "C \\in \\mathbf{P} \\setminus r"
+    , Str "."
+    ]
+, Para
+    [ Str "Tras"
+    , Space
+    , Str "esto,"
+    , Space
+    , Str "basta"
+    , Space
+    , Str "con"
+    , Space
+    , Str "aplicar"
+    , Space
+    , Str "el"
+    , Space
+    , Str "Teorema"
+    , Space
+    , Str "Ampliaci\243n"
+    , Space
+    , Str "del"
+    , Space
+    , Str "Punto"
+    , Space
+    , Str "(3)"
+    , Space
+    , Str "del"
+    , Space
+    , Str "Axioma"
+    , SoftBreak
+    , Str "P4."
+    ]
+, Para
+    [ Str "La"
+    , Space
+    , Str "propiedad"
+    , Space
+    , Str "(6)"
+    , Space
+    , Str "ser\237a"
+    , Space
+    , Str "como"
+    , Space
+    , Str "un"
+    , Space
+    , Str "teorema"
+    , Space
+    , Str "de"
+    , Space
+    , Str "caracterizaci\243n"
+    , Space
+    , Str "de"
+    , Space
+    , Str "los"
+    , Space
+    , Str "semiplanos."
+    , SoftBreak
+    , Str "En"
+    , Space
+    , Str "cuanto"
+    , Space
+    , Str "a"
+    , Space
+    , Str "su"
+    , Space
+    , Str "demostraci\243n,"
+    , Space
+    , Str "advierta"
+    , Space
+    , Str "que,"
+    , Space
+    , Str "tal"
+    , Space
+    , Str "y"
+    , Space
+    , Str "como"
+    , Space
+    , Str "hemos"
+    , Space
+    , Str "comentado"
+    , SoftBreak
+    , Str "anteriormente,"
+    , Space
+    , Str "esos"
+    , Space
+    , Str "bicondicionales"
+    , Space
+    , Str "permiten"
+    , Space
+    , Str "ir"
+    , Space
+    , Str "en"
+    , Space
+    , Str "las"
+    , Space
+    , Str "dos"
+    , Space
+    , Str "direcciones"
+    , Space
+    , Str "en"
+    , Space
+    , Str "la"
+    , SoftBreak
+    , Str "demostraci\243n."
+    , Space
+    , Str "Por"
+    , Space
+    , Str "tanto,"
+    , Space
+    , Str "en"
+    , Space
+    , Str "esta"
+    , Space
+    , Str "\8212aunque"
+    , Space
+    , Str "quiz\225s"
+    , Space
+    , Str "no"
+    , Space
+    , Str "lo"
+    , Space
+    , Str "parezca\8212"
+    , Space
+    , Str "se"
+    , Space
+    , Str "est\225n"
+    , SoftBreak
+    , Str "demostrando"
+    , Space
+    , Str "las"
+    , Space
+    , Str "dos"
+    , Space
+    , Str "inclusiones"
+    , Space
+    , Str "de"
+    , Space
+    , Str "la"
+    , Space
+    , Str "igualdad"
+    , Space
+    , Str "que"
+    , Space
+    , Str "se"
+    , Space
+    , Str "desea"
+    , Space
+    , Str "demostrar;"
+    , SoftBreak
+    , Math InlineMath "\\subseteq"
+    , Space
+    , Str "y"
+    , Space
+    , Math InlineMath "\\supseteq"
+    , Str "."
+    , Space
+    , Str "Creo"
+    , Space
+    , Str "que,"
+    , Space
+    , Str "al"
+    , Space
+    , Str "ir"
+    , Space
+    , Str "de"
+    , Space
+    , Str "derecha"
+    , Space
+    , Str "a"
+    , Space
+    , Str "izquierda,"
+    , Space
+    , Str "nos"
+    , SoftBreak
+    , Str "podemos"
+    , Space
+    , Str "saltar"
+    , Space
+    , Str "el"
+    , Space
+    , Str "paso"
+    , Space
+    , Str "intermedio."
+    ]
+, Para
+    [ Str "En"
+    , Space
+    , Str "la"
+    , Space
+    , Str "demostraci\243n"
+    , Space
+    , Str "del"
+    , Space
+    , Strong [ Str "Teorema" , Space , Str "2.16" ]
+    , Space
+    , Str "("
+    , Quoted DoubleQuote [ Str "Axioma" ]
+    , Space
+    , Str "de"
+    , Space
+    , Str "Pasch),"
+    , Space
+    , Str "determina"
+    , Space
+    , Str "que"
+    , SoftBreak
+    , Str "los"
+    , Space
+    , Str "extremos"
+    , Space
+    , Str "de"
+    , Space
+    , Str "los"
+    , Space
+    , Str "lados"
+    , Space
+    , Str "est\225n"
+    , Space
+    , Str "en"
+    , Space
+    , Math InlineMath "H^1"
+    , Str ","
+    , Space
+    , Str "pues"
+    , Space
+    , Str "es"
+    , Space
+    , Str "algo"
+    , Space
+    , Str "que"
+    , Space
+    , Str "se"
+    , Space
+    , Str "puede"
+    , Space
+    , Str "hacer"
+    , SoftBreak
+    , Str "sin"
+    , Space
+    , Str "p\233rdida"
+    , Space
+    , Str "de"
+    , Space
+    , Str "generalidad."
+    ]
+, Para
+    [ Str "Me"
+    , Space
+    , Str "gustar\237a"
+    , Space
+    , Str "aclarar"
+    , Space
+    , Str "tambi\233n"
+    , Space
+    , Str "el"
+    , Space
+    , Str "\250ltimo"
+    , Space
+    , Str "paso"
+    , Space
+    , Str "de"
+    , Space
+    , Str "esta."
+    , Space
+    , Str "Llegamos"
+    , Space
+    , Str "a"
+    , Space
+    , Str "obtener"
+    , Space
+    , Math InlineMath "[P,\nQ] \\subseteq H^1"
+    , Str "."
+    , Space
+    , Str "A"
+    , Space
+    , Str "partir"
+    , Space
+    , Str "de"
+    , Space
+    , Str "esto,"
+    , Space
+    , Str "si"
+    , Space
+    , Str "tenemos"
+    , Space
+    , Str "en"
+    , Space
+    , Str "cuenta"
+    , Space
+    , Str "el"
+    , Space
+    , Str "punto"
+    , Space
+    , Str "(1)"
+    , Space
+    , Str "del"
+    , SoftBreak
+    , Str "Axioma"
+    , Space
+    , Str "P4,"
+    , Space
+    , Str "tenemos"
+    , Space
+    , Str "que"
+    , Space
+    , Str "para"
+    , Space
+    , Str "todo"
+    , Space
+    , Math InlineMath "X \\in [P, Q]"
+    , Space
+    , Str "se"
+    , Space
+    , Str "tiene"
+    , Space
+    , Str "que"
+    , Space
+    , Math InlineMath "X \\notin r"
+    , Str ","
+    , SoftBreak
+    , Str "o,"
+    , Space
+    , Str "lo"
+    , Space
+    , Str "que"
+    , Space
+    , Str "es"
+    , Space
+    , Str "lo"
+    , Space
+    , Str "mismo,"
+    , Space
+    , Str "no"
+    , Space
+    , Str "existe"
+    , Space
+    , Math InlineMath "X \\in [P, Q]"
+    , Space
+    , Str "tal"
+    , Space
+    , Str "que"
+    , Space
+    , Math InlineMath "X \\in r"
+    , Str ","
+    , Space
+    , Str "cosa"
+    , Space
+    , Str "que"
+    , SoftBreak
+    , Str "contradice"
+    , Space
+    , Str "la"
+    , Space
+    , Str "hip\243tesis"
+    , Space
+    , Str "de"
+    , Space
+    , Str "la"
+    , Space
+    , Str "que"
+    , Space
+    , Str "partimos."
+    ]
+, Header
+    3
+    ( "axiomas-sobre-isometr\237as" , [] , [] )
+    [ Str "Axiomas"
+    , Space
+    , Str "sobre"
+    , Space
+    , Str "isometr\237as"
+    ]
+, Para
+    [ Str "El"
+    , Space
+    , Strong [ Str "Teorema" , Space , Str "2.18" ]
+    , Space
+    , Str "engloba"
+    , Space
+    , Str "a"
+    , Space
+    , Str "varios"
+    , Space
+    , Str "en"
+    , Space
+    , Str "realidad."
+    , Space
+    , Str "Adem\225s,"
+    , Space
+    , Str "de"
+    , Space
+    , Str "la"
+    , Space
+    , Str "conservaci\243n"
+    , SoftBreak
+    , Str "de"
+    , Space
+    , Str "segmentos"
+    , Space
+    , Str "por"
+    , Space
+    , Str "isometr\237a,"
+    , Space
+    , Str "se"
+    , Space
+    , Str "deduce"
+    , Space
+    , Str "de"
+    , Space
+    , Str "forma"
+    , Space
+    , Str "directa"
+    , Space
+    , Str "la"
+    , Space
+    , Str "conservaci\243n"
+    , Space
+    , Str "de"
+    , SoftBreak
+    , Str "alineaciones,"
+    , Space
+    , Str "cosa"
+    , Space
+    , Str "que"
+    , Space
+    , Str "es"
+    , Space
+    , Str "evidente"
+    , Space
+    , Str "ya"
+    , Space
+    , Str "que,"
+    , Space
+    , Str "por"
+    , Space
+    , Str "la"
+    , Space
+    , Str "definici\243n"
+    , Space
+    , Str "de"
+    , Space
+    , Str "la"
+    , SoftBreak
+    , Str "alineaci\243n"
+    , Space
+    , Str "de"
+    , Space
+    , Str "tres"
+    , Space
+    , Str "puntos,"
+    , Space
+    , Str "uno"
+    , Space
+    , Str "estar\225"
+    , Space
+    , Str "en"
+    , Space
+    , Str "el"
+    , Space
+    , Str "segmento"
+    , Space
+    , Str "determinado"
+    , Space
+    , Str "por"
+    , Space
+    , Str "los"
+    , SoftBreak
+    , Str "otros"
+    , Space
+    , Str "dos."
+    , Space
+    , Str "Quiz\225s"
+    , Space
+    , Str "hubiera"
+    , Space
+    , Str "estado"
+    , Space
+    , Str "mejor"
+    , Space
+    , Str "que"
+    , Space
+    , Str "lo"
+    , Space
+    , Str "enunciaran"
+    , Space
+    , Str "tambi\233n"
+    , Space
+    , Str "fuera"
+    , Space
+    , Str "de"
+    , Space
+    , Str "la"
+    , SoftBreak
+    , Str "demostraci\243n."
+    ]
+, Para
+    [ Str "Me"
+    , Space
+    , Str "resulta"
+    , Space
+    , Str "bastante"
+    , Space
+    , Str "cr\237ptica"
+    , Space
+    , Str "la"
+    , Space
+    , Str "presentaci\243n"
+    , Space
+    , Str "de"
+    , Space
+    , Str "este"
+    , Space
+    , Str "teorema,"
+    , Space
+    , Str "al"
+    , Space
+    , Str "tratar"
+    , Space
+    , Str "de"
+    , SoftBreak
+    , Str "llevar"
+    , Space
+    , Str "al"
+    , Space
+    , Str "extremo"
+    , Space
+    , Str "el"
+    , Space
+    , Str "uso"
+    , Space
+    , Str "de"
+    , Space
+    , Str "la"
+    , Space
+    , Str "simbolog\237a"
+    , Space
+    , Str "matem\225tica."
+    , Space
+    , Str "A"
+    , Space
+    , Str "continuaci\243n"
+    , Space
+    , Str "lo"
+    , SoftBreak
+    , Str "presento"
+    , Space
+    , Str "con"
+    , Space
+    , Str "m\225s"
+    , Space
+    , Str "prosa;"
+    , Space
+    , Str "creo"
+    , Space
+    , Str "que"
+    , Space
+    , Str "sirve"
+    , Space
+    , Str "un"
+    , Space
+    , Str "poco"
+    , Space
+    , Str "para"
+    , Space
+    , Str "aclararlo."
+    ]
+, Div
+    ( ""
+    , [ "theorem" ]
+    , [ ( "data-label"
+        , "Teorema (de Conservaciones de Figuras por Isometr\237as)"
+        )
+      ]
+    )
+    [ Para
+        [ Str "Teorema"
+        , Space
+        , Quoted
+            DoubleQuote
+            [ Str "de"
+            , Space
+            , Str "Conservaciones"
+            , Space
+            , Str "de"
+            , Space
+            , Str "Figuras"
+            , Space
+            , Str "por"
+            , Space
+            , Str "Isometr\237as"
+            ]
+        , Space
+        , Str "Sean"
+        , Space
+        , Math InlineMath "A, B \\in\n  \\mathbf{P}"
+        , Str ","
+        , Space
+        , Math InlineMath "g \\in \\text{Isom}(\\mathbf{P}, d)"
+        , Space
+        , Str "y"
+        , Space
+        , Str "usando"
+        , Space
+        , Str "la"
+        , Space
+        , Str "notaci\243n"
+        , Space
+        , Str "de"
+        , SoftBreak
+        , Str "prima"
+        , Space
+        , Str "para"
+        , Space
+        , Str "un"
+        , Space
+        , Str "elemento"
+        , Space
+        , Str "transformado,"
+        , Space
+        , Str "por"
+        , Space
+        , Str "ejemplo,"
+        , Space
+        , Math InlineMath "X' = g(X)"
+        , Space
+        , Str "para"
+        , Space
+        , Str "un"
+        , SoftBreak
+        , Str "punto"
+        , Space
+        , Math InlineMath "X \\in \\mathbf{P}"
+        , Str ","
+        , Space
+        , Str "se"
+        , Space
+        , Str "tiene:"
+        ]
+    , OrderedList
+        ( 1 , Decimal , Period )
+        [ [ Para
+              [ Str "El"
+              , Space
+              , Str "conjunto"
+              , Space
+              , Str "transformado"
+              , Space
+              , Str "por"
+              , Space
+              , Str "una"
+              , Space
+              , Str "isometr\237a"
+              , Space
+              , Str "de"
+              , Space
+              , Str "un"
+              , Space
+              , Str "segmento"
+              , Space
+              , Str "es"
+              , Space
+              , Str "un"
+              , SoftBreak
+              , Str "segmento"
+              , Space
+              , Str "cuyos"
+              , Space
+              , Str "extremos"
+              , Space
+              , Str "son"
+              , Space
+              , Str "los"
+              , Space
+              , Str "puntos"
+              , Space
+              , Str "transformados"
+              , Space
+              , Str "de"
+              , Space
+              , Str "los"
+              , Space
+              , Str "extremos"
+              , SoftBreak
+              , Str "del"
+              , Space
+              , Str "original."
+              , Space
+              , Str "Es"
+              , Space
+              , Str "decir,"
+              ]
+          , Para [ Math DisplayMath " g([A, B]) = [g(A), g(B)] " ]
+          ]
+        , [ Para
+              [ Str "Si"
+              , Space
+              , Str "tres"
+              , Space
+              , Str "puntos"
+              , Space
+              , Str "est\225n"
+              , Space
+              , Str "alineados,"
+              , Space
+              , Str "entonces"
+              , Space
+              , Str "sus"
+              , Space
+              , Str "transformados"
+              , Space
+              , Str "por"
+              , Space
+              , Str "una"
+              , SoftBreak
+              , Str "isometr\237a"
+              , Space
+              , Str "tambi\233n"
+              , Space
+              , Str "est\225n"
+              , Space
+              , Str "alineados"
+              , Space
+              , Str "entre"
+              , Space
+              , Str "s\237."
+              ]
+          ]
+        , [ Para
+              [ Str "El"
+              , Space
+              , Str "conjunto"
+              , Space
+              , Str "transformado"
+              , Space
+              , Str "por"
+              , Space
+              , Str "una"
+              , Space
+              , Str "isometr\237a"
+              , Space
+              , Str "de"
+              , Space
+              , Str "la"
+              , Space
+              , Str "(\250nica)"
+              , Space
+              , Str "recta"
+              , Space
+              , Str "que"
+              , Space
+              , Str "pasa"
+              , SoftBreak
+              , Str "por"
+              , Space
+              , Str "dos"
+              , Space
+              , Str "puntos"
+              , Space
+              , Str "es"
+              , Space
+              , Str "la"
+              , Space
+              , Str "\250nica"
+              , Space
+              , Str "recta"
+              , Space
+              , Str "que"
+              , Space
+              , Str "pasa"
+              , Space
+              , Str "por"
+              , Space
+              , Str "los"
+              , Space
+              , Str "transformados"
+              , Space
+              , Str "de"
+              , Space
+              , Str "esos"
+              , SoftBreak
+              , Str "dos"
+              , Space
+              , Str "puntos."
+              , Space
+              , Str "Es"
+              , Space
+              , Str "decir,"
+              ]
+          , Para [ Math DisplayMath " g(r_{AB}) = r_{A' B'} " ]
+          ]
+        , [ Para
+              [ Str "Los"
+              , Space
+              , Str "conjuntos"
+              , Space
+              , Str "transformados"
+              , Space
+              , Str "por"
+              , Space
+              , Str "una"
+              , Space
+              , Str "isometr\237a"
+              , Space
+              , Str "de"
+              , Space
+              , Str "los"
+              , Space
+              , Str "semiplanos"
+              , SoftBreak
+              , Str "determinados"
+              , Space
+              , Str "a"
+              , Space
+              , Str "partir"
+              , Space
+              , Str "de"
+              , Space
+              , Str "una"
+              , Space
+              , Str "recta"
+              , Space
+              , Str "son"
+              , Space
+              , Str "los"
+              , Space
+              , Str "semiplanos"
+              , Space
+              , Str "que"
+              , Space
+              , Str "define"
+              , Space
+              , Str "la"
+              , SoftBreak
+              , Str "recta"
+              , Space
+              , Str "transformada"
+              , Space
+              , Str "de"
+              , Space
+              , Str "la"
+              , Space
+              , Str "original."
+              , Space
+              , Str "Es"
+              , Space
+              , Str "decir,"
+              , Space
+              , Str "para"
+              , Space
+              , Str "los"
+              , Space
+              , Str "semiplanos"
+              , SoftBreak
+              , Math InlineMath "H_{r}^1"
+              , Space
+              , Str "y"
+              , Space
+              , Math InlineMath "H_{r}^2"
+              , Space
+              , Str "determinados"
+              , Space
+              , Str "a"
+              , Space
+              , Str "partir"
+              , Space
+              , Str "de"
+              , Space
+              , Str "una"
+              , Space
+              , Str "recta"
+              , Space
+              , Math InlineMath "r"
+              , Str ","
+              , Space
+              , Str "se"
+              , Space
+              , Str "tiene"
+              , SoftBreak
+              , Str "que"
+              ]
+          , Para
+              [ Math
+                  DisplayMath
+                  " g(\\{H_r^1, H_r^2\\}) = \\{ H_{r'}^1, H_{r'}^2\\} "
+              ]
+          ]
+        ]
+    ]
+, Para
+    [ Str "Advierta"
+    , Space
+    , Str "que"
+    , Space
+    , Str "en"
+    , Space
+    , Str "estas"
+    , Space
+    , Str "demostraciones"
+    , Space
+    , Str "hay"
+    , Space
+    , Str "que"
+    , Space
+    , Str "ir"
+    , Space
+    , Str "en"
+    , Space
+    , Str "los"
+    , Space
+    , Str "dos"
+    , Space
+    , Str "sentidos,"
+    , Space
+    , Str "como"
+    , Space
+    , Str "se"
+    , SoftBreak
+    , Str "hizo"
+    , Space
+    , Str "antes."
+    , Space
+    , Str "As\237,"
+    , Space
+    , Str "demostramos"
+    , Space
+    , Str "tanto"
+    , Space
+    , Str "la"
+    , Space
+    , Str "parte"
+    , Space
+    , Math InlineMath "\\subseteq"
+    , Space
+    , Str "como"
+    , Space
+    , Math InlineMath "\\supseteq"
+    , Str "."
+    ]
+, Para
+    [ Str "Tambi\233n,"
+    , Space
+    , Str "debe"
+    , Space
+    , Str "tener"
+    , Space
+    , Str "en"
+    , Space
+    , Str "cuenta"
+    , Space
+    , Str "que"
+    , Space
+    , Str "en"
+    , Space
+    , Str "las"
+    , Space
+    , Str "distintas"
+    , Space
+    , Str "demostraciones"
+    , Space
+    , Str "se"
+    , Space
+    , Str "hace"
+    , SoftBreak
+    , Str "uso"
+    , Space
+    , Str "tambi\233n"
+    , Space
+    , Str "de"
+    , Space
+    , Str "los"
+    , Space
+    , Str "puntos"
+    , Space
+    , Str "anteriores"
+    , Space
+    , Str "de"
+    , Space
+    , Str "la"
+    , Space
+    , Str "misma."
+    ]
+, Para
+    [ Str "Me"
+    , Space
+    , Str "gustar\237a"
+    , Space
+    , Str "aclarar"
+    , Space
+    , Str "algo"
+    , Space
+    , Str "de"
+    , Space
+    , Str "la"
+    , Space
+    , Str "primera"
+    , Space
+    , Str "de"
+    , Space
+    , Str "las"
+    , Space
+    , Str "demostraciones,"
+    , Space
+    , Str "pero"
+    , Space
+    , Str "que"
+    , Space
+    , Str "sirve"
+    , SoftBreak
+    , Str "para"
+    , Space
+    , Str "las"
+    , Space
+    , Str "dem\225s."
+    , Space
+    , Str "En"
+    , Space
+    , Str "las"
+    , Space
+    , Str "demostraciones"
+    , Space
+    , Str "se"
+    , Space
+    , Str "usan"
+    , Space
+    , Str "equivalencias,"
+    , Space
+    , Str "o,"
+    , Space
+    , Str "lo"
+    , Space
+    , Str "que"
+    , Space
+    , Str "es"
+    , Space
+    , Str "lo"
+    , SoftBreak
+    , Str "mismo,"
+    , Space
+    , Str "bicondicionales,"
+    , Space
+    , Str "por"
+    , Space
+    , Str "lo"
+    , Space
+    , Str "que,"
+    , Space
+    , Str "como"
+    , Space
+    , Str "hemos"
+    , Space
+    , Str "dicho,"
+    , Space
+    , Str "se"
+    , Space
+    , Str "puede"
+    , Space
+    , Str "leer"
+    , Space
+    , Str "en"
+    , Space
+    , Str "los"
+    , SoftBreak
+    , Str "dos"
+    , Space
+    , Str "sentidos:"
+    , Space
+    , Str "de"
+    , Space
+    , Str "izquierda"
+    , Space
+    , Str "a"
+    , Space
+    , Str "derecha"
+    , Space
+    , Str "y"
+    , Space
+    , Str "tambi\233n"
+    , Space
+    , Str "de"
+    , Space
+    , Str "derecha"
+    , Space
+    , Str "a"
+    , Space
+    , Str "izquierda."
+    , Space
+    , Str "As\237"
+    , SoftBreak
+    , Str "se"
+    , Space
+    , Str "demuestra"
+    , Space
+    , Str "escribi\233ndolo"
+    , Space
+    , Str "una"
+    , Space
+    , Str "sola"
+    , Space
+    , Str "vez."
+    , Space
+    , Str "El"
+    , Space
+    , Str "problema"
+    , Space
+    , Str "que"
+    , Space
+    , Str "le"
+    , Space
+    , Str "encuentro"
+    , Space
+    , Str "es"
+    , Space
+    , Str "que"
+    , SoftBreak
+    , Str "creo"
+    , Space
+    , Str "que"
+    , Space
+    , Str "falta"
+    , Space
+    , Str "una"
+    , Space
+    , Str "equivalencia"
+    , Space
+    , Str "a"
+    , Space
+    , Str "la"
+    , Space
+    , Str "izquierda"
+    , Space
+    , Str "de"
+    , Space
+    , Str "todo,"
+    , Space
+    , Str "para"
+    , Space
+    , Str "que"
+    , Space
+    , Str "quede"
+    , Space
+    , Str "m\225s"
+    , SoftBreak
+    , Str "claro."
+    , Space
+    , Str "Lo"
+    , Space
+    , Str "pongo"
+    , Space
+    , Str "para"
+    , Space
+    , Str "la"
+    , Space
+    , Str "primera"
+    , Space
+    , Str "de"
+    , Space
+    , Str "estas"
+    , Space
+    , Str "demostraciones:"
+    ]
+, Para
+    [ Math
+        DisplayMath
+        " g(X) \\in g([A, B]) \\quad \\Longleftrightarrow \\quad X \\in [A, B] "
+    ]
+, Para
+    [ Str "As\237,"
+    , Space
+    , Str "tiene"
+    , Space
+    , Str "sentido"
+    , Space
+    , Str "aplicar"
+    , Space
+    , Str "la"
+    , Space
+    , Str "definici\243n"
+    , Space
+    , Str "de"
+    , Space
+    , Emph [ Str "subconjunto" ]
+    , Str "."
+    ]
+, Para
+    [ Str "Tambi\233n,"
+    , Space
+    , Str "en"
+    , Space
+    , Str "la"
+    , Space
+    , Str "demostraci\243n"
+    , Space
+    , Str "del"
+    , Space
+    , Str "\250ltimo"
+    , Space
+    , Str "punto"
+    , Space
+    , Str "(el"
+    , Space
+    , Str "de"
+    , Space
+    , Str "los"
+    , Space
+    , Str "semiplanos),"
+    , Space
+    , Str "se"
+    , Space
+    , Str "usa"
+    , SoftBreak
+    , Str "un"
+    , Space
+    , Str "resultado"
+    , Space
+    , Str "de"
+    , Space
+    , Str "la"
+    , Space
+    , Str "teor\237a"
+    , Space
+    , Str "de"
+    , Space
+    , Str "conjuntos"
+    , Space
+    , Str "que"
+    , Space
+    , Str "no"
+    , Space
+    , Str "se"
+    , Space
+    , Str "explica"
+    , Space
+    , Str "en"
+    , Space
+    , Str "el"
+    , Space
+    , Str "texto."
+    , Space
+    , Str "En"
+    , SoftBreak
+    , Str "concreto,"
+    , Space
+    , Str "se"
+    , Space
+    , Str "trata"
+    , Space
+    , Str "de"
+    , Space
+    , Str "la"
+    , Space
+    , Str "primera"
+    , Space
+    , Str "equivalencia"
+    , Space
+    , Str "que"
+    , Space
+    , Str "se"
+    , Space
+    , Str "presenta."
+    , Space
+    , Str "Partimos"
+    , Space
+    , Str "de"
+    ]
+, Para
+    [ Math DisplayMath " [X, Y] \\cap r_{AB} = \\emptyset " ]
+, Para
+    [ Str "Haciendo"
+    , Space
+    , Str "la"
+    , Space
+    , Str "isometr\237a,"
+    , Space
+    , Str "tenemos"
+    ]
+, Para
+    [ Math
+        DisplayMath " g([X, Y] \\cap r_{AB}) = g(\\emptyset) "
+    ]
+, Para
+    [ Str "Por"
+    , Space
+    , Str "un"
+    , Space
+    , Str "lado,"
+    , Space
+    , Str "se"
+    , Space
+    , Str "tiene"
+    , Space
+    , Str "que"
+    , Space
+    , Math InlineMath "g(\\emptyset) = \\emptyset"
+    , Str ","
+    , Space
+    , Str "por"
+    , Space
+    , Str "las"
+    , Space
+    , Str "propiedades"
+    , Space
+    , Str "de"
+    , SoftBreak
+    , Str "las"
+    , Space
+    , Str "aplicaciones."
+    , Space
+    , Str "Por"
+    , Space
+    , Str "otro,"
+    , Space
+    , Str "por"
+    , Space
+    , Str "las"
+    , Space
+    , Str "propiedades"
+    , Space
+    , Str "de"
+    , Space
+    , Str "las"
+    , Space
+    , Str "aplicaciones"
+    , SoftBreak
+    , Str "inyectivas,"
+    , Space
+    , Str "se"
+    , Space
+    , Str "tiene"
+    , Space
+    , Str "que"
+    ]
+, Para
+    [ Math
+        DisplayMath
+        " g([X, Y] \\cap r_{AB}) = g([X, Y]) \\cap g(r_{AB}) "
+    ]
+, Para
+    [ Str "Si"
+    , Space
+    , Str "no"
+    , Space
+    , Str "le"
+    , Space
+    , Str "convence"
+    , Space
+    , Str "con"
+    , Space
+    , Str "simplemente"
+    , Space
+    , Str "mencionarlo,"
+    , Space
+    , Str "en"
+    , Space
+    , Str "el"
+    , Space
+    , Str "Ap\233ndice"
+    , Space
+    , Str "TKTK"
+    , Space
+    , Str "presento"
+    , SoftBreak
+    , Str "este"
+    , Space
+    , Str "teorema,"
+    , Space
+    , Str "junto"
+    , Space
+    , Str "con"
+    , Space
+    , Str "otros"
+    , Space
+    , Str "que"
+    , Space
+    , Str "usa"
+    , Space
+    , Str "como"
+    , Space
+    , Str "base,"
+    , Space
+    , Str "con"
+    , Space
+    , Str "sus"
+    , Space
+    , Str "demostraciones"
+    , SoftBreak
+    , Str "respectivas,"
+    , Space
+    , Str "aunque"
+    , Space
+    , Str "esta"
+    , Space
+    , Str "materia"
+    , Space
+    , Str "pertenecer\237a"
+    , Space
+    , Str "a"
+    , Space
+    , Str "la"
+    , Space
+    , Str "teor\237a"
+    , Space
+    , Str "de"
+    , Space
+    , Str "conjuntos."
+    ]
+, Para
+    [ Str "Existen"
+    , Space
+    , Str "otros"
+    , Space
+    , Str "resultados"
+    , Space
+    , Str "de"
+    , Space
+    , Str "conservaci\243n"
+    , Space
+    , Str "por"
+    , Space
+    , Str "isometr\237as"
+    , Space
+    , Str "que"
+    , Space
+    , Str "no"
+    , Space
+    , Str "se"
+    , Space
+    , Str "presentan"
+    , SoftBreak
+    , Str "en"
+    , Space
+    , Str "el"
+    , Space
+    , Str "texto"
+    , Space
+    , Str "pero"
+    , Space
+    , Str "que"
+    , Space
+    , Str "creo"
+    , Space
+    , Str "que"
+    , Space
+    , Str "son"
+    , Space
+    , Str "relevantes"
+    , Space
+    , Str "para"
+    , Space
+    , Str "tener"
+    , Space
+    , Str "como"
+    , Space
+    , Str "herramientas"
+    , SoftBreak
+    , Str "para"
+    , Space
+    , Str "otras"
+    , Space
+    , Str "demostraciones"
+    , Space
+    , Str "o"
+    , Space
+    , Str "problemas."
+    ]
+, Para
+    [ Str "Por"
+    , Space
+    , Str "ejemplo,"
+    , Space
+    , Str "uno"
+    , Space
+    , Str "viene"
+    , Space
+    , Str "a"
+    , Space
+    , Str "decir"
+    , Space
+    , Str "que,"
+    , Space
+    , Str "dado"
+    , Space
+    , Str "un"
+    , Space
+    , Str "segmento,"
+    , Space
+    , Str "el"
+    , Space
+    , Str "transformado"
+    , Space
+    , Str "por"
+    , SoftBreak
+    , Str "una"
+    , Space
+    , Str "isometr\237a"
+    , Space
+    , Str "de"
+    , Space
+    , Str "su"
+    , Space
+    , Str "punto"
+    , Space
+    , Str "medio"
+    , Space
+    , Str "es"
+    , Space
+    , Str "el"
+    , Space
+    , Str "punto"
+    , Space
+    , Str "medio"
+    , Space
+    , Str "de"
+    , Space
+    , Str "su"
+    , Space
+    , Str "segmento"
+    , SoftBreak
+    , Str "transformado."
+    , Space
+    , Str "O,"
+    , Space
+    , Str "de"
+    , Space
+    , Str "forma"
+    , Space
+    , Str "m\225s"
+    , Space
+    , Str "simb\243lica,"
+    , Space
+    , Str "como"
+    , Space
+    , Str "expresamos"
+    , Space
+    , Str "a"
+    , Space
+    , Str "continuaci\243n."
+    ]
+, Div
+    ( ""
+    , [ "theorem" ]
+    , [ ( "data-label"
+        , "Teorema (de la Conservaci\243n del Punto Medio de un Segmento por Isometr\237a)"
+        )
+      ]
+    )
+    [ Para
+        [ Str "Dado"
+        , Space
+        , Str "un"
+        , Space
+        , Str "segmento"
+        , Space
+        , Math InlineMath "[A, B]"
+        , Space
+        , Str "y"
+        , Space
+        , Str "una"
+        , Space
+        , Str "isometr\237a"
+        , Space
+        , Math InlineMath "g \\in \\text{Isom}(\\mathbf{P},\n  d)"
+        , Str ","
+        , Space
+        , Str "se"
+        , Space
+        , Str "tiene"
+        , Space
+        , Str "que"
+        ]
+    , Para
+        [ Math
+            DisplayMath
+            " g(\\text{medio}[A, B]) = \\text{medio}[g(A), g(B)] "
+        ]
+    ]
+, Div
+    ( "" , [ "proof" ] , [] )
+    [ Para
+        [ Str "Primero,"
+        , Space
+        , Str "demostraremos"
+        , Space
+        , Str "la"
+        , Space
+        , Str "parte"
+        , Space
+        , Math InlineMath "\\subseteq"
+        , Str "."
+        ]
+    , Para
+        [ Str "Por"
+        , Space
+        , Str "la"
+        , Space
+        , Str "conservaci\243n"
+        , Space
+        , Str "de"
+        , Space
+        , Str "segmentos"
+        , Space
+        , Str "por"
+        , Space
+        , Str "isometr\237as,"
+        , Space
+        , Str "es"
+        , Space
+        , Str "decir,"
+        , Space
+        , Str "de"
+        , Space
+        , Str "la"
+        , Space
+        , Str "primera"
+        , SoftBreak
+        , Str "parte"
+        , Space
+        , Str "del"
+        , Space
+        , Strong [ Str "Teorema" , Space , Str "2.18" ]
+        , Str ","
+        , Space
+        , Str "se"
+        , Space
+        , Str "tiene"
+        , Space
+        , Str "que"
+        , Space
+        , Math InlineMath "g(M) \\in \\lbrack A',B'\\rbrack"
+        , Str "."
+        , SoftBreak
+        , Str "Le"
+        , Space
+        , Str "recuerdo"
+        , Space
+        , Str "que"
+        , Space
+        , Str "usamos"
+        , Space
+        , Str "la"
+        , Space
+        , Str "notaci\243n"
+        , Space
+        , Math InlineMath "X' = g(X)"
+        , Space
+        , Str "para"
+        , Space
+        , Str "un"
+        , Space
+        , Str "punto"
+        , Space
+        , Str "cualquiera"
+        , Space
+        , Math InlineMath "X\n  \\in \\mathbf{P}"
+        , Str ","
+        , Space
+        , Str "al"
+        , Space
+        , Str "igual"
+        , Space
+        , Str "que"
+        , Space
+        , Str "se"
+        , Space
+        , Str "hace"
+        , Space
+        , Str "en"
+        , Space
+        , Str "el"
+        , Space
+        , Str "libro."
+        ]
+    , Para
+        [ Str "Por"
+        , Space
+        , Str "la"
+        , Space
+        , Str "conservaci\243n"
+        , Space
+        , Str "de"
+        , Space
+        , Str "distancias"
+        , Space
+        , Str "en"
+        , Space
+        , Math InlineMath "g"
+        , Space
+        , Str "se"
+        , Space
+        , Str "tiene"
+        , Space
+        , Str "que"
+        ]
+    , Para
+        [ Math
+            DisplayMath
+            "\\begin{array}{r}\n    d(M, A) &= d(g(M), A') \\\\\n    d(M, B) &= d(g(M), B')\n  \\end{array}"
+        ]
+    , Para
+        [ Str "Adem\225s,"
+        , Space
+        , Str "por"
+        , Space
+        , Str "la"
+        , Space
+        , Str "definici\243n"
+        , Space
+        , Str "de"
+        , Space
+        , Emph
+            [ Str "punto"
+            , Space
+            , Str "medio"
+            , Space
+            , Str "de"
+            , Space
+            , Str "un"
+            , Space
+            , Str "segmento"
+            ]
+        , Str ","
+        , Space
+        , Str "se"
+        , Space
+        , Str "tiene"
+        , Space
+        , Str "que"
+        ]
+    , Para [ Math DisplayMath " d(M, A) = d(M, B) " ]
+    , Para
+        [ Str "con"
+        , Space
+        , Str "lo"
+        , Space
+        , Str "que"
+        , Space
+        , Str "tenemos"
+        , Space
+        , Str "que"
+        ]
+    , Para [ Math DisplayMath " d(g(M), A') = d(g(M), B') " ]
+    , Para
+        [ Str "pero"
+        , Space
+        , Str "esto"
+        , Space
+        , Str "es"
+        , Space
+        , Str "la"
+        , Space
+        , Str "condici\243n"
+        , Space
+        , Str "para"
+        , Space
+        , Str "que"
+        , Space
+        , Math
+            InlineMath "g(M) = \\text{ medio}\\lbrack\n  A',B'\\rbrack"
+        , Str "."
+        , Space
+        , Str "Por"
+        , Space
+        , Str "cierto,"
+        , Space
+        , Str "aunque"
+        , Space
+        , Str "es"
+        , Space
+        , Str "evidente,"
+        , Space
+        , Str "deseo"
+        , Space
+        , Str "aclarar"
+        , Space
+        , Str "que,"
+        , Space
+        , Str "como"
+        , SoftBreak
+        , Math InlineMath "\\lbrack A',B'\\rbrack"
+        , Space
+        , Str "es"
+        , Space
+        , Str "un"
+        , Space
+        , Str "segmento,"
+        , Space
+        , Str "tal"
+        , Space
+        , Str "y"
+        , Space
+        , Str "como"
+        , Space
+        , Str "se"
+        , Space
+        , Str "muestra"
+        , Space
+        , Str "en"
+        , Space
+        , Str "el"
+        , Space
+        , Str "Teorema"
+        , SoftBreak
+        , Str "2.18,"
+        , Space
+        , Str "el"
+        , Space
+        , Str "punto"
+        , Space
+        , Str "que"
+        , Space
+        , Str "equidista"
+        , Space
+        , Str "de"
+        , Space
+        , Str "sus"
+        , Space
+        , Str "extremos"
+        , Space
+        , Str "ser\225"
+        , Space
+        , Str "\250nico,"
+        , Space
+        , Str "por"
+        , Space
+        , Str "la"
+        , SoftBreak
+        , Str "Observaci\243n"
+        , Space
+        , Str "2.8"
+        , Space
+        , Str "(i)."
+        ]
+    , Para
+        [ Str "Ahora,"
+        , Space
+        , Str "demostraremos"
+        , Space
+        , Str "la"
+        , Space
+        , Str "parte"
+        , Space
+        , Math InlineMath "\\supseteq"
+        , Str ","
+        , Space
+        , Str "es"
+        , Space
+        , Str "decir"
+        ]
+    , Para
+        [ Math
+            DisplayMath
+            "\\text{ medio}\\lbrack A',B'\\rbrack \\subseteq g\\left( \\text{medio}\\lbrack A,B\\rbrack \\right)"
+        ]
+    , Para
+        [ Str "Partimos"
+        , Space
+        , Str "de"
+        , Space
+        , Math
+            InlineMath "g(M) = \\text{ medio}\\lbrack A',B'\\rbrack"
+        , Str "."
+        , Space
+        , Str "Por"
+        , Space
+        , Str "la"
+        , SoftBreak
+        , Str "definici\243n"
+        , Space
+        , Str "del"
+        , Space
+        , Emph
+            [ Str "punto"
+            , Space
+            , Str "medio"
+            , Space
+            , Str "de"
+            , Space
+            , Str "un"
+            , Space
+            , Str "segmento"
+            ]
+        , Str ","
+        , Space
+        , Str "se"
+        , Space
+        , Str "tiene"
+        , Space
+        , Str "que"
+        ]
+    , Para
+        [ Math
+            DisplayMath
+            "d\\left( g(M),A' \\right) = d\\left( g(M),B' \\right)"
+        ]
+    , Para
+        [ Str "Por"
+        , Space
+        , Str "ser"
+        , Space
+        , Math InlineMath "g"
+        , Space
+        , Str "una"
+        , Space
+        , Str "isometr\237a,"
+        , Space
+        , Str "se"
+        , Space
+        , Str "tiene"
+        , Space
+        , Str "que"
+        ]
+    , Para
+        [ Math
+            DisplayMath
+            "\\begin{array}{r}\n  d\\left( g(M),A' \\right) = d(M,A) \\\\\n  d\\left( g(M),B' \\right) = d(M,B)\n  \\end{array}"
+        ]
+    , Para
+        [ Str "Adem\225s,"
+        , Space
+        , Str "por"
+        , Space
+        , Str "la"
+        , Space
+        , Str "inyectividad"
+        , Space
+        , Str "de"
+        , Space
+        , Str "las"
+        , Space
+        , Str "isometr\237as,"
+        , Space
+        , Str "ese"
+        , Space
+        , Math InlineMath "M"
+        , Space
+        , Str "es"
+        , Space
+        , Str "\250nico."
+        , Space
+        , Str "De"
+        , Space
+        , Str "lo"
+        , SoftBreak
+        , Str "anterior"
+        , Space
+        , Str "tenemos"
+        , Space
+        , Str "que"
+        ]
+    , Para [ Math DisplayMath "d(M,A) = d(M,B)" ]
+    , Para [ Str "Por" , Space , Str "tanto," ]
+    , Para
+        [ Math DisplayMath "M = \\text{ medio}\\lbrack A,B\\rbrack"
+        ]
+    , Para [ Str "y," , Space , Str "entonces," ]
+    , Para
+        [ Math
+            DisplayMath
+            "g(M) = g\\left( \\text{medio}\\lbrack A,B\\rbrack \\right)"
+        ]
+    ]
+, Para
+    [ Str "Podr\237a"
+    , Space
+    , Str "haber"
+    , Space
+    , Str "presentado"
+    , Space
+    , Str "esta"
+    , Space
+    , Str "demostraci\243n"
+    , Space
+    , Str "en"
+    , Space
+    , Str "el"
+    , Space
+    , Str "estilo"
+    , Space
+    , Str "del"
+    , Space
+    , Str "libro,"
+    , Space
+    , Str "es"
+    , SoftBreak
+    , Str "decir,"
+    , Space
+    , Str "encadenando"
+    , Space
+    , Str "bicondicionales,"
+    , Space
+    , Math InlineMath "\\Longleftrightarrow"
+    , Str ","
+    , Space
+    , Str "pero"
+    , Space
+    , Str "deseo"
+    , SoftBreak
+    , Str "que"
+    , Space
+    , Str "quede"
+    , Space
+    , Str "al"
+    , Space
+    , Str "menos"
+    , Space
+    , Str "una"
+    , Space
+    , Str "explicaci\243n"
+    , Space
+    , Str "con"
+    , Space
+    , Str "mayor"
+    , Space
+    , Str "detalle,"
+    , Space
+    , Str "por"
+    , Space
+    , Str "si"
+    , Space
+    , Str "el"
+    , Space
+    , Str "lector"
+    , SoftBreak
+    , Str "no"
+    , Space
+    , Str "las"
+    , Space
+    , Str "entiende."
+    ]
+, Para
+    [ Str "Alternativamente,"
+    , Space
+    , Str "se"
+    , Space
+    , Str "podr\237a"
+    , Space
+    , Str "haber"
+    , Space
+    , Str "usado"
+    , Space
+    , Str "el"
+    , Space
+    , Str "Axioma"
+    , Space
+    , Str "P3"
+    , Space
+    , Str "para"
+    , Space
+    , Str "esta"
+    , SoftBreak
+    , Str "demostraci\243n."
+    ]
+, Para
+    [ Str "Ahora,"
+    , Space
+    , Str "veamos"
+    , Space
+    , Str "un"
+    , Space
+    , Str "resultado"
+    , Space
+    , Str "de"
+    , Space
+    , Str "las"
+    , Space
+    , Str "isometr\237as"
+    , Space
+    , Str "para"
+    , Space
+    , Str "dos"
+    , Space
+    , Str "rectas"
+    , Space
+    , Str "secantes."
+    , SoftBreak
+    , Str "Viene"
+    , Space
+    , Str "a"
+    , Space
+    , Str "decir"
+    , Space
+    , Str "que,"
+    , Space
+    , Str "dadas"
+    , Space
+    , Str "dos"
+    , Space
+    , Str "rectas"
+    , Space
+    , Str "secantes,"
+    , Space
+    , Str "su"
+    , Space
+    , Str "transformada"
+    , Space
+    , Str "por"
+    , Space
+    , Str "una"
+    , SoftBreak
+    , Str "isometr\237a"
+    , Space
+    , Str "son"
+    , Space
+    , Str "dos"
+    , Space
+    , Str "rectas"
+    , Space
+    , Str "secantes"
+    , Space
+    , Str "cuyo"
+    , Space
+    , Str "punto"
+    , Space
+    , Str "de"
+    , Space
+    , Str "corte"
+    , Space
+    , Str "es"
+    , Space
+    , Str "el"
+    , Space
+    , Str "punto"
+    , SoftBreak
+    , Str "transformado"
+    , Space
+    , Str "por"
+    , Space
+    , Str "la"
+    , Space
+    , Str "isometr\237a"
+    , Space
+    , Str "del"
+    , Space
+    , Str "punto"
+    , Space
+    , Str "de"
+    , Space
+    , Str "corte"
+    , Space
+    , Str "de"
+    , Space
+    , Str "las"
+    , Space
+    , Str "mismas."
+    ]
+, Para
+    [ Str "Teorema"
+    , Space
+    , Quoted
+        DoubleQuote
+        [ Str "de"
+        , Space
+        , Str "la"
+        , Space
+        , Str "Isometr\237a"
+        , Space
+        , Str "de"
+        , Space
+        , Str "Dos"
+        , Space
+        , Str "Rectas"
+        , Space
+        , Str "Secantes"
+        ]
+    , Str ")["
+    , Space
+    , Str "Dadas"
+    , Space
+    , Str "dos"
+    , Space
+    , Str "rectas"
+    , Space
+    , Math InlineMath "r"
+    , SoftBreak
+    , Str "y"
+    , Space
+    , Math InlineMath "s"
+    , Space
+    , Str "secantes"
+    , Space
+    , Str "con"
+    , Space
+    , Str "punto"
+    , Space
+    , Str "de"
+    , Space
+    , Str "corte"
+    , Space
+    , Math InlineMath "V \\in \\mathbf{P}"
+    , Space
+    , Str "y"
+    , Space
+    , Str "una"
+    , Space
+    , Str "isometr\237a"
+    , SoftBreak
+    , Math
+        InlineMath
+        "g \\in \\text{ Isom}\\left( \\mathbf{R},d \\right)"
+    , Str ","
+    , Space
+    , Str "se"
+    , Space
+    , Str "tiene"
+    , Space
+    , Str "que"
+    ]
+, Para [ Math DisplayMath "g(r)\\text{ inter }g(s) = g(V)" ]
+, Para
+    [ Strong [ Emph [ Str "Demostraci\243n" ] ]
+    , Str "\160\8212"
+    , Space
+    , Str "Lo"
+    , Space
+    , Str "primero"
+    , Space
+    , Str "que"
+    , Space
+    , Str "debe"
+    , Space
+    , Str "comprobarse"
+    , Space
+    , Str "es"
+    , Space
+    , Str "que"
+    , Space
+    , Math InlineMath "g(r)"
+    , Space
+    , Str "y"
+    , SoftBreak
+    , Math InlineMath "g(s)"
+    , Space
+    , Str "son"
+    , Space
+    , Str "rectas,"
+    , Space
+    , Str "por"
+    , Space
+    , Str "el"
+    , Space
+    , Str "Teorema"
+    , Space
+    , Str "2.18."
+    ]
+, Para
+    [ Str "Evidentemente,"
+    , Space
+    , Math InlineMath "g(V) \\in g(r)\\text{ inter }g(s)"
+    , Str ","
+    , Space
+    , Str "ya"
+    , Space
+    , Str "que,"
+    , Space
+    , Str "por"
+    , Space
+    , Str "ejemplo,"
+    , SoftBreak
+    , Str "por"
+    , Space
+    , Str "darse"
+    , Space
+    , Math InlineMath "V \\in r"
+    , Str ","
+    , Space
+    , Str "se"
+    , Space
+    , Str "tiene"
+    , Space
+    , Str "que"
+    , Space
+    , Math InlineMath "g(V) \\in g(r)"
+    , Str "."
+    ]
+, Para
+    [ Str "De"
+    , Space
+    , Math InlineMath "V \\in r\\text{ inter }s"
+    , Space
+    , Str "se"
+    , Space
+    , Str "deduce"
+    , Space
+    , Str "que"
+    , Space
+    , Math InlineMath "V \\in r"
+    , Space
+    , Str "y"
+    , Space
+    , Math InlineMath "V \\in s"
+    , Str ","
+    , Space
+    , Str "y,"
+    , Space
+    , Str "de"
+    , SoftBreak
+    , Str "esto,"
+    , Space
+    , Str "a"
+    , Space
+    , Str "su"
+    , Space
+    , Str "vez,"
+    , Space
+    , Str "que"
+    , Space
+    , Math InlineMath "g(V) \\in g(r)"
+    , Space
+    , Str "y"
+    , Space
+    , Math InlineMath "g(V) \\in g(r)"
+    , Str ","
+    , Space
+    , Str "o,"
+    , Space
+    , Str "lo"
+    , Space
+    , Str "que"
+    , Space
+    , Str "es"
+    , Space
+    , Str "lo"
+    , SoftBreak
+    , Str "mismo,"
+    , Space
+    , Math InlineMath "g(V) \\in g(r)\\text{ inter }g(s)"
+    , Str "."
+    ]
+, Para
+    [ Str "Al"
+    , Space
+    , Str "tener"
+    , Space
+    , Math InlineMath "g(r)"
+    , Space
+    , Str "y"
+    , Space
+    , Math InlineMath "g(s)"
+    , Space
+    , Str "al"
+    , Space
+    , Str "menos"
+    , Space
+    , Str "un"
+    , Space
+    , Str "punto"
+    , Space
+    , Str "en"
+    , Space
+    , Str "com\250n,"
+    , Space
+    , Str "no"
+    , Space
+    , Str "pueden"
+    , Space
+    , Str "ser"
+    , SoftBreak
+    , Str "paralelas"
+    , Space
+    , Str "no"
+    , Space
+    , Str "coincidentes;"
+    , Space
+    , Str "aunque"
+    , Space
+    , Str "s\237"
+    , Space
+    , Str "pueden"
+    , Space
+    , Str "ser"
+    , Space
+    , Str "coincidentes."
+    , Space
+    , Str "Veamos"
+    , Space
+    , Str "que"
+    , SoftBreak
+    , Str "no"
+    , Space
+    , Str "es"
+    , Space
+    , Str "as\237."
+    ]
+, Para
+    [ Str "Supongamos"
+    , Space
+    , Str "que"
+    , Space
+    , Str "existe,"
+    , Space
+    , Str "adem\225s"
+    , Space
+    , Str "de"
+    , Space
+    , Math InlineMath "g(V)"
+    , Str ","
+    , Space
+    , Str "otro"
+    , Space
+    , Str "punto"
+    , SoftBreak
+    , Math InlineMath "Z \\in g(r)\\text{ inter }g(s)"
+    , Str "."
+    , Space
+    , Str "Esto"
+    , Space
+    , Str "es"
+    , Space
+    , Str "lo"
+    , Space
+    , Str "mismo"
+    , Space
+    , Str "que"
+    , Space
+    , Str "afirmar"
+    , Space
+    , Str "que"
+    , SoftBreak
+    , Math InlineMath "Z \\in g(r)"
+    , Space
+    , Str "y"
+    , Space
+    , Math InlineMath "Z \\in g(s)"
+    , Str "."
+    ]
+, Para
+    [ Str "Por"
+    , Space
+    , Str "ser"
+    , Space
+    , Math InlineMath "g"
+    , Space
+    , Str "una"
+    , Space
+    , Str "biyecci\243n,"
+    , Space
+    , Str "existe"
+    , Space
+    , Str "un"
+    , Space
+    , Str "\250nico"
+    , Space
+    , Str "punto"
+    , Space
+    , Math InlineMath "Z_{1}"
+    , Space
+    , Str "que"
+    , Space
+    , Str "pertenece"
+    , Space
+    , Str "a"
+    , SoftBreak
+    , Math InlineMath "r"
+    , Space
+    , Str "y"
+    , Space
+    , Str "a"
+    , Space
+    , Math InlineMath "s"
+    , Space
+    , Str "tal"
+    , Space
+    , Str "que"
+    , Space
+    , Math InlineMath "g\\left( Z_{1} \\right) = Z"
+    , Str "."
+    , Space
+    , Str "Pero"
+    , Space
+    , Str "esto"
+    , Space
+    , Str "es"
+    , Space
+    , Str "un"
+    , SoftBreak
+    , Str "problema"
+    , Space
+    , Str "puesto"
+    , Space
+    , Str "que"
+    , Space
+    , Str "tenemos"
+    , Space
+    , Str "dos"
+    , Space
+    , Str "puntos,"
+    , Space
+    , Math InlineMath "V"
+    , Space
+    , Str "y"
+    , Space
+    , Math InlineMath "Z_{1}"
+    , Str ","
+    , Space
+    , Str "que"
+    , Space
+    , Str "pertenecen"
+    , Space
+    , Str "a"
+    , SoftBreak
+    , Str "la"
+    , Space
+    , Str "intersecci\243n"
+    , Space
+    , Str "de"
+    , Space
+    , Math InlineMath "r"
+    , Space
+    , Str "y"
+    , Space
+    , Math InlineMath "s"
+    , Str ","
+    , Space
+    , Str "cosa"
+    , Space
+    , Str "que"
+    , Space
+    , Str "contradice"
+    , Space
+    , Str "la"
+    , Space
+    , Str "hip\243tesis"
+    , Space
+    , Str "de"
+    , SoftBreak
+    , Str "partida,"
+    , Space
+    , Str "es"
+    , Space
+    , Str "decir,"
+    , Space
+    , Str "que"
+    , Space
+    , Str "las"
+    , Space
+    , Str "dos"
+    , Space
+    , Str "rectas"
+    , Space
+    , Str "son"
+    , Space
+    , Str "secantes."
+    ]
+, Para
+    [ Str "\8202\8193" , Math InlineMath "\\blacksquare" ]
+, Para
+    [ Str "Teorema"
+    , Space
+    , Quoted
+        DoubleQuote
+        [ Str "de"
+        , Space
+        , Str "las"
+        , Space
+        , Str "Isometr\237as"
+        , Space
+        , Str "de"
+        , Space
+        , Str "Semirrectas"
+        ]
+    , Str ")["
+    , Space
+    , Str "Dada"
+    , Space
+    , Str "una"
+    , Space
+    , Str "isometr\237a"
+    , SoftBreak
+    , Math
+        InlineMath
+        "g \\in \\text{ Isom}\\left( \\mathbf{P},d \\right)"
+    , Space
+    , Str "y"
+    , Space
+    , Str "una"
+    , Space
+    , Str "de"
+    , Space
+    , Str "las"
+    , Space
+    , Str "semirrectas"
+    , SoftBreak
+    , Math InlineMath "\8211(r)"
+    , Space
+    , Str "con"
+    , Space
+    , Str "etremo"
+    , Space
+    , Str "el"
+    , Space
+    , Str "punto"
+    , Space
+    , Math InlineMath "V"
+    , Space
+    , Str "en"
+    , Space
+    , Str "la"
+    , Space
+    , Str "recta"
+    , Space
+    , Math InlineMath "r"
+    , Str ","
+    , Space
+    , Str "se"
+    , Space
+    , Str "tiene"
+    , Space
+    , Str "que"
+    , SoftBreak
+    , Math InlineMath "g\\left( \8211(r) \\right)"
+    , Space
+    , Str "es"
+    , Space
+    , Str "una"
+    , Space
+    , Str "de"
+    , Space
+    , Str "las"
+    , Space
+    , Str "semirrectas"
+    , Space
+    , Str "definidas"
+    , Space
+    , Str "por"
+    , Space
+    , Str "el"
+    , Space
+    , Str "punto"
+    , SoftBreak
+    , Math InlineMath "g(V)"
+    , Space
+    , Str "en"
+    , Space
+    , Str "la"
+    , Space
+    , Str "recta"
+    , Space
+    , Math InlineMath "g(r)"
+    , Str "."
+    ]
+, Para
+    [ Str "Terminar"
+    , Space
+    , Str "de"
+    , Space
+    , Str "copiar"
+    , Space
+    , Str "de"
+    , Space
+    , Str "los"
+    , Space
+    , Str "otros"
+    , Space
+    , Str "apuntes."
+    , Space
+    , Str "TKTK."
+    ]
+, Para
+    [ Str "En"
+    , Space
+    , Str "cuanto"
+    , Space
+    , Str "a"
+    , Space
+    , Str "la"
+    , Space
+    , Strong [ Str "Definici\243n" , Space , Str "2.19" ]
+    , Space
+    , Str "(p\225g."
+    , Space
+    , Str "33),"
+    , Space
+    , Str "creo"
+    , Space
+    , Str "que"
+    , Space
+    , Str "tambi\233n"
+    , Space
+    , Str "se"
+    , Space
+    , Str "puede"
+    , SoftBreak
+    , Str "afirmar"
+    , Space
+    , Str "la"
+    , Space
+    , Str "simetr\237a"
+    , Space
+    , Str "de"
+    , Space
+    , Str "la"
+    , Space
+    , Str "congruencia"
+    , Space
+    , Str "de"
+    , Space
+    , Str "figuras."
+    , Space
+    , Str "Es"
+    , Space
+    , Str "decir,"
+    , Space
+    , Str "podemos"
+    , SoftBreak
+    , Str "continuar"
+    , Space
+    , Str "con"
+    , Space
+    , Str "esa"
+    , Space
+    , Str "definici\243n"
+    , Space
+    , Str "y"
+    , Space
+    , Str "afirmar"
+    , Space
+    , Str "que,"
+    , Space
+    , Str "por"
+    , Space
+    , Str "ser"
+    , Space
+    , Math InlineMath "g"
+    , Space
+    , Str "biyectiva,"
+    , Space
+    , Str "se"
+    , SoftBreak
+    , Str "tiene"
+    , Space
+    , Str "que"
+    , Space
+    , Str "para"
+    , Space
+    , Str "todo"
+    , Space
+    , Math InlineMath "X',Y' \\in \\mathcal{F}_{2}"
+    , Space
+    , Str "se"
+    , Space
+    , Str "tienen"
+    , SoftBreak
+    , Math InlineMath "X = g^{- 1}(X)"
+    , Space
+    , Str "e"
+    , Space
+    , Math InlineMath "Y = g^{- 1}(Y)"
+    , Space
+    , Str "tales"
+    , Space
+    , Str "que"
+    , Space
+    , Math InlineMath "X,Y \\in \\mathcal{F}_{1}"
+    , Str "."
+    ]
+, Para
+    [ Str "En"
+    , Space
+    , Str "la"
+    , Space
+    , Str "demostraci\243n"
+    , Space
+    , Str "del"
+    , Space
+    , Strong [ Str "Lema" , Space , Str "2.21" ]
+    , Space
+    , Str "(p\225g."
+    , Space
+    , Str "33)),"
+    , Space
+    , Str "la"
+    , Space
+    , Str "primera"
+    , Space
+    , Str "igualdad"
+    , Space
+    , Str "que"
+    , SoftBreak
+    , Str "aparece"
+    , Space
+    , Str "podemos"
+    , Space
+    , Str "justificarla"
+    , Space
+    , Str "aqu\237"
+    , Space
+    , Str "con"
+    , Space
+    , Str "el"
+    , Space
+    , Str "Teorema"
+    , Space
+    , Str "de"
+    , Space
+    , Str "la"
+    , Space
+    , Str "Conservaci\243n"
+    , Space
+    , Str "del"
+    , SoftBreak
+    , Str "Punto"
+    , Space
+    , Str "Medio"
+    , Space
+    , Str "de"
+    , Space
+    , Str "un"
+    , Space
+    , Str "Segmento"
+    , Space
+    , Str "por"
+    , Space
+    , Str "Isometr\237a,"
+    , Space
+    , Str "presentado"
+    , Space
+    , Str "aqu\237"
+    , Space
+    , Str "anteriormente."
+    ]
+, Para
+    [ Str "Me"
+    , Space
+    , Str "da"
+    , Space
+    , Str "la"
+    , Space
+    , Str "sensaci\243n"
+    , Space
+    , Str "de"
+    , Space
+    , Str "que,"
+    , Space
+    , Str "llegado"
+    , Space
+    , Str "a"
+    , Space
+    , Str "este"
+    , Space
+    , Str "punto"
+    , Space
+    , Str "del"
+    , Space
+    , Str "libro,"
+    , Space
+    , Str "se"
+    , Space
+    , Str "salta"
+    , SoftBreak
+    , Str "algunos"
+    , Space
+    , Str "pasos"
+    , Space
+    , Str "en"
+    , Space
+    , Str "las"
+    , Space
+    , Str "demostraciones."
+    , Space
+    , Str "Esto"
+    , Space
+    , Str "va"
+    , Space
+    , Str "a"
+    , Space
+    , Str "m\225s"
+    , Space
+    , Str "en"
+    , Space
+    , Str "el"
+    , Space
+    , Str "cap\237tulo"
+    , SoftBreak
+    , Str "siguiente,"
+    , Space
+    , Str "y,"
+    , Space
+    , Str "de"
+    , Space
+    , Str "hecho,"
+    , Space
+    , Str "se"
+    , Space
+    , Str "menciona"
+    , Space
+    , Str "al"
+    , Space
+    , Str "comienzo"
+    , Space
+    , Str "de"
+    , Space
+    , Str "dicho"
+    , Space
+    , Str "cap\237tulo."
+    ]
+, Para
+    [ Str "En"
+    , Space
+    , Str "cualquier"
+    , Space
+    , Str "caso,"
+    , Space
+    , Str "por"
+    , Space
+    , Str "aclarar"
+    , Space
+    , Str "las"
+    , Space
+    , Str "cosas,"
+    , Space
+    , Str "me"
+    , Space
+    , Str "gustar\237a"
+    , Space
+    , Str "presentar"
+    , Space
+    , Str "una"
+    , SoftBreak
+    , Str "demostraci\243n"
+    , Space
+    , Str "m\225s"
+    , Space
+    , Str "completa"
+    , Space
+    , Str "del"
+    , Space
+    , Strong [ Str "Teorema" , Space , Str "2.22" ]
+    , Str "."
+    , Space
+    , Str "No"
+    , Space
+    , Str "obstante,"
+    , Space
+    , Str "a"
+    , Space
+    , Str "partir"
+    , Space
+    , Str "de"
+    , SoftBreak
+    , Str "aqu\237"
+    , Space
+    , Str "me"
+    , Space
+    , Str "adaptar\233"
+    , Space
+    , Str "al"
+    , Space
+    , Str "estilo"
+    , Space
+    , Str "del"
+    , Space
+    , Str "libro"
+    , Space
+    , Str "y"
+    , Space
+    , Str "\250nicamente"
+    , Space
+    , Str "mencionar\233"
+    , Space
+    , Str "las"
+    , Space
+    , Str "cosas"
+    , SoftBreak
+    , Str "que"
+    , Space
+    , Str "no"
+    , Space
+    , Str "quedan"
+    , Space
+    , Str "claras"
+    , Space
+    , Str "y"
+    , Space
+    , Str "los"
+    , Space
+    , Str "pasos"
+    , Space
+    , Str "que"
+    , Space
+    , Str "creo"
+    , Space
+    , Str "que"
+    , Space
+    , Str "pueden"
+    , Space
+    , Str "ser"
+    , Space
+    , Str "dif\237ciles"
+    , Space
+    , Str "de"
+    , SoftBreak
+    , Str "intuir."
+    ]
+, Para
+    [ Strong [ Emph [ Str "Demostraci\243n" ] ]
+    , Str "\160\8212"
+    , Space
+    , Str "Dado"
+    , Space
+    , Str "un"
+    , Space
+    , Math InlineMath "A \\in \\mathbf{P}"
+    , Space
+    , Str "tal"
+    , Space
+    , Str "que"
+    , Space
+    , Math InlineMath "A \\in H^{1}"
+    , Str ","
+    , SoftBreak
+    , Str "hacemos"
+    , Space
+    , Str "su"
+    , Space
+    , Str "reflexi\243n"
+    , Space
+    , Str "de"
+    , Space
+    , Str "eje"
+    , Space
+    , Math InlineMath "r"
+    , Str ","
+    , Space
+    , Math InlineMath "A' = \\sigma(A)"
+    , Str "."
+    ]
+, Para
+    [ Str "Por"
+    , Space
+    , Str "el"
+    , Space
+    , Str "Lema"
+    , Space
+    , Str "2.21,"
+    , Space
+    , Str "sabemos"
+    , Space
+    , Str "que"
+    , Space
+    , Math InlineMath "\\text{medio}\\lbrack '\\rbrack \\in r"
+    , Str ";"
+    , SoftBreak
+    , Str "lo"
+    , Space
+    , Str "designaremos"
+    , Space
+    , Str "por"
+    , Space
+    , Math InlineMath "M"
+    , Str "."
+    , Space
+    , Str "Al"
+    , Space
+    , Str "contrario"
+    , Space
+    , Str "de"
+    , Space
+    , Str "lo"
+    , Space
+    , Str "que"
+    , Space
+    , Str "se"
+    , Space
+    , Str "afirma"
+    , Space
+    , Str "en"
+    , Space
+    , Str "la"
+    , SoftBreak
+    , Str "demostraci\243n"
+    , Space
+    , Str "del"
+    , Space
+    , Str "libro,"
+    , Space
+    , Str "a\250n"
+    , Space
+    , Str "no"
+    , Space
+    , Str "sabemos"
+    , Space
+    , Str "si"
+    , Space
+    , Str "se"
+    , Space
+    , Str "cortan,"
+    , Space
+    , Str "pues"
+    , Space
+    , Str "el"
+    , Space
+    , Str "lema"
+    , Space
+    , Str "no"
+    , Space
+    , Str "lo"
+    , SoftBreak
+    , Str "dice."
+    , Space
+    , Str "Veamos"
+    , Space
+    , Str "por"
+    , Space
+    , Str "qu\233"
+    , Space
+    , Str "se"
+    , Space
+    , Str "cortan."
+    ]
+, Para [ Str "TKTK." ]
+, Para
+    [ Str "Al"
+    , Space
+    , Str "pertenecer"
+    , Space
+    , Math InlineMath "A"
+    , Space
+    , Str "a"
+    , Space
+    , Math InlineMath "H^{1}"
+    , Str ","
+    , Space
+    , Str "por"
+    , Space
+    , Str "el"
+    , Space
+    , Str "punto"
+    , Space
+    , Str "(1)"
+    , Space
+    , Str "del"
+    , Space
+    , Str "Axioma"
+    , SoftBreak
+    , Math InlineMath "\\mathbf{P}"
+    , RawInline (Format "html") "<!-- -->"
+    , Str "4"
+    , Space
+    , Str "se"
+    , Space
+    , Str "tiene"
+    , Space
+    , Str "que"
+    , Space
+    , Str "todo"
+    , Space
+    , Str "punto"
+    , Space
+    , Str "de"
+    , Space
+    , Math InlineMath "H^{1}"
+    , Space
+    , Str "est\225"
+    , SoftBreak
+    , Str "fuera"
+    , Space
+    , Str "de"
+    , Space
+    , Math InlineMath "r"
+    , Str "."
+    , Space
+    , Str "Por"
+    , Space
+    , Str "tanto,"
+    , Space
+    , Math InlineMath "A \\notin r"
+    , Str "."
+    ]
+, Para
+    [ Str "como"
+    , Space
+    , Str "tenemos"
+    , Space
+    , Str "un"
+    , Space
+    , Str "punto,"
+    , Space
+    , Math InlineMath "M"
+    , Space
+    , Str "que"
+    , Space
+    , Str "pertenece"
+    , Space
+    , Str "tanto"
+    , Space
+    , Str "a"
+    , Space
+    , Math InlineMath "r"
+    , Space
+    , Str "como"
+    , Space
+    , Str "a"
+    , Space
+    , Math InlineMath "s"
+    , Space
+    , Str "y"
+    , Space
+    , Str "un"
+    , SoftBreak
+    , Str "punto"
+    , Space
+    , Math InlineMath "A"
+    , Space
+    , Str "que"
+    , Space
+    , Str "pertenece"
+    , Space
+    , Str "a"
+    , Space
+    , Math InlineMath "s"
+    , Space
+    , Str "pero"
+    , Space
+    , Str "no"
+    , Space
+    , Str "a"
+    , Space
+    , Math InlineMath "r"
+    , Str ","
+    , Space
+    , Str "ambas"
+    , Space
+    , Str "rectas,"
+    , Space
+    , Str "es"
+    , Space
+    , Str "decir,"
+    , Space
+    , Math InlineMath "r"
+    , SoftBreak
+    , Str "y"
+    , Space
+    , Math InlineMath "s"
+    , Str ","
+    , Space
+    , Str "ser\225n"
+    , Space
+    , Str "secantes,"
+    , Space
+    , Str "por"
+    , Space
+    , Str "aplicaci\243n"
+    , Space
+    , Str "del"
+    , Space
+    , Str "Teorema"
+    , Space
+    , Str "2.7"
+    , Space
+    , Str "(de"
+    , Space
+    , Str "las"
+    , Space
+    , Str "Posiciones"
+    , SoftBreak
+    , Str "Relativas"
+    , Space
+    , Str "de"
+    , Space
+    , Str "Dos"
+    , Space
+    , Str "Rectas)."
+    , Space
+    , Str "Entonces,"
+    , Space
+    , Str "tambi\233n"
+    , Space
+    , Str "ser\225n"
+    , Space
+    , Str "secantes"
+    , Space
+    , Str "el"
+    , Space
+    , Str "segmento"
+    , SoftBreak
+    , Math InlineMath "\\lbrack '\\rbrack"
+    , Space
+    , Str "y"
+    , Space
+    , Str "la"
+    , Space
+    , Str "recta"
+    , Space
+    , Math InlineMath "r"
+    , Str ","
+    , Space
+    , Str "es"
+    , Space
+    , Str "decir,"
+    , Space
+    , Str "se"
+    , Space
+    , Str "cumple"
+    , Space
+    , Str "que"
+    , SoftBreak
+    , Math
+        InlineMath
+        "\\lbrack '\\rbrack\\text{ inter }r \\neq \\emptyset"
+    , Str "."
+    , Space
+    , Str "Aplicando"
+    , Space
+    , Str "ahora"
+    , SoftBreak
+    , Str "el"
+    , Space
+    , Str "Teorema"
+    , Space
+    , Str "Ampliaci\243n"
+    , Space
+    , Str "del"
+    , Space
+    , Str "Punto"
+    , Space
+    , Str "(3)"
+    , Space
+    , Str "del"
+    , Space
+    , Str "Axioma"
+    , SoftBreak
+    , Math InlineMath "\\mathbf{P}"
+    , RawInline (Format "html") "<!-- -->"
+    , Str "4,"
+    , Space
+    , Str "tenemos"
+    , Space
+    , Str "que,"
+    , Space
+    , Str "como"
+    , Space
+    , Math InlineMath "A \\in H^{1}"
+    , Str ","
+    , Space
+    , Str "no"
+    , SoftBreak
+    , Str "queda"
+    , Space
+    , Str "otra"
+    , Space
+    , Str "m\225s"
+    , Space
+    , Str "que"
+    , Space
+    , Math InlineMath "A' \\in H^{2}"
+    , Str "."
+    ]
+, Para
+    [ Str "Por"
+    , Space
+    , Str "la"
+    , Space
+    , Str "Observaci\243n"
+    , Space
+    , Str "2.3"
+    , Space
+    , Str "y"
+    , Space
+    , Str "el"
+    , Space
+    , Str "punto"
+    , Space
+    , Str "(ii)"
+    , Space
+    , Str "del"
+    , Space
+    , Str "Axioma"
+    , SoftBreak
+    , Math InlineMath "\\mathbf{P}"
+    , RawInline (Format "html") "<!-- -->"
+    , Str "2"
+    , Space
+    , Str "(incluyendo"
+    , Space
+    , Str "la"
+    , Space
+    , Str "unicidad),"
+    , Space
+    , Str "sabemos"
+    , Space
+    , Str "que"
+    , SoftBreak
+    , Str "existe"
+    , Space
+    , Str "una"
+    , Space
+    , Str "\250nica"
+    , Space
+    , Str "recta"
+    , Space
+    , Str "que"
+    , Space
+    , Str "contiene"
+    , Space
+    , Str "al"
+    , Space
+    , Str "segmento"
+    , Space
+    , Math InlineMath "\\lbrack '\\rbrack"
+    , Str "."
+    , SoftBreak
+    , Str "La"
+    , Space
+    , Str "designaremos"
+    , Space
+    , Str "por"
+    , Space
+    , Math InlineMath "s"
+    , Str "."
+    ]
+, Para
+    [ Str "Al"
+    , Space
+    , Str "pertenecer"
+    , Space
+    , Math InlineMath "A"
+    , Space
+    , Str "a"
+    , Space
+    , Math InlineMath "H^{1}"
+    , Str ","
+    , Space
+    , Str "por"
+    , Space
+    , Str "el"
+    , Space
+    , Str "punto"
+    , Space
+    , Str "(1)"
+    , Space
+    , Str "del"
+    , Space
+    , Str "Axioma"
+    , SoftBreak
+    , Math InlineMath "\\mathbf{P}"
+    , RawInline (Format "html") "<!-- -->"
+    , Str "4"
+    , Space
+    , Str "se"
+    , Space
+    , Str "tiene"
+    , Space
+    , Str "que"
+    , Space
+    , Str "todo"
+    , Space
+    , Str "punto"
+    , Space
+    , Str "de"
+    , Space
+    , Math InlineMath "H^{1}"
+    , Space
+    , Str "est\225"
+    , SoftBreak
+    , Str "fuera"
+    , Space
+    , Str "de"
+    , Space
+    , Math InlineMath "r"
+    , Str "."
+    , Space
+    , Str "Por"
+    , Space
+    , Str "tanto,"
+    , Space
+    , Str "como"
+    , Space
+    , Str "tenemos"
+    , Space
+    , Str "un"
+    , Space
+    , Str "punto,"
+    , Space
+    , Math InlineMath "M"
+    , Space
+    , Str "que"
+    , Space
+    , Str "pertenece"
+    , Space
+    , Str "tanto"
+    , SoftBreak
+    , Str "a"
+    , Space
+    , Math InlineMath "r"
+    , Space
+    , Str "como"
+    , Space
+    , Str "a"
+    , Space
+    , Math InlineMath "s"
+    , Space
+    , Str "y"
+    , Space
+    , Str "un"
+    , Space
+    , Str "punto"
+    , Space
+    , Math InlineMath "A"
+    , Space
+    , Str "que"
+    , Space
+    , Str "pertenece"
+    , Space
+    , Str "a"
+    , Space
+    , Math InlineMath "s"
+    , Space
+    , Str "pero"
+    , Space
+    , Str "no"
+    , Space
+    , Str "a"
+    , Space
+    , Math InlineMath "r"
+    , Str ","
+    , Space
+    , Str "ambas"
+    , SoftBreak
+    , Str "rectas,"
+    , Space
+    , Str "es"
+    , Space
+    , Str "decir,"
+    , Space
+    , Math InlineMath "r"
+    , Space
+    , Str "y"
+    , Space
+    , Math InlineMath "s"
+    , Str ","
+    , Space
+    , Str "ser\225n"
+    , Space
+    , Str "secantes,"
+    , Space
+    , Str "por"
+    , Space
+    , Str "aplicaci\243n"
+    , Space
+    , Str "del"
+    , Space
+    , Str "Teorema"
+    , SoftBreak
+    , Str "2.7"
+    , Space
+    , Str "(de"
+    , Space
+    , Str "las"
+    , Space
+    , Str "Posiciones"
+    , Space
+    , Str "Relativas"
+    , Space
+    , Str "de"
+    , Space
+    , Str "Dos"
+    , Space
+    , Str "Rectas)."
+    , Space
+    , Str "Entonces,"
+    , Space
+    , Str "tambi\233n"
+    , Space
+    , Str "ser\225n"
+    , SoftBreak
+    , Str "secantes"
+    , Space
+    , Str "el"
+    , Space
+    , Str "segmento"
+    , Space
+    , Math InlineMath "\\lbrack '\\rbrack"
+    , Space
+    , Str "y"
+    , Space
+    , Str "la"
+    , Space
+    , Str "recta"
+    , Space
+    , Math InlineMath "r"
+    , Str ","
+    , Space
+    , Str "es"
+    , Space
+    , Str "decir,"
+    , Space
+    , Str "se"
+    , SoftBreak
+    , Str "cumple"
+    , Space
+    , Str "que"
+    , Space
+    , Math
+        InlineMath
+        "\\lbrack '\\rbrack\\text{ inter }r \\neq \\emptyset"
+    , Str "."
+    , SoftBreak
+    , Str "Aplicando"
+    , Space
+    , Str "ahora"
+    , Space
+    , Str "el"
+    , Space
+    , Str "Teorema"
+    , Space
+    , Str "Ampliaci\243n"
+    , Space
+    , Str "del"
+    , Space
+    , Str "Punto"
+    , Space
+    , Str "(3)"
+    , Space
+    , Str "del"
+    , Space
+    , Str "Axioma"
+    , SoftBreak
+    , Math InlineMath "\\mathbf{P}"
+    , RawInline (Format "html") "<!-- -->"
+    , Str "4,"
+    , Space
+    , Str "tenemos"
+    , Space
+    , Str "que,"
+    , Space
+    , Str "como"
+    , Space
+    , Math InlineMath "A \\in H^{1}"
+    , Str ","
+    , Space
+    , Str "no"
+    , SoftBreak
+    , Str "queda"
+    , Space
+    , Str "otra"
+    , Space
+    , Str "m\225s"
+    , Space
+    , Str "que"
+    , Space
+    , Math InlineMath "A' \\in H^{2}"
+    , Str "."
+    ]
+, Para
+    [ Str "Ahora,"
+    , Space
+    , Str "nos"
+    , Space
+    , Str "fijaremos"
+    , Space
+    , Str "en"
+    , Space
+    , Str "que,"
+    , Space
+    , Str "por"
+    , Space
+    , Str "el"
+    , Space
+    , Str "punto"
+    , Space
+    , Str "(1)"
+    , Space
+    , Str "de"
+    , Space
+    , Str "la"
+    , Space
+    , Str "definici\243n"
+    , Space
+    , Str "de"
+    , SoftBreak
+    , Emph [ Str "reflexi\243n" , Space , Str "axial" ]
+    , Str ","
+    , Space
+    , Str "se"
+    , Space
+    , Str "tiene"
+    , Space
+    , Str "que"
+    , Space
+    , Math InlineMath "\\sigma(r) = r"
+    , Str "."
+    , Space
+    , Str "Aplicando"
+    , Space
+    , Str "entonces"
+    , Space
+    , Str "la"
+    , SoftBreak
+    , Str "\250ltima"
+    , Space
+    , Str "parte"
+    , Space
+    , Str "del"
+    , Space
+    , Str "Teorema"
+    , Space
+    , Str "2.18"
+    , Space
+    , Str "\8212la"
+    , Space
+    , Str "que"
+    , Space
+    , Str "trata"
+    , Space
+    , Str "sobre"
+    , Space
+    , Str "los"
+    , Space
+    , Str "semiplanos\8212,"
+    , SoftBreak
+    , Str "tenemos"
+    , Space
+    , Str "que"
+    , Space
+    , Math InlineMath "H^{1}"
+    , Space
+    , Str "y"
+    , Space
+    , Math InlineMath "H^{2}"
+    , Space
+    , Str "son"
+    , Space
+    , Str "los"
+    , Space
+    , Str "semiplanos"
+    , Space
+    , Str "determinados"
+    , Space
+    , Str "por"
+    , SoftBreak
+    , Math InlineMath "\\sigma(r)"
+    , Str "."
+    , Space
+    , Str "Entonces,"
+    , Space
+    , Str "quedar\237an"
+    , Space
+    , Str "dos"
+    , Space
+    , Str "posibilidades"
+    , Space
+    , Str "\250nicamente:"
+    , Space
+    , Str "que"
+    , Space
+    , Str "los"
+    , SoftBreak
+    , Str "semiplanos"
+    , Space
+    , Str "transformados"
+    , Space
+    , Str "sean"
+    , Space
+    , Str "los"
+    , Space
+    , Str "mismos"
+    , Space
+    , Str "o"
+    , Space
+    , Str "que"
+    , Space
+    , Str "se"
+    , Space
+    , Str "intercambien."
+    , Space
+    , Str "Del"
+    , SoftBreak
+    , Str "resultado"
+    , Space
+    , Str "anterior,"
+    , Space
+    , Str "es"
+    , Space
+    , Str "decir,"
+    , Space
+    , Str "de"
+    , Space
+    , Str "que"
+    , Space
+    , Str "si"
+    , Space
+    , Math InlineMath "A \\in H^{1}"
+    , Space
+    , Str "entonces"
+    , SoftBreak
+    , Math InlineMath "A' \\in H^{2}"
+    , Str ","
+    , Space
+    , Str "se"
+    , Space
+    , Str "tiene"
+    , Space
+    , Str "que"
+    , Space
+    , Str "se"
+    , Space
+    , Str "intercambian"
+    , Space
+    , Str "siempre,"
+    , Space
+    , Str "es"
+    , Space
+    , Str "decir,"
+    ]
+, Para
+    [ Math
+        DisplayMath
+        "\\sigma(H^{1}) = H^{2};\\quad\\sigma(H^{2}) = H^{1}"
+    ]
+, Para
+    [ Str "\8202\8193" , Math InlineMath "\\blacksquare" ]
+]

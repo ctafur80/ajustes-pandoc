@@ -32,7 +32,7 @@ html: $(CONTENTS)
 	pandoc $^ \
 		--metadata-file metadatos.yaml \
 		--citeproc \
-		-L ./ajustes-pandoc/filtros/data-label.lua \
+		-L ./ajustes-pandoc/filtros/math-envs.lua \
 		--defaults ./ajustes-pandoc/defaults/web-apuntes-asignaturas.yaml \
 		--output $(OUTPUT_FILE_N).html ;
 

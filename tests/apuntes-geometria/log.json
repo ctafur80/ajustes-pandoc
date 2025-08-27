@@ -65,17 +65,17 @@
         "type": "FilterCompleted",
         "verbosity": "INFO",
         "path": "citeproc",
-        "milliseconds": "7"
+        "milliseconds": "6"
     },
     {
         "type": "RunningFilter",
         "verbosity": "INFO",
-        "path": "./ajustes-pandoc/filtros/data-label.lua"
+        "path": "./ajustes-pandoc/filtros/math-envs.lua"
     },
     {
         "type": "FilterCompleted",
         "verbosity": "INFO",
-        "path": "./ajustes-pandoc/filtros/data-label.lua",
-        "milliseconds": "13"
+        "path": "./ajustes-pandoc/filtros/math-envs.lua",
+        "milliseconds": "12"
     }
 ]
