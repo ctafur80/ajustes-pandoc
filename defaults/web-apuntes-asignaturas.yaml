@@ -21,6 +21,9 @@ number-sections: false
 # Aunque lo incluya aquí, tengo que añadirlo en el comando `pandoc`.
 cite-method: citeproc
 
+filters:
+  - ../filtros/math-envs.lua
+
 verbosity: INFO
 log-file: log.json
 
