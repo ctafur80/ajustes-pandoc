@@ -4,7 +4,7 @@
 # cómoda la navegación por el documento, incluyendo referencias cruzadas.
 
 
-
+# TODO Quizás quitar raw_tex
 from: markdown+raw_tex
 to: html
 
@@ -90,7 +90,7 @@ include-in-header:
    - ./ajustes-pandoc/salida-web/html/elemento-boton-nav-bar.html
    - ./ajustes-pandoc/salida-web/html/carga-breadcrumbs.html
    - ./ajustes-pandoc/salida-web/html/carga-nav-bar.html
-   - ./ajustes-pandoc/salida-web/html/nameref.html
+   # - ./ajustes-pandoc/salida-web/html/nameref.html
    # - ./ajustes-pandoc/salida-web/html/carga-ajustes-mathjax.html
 
 

@@ -1,0 +1,81 @@
+[
+    {
+        "type": "LoadedResource",
+        "verbosity": "INFO",
+        "for": "./ajustes-pandoc/salida-web/html/elemento-breadcrumbs.html",
+        "from": "./ajustes-pandoc/salida-web/html/elemento-breadcrumbs.html"
+    },
+    {
+        "type": "LoadedResource",
+        "verbosity": "INFO",
+        "for": "./ajustes-pandoc/salida-web/html/etiqueta-final-main.html",
+        "from": "./ajustes-pandoc/salida-web/html/etiqueta-final-main.html"
+    },
+    {
+        "type": "LoadedResource",
+        "verbosity": "INFO",
+        "for": "./ajustes-pandoc/salida-web/html/elemento-nav.html",
+        "from": "./ajustes-pandoc/salida-web/html/elemento-nav.html"
+    },
+    {
+        "type": "LoadedResource",
+        "verbosity": "INFO",
+        "for": "./ajustes-pandoc/salida-web/html/elemento-boton-nav-bar.html",
+        "from": "./ajustes-pandoc/salida-web/html/elemento-boton-nav-bar.html"
+    },
+    {
+        "type": "LoadedResource",
+        "verbosity": "INFO",
+        "for": "./ajustes-pandoc/salida-web/html/carga-breadcrumbs.html",
+        "from": "./ajustes-pandoc/salida-web/html/carga-breadcrumbs.html"
+    },
+    {
+        "type": "LoadedResource",
+        "verbosity": "INFO",
+        "for": "./ajustes-pandoc/salida-web/html/carga-nav-bar.html",
+        "from": "./ajustes-pandoc/salida-web/html/carga-nav-bar.html"
+    },
+    {
+        "type": "RunningFilter",
+        "verbosity": "INFO",
+        "path": "citeproc"
+    },
+    {
+        "type": "LoadedResource",
+        "verbosity": "INFO",
+        "for": "./referencias.yaml",
+        "from": "./referencias.yaml"
+    },
+    {
+        "type": "CiteprocWarning",
+        "verbosity": "WARNING",
+        "message": "citation costa not found"
+    },
+    {
+        "type": "CiteprocWarning",
+        "verbosity": "WARNING",
+        "message": "citation pineda not found"
+    },
+    {
+        "type": "CiteprocWarning",
+        "verbosity": "WARNING",
+        "message": "citation venema not found"
+    },
+    {
+        "type": "FilterCompleted",
+        "verbosity": "INFO",
+        "path": "citeproc",
+        "milliseconds": "7"
+    },
+    {
+        "type": "RunningFilter",
+        "verbosity": "INFO",
+        "path": "./ajustes-pandoc/filtros/data-label.lua"
+    },
+    {
+        "type": "FilterCompleted",
+        "verbosity": "INFO",
+        "path": "./ajustes-pandoc/filtros/data-label.lua",
+        "milliseconds": "12"
+    }
+]

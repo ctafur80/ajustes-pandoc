@@ -1,0 +1,22 @@
+
+references:
+
+- type: book
+  id: vim-robbins-hannah
+  title: Learning the vi and Vim Editors
+  subtitle: Power and Agility Beyond Just Text Editing
+  author:
+  - family: Robbins
+    given: Arnold
+  - family: Hannah
+    given: Elbert
+  issued:
+    date-parts:
+    - - 2021
+      - 12
+  language: en-US
+  edition: 8
+  publisher: O'Reilly Media
+  isbn: 978-1492078807
+
+

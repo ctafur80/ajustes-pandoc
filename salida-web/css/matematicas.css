@@ -19,6 +19,7 @@ p > span.math.display {
 
 math {
     font-family: var(--math-font);
+    font-size: var(--math-font-size);
     /* color: red; */
 }
 

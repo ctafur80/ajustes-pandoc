@@ -1,0 +1,160 @@
+
+
+
+# Capítulo 1
+
+## Introducción
+
+Algo que conviene hacer en esta asignatura es siempre dibujar la
+situación. Aunque se trate de un caso particular y, por tanto, no sirva
+como demostración ni como resolución de un ejercicio,[^1] dibujar la
+situación que se nos presenta nos saca en muchas ocasiones de la
+ofuscación en la que nos encontramos.
+
+1.  Uno
+
+    1.  otro
+
+    2.  otro más
+
+2.  Dos
+
+3.  Tres
+
+Esto es solo una prueba.
+
+``` python
+def funcion():
+  print("Hola, mundo!!!")
+```
+
+$$\int_{0}^{t}t^{2}\: dt$$
+
+Así se ve que...
+
+  -------- -------- -------- --------
+  uno      Exam 1   Exam 2   Exam 3
+  John     dos      $a$      cuatro
+  Mary     tres     $a$      $a$
+  Robert   $b$      $a$      $b$
+  -------- -------- -------- --------
+
+Dado un conjunto $\mathbf{P}$ no vacío, una *métrica* o *distancia* es
+toda aplicación
+$d:\mathbf{P} \times \mathbf{P} \longrightarrow \mathbb{R}^{+} \cup \left\{ 0 \right\}$
+en la que para cualesquiera $x,y,z \in \mathbf{P}$ se cumple:
+
+1.  $d(x,y) = 0$ si y solo si $x = y$.
+
+2.  $d(x,y) = d(y,x)$. (Simetría.)
+
+3.  $d(x,y) \leq d(x,z) + d(z,y)$. (Desigualdad triangular.)
+
+[]{#def-metrica}
+
+Esto es lo que se explica en la [\[def-metrica\]](#def-metrica){.ref}
+cuando se ve que...
+
+En cuanto a la notación, se podría usar también la notación usual para
+la restricción de una aplicación, que en este caso sería algo como
+$\delta|_{M' \times M'}$, para $M' \subseteq M$.
+
+La nueva función se comporta del mismo modo que la vieja, solo que en un
+dominio más restringido.
+
+$$\begin{aligned}
+\delta: & & M \times M & \longrightarrow & & \mathbb{R} \\
+ & & (x,y) & \longmapsto & & \delta(x,y)
+\end{aligned}$$
+
+mientras que
+
+$$\begin{aligned}
+\delta|_{M' \times M'}: & & M' \times M' & \longrightarrow & & \mathbb{R} \\
+ & & (x,y) & \longmapsto & & \delta|_{M' \times M'}(x,y) = \delta(x,y)
+\end{aligned}$$
+
+En la demostración de este teorema, creo que, por hacerla más completa,
+quizás se debería comentar también que que ninguna de las propiedades de
+la definición de *métrica* es del tipo *closure*.
+
+# Capítulo 1
+
+## Introducción
+
+Algo que conviene hacer en esta asignatura es siempre dibujar la
+situación. Aunque se trate de un caso particular y, por tanto, no sirva
+como demostración ni como resolución de un ejercicio,[^2] dibujar la
+situación que se nos presenta nos saca en muchas ocasiones de la
+ofuscación en la que nos encontramos.
+
+1.  Uno
+
+    1.  otro
+
+    2.  otro más
+
+2.  Dos
+
+3.  Tres
+
+Esto es solo una prueba.
+
+``` python
+def funcion():
+  print("Hola, mundo!!!")
+```
+
+$$\int_{0}^{t}t^{2}\: dt$$
+
+Así se ve que...
+
+  -------- -------- -------- --------
+  uno      Exam 1   Exam 2   Exam 3
+  John     dos      $a$      cuatro
+  Mary     tres     $a$      $a$
+  Robert   $b$      $a$      $b$
+  -------- -------- -------- --------
+
+Dado un conjunto $\mathbf{P}$ no vacío, una *métrica* o *distancia* es
+toda aplicación
+$d:\mathbf{P} \times \mathbf{P} \longrightarrow \mathbb{R}^{+} \cup \left\{ 0 \right\}$
+en la que para cualesquiera $x,y,z \in \mathbf{P}$ se cumple:
+
+1.  $d(x,y) = 0$ si y solo si $x = y$.
+
+2.  $d(x,y) = d(y,x)$. (Simetría.)
+
+3.  $d(x,y) \leq d(x,z) + d(z,y)$. (Desigualdad triangular.)
+
+[]{#def-metrica}
+
+Esto es lo que se explica en la [\[def-metrica\]](#def-metrica){.ref}
+cuando se ve que...
+
+En cuanto a la notación, se podría usar también la notación usual para
+la restricción de una aplicación, que en este caso sería algo como
+$\delta|_{M' \times M'}$, para $M' \subseteq M$.
+
+La nueva función se comporta del mismo modo que la vieja, solo que en un
+dominio más restringido.
+
+$$\begin{aligned}
+\delta: & & M \times M & \longrightarrow & & \mathbb{R} \\
+ & & (x,y) & \longmapsto & & \delta(x,y)
+\end{aligned}$$
+
+mientras que
+
+$$\begin{aligned}
+\delta|_{M' \times M'}: & & M' \times M' & \longrightarrow & & \mathbb{R} \\
+ & & (x,y) & \longmapsto & & \delta|_{M' \times M'}(x,y) = \delta(x,y)
+\end{aligned}$$
+
+En la demostración de este teorema, creo que, por hacerla más completa,
+quizás se debería comentar también que que ninguna de las propiedades de
+la definición de *métrica* es del tipo *closure*.
+
+[^1]: Esto es solo una nota a pie de página.
+
+[^2]: Esto es solo una nota a pie de página.
