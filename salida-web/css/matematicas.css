@@ -20,36 +20,12 @@ p > span.math.display {
 math {
     font-family: var(--math-font);
     font-size: var(--math-font-size);
-    /* color: red; */
 }
 
 mtext {
-    /* font-family: "Open Sans", sans-serif; */
-    /* font-size: 95%; */
-    /* color: var(--main-fg-color); */
-    /* background: var(--main-bg-color); */
-    /* margin: auto; */
-    /* padding-left: 0.4rem; */
-    /* padding-right: 0.4rem; */
     letter-spacing: 0.03rem;
-    /* line-height: 1.45; */
 }
 
-
-/* Evita que, dentro de un div, se acumulen márgenes inferiores en elementos mjx- */
-/* De MathJax
-mjx-math.MJX-TEX,
-div [class^="mjx-"],
-div mjx-container,
-div mjx-script,
-div mjx-msup,
-div mjx-mfrac,
-div mjx-msub,
-div mjx-munder,
-div mjx-mover {
-  margin-bottom: 0 !important;
-}
-*/
 
 
 
@@ -224,6 +200,12 @@ math mrow, math semantics {
     margin-bottom: 0 !important;
 }
 
+math mtext {
+    font-family: var(--main-font);
+    font-size: 0.9em;
+    font-weight: var(--main-font-weight);
+}
+
 
 
 
@@ -244,7 +226,7 @@ div.lemma ol > li::marker,
 div.corollary ol > li::marker,
 div.proposition ol > li::marker,
 div.definition ol > li::marker {
-    content: "(" counter(list, lower-roman) ") ";
+    content: counter(list, lower-roman) ". ";
 }
 
 
@@ -252,6 +234,11 @@ div.definition ol > li::marker {
 
 
 /* Demostraciones */
+.qed {
+    float: right;
+}
+
+/*
 div.proof > *:first-child::before {
     content: "Demostración.\2014\00a0";
     font-weight: bold;
@@ -268,6 +255,7 @@ div.proof > *:last-child::after {
     right: 0;
     bottom: 0;
 }
+*/
 
 
 
