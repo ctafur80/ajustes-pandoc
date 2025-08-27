@@ -2,7 +2,7 @@
 -- TODO Hacer locales las variables.
 
 
-envs_data = {
+local envs_data = {
     proof = {
         title = "Demostración",
         sep = ".— ",
@@ -64,7 +64,7 @@ envs_data = {
 
 
 -- Accesory funtion. Checks if an element has some class.
-function has_class(element, class_name)
+local function has_class(element, class_name)
     if not element.attr or not element.attr.classes then
         return false
     end

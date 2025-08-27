@@ -457,12 +457,10 @@ Me resulta bastante críptica la presentación de este teorema, al tratar de
 llevar al extremo el uso de la simbología matemática. A continuación lo
 presento con más prosa; creo que sirve un poco para aclararlo.
 
-::: {.theorem
-       data-label="de Conservaciones de Figuras por Isometrías"}
-  Teorema "de Conservaciones de Figuras por Isometrías" Sean $A, B \in
-  \mathbf{P}$, $g \in \text{Isom}(\mathbf{P}, d)$ y usando la notación de
-  prima para un elemento transformado, por ejemplo, $X' = g(X)$ para un
-  punto $X \in \mathbf{P}$, se tiene:
+::: {.theorem data-label="de Conservaciones de Figuras por Isometrías"}
+  Sean $A, B \in \mathbf{P}$, $g \in \text{Isom}(\mathbf{P}, d)$ y usando la
+  notación de prima ("$'$") para un elemento transformado, por ejemplo, $X'
+  = g(X)$ para un punto $X \in \mathbf{P}$, se tiene:
 
   1. El conjunto transformado por una isometría de un segmento es un
      segmento cuyos extremos son los puntos transformados de los extremos
@@ -504,7 +502,7 @@ claro. Lo pongo para la primera de estas demostraciones:
 
 $$ g(X) \in g([A, B]) \quad \Longleftrightarrow \quad X \in [A, B] $$
 
-Así, tiene sentido aplicar la definición de *subconjunto*.
+Así, tiene sentido aplicar la definición de _subconjunto_.
 
 También, en la demostración del último punto (el de los semiplanos), se usa
 un resultado de la teoría de conjuntos que no se explica en el texto. En
@@ -534,9 +532,8 @@ Por ejemplo, uno viene a decir que, dado un segmento, el transformado por
 una isometría de su punto medio es el punto medio de su segmento
 transformado. O, de forma más simbólica, como expresamos a continuación.
 
-::: {.theorem
-       data-label="Teorema (de la Conservación del Punto Medio de un Segmento por Isometría)"}
-
+::: {.theorem data-label="de la Conservación del Punto Medio de un Segmento
+       por Isometría"}
   Dado un segmento $[A, B]$ y una isometría $g \in \text{Isom}(\mathbf{P},
   d)$, se tiene que
 
