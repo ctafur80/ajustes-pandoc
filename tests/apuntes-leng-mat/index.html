@@ -1,0 +1,1773 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="Carlos E. Tafur Egido" />
+  <meta name="dcterms.date" content="2025-02-08" />
+  <meta name="keywords" content="matemáticas, lógica, teoría de
+conjuntos, teoría de grupos, álgebra abstracta, números" />
+  <meta name="description" content="Apuntes de la asignatura Lenguaje Matemático, Conjuntos y Números." />
+  <title>Apuntes de Lenguaje Matemático, Conjuntos y Números</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    q { quotes: "“" "”" "‘" "’"; }
+    /* CSS for citations */
+    div.csl-bib-body { }
+    div.csl-entry {
+      clear: both;
+      margin-bottom: 0em;
+    }
+    .hanging-indent div.csl-entry {
+      margin-left:2em;
+      text-indent:-2em;
+    }
+    div.csl-left-margin {
+      min-width:2em;
+      float:left;
+    }
+    div.csl-right-inline {
+      margin-left:2em;
+      padding-left:1em;
+    }
+    div.csl-indent {
+      margin-left: 2em;
+    }  </style>
+  <link rel="stylesheet" href="./ajustes-pandoc/salida-web/css/variables/apuntes-asignaturas.css" />
+  <link rel="stylesheet" href="./ajustes-pandoc/salida-web/css/base-mobile-first.css" />
+  <link rel="stylesheet" href="./ajustes-pandoc/salida-web/css/tablas.css" />
+  <link rel="stylesheet" href="./ajustes-pandoc/salida-web/css/codigo.css" />
+  <link rel="stylesheet" href="./ajustes-pandoc/salida-web/css/matematicas.css" />
+  <link rel="stylesheet" href="./ajustes-pandoc/salida-web/css/desktop.css" />
+  <nav id="nav">
+    <!--<h2></h2>-->
+    <ul id="menu">
+    </ul>
+  </nav>
+
+  <!--<main>-->
+  <input type="checkbox" id="toc-check" />
+  <label id="toc-toggle" for="toc-check">ToC</label>
+  <script src="/Users/ctafur/Documents/disenno-tipografia/ajustes-pandoc/salida-web/javascript/breadcrumbs.js"></script>
+  <script src="/Users/ctafur/Documents/disenno-tipografia/ajustes-pandoc/salida-web/javascript/abre-cierra-nav-bar.js"></script>
+</head>
+<body>
+<div id="breadcrumb"></div>
+<header id="title-block-header">
+<h1 class="title">Apuntes de Lenguaje Matemático, Conjuntos y
+Números</h1>
+<p class="author">Carlos E. Tafur Egido</p>
+<p class="date">02/08/2025</p>
+</header>
+<nav id="TOC" role="doc-toc">
+<ul>
+<li><a href="#introducción" id="toc-introducción">Introducción</a></li>
+<li><a href="#cap-logica-prop" id="toc-cap-logica-prop">Capítulo 1.
+Lógica de proposiciones</a>
+<ul>
+<li><a href="#expresiones-matemáticas.-proposiciones"
+id="toc-expresiones-matemáticas.-proposiciones">Expresiones matemáticas.
+Proposiciones</a></li>
+<li><a href="#conectores-lógicos-básicos"
+id="toc-conectores-lógicos-básicos">Conectores lógicos básicos</a></li>
+<li><a href="#construcción-de-proposiciones-nuevas"
+id="toc-construcción-de-proposiciones-nuevas">Construcción de
+proposiciones nuevas</a></li>
+<li><a href="#leyes-lógicas" id="toc-leyes-lógicas">Leyes
+lógicas</a></li>
+<li><a href="#validación-de-proposiciones"
+id="toc-validación-de-proposiciones">Validación de
+proposiciones</a></li>
+<li><a href="#forma-clausulada-de-proposiciones"
+id="toc-forma-clausulada-de-proposiciones">Forma clausulada de
+proposiciones</a></li>
+</ul></li>
+<li><a href="#cap-conjuntos" id="toc-cap-conjuntos">Capítulo 2.
+Conjuntos</a>
+<ul>
+<li><a href="#algunas-ideas-sobre-conjuntos.-predicados"
+id="toc-algunas-ideas-sobre-conjuntos.-predicados">2.1. Algunas ideas
+sobre conjuntos. Predicados</a>
+<ul>
+<li><a href="#predicados" id="toc-predicados">Predicados</a></li>
+<li><a href="#cuantificadores"
+id="toc-cuantificadores">Cuantificadores</a></li>
+<li><a href="#relaciones-entre-los-cuantificadores-exists-yforall"
+id="toc-relaciones-entre-los-cuantificadores-exists-yforall">Relaciones
+entre los cuantificadores
+<q><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mo>∃</mo><annotation encoding="application/x-tex">\exists</annotation></semantics></math>”
+y</q><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mo>∀</mo><annotation encoding="application/x-tex">\forall</annotation></semantics></math>’</a></li>
+<li><a href="#complementario-y-partes-de-un-conjunto"
+id="toc-complementario-y-partes-de-un-conjunto">Complementario y partes
+de un conjunto</a></li>
+</ul></li>
+<li><a href="#operaciones-con-conjuntos"
+id="toc-operaciones-con-conjuntos">Operaciones con conjuntos</a></li>
+<li><a href="#producto-de-dos-conjuntos"
+id="toc-producto-de-dos-conjuntos">Producto de dos conjuntos</a></li>
+<li><a href="#relaciones-entre-conjuntos"
+id="toc-relaciones-entre-conjuntos">Relaciones entre conjuntos</a></li>
+<li><a href="#comentarios" id="toc-comentarios">Comentarios</a>
+<ul>
+<li><a href="#sobre-el-método-de-inducción"
+id="toc-sobre-el-método-de-inducción">Sobre el método de
+inducción</a></li>
+</ul></li>
+</ul></li>
+<li><a href="#capítulo-3.-relaciones-y-aplicaciones"
+id="toc-capítulo-3.-relaciones-y-aplicaciones">Capítulo 3. Relaciones y
+aplicaciones</a>
+<ul>
+<li><a href="#propiedades-básicas-de-una-relación"
+id="toc-propiedades-básicas-de-una-relación">Propiedades básicas de una
+relación</a></li>
+</ul></li>
+<li><a href="#referencias" id="toc-referencias">Referencias</a></li>
+</ul>
+</nav>
+<section id="introducción" class="level1 unnumbered">
+<h1 class="unnumbered">Introducción</h1>
+<p>Se trata de una asignatura que sirve como transición a las
+matemáticas superiores. Abarca a la lógica, la teoría de conjuntos,
+álgebra abstracta y formalizaciones de conjuntos numéricos, como
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>ℤ</mi><annotation encoding="application/x-tex">\mathbb{Z}</annotation></semantics></math>,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>ℝ</mi><annotation encoding="application/x-tex">\mathbb{R}</annotation></semantics></math>,
+etc.</p>
+<p>Algunas de estas partes no las trata tan en detalle como se podría
+hacer en una asignatura dedicada a tal materia. En gran parte se solapa
+con asignaturas sobre demostraciones, que suelen tenerse en muchas
+universidades. Tal y como digo, yo la veo más bien como una introducción
+a las matemáticas superiores; consecuentemente, le servirá para las
+demás asignaturas del grado en matemáticas.</p>
+<p>El texto base de la asignatura es <span class="citation"
+data-cites="pineda"><a href="#ref-pineda"
+role="doc-biblioref">[1]</a></span>, creado por profesores de la UNED.
+Lo primero que se presenta en este es la lógica. En esta referencia no
+se puede decir que se aprenda mucho sobre lógica; solo lo básico para
+poder aplicar a las matemáticas. Si desea aprender de verdad las bases
+de la lógica, una referencia que me gusta mucho es <span
+class="citation" data-cites="forallx"><a href="#ref-forallx"
+role="doc-biblioref">[2]</a></span>, aunque puede que en algún momento
+se cuestione si le merece la pena gastar su tiempo en esos contenidos
+más bien filosóficos. Quizás le baste a efectos prácticos con lo que se
+aprende en el anterior.</p>
+<p>En el Capítulo 2 se continúa con la lógica a la vez que se inicia la
+teoría de conjuntos, que se extiende también al Capítulo 3. Aunque esta
+última se presenta con mayor rigor y extensión que la parte de la
+lógica, tampoco se pllega a ver con la profundidad con la que se puede
+llegar a ver en una asignatura centrada en esta materia. Por ejemplo, se
+presenta la definición <q>ingenua</q> del concepto <em>conjunto</em>. En
+la sección de comentarios del capítulo 2 se explica algo sobre cómo
+sería una definición rigurosa.</p>
+<p>La parte de la teoría de conjuntos puede complementarse con <span
+class="citation" data-cites="velleman"><a href="#ref-velleman"
+role="doc-biblioref">[3]</a></span>, que es un libro con mucha fama.
+Tampoco llega a entrar en gran profundidad en algunos detalles de la
+teoría de conjuntos, pero sí que creo que tiene explicaciones muy
+buenas. El inconveniente que le encuentro es que hace un uso muy extenso
+de la prosa en detrimento de la simbología matemática.</p>
+<p>Un libro que es un clásico de la teoría de conjuntos, y con el que
+puede aprender esos detalles que se pasan aquí por alto, es <span
+class="citation" data-cites="enderton"><a href="#ref-enderton"
+role="doc-biblioref">[4]</a></span>. TKTK. Un libro de teoría de
+conjuntos más centrado en la filosofía pero que puede aclararle algunos
+detalles es <span class="citation" data-cites="ol-set-theory"><a
+href="#ref-ol-set-theory" role="doc-biblioref">[5]</a></span>.</p>
+<p>También, a partir del capítulo 5, se da lo básico sobre el álgebra
+abstracta. TKTK.</p>
+<p>En cuanto a la presentación rigurosa de los números (enteros, reales,
+etc.), esto puede verlo también en muchos otros libros. TKTK.</p>
+<p>En cierto modo, se da cierta contradicción en este tipo de
+asignaturas. Por un lado, para poner ejemplos se usan algunos conceptos
+que ya conoce de cursos previos de matemáticas. Por ejemplo, el concepto
+de <em>función</em>. Conforme avanza en la asignatura, llega un punto en
+el que se le presentan definiciones de algunos de esos conceptos (como
+el de <em>función</em>) más rigurosas de las que ya conocía. Esto se
+hace por razones prácticas. Si no, casi no tendríamos ejemplos, pues se
+trata de una asignatura de <q>cimentación</q> de su conocimiento de las
+matemáticas.</p>
+</section>
+<section id="cap-logica-prop" class="level1">
+<h1>Capítulo 1. Lógica de proposiciones</h1>
+<p>La lógica surge en la filosofía, y de hecho la inició el filósofo
+Aristóteles de la Antigua Grecia. Muchas veces se suele decir que el
+propósito de la lógica es <q>sistematizar el razonamiento</q>. Además de
+en filosofía, también se estudia, para su aplicación, en matemáticas y
+en ciencias de la computación<a href="#fn1" class="footnote-ref"
+id="fnref1" role="doc-noteref"><sup>1</sup></a>, o, de forma más
+general, en el estudio de los sistemas lógicos digitales<a href="#fn2"
+class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a>,
+aunque puede que tenga utilidad en prácticamente todas las ramas del
+conocimiento.</p>
+<p>En cada área donde se estudia se suelen usar unas reglas de estilo
+propias sobre la simbología de la lógica.</p>
+<p>También cambia la terminología y la notación en las distintas
+referencias. Por ejemplo, en <span class="citation"
+data-cites="forallx"><a href="#ref-forallx"
+role="doc-biblioref">[2]</a></span> llaman <em>truth-functional
+logic</em> a lo que en <span class="citation" data-cites="pineda"><a
+href="#ref-pineda" role="doc-biblioref">[1]</a></span> llaman <em>lógica
+de proposiciones</em>, mientras que en <span class="citation"
+data-cites="velleman"><a href="#ref-velleman"
+role="doc-biblioref">[3]</a></span> llaman <em>lógica enunciativa</em>
+(<em>sentential logic</em>) a la de proposiciones y también a la de
+predicados.</p>
+<p>En cualquier caso, lo que debe tener claro es que la lógica es
+también un lenguaje (<em>language</em> TKTK) y podríamos hacer varias
+clasificaciones en cuanto a las expresiones, de más general a más
+particular:</p>
+<ol type="1">
+<li>Verbalización (<em>utterance</em>). TKTK.</li>
+<li>Enunciado (<em>sentence</em>; también llamado <em>oración</em> o
+<em>frase</em>). Los hay de varios tipos: interrogativos, exclamativos,
+imperativos, declarativos (también llamados <em>informativos</em>),
+etc.</li>
+<li>Afirmación (<em>statement</em>) o <em>proposición</em>
+(<em>proposition</em>). Sería un enunciado declarativo. Estos son los
+únicos que nos interesan en la lógica. Estas producirán un valor de
+certeza (también llamado <em>valor de verdad</em>, <em>lógico</em> o
+<em>buleano</em>); es decir, <em>verdadero</em> o <em>falso</em>.</li>
+</ol>
+<p>La lógica es un <em>lenguaje formal</em> (<em>formal language</em>),
+en contraposición a los lenguajes naturales (<em>natural
+languages</em>). TKTK.</p>
+<p>La lógica se encarga de los <em>argumentos</em> (<em>arguments</em><a
+href="#fn3" class="footnote-ref" id="fnref3"
+role="doc-noteref"><sup>3</sup></a>). Estos son una afirmación que
+consta de varias afirmaciones y de una conclusión.</p>
+<p>Esta afirmación puede contar con otras en su interior, a varios
+niveles de anidamiento (<em>nesting</em>).</p>
+<p>Dentro de los argumentos, a la lógica únicamente le interesan los que
+son <em>válidos</em> (<em>valid</em>). Un argumento será válido si y
+solo si no puede ser cierta la conclusión cuando las premisas no sean
+todas ciertas.</p>
+<p>Si ya supuese algo de lógica, esto mismo se podría expresar diciendo
+que un argumento no es más que una proposición (también valdría luego
+para predicados) cuya conectiva principal (<em>main connective</em>) es
+un condicional,
+<q><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>→</mi><annotation encoding="application/x-tex">\mathbin{\longrightarrow}</annotation></semantics></math></q>.
+La expresión a la izquierda de esa conectiva es una conjunción de varias
+proposiciones; a estas se las conoce como <em>premisas</em>. A la parte
+derecha se la conoce como <em>conclusión</em>. En este capítulo se
+aprenden todos estos conceptos que he usado en este párrafo. Esto se
+pasa por alto en <span class="citation" data-cites="pineda"><a
+href="#ref-pineda" role="doc-biblioref">[1]</a></span>, pero sí que se
+explica tanto en <span class="citation" data-cites="forallx"><a
+href="#ref-forallx" role="doc-biblioref">[2]</a></span> como en <span
+class="citation" data-cites="velleman"><a href="#ref-velleman"
+role="doc-biblioref">[3]</a></span>.</p>
+<p>Una demostración matemática no es más que un argumento válido.</p>
+<p>Mediante el uso de la lógica, a partir de una serie de certezas ya
+establecidas <em>deducimos</em> (<em>deduce</em>) otras, con lo que
+extendemos nuestro conocimiento sobre algo. La deducción no es la única
+forma de extender nuestro conocimiento en matemáticas, como veremos.</p>
+<p>Además de la validez de un argumento, se tiene también su
+<em>solidez</em> (<em>soundness</em>). TKTK.</p>
+<section id="expresiones-matemáticas.-proposiciones" class="level2">
+<h2>Expresiones matemáticas. Proposiciones</h2>
+<p>En cuanto a la notación, para las proposiciones lo más común es usar
+una letra mayúscula, como
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>P</mi><annotation encoding="application/x-tex">P</annotation></semantics></math>,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>Q</mi><annotation encoding="application/x-tex">Q</annotation></semantics></math>,
+etc. En <span class="citation" data-cites="pineda"><a href="#ref-pineda"
+role="doc-biblioref">[1]</a></span> se saltan esa regla y optan por usar
+una letra minúscula:
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>p</mi><annotation encoding="application/x-tex">p</annotation></semantics></math>,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>q</mi><annotation encoding="application/x-tex">q</annotation></semantics></math>,
+etc.</p>
+</section>
+<section id="conectores-lógicos-básicos" class="level2">
+<h2>Conectores lógicos básicos</h2>
+<p>A las conectivas (<em>connectives</em>) también se las podría llamar
+<em>operadores</em> (<em>operators</em>).</p>
+<p>Me gustaría destacar la importancia de que conozca las alternativas
+que existen en lo que respecta al condicional. Así, se tienen
+condicional contrario (<em>inverse</em>), el recíproco
+(<em>converse</em>) y el contrarrecíproco (<em>contrapositive</em>), tal
+y como se muestra en <span class="citation" data-cites="pineda"><a
+href="#ref-pineda" role="doc-biblioref">[1, p. 11]</a></span>.</p>
+<p>La conectiva condicional (<em>conditional</em>) es quizás la más
+importante de todas. De hecho, es la que usamos al definir la
+<em>validez</em> de un argumento.</p>
+<p>Vacuamente cierta TKTK.</p>
+<p>Algo que me gustaría aclarar, cuando se estudia la conectiva
+condicional, es que encontrará muchas definiciones, teoremas, etc. en
+los que no se expresa de forma correcta lo que se desea a este
+respecto.</p>
+<p>Por ejemplo, en matemáticas sucede muchas veces en definiciones que
+se usa un enunciado del tipo <q>si …, entonces …</q> cuando lo que se
+desea expresar es un bicondicional. Creo que se debe a la costumbre, y
+se entiende que el lector lo interpretará como un bicondicional. Aun
+así, personalmente creo que lo ideal sería TKTK.</p>
+</section>
+<section id="construcción-de-proposiciones-nuevas" class="level2">
+<h2>Construcción de proposiciones nuevas</h2>
+<p>Básicamente, es construir una proposición haciendo la sustitución de
+una de sus subproposiciones por otra que sea equivalente.</p>
+<p>Una proposición será equivalente a otra cuando el bicondicional de
+estas dos es una tautología,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>𝟏</mn><annotation encoding="application/x-tex">\mathbf{1}</annotation></semantics></math>.</p>
+</section>
+<section id="leyes-lógicas" class="level2">
+<h2>Leyes lógicas</h2>
+<p>En lo que respecta a las secciones en las que se presentan las
+<em>leyes</em> (<em>laws</em>; también calificadas de <em>reglas</em>,
+<em>rules</em>) lógicas, en el fondo lo que se hace no es más que
+comprobar si, de forma global, esa proposición es una tautología,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>𝟏</mn><annotation encoding="application/x-tex">\mathbf{1}</annotation></semantics></math>.
+De hecho, en lugar de <em>leyes</em> o <em>reglas</em> se las podría
+calificar también de <em>tautologías</em>, aunque no se suele hacer.</p>
+<p>Advierta, por ejemplo, que la propiedad distributiva se da para los
+dos tipos posibles, con los operadores
+<q><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>∧</mi><annotation encoding="application/x-tex">\land</annotation></semantics></math></q>
+y
+<q><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>∨</mi><annotation encoding="application/x-tex">\lor</annotation></semantics></math></q>,
+cosa que contrasta con lo que sucede con los números (de cualquier
+tipo), TKTK.</p>
+<p>Una vez que contemos con un buen <q>arsenal</q> de reglas lógicas,
+podemos manipular las expresiones (lógicas) para llegar a la más simple
+posible. No olvide que para una expresión de dos proposiciones simples
+se tienen
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>16</mn><annotation encoding="application/x-tex">16</annotation></semantics></math>
+tablas de verdad posibles, con lo que, por muy compleja y enrevesada que
+sea una expresión lógica compuesta basada en estas dos, al fin y al cabo
+será una de esas
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>16</mn><annotation encoding="application/x-tex">16</annotation></semantics></math>
+proposiciones. Para
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>3</mn><annotation encoding="application/x-tex">3</annotation></semantics></math>
+se tienen
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>256</mn><annotation encoding="application/x-tex">256</annotation></semantics></math>
+posibles proposiciones.</p>
+<p>La regla general, para
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi><mo>∈</mo><msup><mi>ℤ</mi><mo>+</mo></msup></mrow><annotation encoding="application/x-tex">n \in \mathbb{Z}^+</annotation></semantics></math>
+proposiciones simples, es, primero, sacar el número de filas, que no es
+más que
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi><mo>=</mo><msup><mn>2</mn><mi>n</mi></msup></mrow><annotation encoding="application/x-tex">a = 2^n</annotation></semantics></math>.
+Entonces, a partir de este, ver todas las posibles tablas con ese número
+de filas, que serían
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mn>2</mn><mi>a</mi></msup><annotation encoding="application/x-tex">2^a</annotation></semantics></math>.
+Es decir, en total, para
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>n</mi><annotation encoding="application/x-tex">n</annotation></semantics></math>
+proposiciones simples se tienen
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><msup><mn>2</mn><mn>2</mn></msup><mi>n</mi></msup><annotation encoding="application/x-tex">{2^2}^n</annotation></semantics></math>.</p>
+</section>
+<section id="validación-de-proposiciones" class="level2">
+<h2>Validación de proposiciones</h2>
+</section>
+<section id="forma-clausulada-de-proposiciones" class="level2">
+<h2>Forma clausulada de proposiciones</h2>
+<p>Echo en falta, al comienzo de la Sección 1.6 Forma clausulada de
+proposiciones, dar la definición de <em>literal</em> (<em>literal</em>)
+de una expresión lógica. Este no es más que una proposición simple o su
+negación; por ejemplo,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>p</mi><annotation encoding="application/x-tex">p</annotation></semantics></math>
+o
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>¬</mo><mi>p</mi></mrow><annotation encoding="application/x-tex">\neg p</annotation></semantics></math>.</p>
+<p>Pregunta. ¿Tienen que aparecer todos los términos en cada
+cláusula?</p>
+<p>A la forma normal conjiuntiva se la suele llamar, en ciencias de la
+computación, <em>maxitérmino</em> (<em>maxterm</em>).</p>
+<p>Aunque no se explique, análogamente también se tiene la forma normal
+disyuntiva (en ciencias de la computación, <em>minitérmino</em>,
+<em>minterm</em>), que es una expresión de disyunciones de conjunciones
+de literales.</p>
+</section>
+</section>
+<section id="cap-conjuntos" class="level1">
+<h1>Capítulo 2. Conjuntos</h1>
+<section id="algunas-ideas-sobre-conjuntos.-predicados" class="level2">
+<h2>2.1. Algunas ideas sobre conjuntos. Predicados</h2>
+<p>En lo que respecta a los conjuntos, aunque existe un formalismo
+riguroso para presentar este concepto, normalmente en los cursos
+introductorios se opta por dar simplemente unas nociones intuitivas de
+estos; basta con que aprenda a operar con ellos, evitando los casos
+conflictivos que pueden surgir. Al fin y al cabo, el fin con el que se
+incluyen en asignaturas como esta es que aprenda a hacer
+demostraciones.</p>
+<p>A esta forma algo superficial de presentar la teoría de conjuntos se
+la suele calificar de <em>intuitiva</em> o <em>ingenua</em>
+(<em>naïve</em>), palabra que verá en muchos de los textos.</p>
+<p>Se explican junto con nociones de lógica, ya que se puede afirmar que
+la lógica y la teoría de conjuntos constituyen la base de todas las
+matemáticas. Advierta que a veces, en algunas asignaturas de
+matemáticas, se encuentra en un nivel de abstracción en el que <q>pierde
+de vista</q> los conjuntos. Es lo que sucede, por ejemplo, en el álgebra
+básica y el cálculo. Pero siempre, si se adentra un poco, llegará un
+punto en el que tenga que manejar conjuntos.</p>
+<p>Llegado un punto, se ve que la presentación ingenua tiene ciertas
+carencias. Pueden aparecer expresiones que en principio parece que se
+refieren a un conjunto pero en realidad no es así. A estas situaciones
+se las suele conocer como <em>paradojas</em> (<em>paradoxes</em>), y son
+las que en su día motivaron una presentación rigurosa (o, dicho de otro
+modo, una formalización) de la teoría de conjuntos y, en definitiva, de
+las matemáticas. Por ejemplo, tal y como se muestra en <span
+class="citation" data-cites="pineda"><a href="#ref-pineda"
+role="doc-biblioref">[1, p. 34]</a></span>, una restricción que se debe
+imponer (de lo contrario, aparecerá una paradoja) es que un objeto no
+puede ser simultáneamente un conjunto y un elemento del mismo.</p>
+<p>En <span class="citation" data-cites="pineda"><a href="#ref-pineda"
+role="doc-biblioref">[1, p. 66]</a></span> puede ver la definición
+rigurosa de <em>conjunto</em> (<em>set</em>). Es una definición
+axiomática, como es habitual en matemáticas, pero aquí se presenta solo
+por si tiene curiosidad; no es materia que vaya a entrar en el examen.
+En <span class="citation" data-cites="ol-set-theory"><a
+href="#ref-ol-set-theory" role="doc-biblioref">[5]</a></span> se tratan
+los conjuntos de manera ingenua en la primera parte y, en la última
+(parte III), de manera rigurosa.</p>
+<p>A los conjuntos unitarios en inglés los llaman
+<em>singletons</em>.</p>
+<p>El concepto de <em>subconjunto</em> (<em>subset</em>) es muy
+importante. Es una relación que a veces se llama <em>relación de
+contención</em> o <em>de inclusión</em>.</p>
+<p>En cuanto a la notación que se emplea para esta relación, se puede
+decir que hay dos predominantes en la actualidad. La que creo que es la
+clásica es la que se usa en <span class="citation"
+data-cites="pineda"><a href="#ref-pineda"
+role="doc-biblioref">[1]</a></span>. En esta, el símbolo de
+<em>subconjunto</em> es
+<q><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>⊂</mi><annotation encoding="application/x-tex">\mathbin{\subset}</annotation></semantics></math></q>.
+La notación que ahora se ve con más frecuencia es la que se sigue en
+<span class="citation" data-cites="ol-set-theory"><a
+href="#ref-ol-set-theory" role="doc-biblioref">[5]</a></span>. En esta,
+un subconjunto se indica con el símbolo
+<q><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>⊆</mi><annotation encoding="application/x-tex">\mathbin{\subseteq}</annotation></semantics></math></q>.
+Sería algo análogo a como se hace con el signo de <q>menor o igual
+que…</q>,
+<q><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>≤</mi><annotation encoding="application/x-tex">\mathbin{\leq}</annotation></semantics></math></q>;
+cosa que tiene sentido ya que también se admite la posibilidad de que el
+conjunto contenido sea igual que el que lo contiene.</p>
+<p>Los símbolos
+<q><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>⊄</mi><annotation encoding="application/x-tex">\mathbin{\nsubset}</annotation></semantics></math></q>
+y
+<q><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>⊈</mi><annotation encoding="application/x-tex">\mathbin{\nsubseteq}</annotation></semantics></math></q>
+representan a las negaciones de la inclusión, en las respectivas
+notaciones.</p>
+<p>Algo que echo en falta en <span class="citation"
+data-cites="pineda"><a href="#ref-pineda"
+role="doc-biblioref">[1]</a></span>, y que tiene relación con la
+notación de <em>subconjunto</em>, es el concepto de <em>subconjunto
+propio</em>. Este no es más que un subconjunto excluyendo la posibilidad
+de que sea igual que el conjunto que lo contiene. Es decir, dados dos
+conjuntos
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math>
+y
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>B</mi><annotation encoding="application/x-tex">B</annotation></semantics></math>,
+se dice que
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math>
+es un subconjunto propio de
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>B</mi><annotation encoding="application/x-tex">B</annotation></semantics></math>
+si y solo si
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math>
+es un subconjunto de
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>B</mi><annotation encoding="application/x-tex">B</annotation></semantics></math>
+y
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mo>≠</mo><mi>B</mi></mrow><annotation encoding="application/x-tex">A
+\neq B</annotation></semantics></math>.</p>
+<p>En la notación moderna de <em>subconjunto</em>, la relación de
+<em>subconjunto propio</em> se suele expresar por medio del símbolo
+<q><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>⊊</mi><annotation encoding="application/x-tex">\mathbin{\subsetneq}</annotation></semantics></math></q>.
+En la antigua creo que no hay una simbología específica para esto. En
+cualquier caso, siempre se puede mencionar en la prosa.</p>
+<p>Tal y como verá, una de las dificultades de la teoría de conjuntos se
+encuentra en las situaciones en las que aparecen conjuntos de conjuntos.
+La notación a veces es complicada de entender. A este respecto, son de
+destacar <span class="citation" data-cites="pineda"><a
+href="#ref-pineda" role="doc-biblioref">[1, p. 45]</a></span>
+<strong>Ejercicio 2.14</strong> y la definición de <em>familia</em> de
+conjuntos de <span class="citation" data-cites="pineda"><a
+href="#ref-pineda" role="doc-biblioref">[1, p. 51]</a></span>.</p>
+<p>En cuanto a la terminología, conviene advertir de que muchas veces se
+hablará de <em>conjunto</em>, sin especificar de si se trata de un
+subconjunto; entre otras cosas, porque ni siquiera se sabe <em>a
+priori</em>. TKTK. Es decir, ese prefijo <em>sub-</em>, en este caso,
+sería como un adjetivo que no hay por qué mencionarlo siempre.</p>
+<p>Una consecuencia inmediata de la definición de <em>subconjunto</em>
+es que, para todo conjunto
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math>
+se cumple</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mo>⊆</mo><mi>A</mi></mrow><annotation encoding="application/x-tex"> A \subseteq A </annotation></semantics></math></p>
+<p>Otra cosa que no se menciona en <span class="citation"
+data-cites="pineda"><a href="#ref-pineda"
+role="doc-biblioref">[1]</a></span> pero que creo que es importante
+presentarla al comienzo es que la relación de inclusión de conjuntos
+cumple la propiedad transitiva; es decir, dados tres conjuntos
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math>,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>B</mi><annotation encoding="application/x-tex">B</annotation></semantics></math>
+y
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>C</mi><annotation encoding="application/x-tex">C</annotation></semantics></math>,
+si
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mo>⊆</mo><mi>B</mi></mrow><annotation encoding="application/x-tex">A \subseteq B</annotation></semantics></math>
+y
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>B</mi><mo>⊆</mo><mi>C</mi></mrow><annotation encoding="application/x-tex">B \subseteq C</annotation></semantics></math>,
+entonces
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mo>⊆</mo><mi>C</mi></mrow><annotation encoding="application/x-tex">A \subseteq C</annotation></semantics></math>.
+Es muy fácil de demostrar a partir de la definición de
+<em>subconjunto</em>.</p>
+<section id="predicados" class="level3">
+<h3>Predicados</h3>
+<p>Se podría decir que los predicados son a las proposiciones como las
+variables (también llamadas <em>indeterminadas</em>) a los números. Es
+decir, se trata de un proceso de abstracción análogo al que se hace al
+pasar de la aritmética al álgebra (básica, es decir, de
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>ℤ</mi><annotation encoding="application/x-tex">\mathbb{Z}</annotation></semantics></math>,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>ℝ</mi><annotation encoding="application/x-tex">\mathbb{R}</annotation></semantics></math>,
+etc.).</p>
+<p>En cuanto a la notación, aunque en <span class="citation"
+data-cites="pineda"><a href="#ref-pineda"
+role="doc-biblioref">[1]</a></span> ponen al designador del predicado en
+mayúsculas y el argumento como subíndice, por ejemplo,
+<q><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>P</mi><mi>x</mi></msub><annotation encoding="application/x-tex">P_x</annotation></semantics></math></q>,
+también hay quien usa la notación como con las funciones; es decir, algo
+como
+<q><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">P(x)</annotation></semantics></math></q>.</p>
+<p>En realidad, la lógica de predicados es mejor llamarla <em>lógica de
+primer orden</em>, pues, además de hablar de los predicados, se incluyen
+otras cosas respecto a la lógica de proposiciones, como, por ejemplo,
+los cuantificadores.</p>
+<p>Algo que me gustaría aclarar es que, cuando hablamos de conjuntos
+<em>por extensión</em> o <em>por comprensión</em> (que, por cierto,
+estas dos denominaciones reciben muchos otros nombres a este respecto;
+sobretodo la última), lo que estamos haciendo es <em>expresarlos</em> o
+<em>definirlos</em> (a los conjuntos).</p>
+<p>En una expresión por comprensión de un conjunto, se usa el símbolo
+<q><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>|</mi><annotation encoding="application/x-tex">\mathbin{|}</annotation></semantics></math></q>,
+o, alternativamente,
+<q><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>:</mi><annotation encoding="application/x-tex">\mathbin{:}</annotation></semantics></math></q>,
+que se puede leer como <q>tal que…</q>. En realidad, si lo piensa, no es
+más que una conjunción, con lo que se podría leer como <q>y</q>. Incluso
+a veces verá que una coma,
+<q><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>,</mi><annotation encoding="application/x-tex">\mathbin{,}</annotation></semantics></math></q>,
+se corresponde con una conjunción en la notación matemática. Esto
+también se explica en <span class="citation" data-cites="velleman"><a
+href="#ref-velleman" role="doc-biblioref">[3]</a></span>.</p>
+<p>En la expresión por comprensión, a veces, se abusa de la notación y
+se ven expresiones como</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">{</mo><mn>2</mn><mi>k</mi><mspace width="0.222em"></mspace><mo stretchy="false" form="prefix">|</mo><mspace width="0.222em"></mspace><mi>k</mi><mo>∈</mo><mi>ℕ</mi><mo stretchy="false" form="postfix">}</mo></mrow><annotation encoding="application/x-tex"> \{2k \ | \ k \in \mathbb{N}\} </annotation></semantics></math></p>
+<p>en lugar de</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">{</mo><mi>x</mi><mo>∈</mo><mi>ℕ</mi><mspace width="0.222em"></mspace><mo stretchy="false" form="prefix">|</mo><mspace width="0.222em"></mspace><mo stretchy="false" form="prefix">(</mo><mo>∃</mo><mi>x</mi><mo>∈</mo><mi>ℕ</mi><mo stretchy="false" form="postfix">)</mo><mspace width="0.222em"></mspace><mi>x</mi><mo>=</mo><mn>2</mn><mi>k</mi><mo stretchy="false" form="postfix">}</mo></mrow><annotation encoding="application/x-tex"> \{x \in \mathbb{N} \ | \ (\exists x \in \mathbb{N}) \ x = 2k\} </annotation></semantics></math></p>
+<p>que es como debería ser. Formas así también se consideran válidas
+aunque en principio sean <q>agramaticales</q>. Serían como lo que sucede
+con los modismos (<em>idioms</em>) en el estudio de los lenguajes
+naturales; se usan por comodidad.</p>
+<p>Por completar su conocimiento, quizás le interese saber la distinción
+entre <em>variable libre</em> (<em>free variable</em>) y <em>variable
+ligada</em> (<em>bound variable</em>) en un predicado. Puede consultar
+<span class="citation" data-cites="velleman"><a href="#ref-velleman"
+role="doc-biblioref">[3]</a></span>.</p>
+<p>El <em>conjunto vacío</em> (<em>empty set</em>) sería
+<q><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>{</mi><mo stretchy="false" form="postfix">}</mo></mrow><annotation encoding="application/x-tex">\mathbin{\{}{\}}</annotation></semantics></math></q>
+en la expresión por extensión; es decir, tal y como indica su propio
+nombre, el conjunto sin elementos; aunque se suele preferir el símbolo
+<q><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>∅</mi><annotation encoding="application/x-tex">\emptyset</annotation></semantics></math></q>
+para denotarlo. Por comprensión, según pone en <span class="citation"
+data-cites="pineda"><a href="#ref-pineda"
+role="doc-biblioref">[1]</a></span>, sería</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">{</mo><mi>x</mi><mo>∈</mo><mi>U</mi><mspace width="0.222em"></mspace><mo stretchy="false" form="prefix">|</mo><mspace width="0.222em"></mspace><mi>x</mi><mo>∉</mo><mi>U</mi><mo stretchy="false" form="postfix">}</mo></mrow><annotation encoding="application/x-tex"> \{x \in U \ | \ x \notin U\} </annotation></semantics></math></p>
+<p>En realidad serviría cualquier proposición que juntándola (es decir,
+conectándola mediante un operador conjunción,
+<q><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>∧</mi><annotation encoding="application/x-tex">\mathbin{\land}</annotation></semantics></math></q>)
+con la que está a la izquierda de
+<q><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>|</mi><annotation encoding="application/x-tex">\mathbin{|}</annotation></semantics></math></q>,
+produzca el valor <em>falso</em> para cualquier valor de
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>x</mi><annotation encoding="application/x-tex">x</annotation></semantics></math>,
+ya que estas en forma conjunta no producirían ningún valor y por tanto
+se tendría el conjunto
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>∅</mi><annotation encoding="application/x-tex">\emptyset</annotation></semantics></math>.
+En particular, por la regla de la contradicción, se cumple para la
+expresión anterior, ya que</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo>∈</mo><mi>U</mi><mo stretchy="false" form="postfix">)</mo><mspace width="0.222em"></mspace><mo>∧</mo><mspace width="0.222em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo>∉</mo><mi>U</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex"> (x \in U) \ \land \ (x \notin U) </annotation></semantics></math></p>
+<p>produce un valor <em>falso</em> para cualquiera que tome
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>x</mi><annotation encoding="application/x-tex">x</annotation></semantics></math>;
+o, lo que es lo mismo, una contradicción. Cualquier predicado que junto
+con
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>∈</mo><mi>U</mi></mrow><annotation encoding="application/x-tex">x \in U</annotation></semantics></math>
+produzca el valor <em>falso</em> para todos los valores de
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>x</mi><annotation encoding="application/x-tex">x</annotation></semantics></math>
+será un predicado equivalente TKTK.</p>
+<p>Por cierto, existe un único conjunto vacío. Esto se deduce de forma
+directa de la forma en la que hemos definido la igualdad de conjuntos
+(que en el fondo no es más que el Axioma de Extensionalidad de la
+definición formal de <em>conjunto</em>).</p>
+<p>También, algo que se puede demostrar —ahora que se ha definido el
+conjunto vacío— es que, para todo conjunto
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math>,
+se cumple</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>∅</mi><mo>⊆</mo><mi>A</mi></mrow><annotation encoding="application/x-tex"> \emptyset \subseteq A </annotation></semantics></math></p>
+<p>Se demuestra a partir de la definición de <em>subconjunto</em> y se
+trataría de una proposición vacuamente cierta.</p>
+<p>En lo que respecta a la presentación de los números naturales que se
+da en <span class="citation" data-cites="pineda"><a href="#ref-pineda"
+role="doc-biblioref">[1, p. 38]</a></span>, hay que aclarar que en ese
+texto se adopta el convenio de admitir al
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>0</mn><annotation encoding="application/x-tex">0</annotation></semantics></math>
+como un número natural. Esto no es algo que se haga siempre; no existe
+un criterio unificado a este respecto en la comunidad matemática, y de
+hecho hay razones tanto para incluirlo como para no hacerlo, según el
+área de las matemáticas en la que nos encontremos. Por ejemplo, en la
+teoría de conjuntos y la combinatoria se suele incluir, mientras que en
+la teoría de números no.</p>
+<p>En cualquier caso, tanto los Axiomas de Peano como el Principio de
+Inducción serían igualmente válidos si se asumiese que
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>ℕ</mi><annotation encoding="application/x-tex">\mathbb{N}</annotation></semantics></math>
+comienza en
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>1</mn><annotation encoding="application/x-tex">1</annotation></semantics></math>
+en lugar de en
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>0</mn><annotation encoding="application/x-tex">0</annotation></semantics></math>.</p>
+<p>Hablando de esos axiomas, me gustaría aclarar lo que se hace con el
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>A</mi><mn>5</mn></msub><annotation encoding="application/x-tex">A_{5}</annotation></semantics></math>.
+Este hace que ese subconjunto sea
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>ℕ</mi><annotation encoding="application/x-tex">\mathbb{N}</annotation></semantics></math>
+ya que, tal y como se dice en este, es un subconjunto de
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>ℕ</mi><annotation encoding="application/x-tex">\mathbb{N}</annotation></semantics></math>.
+Entonces, si se dan esas condiciones,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>ℕ</mi><annotation encoding="application/x-tex">\mathbb{N}</annotation></semantics></math>
+es un subconjunto de este. Entonces, al darse la doble inclusión, los
+dos conjuntos son iguales.</p>
+<p>El Principio de Inducción, puede verse también de un modo algo más
+general, tal y como se explica en <span class="citation"
+data-cites="pineda"><a href="#ref-pineda" role="doc-biblioref">[1, p.
+66]</a></span>. Se puede comenzar desde cualquier número natural; solo
+que entonces se cumpliría para todos a partir de este.</p>
+<p>Aunque no es muy común, a una definición recurrente también se la
+puede llamar <em>definición inductiva</em> ya que esta hace uso del
+Principio de Inducción. Por cierto, a una expresión no recurrente
+también se la suele llamar <em>forma cerrada</em> o <em>forma
+explícita</em>.</p>
+<p>En cuanto a la definición de <em>factorial</em>, a mí me gusta más la
+definición siguiente:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mi>n</mi><mo>+</mo><mn>1</mn><mo stretchy="false" form="postfix">)</mo><mi>!</mi><mo>=</mo><mrow><mo stretchy="true" form="prefix">{</mo><mtable><mtr><mtd columnalign="left" style="text-align: left"><mn>1</mn></mtd><mtd columnalign="left" style="text-align: left"><mspace width="0.222em"></mspace><mrow><mtext mathvariant="normal">si </mtext><mspace width="0.333em"></mspace></mrow><mi>n</mi><mo>+</mo><mn>1</mn><mo>=</mo><mn>0</mn></mtd></mtr><mtr><mtd columnalign="left" style="text-align: left"><mi>n</mi><mi>!</mi><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>n</mi><mo>+</mo><mn>1</mn><mo stretchy="false" form="postfix">)</mo></mtd><mtd columnalign="left" style="text-align: left"><mspace width="0.222em"></mspace><mrow><mtext mathvariant="normal">si </mtext><mspace width="0.333em"></mspace></mrow><mi>n</mi><mo>+</mo><mn>1</mn><mo>&gt;</mo><mn>0</mn></mtd></mtr></mtable></mrow></mrow><annotation encoding="application/x-tex"> (n + 1)! = \left\{
+     \begin{array}{ll}
+         1            &amp;\ \text{si } n + 1 = 0 \\
+         n!\,(n + 1)  &amp;\ \text{si } n + 1 &gt; 0
+     \end{array} \right. </annotation></semantics></math></p>
+<p>o, mejor aún,</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi><mi>!</mi><mo>=</mo><mrow><mo stretchy="true" form="prefix">{</mo><mtable><mtr><mtd columnalign="left" style="text-align: left"><mn>1</mn></mtd><mtd columnalign="left" style="text-align: left"><mspace width="0.222em"></mspace><mrow><mtext mathvariant="normal">si </mtext><mspace width="0.333em"></mspace></mrow><mi>n</mi><mo>=</mo><mn>0</mn></mtd></mtr><mtr><mtd columnalign="left" style="text-align: left"><mo stretchy="false" form="prefix">(</mo><mi>n</mi><mo>−</mo><mn>1</mn><mo stretchy="false" form="postfix">)</mo><mi>!</mi><mspace width="0.167em"></mspace><mi>n</mi></mtd><mtd columnalign="left" style="text-align: left"><mspace width="0.222em"></mspace><mrow><mtext mathvariant="normal">si </mtext><mspace width="0.333em"></mspace></mrow><mi>n</mi><mo>&gt;</mo><mn>0</mn></mtd></mtr></mtable></mrow></mrow><annotation encoding="application/x-tex"> n! = \left\{
+     \begin{array}{ll}
+         1              &amp;\ \text{si } n = 0 \\
+         (n - 1)!\, n   &amp;\ \text{si } n &gt; 0
+     \end{array} \right. </annotation></semantics></math></p>
+<p>Tengo la manía de poner el factorial a la izquierda, pues no tengo
+claras las reglas de precedencia de este operador TKTK. La verdad es que
+me parece una simbología bastante desacertada. TKTK.</p>
+<p>Por cierto, existen funciones recurrentes en las que el término
+general depende de más de uno de los anteriores, con lo que, para
+concretar y dejar de tener una familia de funciones, deberíamos obtener
+más de un valor concreto. Es lo que sucede, por ejemplo, con la sucesión
+de Fibonacci, en <span class="citation" data-cites="pineda"><a
+href="#ref-pineda" role="doc-biblioref">[1, p. 64]</a></span>.</p>
+</section>
+<section id="cuantificadores" class="level3">
+<h3>Cuantificadores</h3>
+<p>En lo que respecta a los cuantificadores, la notación a veces varía
+en los distintos textos. En <span class="citation"
+data-cites="pineda"><a href="#ref-pineda"
+role="doc-biblioref">[1]</a></span>, se suele encerrar entre paréntesis
+la parte del cuantificador. Por ejemplo,</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mo>∀</mo><mi>x</mi><mo>∈</mo><mi>C</mi><mo stretchy="false" form="postfix">)</mo><mspace width="0.222em"></mspace><msub><mi>P</mi><mi>x</mi></msub></mrow><annotation encoding="application/x-tex"> (\forall x \in C)\: P_x </annotation></semantics></math></p>
+<p>Es común ver, no solo en <span class="citation"
+data-cites="pineda"><a href="#ref-pineda"
+role="doc-biblioref">[1]</a></span>, que en el uso de esta notación a
+veces se es un poco laxo y se quita ese paréntesis. En este caso, se
+suele poner un punto o una coma tras la variable del cuantificador, como
+indicación de separación entre la expresión del cuantificador y el
+predicado. Imagino que se hace con el propósito de que quede una
+expresión más <q>limpia</q>, menos <q>cargada</q> (con menos
+paréntesis). Por ejemplo,</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>∀</mo><mi>x</mi><mo>∈</mo><mi>C</mi><mo>,</mo><mspace width="0.222em"></mspace><msub><mi>P</mi><mi>x</mi></msub></mrow><annotation encoding="application/x-tex"> \forall x \in C,\ P_x </annotation></semantics></math></p>
+<p>En cuanto a <span class="citation" data-cites="velleman"><a
+href="#ref-velleman" role="doc-biblioref">[3]</a></span>, la notación
+que emplea es mucho más rigurosa. Lo primero es que en la variable del
+cuantificador no se especifican aspectos de esa variable, que no son
+otra cosa más que predicados. Así, en lugar de
+<q><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>∀</mo><mi>x</mi><mo>∈</mo><mi>C</mi><mi>…</mi></mrow><annotation encoding="application/x-tex">\forall x \in C\ldots</annotation></semantics></math></q>,
+se pondría
+<q><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>∀</mo><mi>x</mi><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo>∈</mo><mi>C</mi><mo>∧</mo><mi>…</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\forall x(x \in C \land \ldots)</annotation></semantics></math></q>.</p>
+<p>Además, lo que se pone entre paréntesis —o corchetes o llaves, según
+los anidamientos que existan— es el predicado; no el cuantificador con
+su variable.</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>∀</mo><mi>x</mi><mspace width="0.222em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo>∈</mo><mi>C</mi><mo>∧</mo><msub><mi>P</mi><mi>x</mi></msub><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex"> \forall x \ (x \in C \land P_x) </annotation></semantics></math></p>
+<p>A este respecto, se siguen las mismas reglas del uso de paréntesis
+que con el operador negación,
+<q><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mo>¬</mo><annotation encoding="application/x-tex">\neg</annotation></semantics></math></q>.
+Por ejemplo, se pondría</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>∀</mo><mi>x</mi><mspace width="0.222em"></mspace><msub><mi>P</mi><mi>x</mi></msub></mrow><annotation encoding="application/x-tex"> \forall x \ P_x </annotation></semantics></math></p>
+<p>pero,</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>∀</mo><mi>x</mi><mspace width="0.222em"></mspace><mi>x</mi><mo>∈</mo><mi>C</mi><mo>∧</mo><msub><mi>P</mi><mi>x</mi></msub></mrow><annotation encoding="application/x-tex"> \forall x \ x \in C \land P_x </annotation></semantics></math></p>
+<p>TKTK.</p>
+<p>Lo cierto es que, en matemáticas, la notación de <span
+class="citation" data-cites="velleman"><a href="#ref-velleman"
+role="doc-biblioref">[3]</a></span> a este respecto no se suele ver con
+frecuencia. La que se suele ver en los textos de matemáticas es la de
+<span class="citation" data-cites="pineda"><a href="#ref-pineda"
+role="doc-biblioref">[1]</a></span>.</p>
+<p>Volviendo a la definición de <em>subconjunto</em>, podríamos decir
+que se tiene la siguiente equivalencia:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mo>⊆</mo><mi>B</mi><mspace width="1.0em"></mspace><mo>⇔</mo><mspace width="1.0em"></mspace><mo>∀</mo><mi>x</mi><mo>∈</mo><mi>A</mi><mo>,</mo><mspace width="0.222em"></mspace><mi>x</mi><mo>∈</mo><mi>B</mi></mrow><annotation encoding="application/x-tex"> A \subseteq B \quad \Longleftrightarrow \quad \forall x \in A,\: x \in B
+</annotation></semantics></math></p>
+<p>o, en la notación de <span class="citation" data-cites="velleman"><a
+href="#ref-velleman" role="doc-biblioref">[3]</a></span>,</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mo>⊆</mo><mi>B</mi><mspace width="1.0em"></mspace><mo>⇔</mo><mspace width="1.0em"></mspace><mo>∀</mo><mi>x</mi><mspace width="0.222em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo>∈</mo><mi>A</mi><mo>→</mo><mi>x</mi><mo>∈</mo><mi>B</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex"> A \subseteq B \quad \Longleftrightarrow \quad \forall x \ (x \in A
+  \rightarrow x \in B) </annotation></semantics></math></p>
+<p>o</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">[</mo><mi>A</mi><mo>⊆</mo><mi>B</mi><mo stretchy="false" form="postfix">]</mo><mspace width="0.222em"></mspace><mo>⇔</mo><mspace width="0.222em"></mspace><mo stretchy="false" form="prefix">[</mo><mo>∀</mo><mi>x</mi><mspace width="0.222em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo>∈</mo><mi>A</mi><mo>→</mo><mi>x</mi><mo>∈</mo><mi>B</mi><mo stretchy="false" form="postfix">)</mo><mo stretchy="false" form="postfix">]</mo></mrow><annotation encoding="application/x-tex"> [A \subseteq B] \ \Longleftrightarrow \ [\forall x \ (x \in A \rightarrow
+  x \in B)] </annotation></semantics></math></p>
+<p>Algo que se explica en <span class="citation"
+data-cites="velleman"><a href="#ref-velleman"
+role="doc-biblioref">[3]</a></span> pero no en <span class="citation"
+data-cites="pineda"><a href="#ref-pineda"
+role="doc-biblioref">[1]</a></span> es que en la lógica de primer orden
+también podemos usar constantes; es decir, variables con un valor
+fijado. Vea el ejemplo 2.1.2 punto 4.</p>
+<p>Una forma de justificar que</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>∀</mo><mi>x</mi><mo>∈</mo><mi>C</mi><mo>,</mo><mspace width="0.222em"></mspace><msub><mi>P</mi><mi>x</mi></msub><mspace width="1.0em"></mspace><mo>⇔</mo><mspace width="1.0em"></mspace><msub><mi>C</mi><mi>P</mi></msub><mo>=</mo><mi>C</mi></mrow><annotation encoding="application/x-tex"> \forall x \in C,\ P_x\quad \Longleftrightarrow \quad C_P = C </annotation></semantics></math></p>
+<p>sería ver que, por un lado, al definir a
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>C</mi><mi>P</mi></msub><annotation encoding="application/x-tex">C_P</annotation></semantics></math>
+del modo siguiente,</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>C</mi><mi>P</mi></msub><mo>=</mo><mo stretchy="false" form="prefix">{</mo><mi>x</mi><mo>∈</mo><mi>C</mi><mspace width="0.222em"></mspace><mo stretchy="false" form="prefix">|</mo><mspace width="0.222em"></mspace><msub><mi>P</mi><mi>x</mi></msub><mo stretchy="false" form="postfix">}</mo></mrow><annotation encoding="application/x-tex"> C_P = \{x \in C \ | \ P_x\} </annotation></semantics></math></p>
+<p>obviamente se cumple
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>C</mi><mi>P</mi></msub><mo>⊆</mo><mi>C</mi></mrow><annotation encoding="application/x-tex">C_P \subseteq C</annotation></semantics></math>,
+ya que para todo
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>∈</mo><msub><mi>C</mi><mi>P</mi></msub></mrow><annotation encoding="application/x-tex">x \in C_P</annotation></semantics></math>
+se tiene que
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>∈</mo><mi>C</mi></mrow><annotation encoding="application/x-tex">x \in C</annotation></semantics></math>
+(hemos aplicado la definición de <em>subconjunto</em>). Por otro lado,
+la expresión
+’<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>∀</mo><mi>x</mi><mo>∈</mo><mi>C</mi><mo>,</mo><mspace width="0.222em"></mspace><msub><mi>P</mi><mi>x</mi></msub></mrow><annotation encoding="application/x-tex">\forall x \in C,\: P_x</annotation></semantics></math>”
+viene a decir que para un
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>∈</mo><mi>C</mi></mrow><annotation encoding="application/x-tex">x \in C</annotation></semantics></math>
+cualquiera se tiene que
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>P</mi><mi>x</mi></msub><annotation encoding="application/x-tex">P_x</annotation></semantics></math>
+es verdadero y, por tanto, por la definición de
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>C</mi><mi>P</mi></msub><annotation encoding="application/x-tex">C_P</annotation></semantics></math>,
+se tiene que
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>∈</mo><msub><mi>C</mi><mi>P</mi></msub></mrow><annotation encoding="application/x-tex">x \in C_P</annotation></semantics></math>.
+Por tanto, se ha demostrado que
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>C</mi><mo>⊆</mo><msub><mi>C</mi><mi>P</mi></msub></mrow><annotation encoding="application/x-tex">C \subseteq C_P</annotation></semantics></math>.
+Por la doble inclusión se tiene entonces que
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>C</mi><mi>P</mi></msub><mo>=</mo><mi>C</mi></mrow><annotation encoding="application/x-tex">C_P =
+C</annotation></semantics></math>.</p>
+<p>La otra expresión alternativa, es decir, la del cuantificador
+existencial, es bastante evidente a la vista de la definición del
+conjunto
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>C</mi><mi>P</mi></msub><annotation encoding="application/x-tex">C_P</annotation></semantics></math>.</p>
+<p>Lo que viene a decir la última parte de la observación de <span
+class="citation" data-cites="pineda"><a href="#ref-pineda"
+role="doc-biblioref">[1, p. 43]</a></span> es que no hay una forma
+directa de transformar una expresión en lenguaje natural (español o
+inglés, por ejemplo) al lenguaje matemático. Por ejemplo, en el
+enunciado <q>Un número primo es impar</q> ese <em>un</em> no se debe
+interpretar como se hace la mayoría de las veces, pues en este caso no
+se refiere a uno en particular, sino a uno genérico.<a href="#fn4"
+class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a> Es
+decir, es como si se dijese <q>Para todo número primo, este es
+impar</q>.<a href="#fn5" class="footnote-ref" id="fnref5"
+role="doc-noteref"><sup>5</sup></a></p>
+<p>Respecto a lo que se comenta sobre si se hace mayor o menor uso de la
+simbología, en detrimento o favor de la prosa, personalmente soy de usar
+mucha simbología, pues me resulta más clara.</p>
+</section>
+<section id="relaciones-entre-los-cuantificadores-exists-yforall"
+class="level3">
+<h3>Relaciones entre los cuantificadores
+<q><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mo>∃</mo><annotation encoding="application/x-tex">\exists</annotation></semantics></math>”
+y</q><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mo>∀</mo><annotation encoding="application/x-tex">\forall</annotation></semantics></math>’</h3>
+<p>Partiendo del resultado siguiente de la sección anterior:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>∀</mo><mi>x</mi><mo>∈</mo><mi>C</mi><mo>,</mo><mspace width="0.222em"></mspace><msub><mi>P</mi><mi>x</mi></msub><mspace width="1.0em"></mspace><mo>⇔</mo><mspace width="1.0em"></mspace><msub><mi>C</mi><mi>P</mi></msub><mo>=</mo><mi>C</mi></mrow><annotation encoding="application/x-tex"> \forall x \in C,\ P_x \quad \Longleftrightarrow \quad C_P = C </annotation></semantics></math></p>
+<p>tenemos que</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>¬</mo><mo stretchy="false" form="prefix">(</mo><mo>∀</mo><mi>x</mi><mo>∈</mo><mi>C</mi><mo>,</mo><mspace width="0.222em"></mspace><msub><mi>P</mi><mi>x</mi></msub><mo stretchy="false" form="postfix">)</mo><mspace width="1.0em"></mspace><mo>⇔</mo><mspace width="1.0em"></mspace><msub><mi>C</mi><mi>P</mi></msub><mo>≠</mo><mi>C</mi></mrow><annotation encoding="application/x-tex"> \neg(\forall x \in C,\ P_x) \quad \Longleftrightarrow \quad C_P \neq C </annotation></semantics></math></p>
+<p>Pero, como por la definición de
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>C</mi><mi>P</mi></msub><annotation encoding="application/x-tex">C_P</annotation></semantics></math>
+se sigue cumpliendo
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>C</mi><mi>P</mi></msub><mo>⊆</mo><mi>C</mi></mrow><annotation encoding="application/x-tex">C_P \subseteq C</annotation></semantics></math>,
+se tiene entonces que
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>C</mi><mo>⊈</mo><msub><mi>C</mi><mi>P</mi></msub></mrow><annotation encoding="application/x-tex">C \nsubseteq C_P</annotation></semantics></math>,
+y de esto podemos deducir, por la definición de <em>subconjunto</em>,
+que existe un
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>∈</mo><mi>C</mi></mrow><annotation encoding="application/x-tex">x \in C</annotation></semantics></math>
+tal que
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>∉</mo><msub><mi>C</mi><mi>P</mi></msub></mrow><annotation encoding="application/x-tex">x \notin C_P</annotation></semantics></math>,
+cosa que podríamos expresar con el cuantificador existencial,
+<q><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mo>∃</mo><annotation encoding="application/x-tex">\exists</annotation></semantics></math></q>,
+del modo siguiente:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>∃</mo><mi>x</mi><mo>∈</mo><mi>C</mi><mo>,</mo><mspace width="0.222em"></mspace><mo>¬</mo><msub><mi>P</mi><mi>x</mi></msub></mrow><annotation encoding="application/x-tex"> \exists x \in C,\ \neg P_x </annotation></semantics></math></p>
+<p>A la otra equivalencia se llega de un modo análogo. Como vimos,</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>∃</mo><mi>x</mi><mo>∈</mo><mi>C</mi><mo>,</mo><mspace width="0.222em"></mspace><msub><mi>P</mi><mi>x</mi></msub><mspace width="1.0em"></mspace><mo>⇔</mo><mspace width="1.0em"></mspace><msub><mi>C</mi><mi>P</mi></msub><mo>≠</mo><mi>∅</mi></mrow><annotation encoding="application/x-tex"> \exists x \in C,\ P_x \quad \Longleftrightarrow \quad C_P \neq \emptyset
+</annotation></semantics></math></p>
+<p>con lo que</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>¬</mo><mo stretchy="false" form="prefix">(</mo><mo>∃</mo><mi>x</mi><mo>∈</mo><mi>C</mi><mo>,</mo><mspace width="0.222em"></mspace><msub><mi>P</mi><mi>x</mi></msub><mo stretchy="false" form="postfix">)</mo><mspace width="1.0em"></mspace><mo>⇔</mo><mspace width="1.0em"></mspace><msub><mi>C</mi><mi>P</mi></msub><mo>=</mo><mi>∅</mi></mrow><annotation encoding="application/x-tex"> \neg(\exists x \in C,\ P_x)\quad \Longleftrightarrow \quad C_P =
+\emptyset </annotation></semantics></math></p>
+<p>y aplicando la definición del conjunto
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>C</mi><mi>P</mi></msub><annotation encoding="application/x-tex">C_P</annotation></semantics></math>
+tenemos que es lo mismo que</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>∀</mo><mi>x</mi><mo>∈</mo><mi>C</mi><mo>,</mo><mspace width="0.222em"></mspace><mo>¬</mo><msub><mi>P</mi><mi>x</mi></msub></mrow><annotation encoding="application/x-tex"> \forall x \in C,\ \neg P_x </annotation></semantics></math></p>
+<p>En el apartado b del ejercicio 18 se ve otra conclusión relacionada
+con esto.</p>
+</section>
+<section id="complementario-y-partes-de-un-conjunto" class="level3">
+<h3>Complementario y partes de un conjunto</h3>
+<p>Aunque se deje para más adelante (tabla en <span class="citation"
+data-cites="pineda"><a href="#ref-pineda" role="doc-biblioref">[1, p.
+54]</a></span>), conviene explicar aquí que existen las propiedades
+análogas, para la teoría de conjuntos, de las reglas de De Morgan (de la
+lógica). Para dos conjuntos
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math>
+y
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>B</mi><annotation encoding="application/x-tex">B</annotation></semantics></math>
+arbitrarios, se cumplen</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mtable><mtr><mtd columnalign="right" style="text-align: right; padding-right: 0"><mover><mrow><mi>A</mi><mo>∪</mo><mi>B</mi></mrow><mo accent="true">¯</mo></mover></mtd><mtd columnalign="left" style="text-align: left; padding-left: 0"><mo>=</mo><mo stretchy="false" form="prefix">(</mo><mover><mi>A</mi><mo accent="true">¯</mo></mover><mo stretchy="false" form="postfix">)</mo><mo>∩</mo><mo stretchy="false" form="prefix">(</mo><mover><mi>B</mi><mo accent="true">¯</mo></mover><mo stretchy="false" form="postfix">)</mo></mtd></mtr><mtr><mtd columnalign="right" style="text-align: right; padding-right: 0"><mover><mrow><mi>A</mi><mo>∩</mo><mi>B</mi></mrow><mo accent="true">¯</mo></mover></mtd><mtd columnalign="left" style="text-align: left; padding-left: 0"><mo>=</mo><mo stretchy="false" form="prefix">(</mo><mover><mi>A</mi><mo accent="true">¯</mo></mover><mo stretchy="false" form="postfix">)</mo><mo>∪</mo><mo stretchy="false" form="prefix">(</mo><mover><mi>B</mi><mo accent="true">¯</mo></mover><mo stretchy="false" form="postfix">)</mo></mtd></mtr></mtable><annotation encoding="application/x-tex"> \begin{aligned}
+     \overline{A \cup B}  &amp;= (\overline{A}) \cap (\overline{B}) \\
+     \overline{A \cap B}  &amp;= (\overline{A}) \cup (\overline{B})
+   \end{aligned} </annotation></semantics></math></p>
+<p>Se demuestran de un modo bastante directo a partir de la definición
+del concepto de <em>complementario</em> de un conjunto.</p>
+<p>Tras definir el conjunto de las partes de un conjunto (<em>power
+set</em>), tendríamos una expresión simbólica alternativa para los
+subconjuntos que nos vendrá bien en ciertas situaciones:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>B</mi><mo>⊆</mo><mi>A</mi><mspace width="1.0em"></mspace><mo>⇔</mo><mspace width="1.0em"></mspace><mi>B</mi><mo>∈</mo><mi>𝒫</mi><mo stretchy="false" form="prefix">(</mo><mi>A</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex"> B \subseteq A \quad \Longleftrightarrow \quad B \in \mathcal{P}(A) </annotation></semantics></math></p>
+<p>Antes de continuar, me gustaría presentar un resultado de las partes
+de un conjunto.</p>
+<div class="theorem">
+<p><strong><em>Teorema.— </em></strong>Dados dos conjuntos
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math>
+y
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>B</mi><annotation encoding="application/x-tex">B</annotation></semantics></math>,
+se cumple</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mo>⊆</mo><mi>B</mi><mspace width="1.0em"></mspace><mo>⇒</mo><mspace width="1.0em"></mspace><mi>𝒫</mi><mo stretchy="false" form="prefix">(</mo><mi>A</mi><mo stretchy="false" form="postfix">)</mo><mo>⊆</mo><mi>𝒫</mi><mo stretchy="false" form="prefix">(</mo><mi>B</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex"> A \subseteq B \quad \Longrightarrow \quad\mathcal{P}(A) \subseteq
+  \mathcal{P}(B) </annotation></semantics></math></p>
+</div>
+<div class="proof">
+<p><strong><em>Demostración.— </em></strong>La forma que me resulta más
+sencilla para demostrarlo es mediante el condicional
+contrarrecíproco.</p>
+<p>Partiendo de
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>𝒫</mi><mo stretchy="false" form="prefix">(</mo><mi>A</mi><mo stretchy="false" form="postfix">)</mo><mo>⊈</mo><mi>𝒫</mi><mo stretchy="false" form="prefix">(</mo><mi>B</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\mathcal{P}(A) \nsubseteq \mathcal{P}(B)</annotation></semantics></math>,
+vemos que esto es lo mismo que decir que existe un conjunto
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>C</mi><mo>∈</mo><mi>𝒫</mi><mo stretchy="false" form="prefix">(</mo><mi>A</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">C \in \mathcal{P}(A)</annotation></semantics></math>
+tal que
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>C</mi><mo>∉</mo><mi>𝒫</mi><mo stretchy="false" form="prefix">(</mo><mi>B</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">C \notin \mathcal{P}(B)</annotation></semantics></math>.</p>
+<p>ESto es lo mismo que afirmar que existe un conjunto
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>C</mi><mo>≠</mo><mi>∅</mi></mrow><annotation encoding="application/x-tex">C \neq \emptyset</annotation></semantics></math>
+para el que
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>C</mi><mo>⊆</mo><mi>A</mi></mrow><annotation encoding="application/x-tex">C \subseteq A</annotation></semantics></math>
+y
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>C</mi><mo>⊈</mo><mi>B</mi></mrow><annotation encoding="application/x-tex">C \nsubseteq B</annotation></semantics></math>.</p>
+<p>Entonces, podemos decir que para todo elemento
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>∈</mo><mi>C</mi></mrow><annotation encoding="application/x-tex">x \in C</annotation></semantics></math>
+se tiene que
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>∈</mo><mi>A</mi></mrow><annotation encoding="application/x-tex">x
+  \in A</annotation></semantics></math>, pero además existe un
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>∈</mo><mi>C</mi></mrow><annotation encoding="application/x-tex">x \in C</annotation></semantics></math>
+tal que
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>∉</mo><mi>B</mi></mrow><annotation encoding="application/x-tex">x \notin B</annotation></semantics></math>.</p>
+<p>Por tanto, existe un
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>∈</mo><mi>A</mi></mrow><annotation encoding="application/x-tex">x \in A</annotation></semantics></math>
+tal que
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>∉</mo><mi>B</mi></mrow><annotation encoding="application/x-tex">x \notin B</annotation></semantics></math>,
+que es como decir que
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mo>⊈</mo><mi>B</mi></mrow><annotation encoding="application/x-tex">A \nsubseteq B</annotation></semantics></math>.<span
+class="env-last-symbol"> ▢</span></p>
+</div>
+<p>Antes de seguir, vamos a dar una noción no muy formal del
+<em>cardinal</em> (<em>cardinal</em>) o <em>tamaño</em> de un conjunto.
+TKTK.</p>
+<p>El ejercicio 2.14 (<span class="citation" data-cites="pineda"><a
+href="#ref-pineda" role="doc-biblioref">[1, p. 45]</a></span>) es una
+demostración bastante conocida de las matemáticas. Una forma de hacerla
+es por la teoría de conjuntos, tal y como se hace aquí. No obstante,
+también se puede demostrar haciendo uso de otras áreas de las
+matemáticas.</p>
+<p>Voy a presentar aquí la misma demostración de <span class="citation"
+data-cites="pineda"><a href="#ref-pineda"
+role="doc-biblioref">[1]</a></span> solo que expresada a mi manera
+(incluyendo la simbología) y añadiendo algunas cosas del final que dejan
+sin completar.</p>
+<div class="exercise">
+<p><strong><em>Ejercicio (2.14).— </em></strong>Por abreviar, a
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext mathvariant="normal">card</mtext><mo stretchy="false" form="prefix">(</mo><mi>C</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\text{card}(C)</annotation></semantics></math>
+lo designaremos por
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>n</mi><annotation encoding="application/x-tex">n</annotation></semantics></math>.
+También, a
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext mathvariant="normal">card</mtext><mo stretchy="false" form="prefix">(</mo><mi>𝒫</mi><mo stretchy="false" form="prefix">(</mo><mi>C</mi><mo stretchy="false" form="postfix">)</mo><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\text{card}(\mathcal{P}(C))</annotation></semantics></math>
+lo designaremos por
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>a</mi><mi>n</mi></msub><annotation encoding="application/x-tex">a_n</annotation></semantics></math>.
+Advierta que tiene que tener ese subíndice necesariamente.</p>
+<p>Definimos otro conjunto:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>D</mi><mo>=</mo><mi>C</mi><mo>\</mo><mo stretchy="false" form="prefix">{</mo><mi>x</mi><mo stretchy="false" form="postfix">}</mo></mrow><annotation encoding="application/x-tex"> D = C \setminus \{x\} </annotation></semantics></math></p>
+<p>para un
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>∈</mo><mi>C</mi></mrow><annotation encoding="application/x-tex">x \in C</annotation></semantics></math>.
+Evidentemente, se tiene que
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>D</mi><mo>⊆</mo><mi>C</mi></mrow><annotation encoding="application/x-tex">D \subseteq C</annotation></semantics></math>.
+Si nos fijamos en el número de elementos, tenemos, evidentemente, que
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext mathvariant="normal">card</mtext><mo stretchy="false" form="prefix">(</mo><mi>D</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mi>n</mi><mo>−</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">\text{card}(D) = n - 1</annotation></semantics></math>.
+Además, según la notación que hemos establecido para el número de
+elementos de las partes de un conjunto, se tendrá que
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext mathvariant="normal">card</mtext><mo stretchy="false" form="prefix">(</mo><mi>𝒫</mi><mo stretchy="false" form="prefix">(</mo><mi>D</mi><mo stretchy="false" form="postfix">)</mo><mo stretchy="false" form="postfix">)</mo><mo>=</mo><msub><mi>a</mi><mrow><mi>n</mi><mo>−</mo><mn>1</mn></mrow></msub></mrow><annotation encoding="application/x-tex">\text{card}(\mathcal{P}(D)) = a_{n - 1}</annotation></semantics></math>.</p>
+<p>Advierta que aún no sabemos cuál es la relación entre
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>n</mi><annotation encoding="application/x-tex">n</annotation></semantics></math>
+y
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>a</mi><mi>n</mi></msub><annotation encoding="application/x-tex">a_n</annotation></semantics></math>.
+De hecho, eso es precisamente lo que deseamos hallar en este
+problema.</p>
+<p>Ahora, vamos a definir a un conjunto
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>D</mi><mo>′</mo></msup><annotation encoding="application/x-tex">D&#39;</annotation></semantics></math>
+como</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>D</mi><mo>′</mo></msup><mo>=</mo><mi>𝒫</mi><mo stretchy="false" form="prefix">(</mo><mi>D</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex"> D&#39; = \mathcal{P}(D) </annotation></semantics></math></p>
+<p>es decir, es el conjunto de todos los subconjuntos de
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>D</mi><annotation encoding="application/x-tex">D</annotation></semantics></math>,
+o sea, de
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>C</mi><mo>−</mo><mo stretchy="false" form="prefix">{</mo><mi>x</mi><mo stretchy="false" form="postfix">}</mo></mrow><annotation encoding="application/x-tex">C -
+  \{x\}</annotation></semantics></math>. Advierta que
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>D</mi><mo>′</mo></msup><mo>⊆</mo><mi>𝒫</mi><mo stretchy="false" form="prefix">(</mo><mi>C</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">D&#39; \subseteq \mathcal{P}(C)</annotation></semantics></math>.
+Además, para todo elemento (y, además, conjunto)
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>Y</mi><annotation encoding="application/x-tex">Y</annotation></semantics></math>
+de
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>D</mi><mo>′</mo></msup><annotation encoding="application/x-tex">D&#39;</annotation></semantics></math>
+formamos un conjunto
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>Y</mi><mo>∪</mo><mo stretchy="false" form="prefix">{</mo><mi>x</mi><mo stretchy="false" form="postfix">}</mo></mrow><annotation encoding="application/x-tex">Y \cup
+  \{x\}</annotation></semantics></math>. Al conjunto de todos estos
+conjuntos
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>Y</mi><mo>∪</mo><mo stretchy="false" form="prefix">{</mo><mi>x</mi><mo stretchy="false" form="postfix">}</mo></mrow><annotation encoding="application/x-tex">Y \cup \{x\}</annotation></semantics></math>
+lo designamos por
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>D</mi><mo>″</mo></msup><annotation encoding="application/x-tex">D&#39;&#39;</annotation></semantics></math>.
+Advierta que se cumple
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>D</mi><mo>″</mo></msup><mo>⊆</mo><mi>𝒫</mi><mo stretchy="false" form="prefix">(</mo><mi>C</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">D&#39;&#39; \subseteq \mathcal{P}(C)</annotation></semantics></math>.</p>
+<p>Como
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>D</mi><annotation encoding="application/x-tex">D</annotation></semantics></math>
+tiene
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi><mo>−</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">n - 1</annotation></semantics></math>
+elementos, se tendrá que
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>D</mi><mo>′</mo></msup><annotation encoding="application/x-tex">D&#39;</annotation></semantics></math>
+contiene
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>a</mi><mrow><mi>n</mi><mo>−</mo><mn>1</mn></mrow></msub><annotation encoding="application/x-tex">a_{n - 1}</annotation></semantics></math>
+elementos (que a su vez son conjuntos). (Esa relación nos sigue siendo
+desconocida, de momento.) Por otro lado, por la forma de construir al
+conjunto
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>D</mi><mo>″</mo></msup><annotation encoding="application/x-tex">D&#39;&#39;</annotation></semantics></math>,
+se tiene que este ha de tener el mismo número de elementos que
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>D</mi><mo>′</mo></msup><annotation encoding="application/x-tex">D&#39;</annotation></semantics></math>.</p>
+<p>Además de lo anterior, se puede ver fácilmente que se cumplen</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mtable><mtr><mtd columnalign="right" style="text-align: right; padding-right: 0"><msup><mi>D</mi><mo>′</mo></msup><mo>∪</mo><msup><mi>D</mi><mo>″</mo></msup></mtd><mtd columnalign="left" style="text-align: left; padding-left: 0"><mo>=</mo><mi>C</mi></mtd></mtr><mtr><mtd columnalign="right" style="text-align: right; padding-right: 0"><msup><mi>D</mi><mo>′</mo></msup><mo>∩</mo><msup><mi>D</mi><mo>″</mo></msup></mtd><mtd columnalign="left" style="text-align: left; padding-left: 0"><mo>=</mo><mi>∅</mi></mtd></mtr></mtable><annotation encoding="application/x-tex"> \begin{aligned}
+         D&#39; \cup D&#39;&#39;  &amp;= C \\
+         D&#39; \cap D&#39;&#39;  &amp;= \emptyset
+     \end{aligned} </annotation></semantics></math></p>
+<p>Son disjuntos (es decir, se cumple la segunda) porque no existe
+ningún conjunto que contenga y no contenga (simultáneamente) a un
+elemento
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>x</mi><annotation encoding="application/x-tex">x</annotation></semantics></math>.
+La primera es bastante evidente. TKTK.</p>
+<p>Por lo que sabemos de combinatoria, al cumplirse esas dos propiedades
+se tiene que el conjunto unión de
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>D</mi><mo>′</mo></msup><annotation encoding="application/x-tex">D&#39;</annotation></semantics></math>
+y
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>D</mi><mo>″</mo></msup><annotation encoding="application/x-tex">D&#39;&#39;</annotation></semantics></math>
+tendrá como número de elementos a la suma de esos dos; es decir, se
+cumple que</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>a</mi><mi>n</mi></msub><mo>=</mo><msub><mi>a</mi><mrow><mi>n</mi><mo>−</mo><mn>1</mn></mrow></msub><mo>+</mo><msub><mi>a</mi><mrow><mi>n</mi><mo>−</mo><mn>1</mn></mrow></msub><mo>=</mo><mn>2</mn><mspace width="0.167em"></mspace><msub><mi>a</mi><mrow><mi>n</mi><mo>−</mo><mn>1</mn></mrow></msub></mrow><annotation encoding="application/x-tex"> a_n = a_{n - 1} + a_{n - 1} = 2\, a_{n - 1} </annotation></semantics></math></p>
+<p>Advierta que esta es una definición recursiva, aunque incompleta. Hay
+que tener en cuenta también algún valor concreto, pues, sin este,
+tendremos una gama o familia de funciones. Esto es fácil. Para
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>C</mi><mo>=</mo><mi>∅</mi></mrow><annotation encoding="application/x-tex">C = \emptyset</annotation></semantics></math>
+tenemos que
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi><mo>=</mo><mtext mathvariant="normal">card</mtext><mo stretchy="false" form="prefix">(</mo><mi>C</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mtext mathvariant="normal">card</mtext><mo stretchy="false" form="prefix">(</mo><mi>∅</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">n = \text{card}(C) = \text{card}(\emptyset) = 0</annotation></semantics></math>.
+También, se dará
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>a</mi><mn>0</mn></msub><mo>=</mo><mtext mathvariant="normal">card</mtext><mo stretchy="false" form="prefix">(</mo><mi>𝒫</mi><mo stretchy="false" form="prefix">(</mo><mi>C</mi><mo stretchy="false" form="postfix">)</mo><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">a_{0} = \text{card}(\mathcal{P}(C)) = 1</annotation></semantics></math>,
+ya que
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>𝒫</mi><mo stretchy="false" form="prefix">(</mo><mi>∅</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mo stretchy="false" form="prefix">{</mo><mi>∅</mi><mo stretchy="false" form="postfix">}</mo></mrow><annotation encoding="application/x-tex">\mathcal{P}(\emptyset) = \{\emptyset\}</annotation></semantics></math>.</p>
+<p>Entonces, ahora sí tenemos una definición recursiva. Es la
+siguiente:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>a</mi><mi>n</mi></msub><mo>=</mo><mrow><mo stretchy="true" form="prefix">{</mo><mtable><mtr><mtd columnalign="left" style="text-align: left"><mn>1</mn></mtd><mtd columnalign="left" style="text-align: left"><mspace width="0.222em"></mspace><mrow><mtext mathvariant="normal">si </mtext><mspace width="0.333em"></mspace></mrow><mi>n</mi><mo>=</mo><mn>0</mn></mtd></mtr><mtr><mtd columnalign="left" style="text-align: left"><mn>2</mn><mspace width="0.167em"></mspace><msub><mi>a</mi><mrow><mi>n</mi><mo>−</mo><mn>1</mn></mrow></msub></mtd><mtd columnalign="left" style="text-align: left"><mspace width="0.222em"></mspace><mrow><mtext mathvariant="normal">si </mtext><mspace width="0.333em"></mspace></mrow><mi>n</mi><mo>&gt;</mo><mn>0</mn></mtd></mtr></mtable></mrow></mrow><annotation encoding="application/x-tex"> a_n = \left\{
+       \begin{array}{ll}
+           1              &amp;\ \text{si } n = 0 \\
+           2\, a_{n - 1}  &amp;\ \text{si } n &gt; 0
+       \end{array} \right. </annotation></semantics></math></p>
+<p>A la vista de lo siguiente,</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>a</mi><mi>n</mi></msub><mo>=</mo><mn>2</mn><mspace width="0.167em"></mspace><msub><mi>a</mi><mrow><mi>n</mi><mo>−</mo><mn>1</mn></mrow></msub><mo>=</mo><mn>2</mn><mo stretchy="false" form="prefix">(</mo><mn>2</mn><mspace width="0.167em"></mspace><msub><mi>a</mi><mrow><mi>n</mi><mo>−</mo><mn>2</mn></mrow></msub><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>2</mn><mo stretchy="false" form="prefix">(</mo><mn>2</mn><mo stretchy="false" form="prefix">(</mo><mn>2</mn><mspace width="0.167em"></mspace><msub><mi>a</mi><mrow><mi>n</mi><mo>−</mo><mn>3</mn></mrow></msub><mo stretchy="false" form="postfix">)</mo><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mi>⋯</mi><mo>=</mo><mn>2</mn><mo stretchy="false" form="prefix">(</mo><mn>2</mn><mo stretchy="false" form="prefix">(</mo><mn>2</mn><mo stretchy="false" form="prefix">(</mo><mn>2</mn><mspace width="0.167em"></mspace><mo>⋅</mo><mi>⋯</mi><mo>⋅</mo><mo stretchy="false" form="prefix">(</mo><mn>2</mn><mspace width="0.167em"></mspace><msub><mi>a</mi><mn>0</mn></msub><mo stretchy="false" form="postfix">)</mo><mo stretchy="false" form="postfix">)</mo><mo stretchy="false" form="postfix">)</mo><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex"> a_n = 2\, a_{n - 1} = 2(2\, a_{n - 2}) = 2(2(2\, a_{n - 3})) = \cdots
+       = 2(2(2(2\, \cdot \cdots \cdot (2\, a_0)))) </annotation></semantics></math></p>
+<p>tiene pinta que la fórmula explícita (es decir, no recursiva) será la
+siguiente:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>a</mi><mi>n</mi></msub><mo>=</mo><msub><mi>a</mi><mn>0</mn></msub><mspace width="0.167em"></mspace><munderover><mo>∏</mo><mrow><mi>i</mi><mo>=</mo><mn>0</mn></mrow><mi>n</mi></munderover><mn>2</mn><mo>=</mo><mn>1</mn><mo>⋅</mo><msup><mn>2</mn><mi>n</mi></msup><mo>=</mo><msup><mn>2</mn><mi>n</mi></msup></mrow><annotation encoding="application/x-tex"> a_n = a_0\,\prod_{i = 0}^n 2 = 1 \cdot 2^n = 2^n </annotation></semantics></math></p>
+<p>pero esto no lo hemos demostrado; solo lo hemos intuido. Si aplicamos
+el Principio de Inducción podemos ver si se cumple o no se cumple
+esto.</p>
+<p>El caso base se dará para el valor
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">n = 0</annotation></semantics></math>.
+Para este se tiene que
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>a</mi><mn>0</mn></msub><mo>=</mo><mn>1</mn><mo>=</mo><msup><mn>2</mn><mn>0</mn></msup></mrow><annotation encoding="application/x-tex">a_0 =
+  1 = 2^0</annotation></semantics></math>. De momento, se cumple.</p>
+<p>Ahora, pasamos a ver la hipótesis de inducción. Será
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>a</mi><mi>n</mi></msub><mo>=</mo><msup><mn>2</mn><mi>n</mi></msup></mrow><annotation encoding="application/x-tex">a_n = 2^n</annotation></semantics></math>;
+y la meta de inducción será
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>a</mi><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow></msub><mo>=</mo><msup><mn>2</mn><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow></msup></mrow><annotation encoding="application/x-tex">a_{n + 1} = 2^{n + 1}</annotation></semantics></math>.</p>
+<p>Vamos a ver si de la hipótesis se deduce la meta. Aplicando el
+resultado obtenido antes tenemos</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>a</mi><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow></msub><mo>=</mo><mn>2</mn><mspace width="0.167em"></mspace><msub><mi>a</mi><mi>n</mi></msub><mo>=</mo><mn>2</mn><mo>⋅</mo><msup><mn>2</mn><mi>n</mi></msup><mo>=</mo><msup><mn>2</mn><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow></msup></mrow><annotation encoding="application/x-tex"> a_{n + 1} = 2\, a_n = 2 \cdot 2^n = 2^{n + 1} </annotation></semantics></math></p>
+<p>con lo que sí se cumple. Por tanto, se ha demostrado que la relación
+que se cumple entre
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>n</mi><annotation encoding="application/x-tex">n</annotation></semantics></math>
+y
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>a</mi><mi>n</mi></msub><annotation encoding="application/x-tex">a_{n}</annotation></semantics></math>
+es</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>a</mi><mi>n</mi></msub><mo>=</mo><msup><mn>2</mn><mi>n</mi></msup></mrow><annotation encoding="application/x-tex"> a_n = 2^n </annotation></semantics></math></p>
+<p>Pero, mejor, vamos a presentar el resultado para que lo entienda
+cualquiera sin necesidad de que conozca la terminología empleada en esta
+demostración. Para todo conjunto
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>C</mi><annotation encoding="application/x-tex">C</annotation></semantics></math>,
+se tiene que</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext mathvariant="normal">card</mtext><mo stretchy="false" form="prefix">(</mo><mi>𝒫</mi><mo stretchy="false" form="prefix">(</mo><mi>C</mi><mo stretchy="false" form="postfix">)</mo><mo stretchy="false" form="postfix">)</mo><mo>=</mo><msup><mn>2</mn><mrow><mtext mathvariant="normal">card</mtext><mo stretchy="false" form="prefix">(</mo><mi>C</mi><mo stretchy="false" form="postfix">)</mo></mrow></msup></mrow><annotation encoding="application/x-tex"> \text{card}(\mathcal{P}(C)) = 2^{\text{card}(C)} </annotation></semantics></math><span
+class="env-last-symbol"> △</span></p>
+</div>
+</section>
+</section>
+<section id="operaciones-con-conjuntos" class="level2">
+<h2>Operaciones con conjuntos</h2>
+<p>Para el ejemplo 2.26 de <span class="citation" data-cites="pineda"><a
+href="#ref-pineda" role="doc-biblioref">[1]</a></span>, recuerde cómo se
+opera con desigualdades en las que aparece algún valor absoluto. (Vea el
+apéndice TKTK).</p>
+<p>Todas estas propiedades (<span class="citation"
+data-cites="pineda"><a href="#ref-pineda" role="doc-biblioref">[1, p.
+46]</a></span>) se pueden demostrar fácilmente. La primera se haría
+aplicando de forma directa la definición de <em>subconjuto</em>. La
+segunda y la tercera, teniendo en cuenta que la disyunción cumple las
+propiedades conmutativa y asociativa. La cuarta, porque
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>P</mi><mi>x</mi></msub><mo>∨</mo><mn>𝟎</mn><mo>=</mo><msub><mi>P</mi><mi>x</mi></msub></mrow><annotation encoding="application/x-tex">P_x \lor \mathbf{0}
+= P_x</annotation></semantics></math>, ya que se puede definir</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>∅</mi><mo>=</mo><mo stretchy="false" form="prefix">{</mo><mi>x</mi><mo>∈</mo><mi>U</mi><mspace width="0.222em"></mspace><mo stretchy="false" form="prefix">|</mo><mspace width="0.222em"></mspace><mn>𝟎</mn><mo stretchy="false" form="postfix">}</mo></mrow><annotation encoding="application/x-tex"> \emptyset = \{x \in U \ | \ \mathbf{0}\} </annotation></semantics></math></p>
+<p>La quinta, porque
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>P</mi><mi>x</mi></msub><mo>∨</mo><msub><mi>P</mi><mi>x</mi></msub><mo>=</mo><msub><mi>P</mi><mi>x</mi></msub></mrow><annotation encoding="application/x-tex">P_x \lor P_x = P_x</annotation></semantics></math>.</p>
+<p>Tal y como se explica en <span class="citation"
+data-cites="pineda"><a href="#ref-pineda" role="doc-biblioref">[1, p.
+50]</a></span>, al igual que sucede con las proposiciones y los
+predicados, la propiedad asociativa nos permite usar expresiones como
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mo>∪</mo><mi>B</mi><mo>∪</mo><mi>C</mi></mrow><annotation encoding="application/x-tex">A \cup B \cup C</annotation></semantics></math>
+sin que estas sean ambiguas.</p>
+<p>El ejercicio 2.18 hace uso de estas propiedades. Tal y como expliqué
+antes, suelo hacer un mayor uso de la simbología —tanto de la teoría de
+conjuntos como de la lógica de primer orden— en mis demostraciones, ya
+que me resulta más claro así. También, presento las distintas fases o
+casos de un modo más visual (o tipográfico). Lo resuelvo aquí para tener
+un ejemplo de cómo lo suelo hacer.</p>
+<div class="exercise">
+<p><strong><em>Ejercicio (2.18).— </em></strong>Suponemos que los
+conjuntos
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math>
+y
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>B</mi><annotation encoding="application/x-tex">B</annotation></semantics></math>
+son subconjuntos de un conjunto universal
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>U</mi><annotation encoding="application/x-tex">U</annotation></semantics></math>
+(universo de los predicados en las definiciones de dichos
+conjuntos).</p>
+<p>Fase 1
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mo>⇒</mo><annotation encoding="application/x-tex">\Longrightarrow</annotation></semantics></math>).
+Tomamos un elemento arbitrario
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>∈</mo><mi>A</mi></mrow><annotation encoding="application/x-tex">x \in A</annotation></semantics></math>
+y hacemos manipulaciones de expresiones conjuntistas.</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mtable><mtr><mtd columnalign="right" style="text-align: right"><mi>x</mi><mo>∈</mo><mi>A</mi></mtd><mtd columnalign="center" style="text-align: center"><mspace width="0.222em"></mspace><mo>⇒</mo></mtd><mtd columnalign="left" style="text-align: left"><mspace width="0.222em"></mspace><mi>x</mi><mo>∈</mo><mi>A</mi><mo>∪</mo><mi>B</mi></mtd><mtd columnalign="left" style="text-align: left"><mspace width="0.222em"></mspace><mtext mathvariant="normal">por la propiedad 1</mtext></mtd></mtr><mtr><mtd columnalign="right" style="text-align: right"></mtd><mtd columnalign="center" style="text-align: center"><mspace width="0.222em"></mspace><mo>⇒</mo></mtd><mtd columnalign="left" style="text-align: left"><mspace width="0.222em"></mspace><mi>x</mi><mo>∈</mo><mi>B</mi></mtd><mtd columnalign="left" style="text-align: left"><mspace width="0.222em"></mspace><mrow><mtext mathvariant="normal">por el antecedente </mtext><mspace width="0.333em"></mspace></mrow><mo stretchy="false" form="prefix">(</mo><mi>A</mi><mo>∪</mo><mi>B</mi><mo>⊆</mo><mi>B</mi><mo stretchy="false" form="postfix">)</mo></mtd></mtr></mtable><annotation encoding="application/x-tex"> \begin{array}{rcll}
+       x \in A
+         &amp;\: \Longrightarrow
+           &amp;\: x \in A \cup B
+           &amp;\: \text{por la propiedad 1}  \\
+         &amp;\: \Longrightarrow
+           &amp;\: x \in B
+           &amp;\: \text{por el antecedente }(A \cup B \subseteq B)
+     \end{array} </annotation></semantics></math></p>
+<p>Fase 2
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mo>⇐</mo><annotation encoding="application/x-tex">\Longleftarrow</annotation></semantics></math>).</p>
+<p>Fase 2.1.
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mo>⊆</mo><mi>B</mi><mspace width="0.222em"></mspace><mo>⇒</mo><mspace width="0.222em"></mspace><mi>B</mi><mo>⊆</mo><mi>A</mi><mo>∪</mo><mi>B</mi></mrow><annotation encoding="application/x-tex">A \subseteq B \ \Longrightarrow \ B \subseteq A \cup B</annotation></semantics></math>).
+Por la propiedad 1, siempre se cumple que
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>B</mi><mo>⊆</mo><mi>A</mi><mo>∪</mo><mi>B</mi></mrow><annotation encoding="application/x-tex">B \subseteq A \cup B</annotation></semantics></math>;
+en particular, también en los casos que se marcan en el antecedente.</p>
+<p>Fase 2.2
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mo>⊆</mo><mi>B</mi><mspace width="0.222em"></mspace><mo>⇒</mo><mspace width="0.222em"></mspace><mi>A</mi><mo>∪</mo><mi>B</mi><mo>⊆</mo><mi>B</mi></mrow><annotation encoding="application/x-tex">A \subseteq B \ \Longrightarrow \ A \cup B \subseteq B</annotation></semantics></math>).
+Partimos de un elemento
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>∈</mo><mi>A</mi><mo>∪</mo><mi>B</mi></mrow><annotation encoding="application/x-tex">x \in A \cup B</annotation></semantics></math>
+y deseamos llegar a
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>∈</mo><mi>B</mi></mrow><annotation encoding="application/x-tex">x \in B</annotation></semantics></math>.
+Se tienen dos casos posibles:</p>
+<ol type="1">
+<li><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>∈</mo><mi>B</mi></mrow><annotation encoding="application/x-tex">x \in B</annotation></semantics></math>.
+No hay nada que demostrar.</li>
+<li><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>∈</mo><mi>A</mi></mrow><annotation encoding="application/x-tex">x \in A</annotation></semantics></math>.
+Por el antecedente llegamos directamente a que
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>∈</mo><mi>B</mi></mrow><annotation encoding="application/x-tex">x \in B</annotation></semantics></math>.</li>
+</ol>
+</div>
+<p>Las propiedades de la intersección de conjuntos se demuestran de modo
+análogo a como se hace con la unión. Muchas de estas se deducen de forma
+directa de las propiedades de la conjunción. Por ejemplo,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>𝟎</mn><mo>∧</mo><msub><mi>P</mi><mi>x</mi></msub><mo>⇔</mo><mn>𝟎</mn></mrow><annotation encoding="application/x-tex">\mathbf{0} \land
+P_x \Longleftrightarrow \mathbf{0}</annotation></semantics></math>.</p>
+<p>Advierta que con la unión y la disyunción se cumplen los dos tipos de
+propiedades distributivas, al contrario de lo que sucede con la de la
+suma y el producto de números (del tipo que sea).</p>
+<p>En lo que respecta a las familias de conjuntos (indexadas o no
+indexadas), presentadas en <span class="citation" data-cites="pineda"><a
+href="#ref-pineda" role="doc-biblioref">[1, p. 51]</a></span>, advierta
+que con <em>familia</em> no queremos más que decir <em>conjunto</em>. Se
+le llama de forma distinta para distinguir los distintos niveles de
+conjuntos, según el anidamiento.</p>
+<p>En lo que respecta a las propiedades de la diferencia de conjuntos,
+creo que la más importante, y que quizás se debería resaltar más en el
+texto, es</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mo>\</mo><mi>B</mi><mo>=</mo><mi>A</mi><mo>∩</mo><mover><mi>B</mi><mo accent="true">¯</mo></mover></mrow><annotation encoding="application/x-tex"> A \setminus B = A \cap \overline{B} </annotation></semantics></math></p>
+<p>La propiedad 1 de la diferencia de conjuntos se puede demostrar
+fácilmente manipulando expresiones conjuntistas.</p>
+<div class="proof">
+<p><strong><em>Demostración.—
+</em></strong><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mtable><mtr><mtd columnalign="right" style="text-align: right; padding-right: 0"><mi>A</mi><mo>\</mo><mo stretchy="false" form="prefix">(</mo><mi>A</mi><mo>∩</mo><mi>B</mi><mo stretchy="false" form="postfix">)</mo></mtd><mtd columnalign="left" style="text-align: left; padding-left: 0"><mo>=</mo><mi>A</mi><mo>∩</mo><mover><mrow><mi>A</mi><mo>∩</mo><mi>B</mi></mrow><mo accent="true">¯</mo></mover></mtd></mtr><mtr><mtd columnalign="right" style="text-align: right; padding-right: 0"></mtd><mtd columnalign="left" style="text-align: left; padding-left: 0"><mo>=</mo><mi>A</mi><mo>∩</mo><mo stretchy="false" form="prefix">(</mo><mover><mi>A</mi><mo accent="true">¯</mo></mover><mo>∪</mo><mover><mi>B</mi><mo accent="true">¯</mo></mover><mo stretchy="false" form="postfix">)</mo></mtd></mtr><mtr><mtd columnalign="right" style="text-align: right; padding-right: 0"></mtd><mtd columnalign="left" style="text-align: left; padding-left: 0"><mo>=</mo><mo stretchy="false" form="prefix">(</mo><mi>A</mi><mo>∩</mo><mover><mi>A</mi><mo accent="true">¯</mo></mover><mo stretchy="false" form="postfix">)</mo><mo>∪</mo><mo stretchy="false" form="prefix">(</mo><mi>A</mi><mo>∩</mo><mover><mi>B</mi><mo accent="true">¯</mo></mover><mo stretchy="false" form="postfix">)</mo></mtd></mtr><mtr><mtd columnalign="right" style="text-align: right; padding-right: 0"></mtd><mtd columnalign="left" style="text-align: left; padding-left: 0"><mo>=</mo><mi>∅</mi><mo>∪</mo><mo stretchy="false" form="prefix">(</mo><mi>A</mi><mo>∩</mo><mover><mi>B</mi><mo accent="true">¯</mo></mover><mo stretchy="false" form="postfix">)</mo></mtd></mtr><mtr><mtd columnalign="right" style="text-align: right; padding-right: 0"></mtd><mtd columnalign="left" style="text-align: left; padding-left: 0"><mo>=</mo><mi>A</mi><mo>∩</mo><mover><mi>B</mi><mo accent="true">¯</mo></mover></mtd></mtr><mtr><mtd columnalign="right" style="text-align: right; padding-right: 0"></mtd><mtd columnalign="left" style="text-align: left; padding-left: 0"><mo>=</mo><mi>A</mi><mo>\</mo><mi>B</mi></mtd></mtr></mtable><annotation encoding="application/x-tex"> \begin{aligned}
+     A \setminus (A \cap B)
+       &amp;= A \cap \overline{A \cap B} \\
+       &amp;= A \cap (\overline{A} \cup \overline{B}) \\
+       &amp;= (A \cap \overline{A}) \cup (A \cap \overline{B}) \\
+       &amp;= \emptyset \cup (A \cap \overline{B}) \\
+       &amp;= A \cap \overline{B} \\
+       &amp;= A \setminus B
+   \end{aligned} </annotation></semantics></math><span
+class="env-last-symbol"> ▢</span></p>
+</div>
+<p>En cuanto a <span class="citation" data-cites="pineda"><a
+href="#ref-pineda" role="doc-biblioref">[1]</a> ejercicio 2.26</span>,
+que es la demostración de la propiedad 2, se podría haber hecho una
+demostración más directa, sin necesidad de ver los distintos casos,
+haciendo uso de la definición de <em>diferencia de conjuntos</em>.</p>
+<p>En <span class="citation" data-cites="pineda"><a href="#ref-pineda"
+role="doc-biblioref">[1, p. 53]</a></span> <strong>Ejercicio
+2.28</strong> se puede hacer más fácilmente mediante manipulaciones de
+las expresiones conjuntistas. Es sencillo.</p>
+</section>
+<section id="producto-de-dos-conjuntos" class="level2">
+<h2>Producto de dos conjuntos</h2>
+<p>Evidentemente, aunque en <span class="citation"
+data-cites="pineda"><a href="#ref-pineda"
+role="doc-biblioref">[1]</a></span> no se presente, existe una
+definición rigurosa del concepto de <em>par ordenado</em> (<em>ordered
+pair</em>). La que se suele dar es la definición de Viener-Kuratowski.
+TKTK.</p>
+<p>En realidad, al producto de conjuntos se le suele llamar en casi
+todos los textos <em>producto cartesiano</em>, aunque en <span
+class="citation" data-cites="pineda"><a href="#ref-pineda"
+role="doc-biblioref">[1]</a></span> lo mencionen solo de pasada.</p>
+<p>Las propiedades del producto cartesiano no presentan gran
+dificultad.</p>
+</section>
+<section id="relaciones-entre-conjuntos" class="level2">
+<h2>Relaciones entre conjuntos</h2>
+<p>En lo que respecta al concepto de <em>relación</em> binaria, debe
+saber que este es en realidad un predicado lógico simple de dos
+argumentos. En <span class="citation" data-cites="pineda"><a
+href="#ref-pineda" role="doc-biblioref">[1, p. 59]</a></span> la llaman
+<em>relación lógica</em>, para distinguirla de la conjuntista que
+definen posteriormente. En realidad, pasar de las relaciones lógicas
+(las auténticas) a las conjuntistas es algo más complicado de lo que se
+nos muestra en <span class="citation" data-cites="pineda"><a
+href="#ref-pineda" role="doc-biblioref">[1]</a></span>. Puede consultar
+<span class="citation" data-cites="ol-set-theory"><a
+href="#ref-ol-set-theory" role="doc-biblioref">[5]</a></span> para ver
+que, aunque muchos conjuntos pueden sintetizar la información que nos da
+una relación, esto no siempre sucede.</p>
+<p>En cualquier caso, a nosotros en principio lo que nos interesa serán
+las relaciones desde el punto de vista conjuntista, y no nos detendremos
+en la cuestión anterior. Para nosotros, todas las relaciones que veremos
+se podrán definir desde el punto de vista conjuntista.</p>
+<p>En <span class="citation" data-cites="velleman"><a
+href="#ref-velleman" role="doc-biblioref">[3]</a></span> llaman
+<em>relación</em> a las conjuntistas mientras que a las lógicas las
+llaman <em>predicados de dos argumentos</em> (afirmaciones o
+predicados?? TKTK). Esto quizás sea lo que más sentido tenga.</p>
+<p>Si los argumentos del predicado son 2, será una relación
+<em>binaria</em>; si son 3, terciaria, etc. En general,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>n</mi><annotation encoding="application/x-tex">n</annotation></semantics></math>-arias,
+para un
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi><mo>∈</mo><msup><mi>ℤ</mi><mo>+</mo></msup></mrow><annotation encoding="application/x-tex">n \in \mathbb{Z}^{+}</annotation></semantics></math>.
+A esta cualidad se la conoce como la <em>aridad</em> (<em>arity</em>) de
+la relación. Pero en realidad esta información casi nunca se da de forma
+explícita, sino que se entiende por los datos del problema o situación
+en particular. Es decir, normalmente, se habla de una <em>relación</em>,
+sin especificar su aridad.</p>
+<p>Me gustaría aclarar que a veces se usan definiciones algo distintas
+del concepto <em>relación</em>. Así, en <span class="citation"
+data-cites="ol-set-theory"><a href="#ref-ol-set-theory"
+role="doc-biblioref">[5]</a></span> la definen como un subconjunto de
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mo>×</mo><mi>A</mi></mrow><annotation encoding="application/x-tex">A \times A</annotation></semantics></math>,
+siendo
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math>
+un conjunto. A esta, en nuestra terminología —que cuenta con una
+definición más general— las llamamos <em>relaciones homogéneas</em>.</p>
+<p>En cuanto a la notación, personalmente me gusta usar
+<q><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>ℛ</mi><mo>⊆</mo><mi>A</mi><mo>×</mo><mi>B</mi></mrow><annotation encoding="application/x-tex">\mathcal{R} \subseteq
+A \times B</annotation></semantics></math></q> para las relaciones y
+reservar
+<q><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>ℛ</mi><mo>:</mo><mi>A</mi><mo>→</mo><mi>B</mi></mrow><annotation encoding="application/x-tex">\mathcal{R}:A \longrightarrow
+B</annotation></semantics></math></q> para las aplicaciones (también
+llamadas <em>funciones</em>), un tipo de relaciones que cumplen ciertas
+propiedades y que se estudian un poco más adelante. Me gusta
+distinguirlas así, simbólicamente. Si sigue esta misma notación, debe
+tener cuidado, pues en muchos textos también expresan las relaciones (en
+general) con expresiones del tipo de
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>ℛ</mi><mo>:</mo><mi>A</mi><mo>→</mo><mi>B</mi></mrow><annotation encoding="application/x-tex">\mathcal{R}:A
+\longrightarrow B</annotation></semantics></math>. Es lo que se hace en
+<span class="citation" data-cites="pineda"><a href="#ref-pineda"
+role="doc-biblioref">[1]</a></span>, con lo que aquí usaré una notación
+algo distinta a este respecto.</p>
+<p>La terminología que se presenta al respecto de las relacioens en
+<span class="citation" data-cites="pineda"><a href="#ref-pineda"
+role="doc-biblioref">[1, p. 60]</a></span>, en otros textos es común que
+tome otros nombres:</p>
+<ul>
+<li>Al conjunto original (ojo, no el inicial) de la relación también se
+le conoce como <em>dominio</em> (<em>domain</em>), y se puede designar
+por
+<q><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext mathvariant="normal">Dom</mtext><mo stretchy="false" form="prefix">(</mo><mi>ℛ</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\text{Dom}(\mathcal{R})</annotation></semantics></math></q>.</li>
+<li>Al final, <em>codominio</em> (<em>codomain</em>).</li>
+<li>Al conjunto imagen de la relación, <em>rango</em> (<em>range</em>) o
+<em>recorrido</em>, y se puede designar por
+<q><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext mathvariant="normal">Im</mtext><mo stretchy="false" form="prefix">(</mo><mi>ℛ</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\text{Im}(\mathcal{R})</annotation></semantics></math></q>.</li>
+<li>Al (conjunto) original de un elemento del conjunto final por
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>ℛ</mi><annotation encoding="application/x-tex">\mathcal{R}</annotation></semantics></math>
+también se le puede llamar <em>contraimagen</em> (de ese mismo elemento
+por esa misma relación).</li>
+</ul>
+<p>Por cierto, creo que no pasa nada si en lugar de decir <q>conjunto
+imagen</q> o <q>conjunto original</q> decimos simplemente <q>imagen</q>
+u <q>original</q>, respectivamente, ya que se sobrentiende que se trata
+de conjuntos. Al igual que se puede omitir mencionar a qué relación nos
+referimos, si está claro por el contexto.</p>
+<p>También, me gustaría aclarar que una relación (conjuntista) y su
+grafo se diferencian en que en este último se <q>pierde</q> cierta
+información. Concretamente, no sabemos cuáles son el conjunto inicial ni
+el final. Podrían ser, respectivamente, cualaquier supraconjunto del
+conjunto original y del conjunto imagen.</p>
+<p>Por cierto <em>grafo</em> sería básicamente un concepto que ya conoce
+de sus estudios previos: la gráfica de una función; aunque aquí, de
+momento, estamos estudiando relaciones, que es un concepto más amplio
+que el de <em>función</em>.</p>
+<p>Los ejercicios que se presentan aquí tienen relación con partes del
+álgebra básica y el precálculo. Si se fija, se muestran cosas como
+<q><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>𝒢</mi><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mo stretchy="false" form="prefix">{</mo><mn>0</mn><mo stretchy="false" form="postfix">}</mo></mrow><annotation encoding="application/x-tex">\mathcal{G}(1)
+= \{0\}</annotation></semantics></math></q>. Esto no es más que lo que
+en esas asignaturas expresaríamos por
+<q><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>𝒢</mi><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">\mathcal{G}(1) = 0</annotation></semantics></math></q>,
+que, aunque le parezca increíble, en cierto modo es abusar de la
+notación. Sin embargo, no se podría hacer esa simplificación en la
+notación para
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>𝒢</mi><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mo stretchy="false" form="prefix">{</mo><mrow><mi>−</mi><msqrt><mrow><mn>1</mn><mo>−</mo><msup><mi>x</mi><mn>2</mn></msup></mrow></msqrt><mo>,</mo><msqrt><mrow><mn>1</mn><mo>−</mo><msup><mi>x</mi><mn>2</mn></msup></mrow></msqrt></mrow><mo stretchy="false" form="postfix">}</mo></mrow><annotation encoding="application/x-tex">\mathcal{G}(x) = \{{-\sqrt{1 - x^2},\sqrt{1 - x^2}}\}</annotation></semantics></math>
+ya que se tienen dos resultados; aunque también se podría presentar como
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>𝒢</mi><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mi>±</mi><msqrt><mrow><mn>1</mn><mo>−</mo><msup><mi>x</mi><mn>2</mn></msup></mrow></msqrt></mrow><annotation encoding="application/x-tex">\mathcal{G}(x) = \pm \sqrt{1 - x^2}</annotation></semantics></math>.</p>
+<p>Como se verá en el capítulo siguiente, un tipo muy importante de
+relaciones son las que producen un único resultado; a estas se las llama
+<em>aplicaciones</em> o <em>funciones</em>,<a href="#fn6"
+class="footnote-ref" id="fnref6" role="doc-noteref"><sup>6</sup></a> y
+ya las conoce de asignaturas previas, solo que este concepto se lo
+definieron de formas menos rigurosas; por ejemplo, diciendo que se
+comportan como si se tratase de una máquina.</p>
+<p>En <span class="citation" data-cites="pineda"><a href="#ref-pineda"
+role="doc-biblioref">[1]</a></span> no se da la definición más amplia
+posible de la composición de relaciones, sino que usan relaciones
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>ℛ</mi><annotation encoding="application/x-tex">\mathcal{R}</annotation></semantics></math>
+y
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>𝒮</mi><annotation encoding="application/x-tex">\mathcal{S}</annotation></semantics></math>
+que tienen el mismo conjunto final e inicial, respectivamente, al cual
+denotan por
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>B</mi><annotation encoding="application/x-tex">B</annotation></semantics></math>.
+Imagino que lo hacen por no hacerlo excesivamente complejo.</p>
+<p>Para la definición amplia se debería imponer una condición para que
+se pueda tener la composición de relaciones
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>𝒮</mi><mo>∘</mo><mi>ℛ</mi></mrow><annotation encoding="application/x-tex">\mathcal{S} \circ \mathcal{R}</annotation></semantics></math>.
+Debe cumplirse que el conjunto original de
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>𝒮</mi><annotation encoding="application/x-tex">\mathcal{S}</annotation></semantics></math>
+sea un subconjunto del conjunto imagen de
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>ℛ</mi><annotation encoding="application/x-tex">\mathcal{R}</annotation></semantics></math>.</p>
+<p>Es decir, si tuviésemos dos relaciones
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>ℛ</mi><mo>⊆</mo><mi>A</mi><mo>×</mo><mi>B</mi></mrow><annotation encoding="application/x-tex">\mathcal{R} \subseteq A \times B</annotation></semantics></math>
+y
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>𝒮</mi><mo>⊆</mo><mi>C</mi><mo>×</mo><mi>D</mi></mrow><annotation encoding="application/x-tex">\mathcal{S} \subseteq C \times D</annotation></semantics></math>,
+para tener
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>𝒮</mi><mo>∘</mo><mi>ℛ</mi></mrow><annotation encoding="application/x-tex">\mathcal{S} \circ
+\mathcal{R}</annotation></semantics></math> se debería dar</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>𝒮</mi><mrow><mi>−</mi><mn>1</mn></mrow></msup><mo stretchy="false" form="prefix">(</mo><mi>D</mi><mo stretchy="false" form="postfix">)</mo><mo>⊆</mo><mi>ℛ</mi><mo stretchy="false" form="prefix">(</mo><mi>A</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex"> \mathcal{S}^{-1}(D) \subseteq \mathcal{R}(A) </annotation></semantics></math></p>
+<p>o, lo que es lo mismo,</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext mathvariant="normal">Dom</mtext><mo stretchy="false" form="prefix">(</mo><mi>𝒮</mi><mo stretchy="false" form="postfix">)</mo><mo>⊆</mo><mtext mathvariant="normal">Im</mtext><mo stretchy="false" form="prefix">(</mo><mi>ℛ</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex"> \text{Dom}(\mathcal{S}) \subseteq \text{Im}(\mathcal{R}) </annotation></semantics></math></p>
+<p>Si no se da esta condición, podría tenerse un elemento de
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>C</mi><annotation encoding="application/x-tex">C</annotation></semantics></math>
+que, aunque tenga su imagen por
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>𝒮</mi><annotation encoding="application/x-tex">\mathcal{S}</annotation></semantics></math>
+en
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>D</mi><annotation encoding="application/x-tex">D</annotation></semantics></math>,
+no tiene ninguna contraimagen por
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>ℛ</mi><annotation encoding="application/x-tex">\mathcal{R}</annotation></semantics></math>
+en
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math>.
+Sin embargo, sí está permitido que exista un elemento de
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>C</mi><annotation encoding="application/x-tex">C</annotation></semantics></math>
+que tenga una contraimagen por
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>ℛ</mi><annotation encoding="application/x-tex">\mathcal{R}</annotation></semantics></math>
+en
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math>
+pero no tenga imagen por
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>𝒮</mi><annotation encoding="application/x-tex">\mathcal{S}</annotation></semantics></math>
+en
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>D</mi><annotation encoding="application/x-tex">D</annotation></semantics></math>.</p>
+<p>Por otro lado, estaría bien que se explicara que la composición viene
+a decir que, para un
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>∈</mo><mi>A</mi></mrow><annotation encoding="application/x-tex">x \in A</annotation></semantics></math>,
+se tiene</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mi>𝒮</mi><mo>∘</mo><mi>ℛ</mi><mo stretchy="false" form="postfix">)</mo><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mi>𝒮</mi><mo stretchy="false" form="prefix">(</mo><mi>ℛ</mi><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex"> (\mathcal{S} \circ \mathcal{R})(x) = \mathcal{S}(\mathcal{R}(x)) </annotation></semantics></math></p>
+<p>En algún texto he visto que la definen justo al revés, pero es muy
+poco común verlo así.</p>
+</section>
+<section id="comentarios" class="level2">
+<h2>Comentarios</h2>
+<section id="sobre-el-método-de-inducción" class="level3">
+<h3>Sobre el método de inducción</h3>
+<p>En <span class="citation" data-cites="pineda"><a href="#ref-pineda"
+role="doc-biblioref">[1]</a> ejemplo 2.49</span>, quizás debería dejar
+más claro que <em>sucesión</em> y <em>progresión</em> son lo mismo.</p>
+<p>Para pasar de una forma recursiva de una sucesión a una explícita, se
+suele usar el Principio de Inducción. Se puede ver, por ejemplo, cómo se
+aplica a las fórmulas de las sumas de sucesiones, o, lo que es lo mismo,
+el término general de una serie; por ejemplo, las que se presentan en
+<span class="citation" data-cites="pineda"><a href="#ref-pineda"
+role="doc-biblioref">[1, p. 66]</a></span>, es decir, las aritméticas y
+las geométricas.</p>
+<p>Como curiosidad, quizás le interese saber que existen formalismos
+alternativos de los números naturales en los que se tiene, en lugar del
+Principio de Inducción como quinto axioma, la Propiedad de Buena
+Ordenación. Tomando uno cualquiera de estos, se deduce el otro y por
+tanto es un teorema. Esto se explica en <em>Rosen Number
+Theory</em>.</p>
+<p>A la variante del método de inducción que llamamos <em>inducción
+completa</em>, a veces se prefiere calificarla de <em>fuerte</em>
+(<em>strong</em>) o <em>estricta</em>, en lugar de
+<em>completa</em>.</p>
+</section>
+</section>
+</section>
+<section id="capítulo-3.-relaciones-y-aplicaciones" class="level1">
+<h1>Capítulo 3. Relaciones y aplicaciones</h1>
+<section id="propiedades-básicas-de-una-relación" class="level2">
+<h2>Propiedades básicas de una relación</h2>
+<p>Advierta que en <span class="citation" data-cites="pineda"><a
+href="#ref-pineda" role="doc-biblioref">[1, p. 75]</a></span>, al pasar
+a ver estas propiedades, nos centramos en las relaciones
+<em>homogeneas</em>, es decir, de la forma
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>ℛ</mi><mo>⊆</mo><mi>U</mi><mo>×</mo><mi>U</mi></mrow><annotation encoding="application/x-tex">\mathcal{R}
+\subseteq U \times U</annotation></semantics></math>, siendo
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>U</mi><annotation encoding="application/x-tex">U</annotation></semantics></math>
+un conjunto. Se podrían ver de forma más general, pero sería más
+engorroso.</p>
+<p>En cuanto a la clasificación que se hace según estas propiedades, en
+<span class="citation" data-cites="ol-set-theory"><a
+href="#ref-ol-set-theory" role="doc-biblioref">[5]</a></span> se da una
+clasificación más <q>rica</q>, es decir, que contempla más casos. Además
+resulta ser distinta a la de nuestro libro en ciertos casos.</p>
+<p>Si se fija, se dan dos definiciones por cada una de esas propiedades
+que se mencionan. La segunda sería la que se suele dar comúnmente.</p>
+<p>Me gustaría comentar que, en lo que respecta a la propiedad de
+simetría, a partir de la segunda definición, se tiene, por aplicación
+directa de de la definición de <em>subconjunto</em>, que
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>ℛ</mi><mo>⊆</mo><msup><mi>ℛ</mi><mrow><mi>−</mi><mn>1</mn></mrow></msup></mrow><annotation encoding="application/x-tex">\mathcal{R} \subseteq \mathcal{R}^{-1}</annotation></semantics></math>.
+Además, como se da para todos los pares de puntos, se tendrá también que
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>ℛ</mi><mrow><mi>−</mi><mn>1</mn></mrow></msup><mo>⊆</mo><mi>ℛ</mi></mrow><annotation encoding="application/x-tex">\mathcal{R}^{-1} \subseteq \mathcal{R}</annotation></semantics></math>
+(por cierto, esta es la que se da en el libro), y, por tanto, se tiene
+que
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>ℛ</mi><mo>=</mo><msup><mi>ℛ</mi><mrow><mi>−</mi><mn>1</mn></mrow></msup></mrow><annotation encoding="application/x-tex">\mathcal{R} = \mathcal{R}^{-1}</annotation></semantics></math>.
+Esta sería quizás una definición más elegante.</p>
+<p>Me gustaría resaltar que a veces conviene usar el (condicional)
+contrarrecíproco de esta definición, en la segunda forma en la que se
+expresa; es decir: si
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mi>y</mi><mo>,</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo><mo>∉</mo><mi>ℛ</mi></mrow><annotation encoding="application/x-tex">(y, x) \notin \mathcal{R}</annotation></semantics></math>,
+entonces
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo stretchy="false" form="postfix">)</mo><mo>∉</mo><mi>ℛ</mi></mrow><annotation encoding="application/x-tex">(x, y) \notin
+\mathcal{R}</annotation></semantics></math>. O, cambiando la notación,
+ya que se cumple para todos los pares de elementos: si
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo stretchy="false" form="postfix">)</mo><mo>∉</mo><mi>ℛ</mi></mrow><annotation encoding="application/x-tex">(x, y) \notin \mathcal{R}</annotation></semantics></math>,
+entonces
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mi>y</mi><mo>,</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo><mo>∉</mo><mi>ℛ</mi></mrow><annotation encoding="application/x-tex">(y, x) \notin
+\mathcal{R}</annotation></semantics></math>. Advierta que también se da
+entonces el (condicional) contrario del original.</p>
+<p>En cuanto a las propiedades que se pueden cumplir en las relaciones,
+me gustaría aclarar que estas no tienen por qué ser excluyentes. Por
+ejemplo, una relación puede ser a la vez simétrica y antisimétrica. Esto
+sucedería, por ejemplo, con la relación identidad para cualquier
+conjunto
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math>,
+que solemos representar por
+<q><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mtext mathvariant="normal">id</mtext><mi>A</mi></msub><annotation encoding="application/x-tex">\text{id}_{A}</annotation></semantics></math></q>
+o por
+<q><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>I</mi><mi>A</mi></msub><annotation encoding="application/x-tex">I_{A}</annotation></semantics></math></q>.</p>
+<p>Para ver que la relación de <span class="citation"
+data-cites="pineda"><a href="#ref-pineda" role="doc-biblioref">[1]</a>
+ejemplo 2.43</span> cumple la propiedad de simetría, bastaría con ver
+que, para cualesquiera
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>,</mo><mi>y</mi><mo>∈</mo><mi>ℝ</mi></mrow><annotation encoding="application/x-tex">x, y \in \mathbb{R}</annotation></semantics></math>,
+se cumple:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo stretchy="false" form="postfix">)</mo><mo>∈</mo><mi>𝒢</mi><mspace width="0.222em"></mspace><mo>⇔</mo><mspace width="0.222em"></mspace><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><msup><mi>y</mi><mn>2</mn></msup><mo>=</mo><mn>1</mn><mspace width="0.222em"></mspace><mo>⇔</mo><mspace width="0.222em"></mspace><msup><mi>y</mi><mn>2</mn></msup><mo>+</mo><msup><mi>x</mi><mn>2</mn></msup><mo>=</mo><mn>1</mn><mspace width="0.222em"></mspace><mo>⇔</mo><mspace width="0.222em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>y</mi><mo>,</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo><mo>∈</mo><mi>𝒢</mi></mrow><annotation encoding="application/x-tex"> (x, y) \in \mathcal{G}
+     \: \Longleftrightarrow \: x^2 + y^2 = 1
+     \: \Longleftrightarrow \: y^2 + x^2 = 1
+     \: \Longleftrightarrow \: (y, x) \in \mathcal{G} </annotation></semantics></math></p>
+<p>Para ver que en el ejercicio 2.42 no se cumple, bastaría con
+encontrar un contraejemplo. Tomando los valores
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>=</mo><mn>4</mn></mrow><annotation encoding="application/x-tex">x = 4</annotation></semantics></math>
+e
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>y</mi><mo>=</mo><mn>2</mn></mrow><annotation encoding="application/x-tex">y = 2</annotation></semantics></math>,
+se tiene que se cumple
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mi>ℛ</mi><mi>y</mi></mrow><annotation encoding="application/x-tex">x \mathcal{R} y</annotation></semantics></math>
+pero no se cumple
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>y</mi><mi>ℛ</mi><mi>x</mi></mrow><annotation encoding="application/x-tex">y \mathcal{R} x</annotation></semantics></math>.</p>
+<p>Lo que se hace en <span class="citation" data-cites="pineda"><a
+href="#ref-pineda" role="doc-biblioref">[1]</a> ejemplo 3.2</span>, es
+decir, a partir de un concepto (vector fijo) definir a uno más general
+(vector libre) a partir de las clases de equivalencia, es algo que se
+hace a menudo. TKTK.</p>
+<p>En <span class="citation" data-cites="pineda"><a href="#ref-pineda"
+role="doc-biblioref">[1]</a> ejemplo 3.4</span>, en la expresión del
+conjunto
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>E</mi><annotation encoding="application/x-tex">E</annotation></semantics></math>,
+la parte</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">|</mo><mi>a</mi><mo stretchy="false" form="prefix">|</mo><mspace width="0.167em"></mspace><mo>+</mo><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">|</mo><mi>b</mi><mo stretchy="false" form="prefix">|</mo><mo>≠</mo><mn>0</mn></mrow><annotation encoding="application/x-tex"> |a| \, + \, |b| \neq 0 </annotation></semantics></math></p>
+<p>tiene el propósito de excluir (de un modo bastante elegante) el caso
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi><mo>=</mo><mi>b</mi><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">a = b
+= 0</annotation></semantics></math>, que daría lugar a un punto, en
+lugar dea a una recta.</p>
+<p>Lo que se explica al final de este ejemplo es que existen varias
+expresiones algebraicas equivalentes para una misma recta. Por ejemplo,
+si multiplicamos a todos los términos por
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>2</mn><annotation encoding="application/x-tex">2</annotation></semantics></math>,
+seguirá siendo la misma recta en realidad.</p>
+<p>Evidentemente, para trabajar con expresiones algebraicas en
+geometría, debemos hacer uso de una de estas expresiones; a esta se la
+califica de <em>representante</em> de esa clase de equivalencia. A la
+recta la definimos como toda esa clase de equivalencia.</p>
+<p>Ahora, presenta dos ejemplos en los que se muestra la necesidad de
+definir conjuntos numéricos más amplios que
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>ℕ</mi><annotation encoding="application/x-tex">\mathbb{N}</annotation></semantics></math>.
+No obstante, estos se definirán con mucho más detalle en capítulos
+posteriores.</p>
+<p>En <span class="citation" data-cites="pineda"><a href="#ref-pineda"
+role="doc-biblioref">[1]</a> ejemplo 3.8</span>, al definir la relación
+de equivalencia
+<q><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>ε</mi><annotation encoding="application/x-tex">\varepsilon</annotation></semantics></math></q>,
+definida del modo siguiente:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false" form="postfix">)</mo><mspace width="0.167em"></mspace><mi>ε</mi><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>c</mi><mo>,</mo><mi>d</mi><mo stretchy="false" form="postfix">)</mo><mrow><mspace width="0.333em"></mspace><mtext mathvariant="normal"> si y solo si </mtext><mspace width="0.333em"></mspace></mrow><mi>a</mi><mo>+</mo><mi>d</mi><mo>=</mo><mi>b</mi><mo>+</mo><mi>c</mi></mrow><annotation encoding="application/x-tex"> (a, b) \, \varepsilon \, (c, d) \text{ si y solo si } a + d = b + c </annotation></semantics></math></p>
+<p>en realidad piense en que esto viene de manipular las ecuaciones
+anteriores, es decir,</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mtable><mtr><mtd columnalign="right" style="text-align: right; padding-right: 0"><mi>x</mi><mo>+</mo><mi>b</mi></mtd><mtd columnalign="left" style="text-align: left; padding-left: 0"><mo>=</mo><mi>a</mi></mtd></mtr><mtr><mtd columnalign="right" style="text-align: right; padding-right: 0"><mi>x</mi><mo>+</mo><mi>d</mi></mtd><mtd columnalign="left" style="text-align: left; padding-left: 0"><mo>=</mo><mi>c</mi></mtd></mtr></mtable><annotation encoding="application/x-tex"> \begin{aligned}
+     x + b  &amp;= a \\
+     x + d  &amp;= c
+   \end{aligned} </annotation></semantics></math></p>
+<p>de lo que se obtiene</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>=</mo><mi>a</mi><mo>−</mo><mi>b</mi><mo>=</mo><mi>c</mi><mo>−</mo><mi>d</mi></mrow><annotation encoding="application/x-tex"> x = a - b = c - d </annotation></semantics></math></p>
+<p>y de ahí
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi><mo>+</mo><mi>d</mi><mo>=</mo><mi>b</mi><mo>+</mo><mi>c</mi></mrow><annotation encoding="application/x-tex">a + d = b + c</annotation></semantics></math>.
+Algo similar se hace en el ejemplo 3.9 solo que con el producto y la
+división. Simplemente, hay que igualar dos expresiones genéricas y
+despejar las
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>x</mi><annotation encoding="application/x-tex">x</annotation></semantics></math>.
+De</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mtable><mtr><mtd columnalign="right" style="text-align: right; padding-right: 0"><mi>b</mi><mi>x</mi></mtd><mtd columnalign="left" style="text-align: left; padding-left: 0"><mo>=</mo><mi>a</mi></mtd></mtr><mtr><mtd columnalign="right" style="text-align: right; padding-right: 0"><mi>d</mi><mi>x</mi></mtd><mtd columnalign="left" style="text-align: left; padding-left: 0"><mo>=</mo><mi>c</mi></mtd></mtr></mtable><annotation encoding="application/x-tex"> \begin{aligned}
+     bx &amp;= a \\
+     dx &amp;= c
+   \end{aligned} </annotation></semantics></math></p>
+<p>tenemos</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mtable><mtr><mtd columnalign="right" style="text-align: right; padding-right: 0"><mo stretchy="false" form="prefix">(</mo><mi>b</mi><mi>x</mi><mo stretchy="false" form="postfix">)</mo><mi>c</mi></mtd><mtd columnalign="left" style="text-align: left; padding-left: 0"><mo>=</mo><mi>a</mi><mo stretchy="false" form="prefix">(</mo><mi>d</mi><mi>x</mi><mo stretchy="false" form="postfix">)</mo></mtd></mtr><mtr><mtd columnalign="right" style="text-align: right; padding-right: 0"><mi>b</mi><mi>c</mi><mi>x</mi></mtd><mtd columnalign="left" style="text-align: left; padding-left: 0"><mo>=</mo><mi>a</mi><mi>d</mi><mi>x</mi></mtd></mtr><mtr><mtd columnalign="right" style="text-align: right; padding-right: 0"><mi>b</mi><mi>c</mi></mtd><mtd columnalign="left" style="text-align: left; padding-left: 0"><mo>=</mo><mi>a</mi><mi>d</mi></mtd></mtr></mtable><annotation encoding="application/x-tex"> \begin{aligned}
+     (bx)c  &amp;= a(dx) \\
+     bcx    &amp;= adx \\
+     bc     &amp;= ad
+   \end{aligned}</annotation></semantics></math></p>
+<p>Tal y como se verá más adelante (además de en teoría de números), en
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>ℚ</mi><annotation encoding="application/x-tex">\mathbb{Q}</annotation></semantics></math>
+existe un representante de clase especial: la fracción en términos
+mínimos. TKTK.</p>
+<p>El comentario que se hace en <span class="citation"
+data-cites="pineda"><a href="#ref-pineda" role="doc-biblioref">[1]</a>
+ejemplo 3.10</span>, aunque pertenezca más bien a la teoría de números,
+(puede verla en la Matemáticas Discretas) y se vea en profundidad en
+esta, me gustaría aclararlo aquí.</p>
+<p>La definición que se suele dar de <em>congruencia</em> módulo
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>p</mi><annotation encoding="application/x-tex">p</annotation></semantics></math>
+de dos números
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi><mo>,</mo><mi>b</mi><mo>∈</mo><mi>ℤ</mi></mrow><annotation encoding="application/x-tex">a,b \in \mathbb{Z}</annotation></semantics></math>
+es</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi><mo>≡</mo><mi>b</mi><mspace width="0.222em"></mspace><mo stretchy="false" form="prefix">(</mo><mtext mathvariant="normal">mód</mtext><mspace width="0.278em"></mspace><mi>p</mi><mo stretchy="false" form="postfix">)</mo><mspace width="1.0em"></mspace><mo>⇔</mo><mspace width="1.0em"></mspace><mi>p</mi><mo>∣</mo><mo stretchy="false" form="prefix">(</mo><mi>a</mi><mo>−</mo><mi>b</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex"> a \equiv b \ (\text{mód} \; p) \quad \Longleftrightarrow \quad p \mid (a
+- b) </annotation></semantics></math></p>
+<p>Hemos usado el operador <q>divide a…</q>, que se representa por
+<q><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>|</mi><annotation encoding="application/x-tex">\mathbin{|}</annotation></semantics></math></q>.</p>
+<p>Advierta que lo anterior es lo mismo que</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>∃</mo><mi>k</mi><mo>∈</mo><mi>ℤ</mi><mrow><mspace width="0.333em"></mspace><mtext mathvariant="normal"> tal que </mtext><mspace width="0.333em"></mspace></mrow><mi>k</mi><mi>p</mi><mo>=</mo><mi>a</mi><mo>−</mo><mi>b</mi></mrow><annotation encoding="application/x-tex"> \exists k \in \mathbb{Z} \text{ tal que } kp = a - b </annotation></semantics></math></p>
+<p>Es fácil deducir que esto es lo mismo que decir que el resto tanto de
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>a</mi><annotation encoding="application/x-tex">a</annotation></semantics></math>
+como de
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>b</mi><annotation encoding="application/x-tex">b</annotation></semantics></math>
+al dividirlo mediante la división euclidiana entre
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>p</mi><annotation encoding="application/x-tex">p</annotation></semantics></math>,
+es el mismo.</p>
+<p>Por el Teorema de la División Euclidiana (más conocido como el
+Algoritmo de la División, aunque no es un algoritmo en realidad), se
+tiene que</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mtable><mtr><mtd columnalign="right" style="text-align: right; padding-right: 0"><mi>a</mi></mtd><mtd columnalign="left" style="text-align: left; padding-left: 0"><mo>=</mo><msub><mi>q</mi><mn>1</mn></msub><mi>p</mi><mo>+</mo><msub><mi>r</mi><mn>1</mn></msub></mtd></mtr><mtr><mtd columnalign="right" style="text-align: right; padding-right: 0"><mi>b</mi></mtd><mtd columnalign="left" style="text-align: left; padding-left: 0"><mo>=</mo><msub><mi>q</mi><mn>2</mn></msub><mi>p</mi><mo>+</mo><msub><mi>r</mi><mn>2</mn></msub></mtd></mtr></mtable><annotation encoding="application/x-tex"> \begin{aligned}
+     a  &amp;= q_1 p + r_1 \\
+     b  &amp;= q_2 p + r_2
+   \end{aligned}</annotation></semantics></math></p>
+<p>para
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>q</mi><mn>1</mn></msub><mo>,</mo><msub><mi>q</mi><mn>2</mn></msub><mo>,</mo><msub><mi>r</mi><mn>1</mn></msub><mo>,</mo><msub><mi>r</mi><mn>2</mn></msub><mo>∈</mo><mi>ℤ</mi></mrow><annotation encoding="application/x-tex">q_1, q_2, r_1, r_2 \in \mathbb{Z}</annotation></semantics></math>
+siendo
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0</mn><mo>≤</mo><msub><mi>r</mi><mn>1</mn></msub><mo>&lt;</mo><mi>p</mi></mrow><annotation encoding="application/x-tex">0 \leq r_1 &lt; p</annotation></semantics></math>
+y
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0</mn><mo>≤</mo><msub><mi>r</mi><mn>2</mn></msub><mo>&lt;</mo><mi>p</mi></mrow><annotation encoding="application/x-tex">0 \leq
+r_2 &lt; p</annotation></semantics></math>.</p>
+<p>Restando tenemos</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mtable><mtr><mtd columnalign="right" style="text-align: right; padding-right: 0"><mi>a</mi><mo>−</mo><mi>b</mi></mtd><mtd columnalign="left" style="text-align: left; padding-left: 0"><mo>=</mo><mo stretchy="false" form="prefix">(</mo><msub><mi>q</mi><mn>1</mn></msub><mi>p</mi><mo>+</mo><msub><mi>r</mi><mn>1</mn></msub><mo stretchy="false" form="postfix">)</mo><mo>−</mo><mo stretchy="false" form="prefix">(</mo><msub><mi>q</mi><mn>2</mn></msub><mi>p</mi><mo>+</mo><msub><mi>r</mi><mn>2</mn></msub><mo stretchy="false" form="postfix">)</mo></mtd></mtr><mtr><mtd columnalign="right" style="text-align: right; padding-right: 0"></mtd><mtd columnalign="left" style="text-align: left; padding-left: 0"><mo>=</mo><mi>p</mi><mo stretchy="false" form="prefix">(</mo><msub><mi>q</mi><mn>1</mn></msub><mo>−</mo><msub><mi>q</mi><mn>2</mn></msub><mo stretchy="false" form="postfix">)</mo><mo>+</mo><mo stretchy="false" form="prefix">(</mo><msub><mi>r</mi><mn>2</mn></msub><mo>−</mo><msub><mi>r</mi><mn>1</mn></msub><mo stretchy="false" form="postfix">)</mo></mtd></mtr></mtable><annotation encoding="application/x-tex"> \begin{aligned}
+     a - b  &amp;= (q_1 p + r_1) - (q_2 p + r_2) \\
+            &amp;= p(q_1 - q_2) + (r_2 - r_1)
+   \end{aligned} </annotation></semantics></math></p>
+<p>Uniendo este resultado con la hipótesis anterior tenemos que</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>k</mi><mo>=</mo><msub><mi>q</mi><mn>1</mn></msub><mo>−</mo><msub><mi>q</mi><mn>2</mn></msub><mrow><mspace width="0.333em"></mspace><mtext mathvariant="normal"> y </mtext><mspace width="0.333em"></mspace></mrow><msub><mi>r</mi><mn>2</mn></msub><mo>−</mo><msub><mi>r</mi><mn>1</mn></msub><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex"> k = q_1 - q_2 \text{ y } r_2 - r_1 = 0 </annotation></semantics></math></p>
+<p>con lo que tenemos que
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>r</mi><mn>1</mn></msub><mo>=</mo><msub><mi>r</mi><mn>2</mn></msub></mrow><annotation encoding="application/x-tex">r_1 = r_2</annotation></semantics></math>,
+tal y como deseábamos demostrar.</p>
+<p>Es fácil ver cuáles son todas las clases de equivalencia, o, lo que
+es lo mismo, el conjunto cociente, al ver los únicos valores posibles de
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>r</mi><mn>1</mn></msub><annotation encoding="application/x-tex">r_1</annotation></semantics></math>
+y
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>r</mi><mn>2</mn></msub><annotation encoding="application/x-tex">r_2</annotation></semantics></math>.</p>
+<p>En <span class="citation" data-cites="pineda"><a href="#ref-pineda"
+role="doc-biblioref">[1]</a> ejemplo 3.16</span>, se tendría la relación
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mtext mathvariant="normal">&quot;</mtext><mo>⊆</mo><mtext mathvariant="normal">&quot;</mtext></mrow><mo>⊆</mo><mi>𝒫</mi><mo stretchy="false" form="prefix">(</mo><mi>U</mi><mo stretchy="false" form="postfix">)</mo><mo>×</mo><mi>𝒫</mi><mo stretchy="false" form="prefix">(</mo><mi>U</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\mathbin{{\text{&quot;}}{\subseteq}{\text{&quot;}}} \subseteq \mathcal{P}(U) \times
+\mathcal{P}(U)</annotation></semantics></math>. Como puede ver, esta
+notación es a veces un poco engorrosa. Por cierto, hemos entrecomillado
+el símbolo que usamos en la relación para distinguirlo aquí del
+otro.</p>
+<p>Ahora, se pasa a las relaciones de orden. Estas, en muchas ocasiones,
+son más difíciles de comprender que las de equivalencia, principalmente,
+porque a estas alturas estará muy acostumbrado a emplear una relación de
+orden en particular; la usual de los números de cualquier tipo. La
+relación de orden supone una generalización de ese concepto de
+<em>orden</em> que se emplea en los números.</p>
+<p>En realidad, los órdenes estrictos se pueden definir por medio de la
+propiedad irreflexiva, como se hace en <span class="citation"
+data-cites="ol-set-theory"><a href="#ref-ol-set-theory"
+role="doc-biblioref">[5]</a></span>. TKTK.</p>
+<p>En la definición de <em>conjunto ordenado</em>,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mi>U</mi><mo>,</mo><mi>≼</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">(U, \mathbin{\preceq})</annotation></semantics></math>,
+advierta que el orden
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>≼</mi><annotation encoding="application/x-tex">\mathbin{\preceq}</annotation></semantics></math>
+tiene que corresponder a ese conjunto
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>U</mi><annotation encoding="application/x-tex">U</annotation></semantics></math>,
+es decir,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>≼</mi><mo>⊆</mo><mi>U</mi><mo>×</mo><mi>U</mi></mrow><annotation encoding="application/x-tex">\mathbin{\preceq} \subseteq U \times U</annotation></semantics></math>.</p>
+<p>Al hablar de las relaciones de orden, en <span class="citation"
+data-cites="pineda"><a href="#ref-pineda" role="doc-biblioref">[1, p.
+82]</a></span>, se pasa por alto explicar que cosas como
+<q><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi><mo>≼</mo><mi>b</mi><mo>≼</mo><mi>c</mi></mrow><annotation encoding="application/x-tex">a \preceq b \preceq c</annotation></semantics></math></q>
+es una forma abreviada de expresar</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi><mo>≼</mo><mi>b</mi><mrow><mspace width="0.333em"></mspace><mtext mathvariant="normal"> y </mtext><mspace width="0.333em"></mspace></mrow><mi>b</mi><mo>≼</mo><mi>c</mi></mrow><annotation encoding="application/x-tex"> a \preceq b \text{ y } b \preceq c </annotation></semantics></math></p>
+<p>Sería válido para cualquier relación de orden. A la expresión
+abreviada, es decir, a una expresión como
+<q><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi><mo>≼</mo><mi>b</mi><mo>≼</mo><mi>c</mi></mrow><annotation encoding="application/x-tex">a \preceq b \preceq c</annotation></semantics></math></q>,
+me gusta llamarla <q>expresión en forma concatenada</q>.</p>
+<p>De hecho, se puede deducir algo más de la definición de
+<em>intervalo</em>. Tomemos a un intervalo genérico
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false" form="postfix">]</mo></mrow><annotation encoding="application/x-tex">(a, b]</annotation></semantics></math>
+como ejemplo siendo
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi><mo>,</mo><mi>b</mi><mo>∈</mo><mi>U</mi></mrow><annotation encoding="application/x-tex">a, b \in U</annotation></semantics></math>
+y la relación de orden
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>≼</mi><mo>⊆</mo><mi>U</mi><mo>×</mo><mi>U</mi></mrow><annotation encoding="application/x-tex">\mathbin{\preceq} \subseteq U \times U</annotation></semantics></math>.
+Se tiene lo siguiente:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mtable><mtr><mtd columnalign="right" style="text-align: right; padding-right: 0"><mo stretchy="false" form="prefix">(</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false" form="postfix">]</mo></mtd><mtd columnalign="left" style="text-align: left; padding-left: 0"><mo>=</mo><mo stretchy="false" form="prefix">{</mo><mi>x</mi><mo>∈</mo><mi>U</mi><mspace width="0.222em"></mspace><mo stretchy="false" form="prefix">|</mo><mspace width="0.222em"></mspace><mi>a</mi><mo>≺</mo><mi>x</mi><mo>≼</mo><mi>b</mi><mo stretchy="false" form="postfix">}</mo><mo>=</mo><mo stretchy="false" form="prefix">{</mo><mi>x</mi><mo>∈</mo><mi>U</mi><mspace width="0.222em"></mspace><mo stretchy="false" form="prefix">|</mo><mspace width="0.222em"></mspace><mi>a</mi><mo>≺</mo><mi>x</mi><mrow><mspace width="0.333em"></mspace><mtext mathvariant="normal"> y </mtext><mspace width="0.333em"></mspace></mrow><mi>x</mi><mo>≼</mo><mi>b</mi><mo stretchy="false" form="postfix">}</mo></mtd></mtr><mtr><mtd columnalign="right" style="text-align: right; padding-right: 0"></mtd><mtd columnalign="left" style="text-align: left; padding-left: 0"><mo>=</mo><mo stretchy="false" form="prefix">{</mo><mi>x</mi><mo>∈</mo><mi>U</mi><mspace width="0.222em"></mspace><mo stretchy="false" form="prefix">|</mo><mspace width="0.222em"></mspace><mi>a</mi><mo>≺</mo><mi>x</mi><mo stretchy="false" form="postfix">}</mo><mo>∩</mo><mo stretchy="false" form="prefix">{</mo><mi>x</mi><mo>∈</mo><mi>U</mi><mspace width="0.222em"></mspace><mo stretchy="false" form="prefix">|</mo><mspace width="0.222em"></mspace><mi>x</mi><mo>≼</mo><mi>b</mi><mo stretchy="false" form="postfix">}</mo><mo>=</mo><mo stretchy="false" form="prefix">(</mo><mi>a</mi><mo>,</mo><mi>→</mi><mo stretchy="false" form="postfix">)</mo><mo>∩</mo><mo stretchy="false" form="prefix">(</mo><mi>←</mi><mo>,</mo><mi>b</mi><mo stretchy="false" form="postfix">]</mo></mtd></mtr></mtable><annotation encoding="application/x-tex"> \begin{aligned}
+     (a, b]
+       &amp;= \{x \in U \ | \ a \prec x \preceq b\}
+        = \{x \in U \ | \ a \prec x \text{ y } x \preceq b\} \\
+       &amp;= \{x \in U \ | \ a \prec x\} \cap \{x \in U \ | \ x \preceq b\}
+        = (a, \mathbin{\rightarrow}) \cap (\mathbin{\leftarrow} ,b]
+   \end{aligned} </annotation></semantics></math></p>
+<p>Algo análogo se tendría para los otros tipos de intervalos.</p>
+<p>Tal y como se explica luego, para cualquier
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi><mo>∈</mo><mi>U</mi></mrow><annotation encoding="application/x-tex">a \in U</annotation></semantics></math>,</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">[</mo><mi>a</mi><mo>,</mo><mi>a</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mo stretchy="false" form="prefix">[</mo><mi>a</mi><mo>,</mo><mi>a</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mi>∅</mi></mrow><annotation encoding="application/x-tex"> [a, a) = [a, a) = \emptyset </annotation></semantics></math></p>
+<p>Es fácil verlo si descomponemos la expresión en forma concatenada en
+la conjunción de dos relaciones. Tenga en cuenta que la intersección de
+dos conjuntos en los que uno contiene a un elemento
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>a</mi><annotation encoding="application/x-tex">a</annotation></semantics></math>
+con uno que no lo contiene, no contendrá a dicho elemento
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>a</mi><annotation encoding="application/x-tex">a</annotation></semantics></math>.</p>
+<p>A partir de <span class="citation" data-cites="pineda"><a
+href="#ref-pineda" role="doc-biblioref">[1]</a> ejemplo 3.22</span>,
+comienza a complicarse el estudio de las relaciones de orden.</p>
+<p>En este ejemplo, tenga en cuenta que
+<q><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mo>≤</mo><mi>L</mi></msub><annotation encoding="application/x-tex">\leq_L</annotation></semantics></math></q>
+(TKTK quitar espacios) y
+<q><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>≤</mi><annotation encoding="application/x-tex">\mathbin{\leq}</annotation></semantics></math></q>
+son relaciones de orden diferentes. La primera es el orden
+lexicográfico, definido para elementos de
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>ℝ</mi><mn>2</mn></msup><annotation encoding="application/x-tex">\mathbb{R}^2</annotation></semantics></math>.
+La otra es el orden usual en
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>ℝ</mi><annotation encoding="application/x-tex">\mathbb{R}</annotation></semantics></math>.</p>
+<p>En <span class="citation" data-cites="pineda"><a href="#ref-pineda"
+role="doc-biblioref">[1]</a> ejemplo 3.23 figura 3.10</span>, creo que
+debería tener el cuadrado que encierra al área sombreada con línea
+discontinua ya que se trata de un intervalo abierto y, por tanto, se usa
+un orden (producto) estricto, tal y como se indica en esa área
+sombreada.</p>
+<p>Evidentemnte, el orden producto estricto se definiría</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false" form="postfix">)</mo><msub><mo>≤</mo><mi>P</mi></msub><mo stretchy="false" form="prefix">(</mo><mi>c</mi><mo>,</mo><mi>d</mi><mo stretchy="false" form="postfix">)</mo><mspace width="1.0em"></mspace><mo>⇔</mo><mspace width="1.0em"></mspace><mi>x</mi><mo>&lt;</mo><mi>a</mi><mrow><mspace width="0.333em"></mspace><mtext mathvariant="normal"> e </mtext><mspace width="0.333em"></mspace></mrow><mi>y</mi><mo>&lt;</mo><mi>b</mi></mrow><annotation encoding="application/x-tex"> (a, b) \leq_P (c, d) \quad \Longleftrightarrow \quad x &lt; a \text{ e } y &lt;
+b </annotation></semantics></math></p>
+<p>Además, por lo que explicamos antes, se tendría que</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mo stretchy="false" form="prefix">(</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false" form="postfix">)</mo><mo>,</mo><mo stretchy="false" form="prefix">(</mo><mi>c</mi><mo>,</mo><mi>d</mi><mo stretchy="false" form="postfix">)</mo><msub><mo stretchy="false" form="postfix">)</mo><msub><mo>≤</mo><mi>P</mi></msub></msub><mo>=</mo><mo stretchy="false" form="prefix">(</mo><mo stretchy="false" form="prefix">(</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false" form="postfix">)</mo><mo>,</mo><mi>→</mi><msub><mo stretchy="false" form="postfix">)</mo><msub><mo>≤</mo><mi>P</mi></msub></msub><mo>∩</mo><mo stretchy="false" form="prefix">(</mo><mi>←</mi><mo>,</mo><mo stretchy="false" form="prefix">(</mo><mi>c</mi><mo>,</mo><mi>d</mi><mo stretchy="false" form="postfix">)</mo><msub><mo stretchy="false" form="postfix">)</mo><msub><mo>≤</mo><mi>P</mi></msub></msub></mrow><annotation encoding="application/x-tex"> ((a, b), (c, d))_{\leq_P} = ((a, b), \mathbin{\rightarrow})_{\leq_P} \cap
+  (\mathbin{\leftarrow}, (c, d))_{\leq_P} </annotation></semantics></math></p>
+<p>Aunque pasemos a usar una notación genérica para las relaciones de
+orden, es decir,
+<q><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>≼</mi><annotation encoding="application/x-tex">\mathbin{\preceq}</annotation></semantics></math></q>
+y similares, seguiremos diciendo que un elemento es <em>menor o
+igual</em> que otro si le precede según esa relación de orden. Es decir,
+debe tener en cuenta que ampliamos el significado de TKTK.</p>
+<p>En lo que respecta a la acotación de conjuntos, es relevante que sepa
+que ese adjetivo, <em>acotado</em>, en inglés es <em>bounded</em>, y,
+<em>cota</em> se traduce por <em>bound</em>.</p>
+<p>Creo que estos conceptos relacionados con la acotación son relevantes
+para la formalización del cálculo, cosa que se suele conocer como
+<em>análisis matemático</em>. Creo que tienen relación con la
+topología.</p>
+<p>Advierta que, aplicando la definición de intervalos iniciales y
+finales (<span class="citation" data-cites="pineda"><a
+href="#ref-pineda" role="doc-biblioref">[1, p. 85]</a></span>) a la
+definición de <em>cota superior</em>
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>u</mi><mo>∈</mo><mi>U</mi></mrow><annotation encoding="application/x-tex">u \in U</annotation></semantics></math>
+de
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mo>⊆</mo><mi>U</mi></mrow><annotation encoding="application/x-tex">A
+\subseteq U</annotation></semantics></math>, tenemos que esta se puede
+expresar alternativamente como</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mo>⊆</mo><mo stretchy="false" form="prefix">(</mo><mi>←</mi><mo>,</mo><mi>u</mi><msub><mo stretchy="false" form="postfix">]</mo><mo>≼</mo></msub></mrow><annotation encoding="application/x-tex"> A \subseteq (\mathbin{\leftarrow}, u]_\preceq </annotation></semantics></math></p>
+<p>No hay más que aplicar la definición de <em>subconjunto</em>.
+Análogamente, para una cota inferior
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>d</mi><annotation encoding="application/x-tex">d</annotation></semantics></math>
+se tiene</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mo>⊆</mo><mo stretchy="false" form="prefix">[</mo><mi>d</mi><mo>,</mo><mi>→</mi><msub><mo stretchy="false" form="postfix">)</mo><mo>≼</mo></msub></mrow><annotation encoding="application/x-tex"> A \subseteq [d, \mathbin{\rightarrow})_\preceq </annotation></semantics></math></p>
+<p>Si se cumplen las dos, se tiene que el conjunto
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math>
+está acotado. Pero, además, por estas otras expresiones, se tiene
+que</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mo>⊆</mo><mo stretchy="false" form="prefix">[</mo><mi>d</mi><mo>,</mo><mi>→</mi><msub><mo stretchy="false" form="postfix">)</mo><mo>≼</mo></msub><mo>∩</mo><mo stretchy="false" form="prefix">(</mo><mi>←</mi><mo>,</mo><mi>u</mi><msub><mo stretchy="false" form="postfix">]</mo><mo>≼</mo></msub><mo>=</mo><mo stretchy="false" form="prefix">[</mo><mi>d</mi><mo>,</mo><mi>u</mi><msub><mo stretchy="false" form="postfix">]</mo><mo>≼</mo></msub></mrow><annotation encoding="application/x-tex"> A \subseteq [d, \mathbin{\rightarrow})_\preceq \cap
+     (\mathbin{\leftarrow}, u]_\preceq = [d, u]_\preceq </annotation></semantics></math></p>
+<p>Lo que acabamos de explicar es, de hecho, la primera parte de la
+demostración de la observación de <span class="citation"
+data-cites="pineda"><a href="#ref-pineda" role="doc-biblioref">[1, p.
+87]</a></span> (si se cambian
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>d</mi><annotation encoding="application/x-tex">d</annotation></semantics></math>
+por
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>a</mi><annotation encoding="application/x-tex">a</annotation></semantics></math>
+y
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>u</mi><annotation encoding="application/x-tex">u</annotation></semantics></math>
+por
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>b</mi><annotation encoding="application/x-tex">b</annotation></semantics></math>);
+es decir, la demostración de la implicación
+<q><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>⇒</mi><annotation encoding="application/x-tex">\mathbin{\Longrightarrow}</annotation></semantics></math></q>.
+Quedaría por ver la implicación en el otro sentido,
+<q><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>⇐</mi><annotation encoding="application/x-tex">\mathbin{\Longleftarrow}</annotation></semantics></math></q>.
+Veámosla.</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mtable><mtr><mtd columnalign="right" style="text-align: right; padding-right: 0"><mi>A</mi><mo>⊆</mo><mo stretchy="false" form="prefix">[</mo><mi>a</mi><mo>,</mo><mi>b</mi><msub><mo stretchy="false" form="postfix">]</mo><mo>≼</mo></msub></mtd><mtd columnalign="left" style="text-align: left; padding-left: 0"><mspace width="0.222em"></mspace><mo>⇔</mo><mspace width="0.222em"></mspace><mo>∀</mo><mi>x</mi><mo>∈</mo><mi>A</mi><mo>,</mo><mspace width="0.222em"></mspace><mi>x</mi><mo>∈</mo><mo stretchy="false" form="prefix">[</mo><mi>a</mi><mo>,</mo><mi>b</mi><msub><mo stretchy="false" form="postfix">]</mo><mo>≼</mo></msub></mtd></mtr><mtr><mtd columnalign="right" style="text-align: right; padding-right: 0"></mtd><mtd columnalign="left" style="text-align: left; padding-left: 0"><mspace width="0.222em"></mspace><mo>⇔</mo><mspace width="0.222em"></mspace><mo>∀</mo><mi>x</mi><mo>∈</mo><mi>A</mi><mo>,</mo><mspace width="0.222em"></mspace><mi>x</mi><mo>∈</mo><mo stretchy="false" form="prefix">[</mo><mi>a</mi><mo>,</mo><mi>→</mi><msub><mo stretchy="false" form="postfix">)</mo><mo>≼</mo></msub><mo>∩</mo><mi>x</mi><mo>∈</mo><mo stretchy="false" form="prefix">(</mo><mi>←</mi><mo>,</mo><mi>b</mi><msub><mo stretchy="false" form="postfix">]</mo><mo>≼</mo></msub></mtd></mtr><mtr><mtd columnalign="right" style="text-align: right; padding-right: 0"></mtd><mtd columnalign="left" style="text-align: left; padding-left: 0"><mspace width="0.222em"></mspace><mo>⇔</mo><mspace width="0.222em"></mspace><mo>∀</mo><mi>x</mi><mo>∈</mo><mi>A</mi><mo>,</mo><mspace width="0.222em"></mspace><mi>x</mi><mo>∈</mo><mo stretchy="false" form="prefix">[</mo><mi>a</mi><mo>,</mo><mi>→</mi><msub><mo stretchy="false" form="postfix">)</mo><mo>≼</mo></msub><mrow><mspace width="0.333em"></mspace><mtext mathvariant="normal"> y </mtext><mspace width="0.333em"></mspace></mrow><mi>x</mi><mo>∈</mo><mo stretchy="false" form="prefix">(</mo><mi>←</mi><mo>,</mo><mi>b</mi><msub><mo stretchy="false" form="postfix">]</mo><mo>≼</mo></msub></mtd></mtr><mtr><mtd columnalign="right" style="text-align: right; padding-right: 0"></mtd><mtd columnalign="left" style="text-align: left; padding-left: 0"><mspace width="0.222em"></mspace><mo>⇔</mo><mspace width="0.222em"></mspace><mi>a</mi><mrow><mspace width="0.333em"></mspace><mtext mathvariant="normal"> es cota inferior y </mtext><mspace width="0.333em"></mspace></mrow><mi>b</mi><mrow><mspace width="0.333em"></mspace><mtext mathvariant="normal"> cota superior </mtext><mspace width="0.333em"></mspace></mrow></mtd></mtr></mtable><annotation encoding="application/x-tex"> \begin{aligned}
+     A \subseteq [a, b]_\preceq
+       &amp;\ \Longleftrightarrow \ \forall x \in A,\ x \in [a, b]_\preceq \\
+       &amp;\ \Longleftrightarrow \ \forall x \in A,\ x \in
+         [a, \mathbin{\rightarrow})_\preceq \cap x \in
+         (\mathbin{\leftarrow} ,b]_\preceq \\
+       &amp;\ \Longleftrightarrow \ \forall x \in A,\ x \in
+         [a, \mathbin{\rightarrow})_\preceq \text{ y } x \in
+         (\mathbin{\leftarrow} ,b]_\preceq \\
+       &amp;\ \Longleftrightarrow \ a \text{ es cota inferior y } b \text{ cota superior }
+   \end{aligned} </annotation></semantics></math></p>
+<p>El concepto de <em>máximo</em> (<em>greater</em>) de un conjunto
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mo>∈</mo><mi>U</mi></mrow><annotation encoding="application/x-tex">A \in U</annotation></semantics></math>
+es lo mismo que el de <em>cota superior</em> solo que ciñéndonos a los
+valores de
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math>,
+en lugar de los de
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>U</mi><annotation encoding="application/x-tex">U</annotation></semantics></math>.
+Algo análogo sucede para el concepto de <em>mínimo</em>
+(<em>least</em>). Además, tal y como se ve luego, estos son únicos,
+necseariamente.</p>
+<p>Por su parte, el supremo es, tal y como se explica en la observación
+tras su definición, el máximo del conjunto de sus cotas superiores.
+Análogamente, el ínfimo sería el mínimo de las cotas inferiores. Estos
+son también únicos.</p>
+<p>Hacer la demostración de esta observación. TKTK</p>
+<p>En <span class="citation" data-cites="pineda"><a href="#ref-pineda"
+role="doc-biblioref">[1]</a></span>, la Proposición 3.26 es importante y
+conviene que sepa hacer las demostraciones de esta.</p>
+</section>
+</section>
+<section id="referencias" class="level1 unnumbered">
+<h1 class="unnumbered">Referencias</h1>
+<div id="refs" class="references csl-bib-body" data-entry-spacing="0"
+role="list">
+<div id="ref-pineda" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[1] </div><div
+class="csl-right-inline">Miguel Delgado Pineda y María José Muñoz
+Bouza., <em>Lenguaje matemático, conjuntos y números</em>, 2.ª ed. Sanz
+y Torres, 2023.</div>
+</div>
+<div id="ref-forallx" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[2] </div><div
+class="csl-right-inline">Richard Zach y y otros, <em>Forall x:
+Calgary</em>. publicación independiente, 2023.</div>
+</div>
+<div id="ref-velleman" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[3] </div><div
+class="csl-right-inline">Daniel J. Velleman, <em>How to Prove It</em>,
+3.ª ed. Cambridge University Press, 2019.</div>
+</div>
+<div id="ref-enderton" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[4] </div><div
+class="csl-right-inline">Herbert B. Enderton, <em>Elements of Set
+Theory</em>, 1.ª ed. Academic Press, 1977.</div>
+</div>
+<div id="ref-ol-set-theory" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[5] </div><div class="csl-right-inline">Tim
+Button, <em>Set Theory</em>. Open Logic Project, 2021.</div>
+</div>
+</div>
+</section>
+<section id="footnotes" class="footnotes footnotes-end-of-document"
+role="doc-endnotes">
+<hr />
+<ol>
+<li id="fn1"><p>cosa que en España se conoce más como
+<em>informática</em><a href="#fnref1" class="footnote-back"
+role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>A esta he visto que la llaman también lógica digital.<a
+href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn3"><p>Advierta que en inglés este término tiene polisemia.
+Además de tener el sentido de nuestro <em>argumento</em>, tiene también
+el de <em>discusión</em> o <em>riña</em>.<a href="#fnref3"
+class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn4"><p>En la lingüística creo que a esta figura se la conoce
+como sinécdoque de género por especie.<a href="#fnref4"
+class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn5"><p>Por cierto, esa expresión es falsa ya que el
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>2</mn><annotation encoding="application/x-tex">2</annotation></semantics></math>
+es un número primo que no es impar. Es fácil demostrar que es el único
+con esa propiedad de entre todos los números primos, pero eso queda
+fuera de esta asignatura.<a href="#fnref5" class="footnote-back"
+role="doc-backlink">↩︎</a></p></li>
+<li id="fn6"><p>Tampoco llega a ser esta una definición completa; ya lo
+verá.<a href="#fnref6" class="footnote-back"
+role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section>
+<!--</main>-->
+</body>
+</html>

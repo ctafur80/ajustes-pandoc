@@ -25,7 +25,27 @@
       vertical-align: middle;
     }
     q { quotes: "“" "”" "‘" "’"; }
-  </style>
+    /* CSS for citations */
+    div.csl-bib-body { }
+    div.csl-entry {
+      clear: both;
+      margin-bottom: 0em;
+    }
+    .hanging-indent div.csl-entry {
+      margin-left:2em;
+      text-indent:-2em;
+    }
+    div.csl-left-margin {
+      min-width:2em;
+      float:left;
+    }
+    div.csl-right-inline {
+      margin-left:2em;
+      padding-left:1em;
+    }
+    div.csl-indent {
+      margin-left: 2em;
+    }  </style>
   <link rel="stylesheet" href="./ajustes-pandoc/salida-web/css/variables/apuntes-asignaturas.css" />
   <link rel="stylesheet" href="./ajustes-pandoc/salida-web/css/base-mobile-first.css" />
   <link rel="stylesheet" href="./ajustes-pandoc/salida-web/css/tablas.css" />
@@ -84,9 +104,11 @@ lector.</p>
 <p>Algo que debe tener en cuenta es que, en este capítulo, algunos de
 los ejemplos solo se plantean, sin resolverlos, y se presentan al final
 del mismo como ejercicios.</p>
-<p><strong>pág. 11</strong>. <strong>Definición 1.1</strong>. En lo que
-respecta a la <strong>Definición 1.1 (Métrica)</strong>, me gusta más la
-siguiente, ya que me parece más <q>elegante</q>.</p>
+<hr />
+<p>En lo que respecta a <span class="citation" data-cites="costa"><a
+href="#ref-costa" role="doc-biblioref">[1, p. 11]</a></span>
+<strong>Definición 1.1 (Métrica)</strong>, me gusta más la siguiente, ya
+que me parece más <q>elegante</q>.</p>
 <div id="def-metrica" class="definition">
 <p><strong><em>Definición (1.1 / Métrica (alt.)).— </em></strong>Dado un
 conjunto
@@ -98,8 +120,8 @@ toda aplicación
 en la que para cualesquiera
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>,</mo><mi>y</mi><mo>,</mo><mi>z</mi><mo>∈</mo><mi>𝐏</mi></mrow><annotation encoding="application/x-tex">x,
   y, z \in \mathbf{P}</annotation></semantics></math> se cumplen:</p>
-<ol type="1">
-<li><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>d</mi><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>0</mn><mspace width="0.222em"></mspace><mo>⇔</mo><mspace width="0.222em"></mspace><mi>x</mi><mo>=</mo><mi>y</mi></mrow><annotation encoding="application/x-tex">d(x, y) = 0 \: \Longleftrightarrow \: x = y</annotation></semantics></math>.</li>
+<ol type="i">
+<li><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>d</mi><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>0</mn><mspace width="0.222em"></mspace><mo>⇔</mo><mspace width="0.222em"></mspace><mi>x</mi><mo>=</mo><mi>y</mi></mrow><annotation encoding="application/x-tex">d(x, y) = 0 \ \Longleftrightarrow \ x = y</annotation></semantics></math>.</li>
 <li><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>d</mi><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mi>d</mi><mo stretchy="false" form="prefix">(</mo><mi>y</mi><mo>,</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">d(x, y) = d(y, x)</annotation></semantics></math>.
 (Simetría.)</li>
 <li><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>d</mi><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo stretchy="false" form="postfix">)</mo><mo>≤</mo><mi>d</mi><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo>,</mo><mi>z</mi><mo stretchy="false" form="postfix">)</mo><mo>+</mo><mi>d</mi><mo stretchy="false" form="prefix">(</mo><mi>z</mi><mo>,</mo><mi>y</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">d(x, y) \leq d(x, z) + d(z, y)</annotation></semantics></math>.
@@ -108,11 +130,11 @@ en la que para cualesquiera
 </div>
 <p>Tal y como se explica en la <a href="#def-metrica">Definición (1.1 /
 Métrica (alt.))</a>, se ve que TKTK.</p>
-<p>La definición que dan en <span class="citation"
-data-cites="costa">(<strong>costa?</strong>)</span> establece como
+<p>La definición que dan en <span class="citation" data-cites="costa"><a
+href="#ref-costa" role="doc-biblioref">[1]</a></span> establece como
 codominio a todo
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>ℝ</mi><annotation encoding="application/x-tex">\mathbb{R}</annotation></semantics></math>
-y luego hace una corrección de este en el punto 1. Quizás se deba a que
+y luego hace una corrección de este en el punto i. Quizás se deba a que
 resulta más cómoda si se desea comprobar punto por punto, en los
 ejercicios, demostraciones, etc.</p>
 <p>Lo único es que, con la mía, hay que tener cuidado para ciertas
@@ -121,11 +143,13 @@ cosas. Por ejemplo, para demostrar el paso que si
 entonces
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>=</mo><mi>y</mi></mrow><annotation encoding="application/x-tex">x = y</annotation></semantics></math>.
 Conviene hacerlo con el condicional contrarrecíproco, que sería lo mismo
-que en la definición de <span class="citation"
-data-cites="costa">(<strong>costa?</strong>)</span>.</p>
-<p><strong>pág. 11</strong>. <strong>Ejemplo 1.2</strong>. No llega a
-demostrar, ni aquí ni en el <strong>Ejercicio 1.2</strong>, los dos
-primeros puntos. Aunque sea fácil, vamos a hacerlo aquí.</p>
+que en la definición de <span class="citation" data-cites="costa"><a
+href="#ref-costa" role="doc-biblioref">[1]</a></span>.</p>
+<hr />
+<p>En <span class="citation" data-cites="costa"><a href="#ref-costa"
+role="doc-biblioref">[1, p. 11]</a></span> <strong>Ejemplo 1.2</strong>
+no llega a demostrar, ni aquí ni en el <strong>Ejercicio 1.2</strong>,
+los dos primeros puntos. Aunque sea fácil, vamos a hacerlo aquí.</p>
 <p>Advierta que las coordenadas que se usan en este ejercicio son
 distintas a las que está acostumbrado. Normalmente, se usan coordenadas
 del tipo</p>
@@ -196,19 +220,21 @@ y su raíz, evidentemente, también lo será.</p>
     &amp;= \sqrt{(y_1 - x_1)^2 + (y_2 - x_2)^2} \\
     &amp;= d_E (y,x)
 \end{aligned}</annotation></semantics></math></p>
-<p>En cuanto al <strong>Ejemplo 1.3</strong>, lo más relevante está en
-que nos podemos basar en la desigualdad triangular en
+<hr />
+<p>En <span class="citation" data-cites="costa"><a href="#ref-costa"
+role="doc-biblioref">[1]</a></span> <strong>Ejemplo 1.3</strong>, lo más
+relevante está en que nos podemos basar en la desigualdad triangular en
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mi>ℝ</mi><mo>,</mo><mi>+</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">(\mathbb{R}, +)</annotation></semantics></math>
-para demostrar que se cumple el punto 3 en la definición de
-<em>métrica</em>. Esta se da como conocimiento básico, es decir, como
-prerrequisito.</p>
-<p>Aunque el <strong>Teorema 1.4</strong> (de la Métrica Inducida, pág.
-12) pueda parecer más bien una definición, en realidad lo que viene a
-explicar es que la restricción del dominio de un espacio métrico es
-siempre un espacio métrico. A este se le suele llamar <em>espacio
-métrico inducido</em>, y, a esa métrica, <em>métrica inducida</em>.
-También se podía haber optado por llamarlo <em>espacio métrico
-restringido</em>.</p>
+para demostrar que se cumple el punto 3 en la Definición 1.1 (Métrica).
+Esta se da como conocimiento básico, es decir, como prerrequisito.</p>
+<p>Aunque el <strong>Teorema 1.4</strong> (de la Métrica Inducida, <span
+class="citation" data-cites="costa"><a href="#ref-costa"
+role="doc-biblioref">[1, p. 12]</a></span>) pueda parecer más bien una
+definición, en realidad lo que viene a explicar es que la restricción
+del dominio de un espacio métrico es siempre un espacio métrico. A este
+se le suele llamar <em>espacio métrico inducido</em>, y, a esa métrica,
+<em>métrica inducida</em>. También se podía haber optado por llamarlo
+<em>espacio métrico restringido</em>.</p>
 <p>Para entender esto, además de conocer el concepto de <em>espacio
 métrico</em>, debe saber qué es una <em>restricción</em> de una
 aplicación, cosa que se estudia normalmente en asignaturas de lógica y
@@ -235,22 +261,25 @@ un dominio más restringido.</p>
 completa, quizás se debería comentar también que que ninguna de las
 propiedades de la definición de <em>métrica</em> es del tipo
 <em>closure</em>.</p>
-<p><strong>Definición 1.5</strong>. Alternativamente a como se define el
-concepto de <em>isometría</em>, podríamos definirla como</p>
-<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>g</mi><mo>:</mo><mspace width="0.222em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>M</mi><mo>,</mo><mi>δ</mi><mo stretchy="false" form="postfix">)</mo><mo>→</mo><mo stretchy="false" form="prefix">(</mo><msup><mi>M</mi><mo>′</mo></msup><mo>,</mo><msup><mi>δ</mi><mo>′</mo></msup><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex"> g: \: (M, \delta) \longrightarrow (M&#39;, \delta&#39;) </annotation></semantics></math></p>
-<p>Y, de hecho, en <span class="citation"
-data-cites="costa">(<strong>costa?</strong>)</span> se usa esta notación
-un poco después, en la <strong>Definición 1.8</strong>. En el fondo, la
-que usa el libro se refiere de forma implícita a esta. En su definición
-se entiende de forma tácita cuáles son las métricas en cada uno de los
-conjuntos.</p>
+<hr />
+<p>En <span class="citation" data-cites="costa"><a href="#ref-costa"
+role="doc-biblioref">[1]</a></span> <strong>Definición 1.5</strong>,
+alternativamente a como se define el concepto de <em>isometría</em>,
+podríamos definirla como</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>g</mi><mo>:</mo><mspace width="0.222em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>M</mi><mo>,</mo><mi>δ</mi><mo stretchy="false" form="postfix">)</mo><mo>→</mo><mo stretchy="false" form="prefix">(</mo><msup><mi>M</mi><mo>′</mo></msup><mo>,</mo><msup><mi>δ</mi><mo>′</mo></msup><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex"> g: \ (M, \delta) \longrightarrow (M&#39;, \delta&#39;) </annotation></semantics></math></p>
+<p>Y, de hecho, en <span class="citation" data-cites="costa"><a
+href="#ref-costa" role="doc-biblioref">[1]</a></span> se usa esta
+notación un poco después, en la <strong>Definición 1.8</strong>. En el
+fondo, la que usa el libro se refiere de forma implícita a esta. En su
+definición se entiende de forma tácita cuáles son las métricas en cada
+uno de los conjuntos.</p>
 <p><strong>Teorema 1.7</strong>. En la demostración, creo que obvia
 demasiados puntos. Básicamente, solo muestra las transformaciones que
 conducen a la conservación de distancias en estas nuevas relaciones,
 pero se deja todo lo relacionado con la teoría de conjuntos. Los hechos
 que faltan se basan en algunos resultados sobre las aplicaciones. Puede
-consultarlos en <span class="citation"
-data-cites="pineda">(<strong>pineda?</strong> pág. 104–105)</span>.
+consultarlos en <span class="citation" data-cites="pineda"><a
+href="#ref-pineda" role="doc-biblioref">[2, pp. 104-105]</a></span>.
 Concretamente, el 3.59 (de Caracterización de una Aplicación Biyectiva)
 y 3.60.</p>
 <p>Veamos primero la demostración de la inversa,
@@ -297,6 +326,7 @@ por
 (por la inyectividad), y los valores producidos abarcarán a todo
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>M</mi><mo>″</mo></msup><annotation encoding="application/x-tex">M&#39;&#39;</annotation></semantics></math>
 (por la suprayectividad).</p>
+<hr />
 <p>En la <strong>Definición 1.8</strong>, también se puede usar una
 notación más explícita, al igual que sucede con lo que dijimos antes
 sobre la definición de <em>isometría</em>. En este caso, sería
@@ -355,14 +385,14 @@ también se le suele llamar <q>segmento
 también que esto está relacionado con el concepto de <em>recta</em>, que
 se define en el capítulo siguiente. Si tres elementos están alineados,
 también se dice que son <em>colineales</em>.</p>
-<p>La demostración del punto (i) de la <strong>Ovservación 1.13</strong>
+<p>La demostración del punto i de la <strong>Ovservación 1.13</strong>
 es, en su estructura, similar a muchas otras que aparecen a lo largo de
 todo el texto. Debe tener en cuenta que esos bicondicionales sirven para
 ir en los dos sentidos; es decir, en esta demostración en concreto, si
 la leemos de izquierda a derecha estaremos demostrando que
-<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">[</mo><mi>a</mi><mo>,</mo><mi>a</mi><mo stretchy="false" form="postfix">]</mo><mo>⊆</mo><mi>a</mi></mrow><annotation encoding="application/x-tex">[a, a] \subseteq {a}</annotation></semantics></math>.
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">[</mo><mi>a</mi><mo>,</mo><mi>a</mi><mo stretchy="false" form="postfix">]</mo><mo>⊆</mo><mo stretchy="false" form="prefix">{</mo><mi>a</mi><mo stretchy="false" form="postfix">}</mo></mrow><annotation encoding="application/x-tex">[a, a] \subseteq \{a\}</annotation></semantics></math>.
 Si se va en el otro sentido, que
-<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi><mo>⊆</mo><mo stretchy="false" form="prefix">[</mo><mi>a</mi><mo>,</mo><mi>a</mi><mo stretchy="false" form="postfix">]</mo></mrow><annotation encoding="application/x-tex">{a} \subseteq [a, a]</annotation></semantics></math>.</p>
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">{</mo><mi>a</mi><mo stretchy="false" form="postfix">}</mo><mo>⊆</mo><mo stretchy="false" form="prefix">[</mo><mi>a</mi><mo>,</mo><mi>a</mi><mo stretchy="false" form="postfix">]</mo></mrow><annotation encoding="application/x-tex">\{a\} \subseteq [a, a]</annotation></semantics></math>.</p>
 <p><strong>Ejercicio 1.3</strong>. Debe tener cuidado con la
 demostración de la desigualdad triangular:</p>
 <p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>δ</mi><mo stretchy="false" form="prefix">(</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false" form="postfix">)</mo><mo>≤</mo><mi>δ</mi><mo stretchy="false" form="prefix">(</mo><mi>a</mi><mo>,</mo><mi>c</mi><mo stretchy="false" form="postfix">)</mo><mo>+</mo><mi>δ</mi><mo stretchy="false" form="prefix">(</mo><mi>c</mi><mo>,</mo><mi>b</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex"> \delta(a, b) \leq \delta(a, c) + \delta(c, b) </annotation></semantics></math></p>
@@ -502,8 +532,9 @@ nos encontramos en una geometría en particular.</p>
 geometría desde un punto de vista <em>sintético</em>, en contraste con
 el enfoque <em>analítico</em>, que es al que quizás esté más
 acostumbrado. A este resepecto, en <span class="citation"
-data-cites="venema">(<strong>venema?</strong>)</span>, en lugar de
-<q>enfoque</q> o <q>punto de vista</q> dicen <q>modelo</q>.</p>
+data-cites="venema"><a href="#ref-venema"
+role="doc-biblioref">[3]</a></span>, en lugar de <q>enfoque</q> o
+<q>punto de vista</q> dicen <q>modelo</q>.</p>
 <p>Como quizás ya sepa, la geometría analítica es la que hace uso de
 coordenadas y, por tanto, se basa más en nuestro conocimiento del
 álgebra de los números reales. La sintética, por su parte, prescinde del
@@ -533,11 +564,14 @@ la pág. 35.</p>
 </section>
 <section id="recta" class="level2">
 <h2>2.2 Recta</h2>
-<p>En la definición de <em>recta</em> (pág. 23), el punto (i) se incluye
-para que un conjunto formado por un único punto no cumpla las
-condiciones para ser una recta.</p>
-<p>Algo similar sucede con el punto (i) del Axioma P2 (pág. 24). De no
-incluirlo, una recta podría ser todo el plano euclideo,
+<p>En la definición de <em>recta</em> en <span class="citation"
+data-cites="costa"><a href="#ref-costa" role="doc-biblioref">[1, p.
+23]</a></span>, el punto i se incluye para que un conjunto formado por
+un único punto no cumpla las condiciones para ser una recta.</p>
+<p>Algo similar sucede con el punto i del Axioma P2 en <span
+class="citation" data-cites="costa"><a href="#ref-costa"
+role="doc-biblioref">[1, p. 24]</a></span>. De no incluirlo, una recta
+podría ser todo el plano euclideo,
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>𝐏</mi><annotation encoding="application/x-tex">\mathbf{P}</annotation></semantics></math>.</p>
 <p>Se podría enunciar de forma menos simbólica —y, por tanto, más
 prosaica— la <strong>Observación 2.3</strong>: <q>Si los extremos de un
@@ -553,12 +587,13 @@ pueden tener dos pares de puntos que definan a una misma recta.</p>
 <p>Evidentemente, un segmento define también a una única recta ya que,
 al mencionar a un segmento, es como si mencionáramos a dos puntos (por
 la biyectividad).</p>
-<p>Tal y como se explica en la <strong>Observación 2.4</strong> (pág.
-24), en realidad en el punto (ii) del Axioma P2 se podría haber limitado
-a decir que entre dos puntos no coincidentes siempre hay (al menos) una
-recta; que sea única es algo que se puede deducir y, por tanto, se
-podría haber presentado como un teorema. Veamos la demostración de
-este.</p>
+<p>Tal y como se explica en la <strong>Observación 2.4</strong> en <span
+class="citation" data-cites="costa"><a href="#ref-costa"
+role="doc-biblioref">[1, p. 24]</a></span>, en realidad en el punto ii
+del Axioma P2 se podría haber limitado a decir que entre dos puntos no
+coincidentes siempre hay (al menos) una recta; que sea única es algo que
+se puede deducir y, por tanto, se podría haber presentado como un
+teorema. Veamos la demostración de este.</p>
 <div class="proof">
 <p><strong><em>Demostración.— </em></strong>Suponemos que existen dos
 rectas
@@ -572,7 +607,7 @@ que contienen a dos puntos
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>X</mi><mo>∈</mo><mi>𝐏</mi></mrow><annotation encoding="application/x-tex">X \in \mathbf{P}</annotation></semantics></math>
 tal que
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>X</mi><mo>∈</mo><mi>r</mi></mrow><annotation encoding="application/x-tex">X \in r</annotation></semantics></math>,
-por el punto (ii) de la Definición 2.2 (de Recta) se tiene que
+por el punto ii de la Definición 2.2 (de Recta) se tiene que
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math>,
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>B</mi><annotation encoding="application/x-tex">B</annotation></semantics></math>
 y
@@ -580,8 +615,8 @@ y
 están alineados.</p>
 <p>Desde otro punto de vista, sabemos que
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mo>,</mo><mi>B</mi><mo>∈</mo><mi>s</mi></mrow><annotation encoding="application/x-tex">A, B \in s</annotation></semantics></math>.
-Entonces, por el punto (iii) de la Definición 2.2 (de Recta) tenemos
-que, como
+Entonces, por el punto iii de la Definición 2.2 (de Recta) tenemos que,
+como
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math>,
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>B</mi><annotation encoding="application/x-tex">B</annotation></semantics></math>
 y
@@ -594,7 +629,7 @@ Con este razonamiento, hemos llegado a demostrar que
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>s</mi><mo>⊆</mo><mi>r</mi></mrow><annotation encoding="application/x-tex">s \subseteq r</annotation></semantics></math>.
 Uniendo ambas, tenemos que
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>r</mi><mo>=</mo><mi>s</mi></mrow><annotation encoding="application/x-tex">r = s</annotation></semantics></math>.<span
-class="qed"> ■</span></p>
+class="env-last-symbol"> ▢</span></p>
 </div>
 <p>Por lo que explicamos antes sobre las relaciones entre pares de
 puntos y segmentos y rectas, de este axioma se deduce también que que la
@@ -614,7 +649,7 @@ secantes ni paralelas simultáneamente.</p>
 este teorema en algunas demostraciones, que se trata de una <em>o</em>
 exclusiva. Yo lo enunciaría del modo siguiente.</p>
 <div id="thm-pos-rel-rectas" class="theorem"
-data-datal-label="Teorema (de las Posiciones Relativas de Dos Rectas)">
+data-datal-label="Teorema (de las Posiciones   Relativas de Dos Rectas)">
 <p><strong><em>Teorema.— </em></strong>Las dos únicas posiciones
 relativas que pueden tener dos rectas es ser secantes o bien ser
 paralelas (coincidentes o no coincidentes), pero no pueden ser ambas
@@ -706,7 +741,7 @@ disyunción, la proposición general será siempre falsa.</p>
 y
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>s</mi><annotation encoding="application/x-tex">s</annotation></semantics></math>
 no se cortan ni son paralelas.</p>
-<p>TKTK.<span class="qed"> ■</span></p>
+<p>TKTK.<span class="env-last-symbol"> ▢</span></p>
 </div>
 <p>O sea, este teorema viene a decir que dos rectas tienen únicamente
 tres posiciones relativas entre sí: no se tocan en ningún punto
@@ -723,14 +758,14 @@ después.</p>
 recta y un segmento. Aquí, sí que hay más casos posibles de sus
 posiciones relativas.</p>
 <ol type="1">
-<li><p>Se cortan. Un único punto en común.</p></li>
-<li><p>La recta contiene al segmento. Es coincidente con la única recta
-que contiene al segmento. La recta contiene a sus extremos. Advierta que
-esto último solo es cierto si el segmento no es un punto.</p></li>
-<li><p>Son paralelos. La recta es paralela a la recta que contiene al
-segmento.</p></li>
-<li><p>No se cortan ni son paralelos. Aquí es distinto a las posiciones
-relativas entre dos rectas.</p></li>
+<li>Se cortan. Un único punto en común.</li>
+<li>La recta contiene al segmento. Es coincidente con la única recta que
+contiene al segmento. La recta contiene a sus extremos. Advierta que
+esto último solo es cierto si el segmento no es un punto.</li>
+<li>Son paralelos. La recta es paralela a la recta que contiene al
+segmento.</li>
+<li>No se cortan ni son paralelos. Aquí es distinto a las posiciones
+relativas entre dos rectas.</li>
 </ol>
 <p>Si lo piensa, un segmento es un objeto (también llamado
 <em>figura</em>) más complejo que una recta. De hecho, creo que se
@@ -754,8 +789,8 @@ y
 son secantes.</p>
 </div>
 <div class="proof">
-<p><strong><em>Demostración.— </em></strong>TKTK.<span class="qed">
-■</span></p>
+<p><strong><em>Demostración.— </em></strong>TKTK.<span
+class="env-last-symbol"> ▢</span></p>
 </div>
 <p>Una vez que se han presentado los conceptos de <em>rectas
 secantes</em> y <em>paralelas</em>, se puede deducir una consecuencia
@@ -788,7 +823,7 @@ sean secantes, siendo
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>r</mi><mrow><mi>A</mi><mi>B</mi></mrow></msub><annotation encoding="application/x-tex">r_{AB}</annotation></semantics></math>
 la recta soporte de
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">[</mo><mi>A</mi><mo>,</mo><mi>B</mi><mo stretchy="false" form="postfix">]</mo></mrow><annotation encoding="application/x-tex">[A, B]</annotation></semantics></math>.<span
-class="qed"> ■</span></p>
+class="env-last-symbol"> ▢</span></p>
 </div>
 <p>Advierta que lo contrario no tiene por qué ser cierto. Es decir,
 pueden cortarse dos rectas pero no cortarse una de estas con un segmento
@@ -846,6 +881,7 @@ se tenga que
 <p>Me gustaría explicar también cómo se puede llegar, por medio de
 manipulaciones algebraicas, al último paso de la primera expresión
 matemática que presenta.</p>
+<p>TKTK.</p>
 <!--
 $$\begin{array}{rlr}
   |t - a| &= |t - b| \\
@@ -915,7 +951,7 @@ será único por ser
 biyectiva.</p>
 <p>A partir de esto, es fácil demostrar que
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>B</mi><mo>=</mo><mtext mathvariant="normal">medio</mtext><mo stretchy="false" form="prefix">[</mo><mi>A</mi><mo>,</mo><msup><mi>A</mi><mo>′</mo></msup><mo stretchy="false" form="postfix">]</mo></mrow><annotation encoding="application/x-tex">B = \text{medio}[A, A&#39;]</annotation></semantics></math>.<span
-class="qed"> ■</span></p>
+class="env-last-symbol"> ▢</span></p>
 </div>
 <p>En esta definición, se debe hacer cierta puntualización para analizar
 el caso extremo en el que los extremos sean el mismo punto, es decir,
@@ -955,7 +991,7 @@ P4, antes de pasar a ver sus propiedades, presentadas en el
 presentar y que se deduce directamente de este y que se usa en muchas
 demostraciones. Sería básicamente el recíproco del punto 3 de este.</p>
 <div id="thm-ampliacion-ax-p4" class="theorem">
-<p><strong><em>Teorema (Ampliación del Punto 3 del Axioma P4).—
+<p><strong><em>Teorema (Ampliación del Punto 3 del   Axioma P4).—
 </em></strong>Dados
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>X</mi><mo>,</mo><mi>Y</mi><mo>∈</mo><mi>𝐏</mi><mo>\</mo><mi>r</mi></mrow><annotation encoding="application/x-tex">X, Y \in \mathbf{P} \setminus r</annotation></semantics></math>
 siendo
@@ -969,7 +1005,7 @@ e
 se encuentran en semiplanos distintos.</p>
 </div>
 <p>Tal y como se explica en el <a href="#thm-ampliacion-ax-p4">Teorema
-(Ampliación del Punto 3 del Axioma P4)</a> TKTK.</p>
+(Ampliación del Punto 3 del   Axioma P4)</a> TKTK.</p>
 <p>Este teorema se enuncia al final de la demostración de la propiedad 4
 (Teorema 2.12), pero no lo demuestran.</p>
 <div class="proof">
@@ -996,7 +1032,8 @@ se tiene que
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>X</mi><annotation encoding="application/x-tex">X</annotation></semantics></math>
 e
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>Y</mi><annotation encoding="application/x-tex">Y</annotation></semantics></math>
-se encuentran en semiplanos distintos.<span class="qed"> ■</span></p>
+se encuentran en semiplanos distintos.<span class="env-last-symbol">
+▢</span></p>
 </div>
 <p>Veamos algunas observaciones del <strong>Teorema 2.12</strong>
 (Propiedades de los Semiplanos). En la 4, el primer paso se justifica
@@ -1028,9 +1065,9 @@ comentado anteriormente, esos bicondicionales permiten ir en las dos
 direcciones en la demostración. Por tanto, en esta —aunque quizás no lo
 parezca— se están demostrando las dos inclusiones de la igualdad que se
 desea demostrar;
-<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mo>⊆</mo><annotation encoding="application/x-tex">\subseteq</annotation></semantics></math>
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>⊆</mi><annotation encoding="application/x-tex">\mathbin{\subseteq}</annotation></semantics></math>
 y
-<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mo>⊇</mo><annotation encoding="application/x-tex">\supseteq</annotation></semantics></math>.
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>⊇</mi><annotation encoding="application/x-tex">\mathbin{\supseteq}</annotation></semantics></math>.
 Creo que, al ir de derecha a izquierda, nos podemos saltar el paso
 intermedio.</p>
 <p>En la demostración del <strong>Teorema 2.16</strong> (<q>Axioma</q>
@@ -1041,7 +1078,7 @@ pues es algo que se puede hacer sin pérdida de generalidad.</p>
 obtener
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">[</mo><mi>P</mi><mo>,</mo><mi>Q</mi><mo stretchy="false" form="postfix">]</mo><mo>⊆</mo><msup><mi>H</mi><mn>1</mn></msup></mrow><annotation encoding="application/x-tex">[P,
 Q] \subseteq H^1</annotation></semantics></math>. A partir de esto, si
-tenemos en cuenta el punto (1) del Axioma P4, tenemos que para todo
+tenemos en cuenta el punto 1 del Axioma P4, tenemos que para todo
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>X</mi><mo>∈</mo><mo stretchy="false" form="prefix">[</mo><mi>P</mi><mo>,</mo><mi>Q</mi><mo stretchy="false" form="postfix">]</mo></mrow><annotation encoding="application/x-tex">X \in [P, Q]</annotation></semantics></math>
 se tiene que
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>X</mi><mo>∉</mo><mi>r</mi></mrow><annotation encoding="application/x-tex">X \notin r</annotation></semantics></math>,
@@ -1100,9 +1137,9 @@ se tiene que</p>
 </div>
 <p>Advierta que en estas demostraciones hay que ir en los dos sentidos,
 como se hizo antes. Así, demostramos tanto la parte
-<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mo>⊆</mo><annotation encoding="application/x-tex">\subseteq</annotation></semantics></math>
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>⊆</mi><annotation encoding="application/x-tex">\mathbin{\subseteq}</annotation></semantics></math>
 como
-<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mo>⊇</mo><annotation encoding="application/x-tex">\supseteq</annotation></semantics></math>.</p>
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>⊇</mi><annotation encoding="application/x-tex">\mathbin{\supseteq}</annotation></semantics></math>.</p>
 <p>También, debe tener en cuenta que en las distintas demostraciones se
 hace uso también de los puntos anteriores de la misma.</p>
 <p>Me gustaría aclarar algo de la primera de las demostraciones, pero
@@ -1140,7 +1177,7 @@ transformado. O, de forma más simbólica, como expresamos a
 continuación.</p>
 <div class="theorem">
 <p><strong><em>Teorema (de la Conservación del Punto Medio de un
-Segmento        por Isometría).— </em></strong>Dado un segmento
+Segmento      por Isometría).— </em></strong>Dado un segmento
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">[</mo><mi>A</mi><mo>,</mo><mi>B</mi><mo stretchy="false" form="postfix">]</mo></mrow><annotation encoding="application/x-tex">[A, B]</annotation></semantics></math>
 y una isometría
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>g</mi><mo>∈</mo><mtext mathvariant="normal">Isom</mtext><mo stretchy="false" form="prefix">(</mo><mi>𝐏</mi><mo>,</mo><mi>d</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">g \in \text{Isom}(\mathbf{P},
@@ -1150,7 +1187,7 @@ y una isometría
 <div class="proof">
 <p><strong><em>Demostración.— </em></strong>Primero, demostraremos la
 parte
-<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mo>⊆</mo><annotation encoding="application/x-tex">\subseteq</annotation></semantics></math>.</p>
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>⊆</mi><annotation encoding="application/x-tex">\mathbin{\subseteq}</annotation></semantics></math>.</p>
 <p>Por la conservación de segmentos por isometrías, es decir, de la
 primera parte del <strong>Teorema 2.18</strong>, se tiene que
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>g</mi><mo stretchy="false" form="prefix">(</mo><mi>M</mi><mo stretchy="false" form="postfix">)</mo><mo>∈</mo><mo stretchy="false" form="prefix">[</mo><msup><mi>A</mi><mo>′</mo></msup><mo>,</mo><msup><mi>B</mi><mo>′</mo></msup><mo stretchy="false" form="postfix">]</mo></mrow><annotation encoding="application/x-tex">g(M) \in \lbrack A&#39;,B&#39;\rbrack</annotation></semantics></math>.
@@ -1180,34 +1217,38 @@ aunque es evidente, deseo aclarar que, como
 es un segmento, tal y como se muestra en el Teorema 2.18, el punto que
 equidista de sus extremos será único, por la Observación 2.8 (i).</p>
 <p>Ahora, demostraremos la parte
-<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mo>⊇</mo><annotation encoding="application/x-tex">\supseteq</annotation></semantics></math>,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>⊇</mi><annotation encoding="application/x-tex">\mathbin{\supseteq}</annotation></semantics></math>,
 es decir</p>
-<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mspace width="0.333em"></mspace><mtext mathvariant="normal"> medio</mtext></mrow><mo stretchy="false" form="prefix">[</mo><msup><mi>A</mi><mo>′</mo></msup><mo>,</mo><msup><mi>B</mi><mo>′</mo></msup><mo stretchy="false" form="postfix">]</mo><mo>⊆</mo><mi>g</mi><mrow><mo stretchy="true" form="prefix">(</mo><mtext mathvariant="normal">medio</mtext><mo stretchy="false" form="prefix">[</mo><mi>A</mi><mo>,</mo><mi>B</mi><mo stretchy="false" form="postfix">]</mo><mo stretchy="true" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">\text{ medio}\lbrack A&#39;,B&#39;\rbrack \subseteq g\left( \text{medio}\lbrack A,B\rbrack \right)</annotation></semantics></math></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext mathvariant="normal">medio</mtext><mo stretchy="false" form="prefix">[</mo><msup><mi>A</mi><mo>′</mo></msup><mo>,</mo><msup><mi>B</mi><mo>′</mo></msup><mo stretchy="false" form="postfix">]</mo><mo>⊆</mo><mo stretchy="false" form="prefix">(</mo><mtext mathvariant="normal">medio</mtext><mo stretchy="false" form="prefix">[</mo><mi>A</mi><mo>,</mo><mi>B</mi><mo stretchy="false" form="postfix">]</mo><msup><mo stretchy="false" form="postfix">)</mo><mo>′</mo></msup></mrow><annotation encoding="application/x-tex"> \text{medio}[A&#39;, B&#39;] \subseteq (\text{medio}[A, B])&#39; </annotation></semantics></math></p>
+<p>Advierta que hemos <q>estirado</q> la notación, representando a
+<q><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>g</mi><mo stretchy="false" form="prefix">(</mo><mtext mathvariant="normal">medio</mtext><mo stretchy="false" form="prefix">[</mo><mi>A</mi><mo>,</mo><mi>B</mi><mo stretchy="false" form="postfix">]</mo><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">g(\text{medio}[A, B])</annotation></semantics></math></q>
+por
+<q><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mtext mathvariant="normal">medio</mtext><mo stretchy="false" form="prefix">[</mo><mi>A</mi><mo>,</mo><mi>B</mi><mo stretchy="false" form="postfix">]</mo><msup><mo stretchy="false" form="postfix">)</mo><mo>′</mo></msup></mrow><annotation encoding="application/x-tex">(\text{medio}[A, B])&#39;</annotation></semantics></math></q>.</p>
 <p>Partimos de
-<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>g</mi><mo stretchy="false" form="prefix">(</mo><mi>M</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mrow><mspace width="0.333em"></mspace><mtext mathvariant="normal"> medio</mtext></mrow><mo stretchy="false" form="prefix">[</mo><msup><mi>A</mi><mo>′</mo></msup><mo>,</mo><msup><mi>B</mi><mo>′</mo></msup><mo stretchy="false" form="postfix">]</mo></mrow><annotation encoding="application/x-tex">g(M) = \text{ medio}\lbrack A&#39;,B&#39;\rbrack</annotation></semantics></math>.
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>g</mi><mo stretchy="false" form="prefix">(</mo><mi>M</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mtext mathvariant="normal">medio</mtext><mo stretchy="false" form="prefix">[</mo><msup><mi>A</mi><mo>′</mo></msup><mo>,</mo><msup><mi>B</mi><mo>′</mo></msup><mo stretchy="false" form="postfix">]</mo></mrow><annotation encoding="application/x-tex">g(M) = \text{medio}[A&#39;, B&#39;]</annotation></semantics></math>.
 Por la definición del <em>punto medio de un segmento</em>, se tiene
 que</p>
-<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>d</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>g</mi><mo stretchy="false" form="prefix">(</mo><mi>M</mi><mo stretchy="false" form="postfix">)</mo><mo>,</mo><msup><mi>A</mi><mo>′</mo></msup><mo stretchy="true" form="postfix">)</mo></mrow><mo>=</mo><mi>d</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>g</mi><mo stretchy="false" form="prefix">(</mo><mi>M</mi><mo stretchy="false" form="postfix">)</mo><mo>,</mo><msup><mi>B</mi><mo>′</mo></msup><mo stretchy="true" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">d\left( g(M),A&#39; \right) = d\left( g(M),B&#39; \right)</annotation></semantics></math></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>d</mi><mo stretchy="false" form="prefix">(</mo><mi>g</mi><mo stretchy="false" form="prefix">(</mo><mi>M</mi><mo stretchy="false" form="postfix">)</mo><mo>,</mo><msup><mi>A</mi><mo>′</mo></msup><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mi>d</mi><mo stretchy="false" form="prefix">(</mo><mi>g</mi><mo stretchy="false" form="prefix">(</mo><mi>M</mi><mo stretchy="false" form="postfix">)</mo><mo>,</mo><msup><mi>B</mi><mo>′</mo></msup><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex"> d(g(M), A&#39;) = d(g(M), B&#39;) </annotation></semantics></math></p>
 <p>Por ser
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>g</mi><annotation encoding="application/x-tex">g</annotation></semantics></math>
 una isometría, se tiene que</p>
-<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mtable><mtr><mtd columnalign="right" style="text-align: right"><mi>d</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>g</mi><mo stretchy="false" form="prefix">(</mo><mi>M</mi><mo stretchy="false" form="postfix">)</mo><mo>,</mo><msup><mi>A</mi><mo>′</mo></msup><mo stretchy="true" form="postfix">)</mo></mrow><mo>=</mo><mi>d</mi><mo stretchy="false" form="prefix">(</mo><mi>M</mi><mo>,</mo><mi>A</mi><mo stretchy="false" form="postfix">)</mo></mtd></mtr><mtr><mtd columnalign="right" style="text-align: right"><mi>d</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>g</mi><mo stretchy="false" form="prefix">(</mo><mi>M</mi><mo stretchy="false" form="postfix">)</mo><mo>,</mo><msup><mi>B</mi><mo>′</mo></msup><mo stretchy="true" form="postfix">)</mo></mrow><mo>=</mo><mi>d</mi><mo stretchy="false" form="prefix">(</mo><mi>M</mi><mo>,</mo><mi>B</mi><mo stretchy="false" form="postfix">)</mo></mtd></mtr></mtable><annotation encoding="application/x-tex">\begin{array}{r}
-  d\left( g(M),A&#39; \right) = d(M,A) \\
-  d\left( g(M),B&#39; \right) = d(M,B)
-  \end{array}</annotation></semantics></math></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mtable><mtr><mtd columnalign="right" style="text-align: right"><mi>d</mi><mo stretchy="false" form="prefix">(</mo><mi>g</mi><mo stretchy="false" form="prefix">(</mo><mi>M</mi><mo stretchy="false" form="postfix">)</mo><mo>,</mo><msup><mi>A</mi><mo>′</mo></msup><mo stretchy="false" form="postfix">)</mo></mtd><mtd columnalign="center" style="text-align: center"><mo>=</mo><mi>d</mi><mo stretchy="false" form="prefix">(</mo><mi>M</mi><mo>,</mo><mi>A</mi><mo stretchy="false" form="postfix">)</mo></mtd></mtr><mtr><mtd columnalign="right" style="text-align: right"><mi>d</mi><mo stretchy="false" form="prefix">(</mo><mi>g</mi><mo stretchy="false" form="prefix">(</mo><mi>M</mi><mo stretchy="false" form="postfix">)</mo><mo>,</mo><msup><mi>B</mi><mo>′</mo></msup><mo stretchy="false" form="postfix">)</mo></mtd><mtd columnalign="center" style="text-align: center"><mo>=</mo><mi>d</mi><mo stretchy="false" form="prefix">(</mo><mi>M</mi><mo>,</mo><mi>B</mi><mo stretchy="false" form="postfix">)</mo></mtd></mtr></mtable><annotation encoding="application/x-tex"> \begin{array}{r}
+       d(g(M), A&#39;) &amp;= d(M,A) \\
+       d(g(M), B&#39;) &amp;= d(M,B)
+     \end{array} </annotation></semantics></math></p>
 <p>Además, por la inyectividad de las isometrías, ese
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>M</mi><annotation encoding="application/x-tex">M</annotation></semantics></math>
 es único. De lo anterior tenemos que</p>
-<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>d</mi><mo stretchy="false" form="prefix">(</mo><mi>M</mi><mo>,</mo><mi>A</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mi>d</mi><mo stretchy="false" form="prefix">(</mo><mi>M</mi><mo>,</mo><mi>B</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">d(M,A) = d(M,B)</annotation></semantics></math></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>d</mi><mo stretchy="false" form="prefix">(</mo><mi>M</mi><mo>,</mo><mi>A</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mi>d</mi><mo stretchy="false" form="prefix">(</mo><mi>M</mi><mo>,</mo><mi>B</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex"> d(M, A) = d(M, B) </annotation></semantics></math></p>
 <p>Por tanto,</p>
-<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>M</mi><mo>=</mo><mrow><mspace width="0.333em"></mspace><mtext mathvariant="normal"> medio</mtext></mrow><mo stretchy="false" form="prefix">[</mo><mi>A</mi><mo>,</mo><mi>B</mi><mo stretchy="false" form="postfix">]</mo></mrow><annotation encoding="application/x-tex">M = \text{ medio}\lbrack A,B\rbrack</annotation></semantics></math></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>M</mi><mo>=</mo><mtext mathvariant="normal">medio</mtext><mo stretchy="false" form="prefix">[</mo><mi>A</mi><mo>,</mo><mi>B</mi><mo stretchy="false" form="postfix">]</mo></mrow><annotation encoding="application/x-tex"> M = \text{medio}[A, B] </annotation></semantics></math></p>
 <p>y, entonces,</p>
-<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>g</mi><mo stretchy="false" form="prefix">(</mo><mi>M</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mi>g</mi><mrow><mo stretchy="true" form="prefix">(</mo><mtext mathvariant="normal">medio</mtext><mo stretchy="false" form="prefix">[</mo><mi>A</mi><mo>,</mo><mi>B</mi><mo stretchy="false" form="postfix">]</mo><mo stretchy="true" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">g(M) = g\left( \text{medio}\lbrack A,B\rbrack \right)</annotation></semantics></math><span
-class="qed"> ■</span></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>g</mi><mo stretchy="false" form="prefix">(</mo><mi>M</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mi>g</mi><mo stretchy="false" form="prefix">(</mo><mtext mathvariant="normal">medio</mtext><mo stretchy="false" form="prefix">[</mo><mi>A</mi><mo>,</mo><mi>B</mi><mo stretchy="false" form="postfix">]</mo><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex"> g(M) = g(\text{medio}[A, B]) </annotation></semantics></math><span
+class="env-last-symbol"> ▢</span></p>
 </div>
 <p>Podría haber presentado esta demostración en el estilo del libro, es
 decir, encadenando bicondicionales,
-<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mo>⇔</mo><annotation encoding="application/x-tex">\Longleftrightarrow</annotation></semantics></math>,
+<q><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>⇔</mi><annotation encoding="application/x-tex">\mathbin{\Longleftrightarrow}</annotation></semantics></math></q>,
 pero deseo que quede al menos una explicación con mayor detalle, por si
 el lector no las entiende.</p>
 <p>Alternativamente, se podría haber usado el Axioma P3 para esta
@@ -1217,18 +1258,21 @@ secantes. Viene a decir que, dadas dos rectas secantes, su transformada
 por una isometría son dos rectas secantes cuyo punto de corte es el
 punto transformado por la isometría del punto de corte de las
 mismas.</p>
-<p>Teorema <q>de la Isometría de Dos Rectas Secantes</q>)[ Dadas dos
-rectas
+<div class="theorem">
+<p><strong><em>Teorema (de la Isometría de Dos Rectas Secantes).—
+</em></strong>Dadas dos rectas
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>r</mi><annotation encoding="application/x-tex">r</annotation></semantics></math>
 y
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>s</mi><annotation encoding="application/x-tex">s</annotation></semantics></math>
 secantes con punto de corte
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>V</mi><mo>∈</mo><mi>𝐏</mi></mrow><annotation encoding="application/x-tex">V \in \mathbf{P}</annotation></semantics></math>
 y una isometría
-<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>g</mi><mo>∈</mo><mrow><mspace width="0.333em"></mspace><mtext mathvariant="normal"> Isom</mtext></mrow><mrow><mo stretchy="true" form="prefix">(</mo><mi>𝐑</mi><mo>,</mo><mi>d</mi><mo stretchy="true" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">g \in \text{ Isom}\left( \mathbf{R},d \right)</annotation></semantics></math>,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>g</mi><mo>∈</mo><mtext mathvariant="normal">Isom</mtext><mo stretchy="false" form="prefix">(</mo><mi>𝐑</mi><mo>,</mo><mi>d</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">g \in \text{Isom}(\mathbf{R}, d)</annotation></semantics></math>,
 se tiene que</p>
-<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>g</mi><mo stretchy="false" form="prefix">(</mo><mi>r</mi><mo stretchy="false" form="postfix">)</mo><mrow><mspace width="0.333em"></mspace><mtext mathvariant="normal"> inter </mtext><mspace width="0.333em"></mspace></mrow><mi>g</mi><mo stretchy="false" form="prefix">(</mo><mi>s</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mi>g</mi><mo stretchy="false" form="prefix">(</mo><mi>V</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">g(r)\text{ inter }g(s) = g(V)</annotation></semantics></math></p>
-<p><strong><em>Demostración</em></strong> — Lo primero que debe
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>g</mi><mo stretchy="false" form="prefix">(</mo><mi>r</mi><mo stretchy="false" form="postfix">)</mo><mo>∩</mo><mi>g</mi><mo stretchy="false" form="prefix">(</mo><mi>s</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mi>g</mi><mo stretchy="false" form="prefix">(</mo><mi>V</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex"> g(r) \cap g(s) = g(V) </annotation></semantics></math></p>
+</div>
+<div class="proof">
+<p><strong><em>Demostración.— </em></strong>Lo primero que debe
 comprobarse es que
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>g</mi><mo stretchy="false" form="prefix">(</mo><mi>r</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">g(r)</annotation></semantics></math>
 y
@@ -1261,59 +1305,65 @@ aunque sí pueden ser coincidentes. Veamos que no es así.</p>
 <p>Supongamos que existe, además de
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>g</mi><mo stretchy="false" form="prefix">(</mo><mi>V</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">g(V)</annotation></semantics></math>,
 otro punto
-<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>Z</mi><mo>∈</mo><mi>g</mi><mo stretchy="false" form="prefix">(</mo><mi>r</mi><mo stretchy="false" form="postfix">)</mo><mrow><mspace width="0.333em"></mspace><mtext mathvariant="normal"> inter </mtext><mspace width="0.333em"></mspace></mrow><mi>g</mi><mo stretchy="false" form="prefix">(</mo><mi>s</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">Z \in g(r)\text{ inter }g(s)</annotation></semantics></math>.
-Esto es lo mismo que afirmar que
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>Z</mi><mo>∈</mo><mi>g</mi><mo stretchy="false" form="prefix">(</mo><mi>r</mi><mo stretchy="false" form="postfix">)</mo><mrow><mtext mathvariant="normal">
+ inter </mtext><mspace width="0.333em"></mspace></mrow><mi>g</mi><mo stretchy="false" form="prefix">(</mo><mi>s</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">Z \in g(r)\text{
+  inter }g(s)</annotation></semantics></math>. Esto es lo mismo que
+afirmar que
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>Z</mi><mo>∈</mo><mi>g</mi><mo stretchy="false" form="prefix">(</mo><mi>r</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">Z \in g(r)</annotation></semantics></math>
 y
-<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>Z</mi><mo>∈</mo><mi>g</mi><mo stretchy="false" form="prefix">(</mo><mi>s</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">Z \in g(s)</annotation></semantics></math>.</p>
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>Z</mi><mo>∈</mo><mi>g</mi><mo stretchy="false" form="prefix">(</mo><mi>s</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">Z \in
+  g(s)</annotation></semantics></math>.</p>
 <p>Por ser
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>g</mi><annotation encoding="application/x-tex">g</annotation></semantics></math>
 una biyección, existe un único punto
-<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>Z</mi><mn>1</mn></msub><annotation encoding="application/x-tex">Z_{1}</annotation></semantics></math>
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>Z</mi><mn>1</mn></msub><annotation encoding="application/x-tex">Z_1</annotation></semantics></math>
 que pertenece a
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>r</mi><annotation encoding="application/x-tex">r</annotation></semantics></math>
 y a
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>s</mi><annotation encoding="application/x-tex">s</annotation></semantics></math>
 tal que
-<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>g</mi><mrow><mo stretchy="true" form="prefix">(</mo><msub><mi>Z</mi><mn>1</mn></msub><mo stretchy="true" form="postfix">)</mo></mrow><mo>=</mo><mi>Z</mi></mrow><annotation encoding="application/x-tex">g\left( Z_{1} \right) = Z</annotation></semantics></math>.
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>g</mi><mo stretchy="false" form="prefix">(</mo><msub><mi>Z</mi><mn>1</mn></msub><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mi>Z</mi></mrow><annotation encoding="application/x-tex">g(Z_1) = Z</annotation></semantics></math>.
 Pero esto es un problema puesto que tenemos dos puntos,
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>V</mi><annotation encoding="application/x-tex">V</annotation></semantics></math>
 y
-<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>Z</mi><mn>1</mn></msub><annotation encoding="application/x-tex">Z_{1}</annotation></semantics></math>,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>Z</mi><mn>1</mn></msub><annotation encoding="application/x-tex">Z_1</annotation></semantics></math>,
 que pertenecen a la intersección de
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>r</mi><annotation encoding="application/x-tex">r</annotation></semantics></math>
 y
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>s</mi><annotation encoding="application/x-tex">s</annotation></semantics></math>,
 cosa que contradice la hipótesis de partida, es decir, que las dos
-rectas son secantes.</p>
-<p>  <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>◼</mi><annotation encoding="application/x-tex">\blacksquare</annotation></semantics></math></p>
-<p>Teorema <q>de las Isometrías de Semirrectas</q>)[ Dada una isometría
-<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>g</mi><mo>∈</mo><mrow><mspace width="0.333em"></mspace><mtext mathvariant="normal"> Isom</mtext></mrow><mrow><mo stretchy="true" form="prefix">(</mo><mi>𝐏</mi><mo>,</mo><mi>d</mi><mo stretchy="true" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">g \in \text{ Isom}\left( \mathbf{P},d \right)</annotation></semantics></math>
+rectas son secantes.<span class="env-last-symbol"> ▢</span></p>
+</div>
+<div class="theorem">
+<p><strong><em>Teorema (de las Isometrías de Semirrectas).—
+</em></strong>Dada una isometría
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>g</mi><mo>∈</mo><mtext mathvariant="normal">Isom</mtext><mo stretchy="false" form="prefix">(</mo><mi>𝐏</mi><mo>,</mo><mi>d</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">g \in \text{Isom}(\mathbf{P}, d)</annotation></semantics></math>
 y una de las semirrectas
-<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>–</mi><mo stretchy="false" form="prefix">(</mo><mi>r</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">–(r)</annotation></semantics></math>
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mover><mi>r</mi><mo accent="true">‾</mo></mover><annotation encoding="application/x-tex">\bar{r}</annotation></semantics></math>
 con etremo el punto
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>V</mi><annotation encoding="application/x-tex">V</annotation></semantics></math>
 en la recta
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>r</mi><annotation encoding="application/x-tex">r</annotation></semantics></math>,
 se tiene que
-<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>g</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>–</mi><mo stretchy="false" form="prefix">(</mo><mi>r</mi><mo stretchy="false" form="postfix">)</mo><mo stretchy="true" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">g\left( –(r) \right)</annotation></semantics></math>
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>g</mi><mo stretchy="false" form="prefix">(</mo><mover><mi>r</mi><mo accent="true">‾</mo></mover><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">g(\bar{r})</annotation></semantics></math>
 es una de las semirrectas definidas por el punto
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>g</mi><mo stretchy="false" form="prefix">(</mo><mi>V</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">g(V)</annotation></semantics></math>
 en la recta
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>g</mi><mo stretchy="false" form="prefix">(</mo><mi>r</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">g(r)</annotation></semantics></math>.</p>
+</div>
 <p>Terminar de copiar de los otros apuntes. TKTK.</p>
 <p>En cuanto a la <strong>Definición 2.19</strong> (pág. 33), creo que
 también se puede afirmar la simetría de la congruencia de figuras. Es
 decir, podemos continuar con esa definición y afirmar que, por ser
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>g</mi><annotation encoding="application/x-tex">g</annotation></semantics></math>
 biyectiva, se tiene que para todo
-<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>X</mi><mo>′</mo></msup><mo>,</mo><msup><mi>Y</mi><mo>′</mo></msup><mo>∈</mo><msub><mi>ℱ</mi><mn>2</mn></msub></mrow><annotation encoding="application/x-tex">X&#39;,Y&#39; \in \mathcal{F}_{2}</annotation></semantics></math>
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>X</mi><mo>′</mo></msup><mo>,</mo><msup><mi>Y</mi><mo>′</mo></msup><mo>∈</mo><msub><mi>ℱ</mi><mn>2</mn></msub></mrow><annotation encoding="application/x-tex">X&#39;, Y&#39; \in \mathcal{F}_2</annotation></semantics></math>
 se tienen
-<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>X</mi><mo>=</mo><msup><mi>g</mi><mrow><mi>−</mi><mn>1</mn></mrow></msup><mo stretchy="false" form="prefix">(</mo><mi>X</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">X = g^{- 1}(X)</annotation></semantics></math>
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>X</mi><mo>=</mo><msup><mi>g</mi><mrow><mi>−</mi><mn>1</mn></mrow></msup><mo stretchy="false" form="prefix">(</mo><mi>X</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">X = g^{-1}(X)</annotation></semantics></math>
 e
-<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>Y</mi><mo>=</mo><msup><mi>g</mi><mrow><mi>−</mi><mn>1</mn></mrow></msup><mo stretchy="false" form="prefix">(</mo><mi>Y</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">Y = g^{- 1}(Y)</annotation></semantics></math>
-tales que
-<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>X</mi><mo>,</mo><mi>Y</mi><mo>∈</mo><msub><mi>ℱ</mi><mn>1</mn></msub></mrow><annotation encoding="application/x-tex">X,Y \in \mathcal{F}_{1}</annotation></semantics></math>.</p>
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>Y</mi><mo>=</mo><msup><mi>g</mi><mrow><mi>−</mi><mn>1</mn></mrow></msup><mo stretchy="false" form="prefix">(</mo><mi>Y</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">Y =
+g^{-1}(Y)</annotation></semantics></math> tales que
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>X</mi><mo>,</mo><mi>Y</mi><mo>∈</mo><msub><mi>ℱ</mi><mn>1</mn></msub></mrow><annotation encoding="application/x-tex">X, Y \in \mathcal{F}_1</annotation></semantics></math>.</p>
 <p>En la demostración del <strong>Lema 2.21</strong> (pág. 33)), la
 primera igualdad que aparece podemos justificarla aquí con el Teorema de
 la Conservación del Punto Medio de un Segmento por Isometría, presentado
@@ -1326,15 +1376,16 @@ demostración más completa del <strong>Teorema 2.22</strong>. No
 obstante, a partir de aquí me adaptaré al estilo del libro y únicamente
 mencionaré las cosas que no quedan claras y los pasos que creo que
 pueden ser difíciles de intuir.</p>
-<p><strong><em>Demostración</em></strong> — Dado un
+<div class="proof">
+<p><strong><em>Demostración.— </em></strong>Dado un
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mo>∈</mo><mi>𝐏</mi></mrow><annotation encoding="application/x-tex">A \in \mathbf{P}</annotation></semantics></math>
 tal que
-<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mo>∈</mo><msup><mi>H</mi><mn>1</mn></msup></mrow><annotation encoding="application/x-tex">A \in H^{1}</annotation></semantics></math>,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mo>∈</mo><msup><mi>H</mi><mn>1</mn></msup></mrow><annotation encoding="application/x-tex">A \in H^1</annotation></semantics></math>,
 hacemos su reflexión de eje
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>r</mi><annotation encoding="application/x-tex">r</annotation></semantics></math>,
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>A</mi><mo>′</mo></msup><mo>=</mo><mi>σ</mi><mo stretchy="false" form="prefix">(</mo><mi>A</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">A&#39; = \sigma(A)</annotation></semantics></math>.</p>
 <p>Por el Lema 2.21, sabemos que
-<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext mathvariant="normal">medio</mtext><msup><mo stretchy="false" form="prefix">[</mo><mo>′</mo></msup><mo stretchy="false" form="postfix">]</mo><mo>∈</mo><mi>r</mi></mrow><annotation encoding="application/x-tex">\text{medio}\lbrack &#39;\rbrack \in r</annotation></semantics></math>;
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext mathvariant="normal">medio</mtext><mo stretchy="false" form="prefix">[</mo><mi>A</mi><mo>,</mo><msup><mi>A</mi><mo>′</mo></msup><mo stretchy="false" form="postfix">]</mo><mo>∈</mo><mi>r</mi></mrow><annotation encoding="application/x-tex">\text{medio}[A, A&#39;] \in r</annotation></semantics></math>;
 lo designaremos por
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>M</mi><annotation encoding="application/x-tex">M</annotation></semantics></math>.
 Al contrario de lo que se afirma en la demostración del libro, aún no
@@ -1344,11 +1395,9 @@ cortan.</p>
 <p>Al pertenecer
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math>
 a
-<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>H</mi><mn>1</mn></msup><annotation encoding="application/x-tex">H^{1}</annotation></semantics></math>,
-por el punto (1) del Axioma
-<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>𝐏</mi><annotation encoding="application/x-tex">\mathbf{P}</annotation></semantics></math><!-- -->4
-se tiene que todo punto de
-<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>H</mi><mn>1</mn></msup><annotation encoding="application/x-tex">H^{1}</annotation></semantics></math>
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>H</mi><mn>1</mn></msup><annotation encoding="application/x-tex">H^1</annotation></semantics></math>,
+por el punto 1 del Axioma P4 se tiene que todo punto de
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>H</mi><mn>1</mn></msup><annotation encoding="application/x-tex">H^1</annotation></semantics></math>
 está fuera de
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>r</mi><annotation encoding="application/x-tex">r</annotation></semantics></math>.
 Por tanto,
@@ -1371,32 +1420,27 @@ y
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>s</mi><annotation encoding="application/x-tex">s</annotation></semantics></math>,
 serán secantes, por aplicación del Teorema 2.7 (de las Posiciones
 Relativas de Dos Rectas). Entonces, también serán secantes el segmento
-<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mo stretchy="false" form="prefix">[</mo><mo>′</mo></msup><mo stretchy="false" form="postfix">]</mo></mrow><annotation encoding="application/x-tex">\lbrack &#39;\rbrack</annotation></semantics></math>
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">[</mo><mi>A</mi><mo>,</mo><msup><mi>A</mi><mo>′</mo></msup><mo stretchy="false" form="postfix">]</mo></mrow><annotation encoding="application/x-tex">[A, A&#39;]</annotation></semantics></math>
 y la recta
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>r</mi><annotation encoding="application/x-tex">r</annotation></semantics></math>,
 es decir, se cumple que
-<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mo stretchy="false" form="prefix">[</mo><mo>′</mo></msup><mo stretchy="false" form="postfix">]</mo><mrow><mspace width="0.333em"></mspace><mtext mathvariant="normal"> inter </mtext><mspace width="0.333em"></mspace></mrow><mi>r</mi><mo>≠</mo><mi>∅</mi></mrow><annotation encoding="application/x-tex">\lbrack &#39;\rbrack\text{ inter }r \neq \emptyset</annotation></semantics></math>.
-Aplicando ahora el Teorema Ampliación del Punto (3) del Axioma
-<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>𝐏</mi><annotation encoding="application/x-tex">\mathbf{P}</annotation></semantics></math><!-- -->4,
-tenemos que, como
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">[</mo><mi>A</mi><mo>,</mo><msup><mi>A</mi><mo>′</mo></msup><mo stretchy="false" form="postfix">]</mo><mo>∩</mo><mi>r</mi><mo>≠</mo><mi>∅</mi></mrow><annotation encoding="application/x-tex">[A, A&#39;] \cap r \neq
+  \emptyset</annotation></semantics></math>. Aplicando ahora el Teorema
+Ampliación del Punto 3 del Axioma P4, tenemos que, como
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mo>∈</mo><msup><mi>H</mi><mn>1</mn></msup></mrow><annotation encoding="application/x-tex">A \in H^{1}</annotation></semantics></math>,
 no queda otra más que
-<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>A</mi><mo>′</mo></msup><mo>∈</mo><msup><mi>H</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">A&#39; \in H^{2}</annotation></semantics></math>.</p>
-<p>Por la Observación 2.3 y el punto (ii) del Axioma
-<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>𝐏</mi><annotation encoding="application/x-tex">\mathbf{P}</annotation></semantics></math><!-- -->2
-(incluyendo la unicidad), sabemos que existe una única recta que
-contiene al segmento
-<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mo stretchy="false" form="prefix">[</mo><mo>′</mo></msup><mo stretchy="false" form="postfix">]</mo></mrow><annotation encoding="application/x-tex">\lbrack &#39;\rbrack</annotation></semantics></math>.
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>A</mi><mo>′</mo></msup><mo>∈</mo><msup><mi>H</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">A&#39; \in H^2</annotation></semantics></math>.</p>
+<p>Por la Observación 2.3 y el punto ii del Axioma P2 (incluyendo la
+unicidad), sabemos que existe una única recta que contiene al segmento
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">[</mo><mi>A</mi><mo>,</mo><msup><mi>A</mi><mo>′</mo></msup><mo stretchy="false" form="postfix">]</mo></mrow><annotation encoding="application/x-tex">[A, A&#39;]</annotation></semantics></math>.
 La designaremos por
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>s</mi><annotation encoding="application/x-tex">s</annotation></semantics></math>.</p>
 <p>Al pertenecer
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math>
 a
-<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>H</mi><mn>1</mn></msup><annotation encoding="application/x-tex">H^{1}</annotation></semantics></math>,
-por el punto (1) del Axioma
-<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>𝐏</mi><annotation encoding="application/x-tex">\mathbf{P}</annotation></semantics></math><!-- -->4
-se tiene que todo punto de
-<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>H</mi><mn>1</mn></msup><annotation encoding="application/x-tex">H^{1}</annotation></semantics></math>
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>H</mi><mn>1</mn></msup><annotation encoding="application/x-tex">H^1</annotation></semantics></math>,
+por el punto 1 del Axioma P4 se tiene que todo punto de
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>H</mi><mn>1</mn></msup><annotation encoding="application/x-tex">H^1</annotation></semantics></math>
 está fuera de
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>r</mi><annotation encoding="application/x-tex">r</annotation></semantics></math>.
 Por tanto, como tenemos un punto,
@@ -1417,40 +1461,59 @@ y
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>s</mi><annotation encoding="application/x-tex">s</annotation></semantics></math>,
 serán secantes, por aplicación del Teorema 2.7 (de las Posiciones
 Relativas de Dos Rectas). Entonces, también serán secantes el segmento
-<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mo stretchy="false" form="prefix">[</mo><mo>′</mo></msup><mo stretchy="false" form="postfix">]</mo></mrow><annotation encoding="application/x-tex">\lbrack &#39;\rbrack</annotation></semantics></math>
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">[</mo><mi>A</mi><mo>,</mo><msup><mi>A</mi><mo>′</mo></msup><mo stretchy="false" form="postfix">]</mo></mrow><annotation encoding="application/x-tex">[A, A&#39;]</annotation></semantics></math>
 y la recta
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>r</mi><annotation encoding="application/x-tex">r</annotation></semantics></math>,
 es decir, se cumple que
-<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mo stretchy="false" form="prefix">[</mo><mo>′</mo></msup><mo stretchy="false" form="postfix">]</mo><mrow><mspace width="0.333em"></mspace><mtext mathvariant="normal"> inter </mtext><mspace width="0.333em"></mspace></mrow><mi>r</mi><mo>≠</mo><mi>∅</mi></mrow><annotation encoding="application/x-tex">\lbrack &#39;\rbrack\text{ inter }r \neq \emptyset</annotation></semantics></math>.
-Aplicando ahora el Teorema Ampliación del Punto (3) del Axioma
-<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>𝐏</mi><annotation encoding="application/x-tex">\mathbf{P}</annotation></semantics></math><!-- -->4,
-tenemos que, como
-<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mo>∈</mo><msup><mi>H</mi><mn>1</mn></msup></mrow><annotation encoding="application/x-tex">A \in H^{1}</annotation></semantics></math>,
-no queda otra más que
-<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>A</mi><mo>′</mo></msup><mo>∈</mo><msup><mi>H</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">A&#39; \in H^{2}</annotation></semantics></math>.</p>
-<p>Ahora, nos fijaremos en que, por el punto (1) de la definición de
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">[</mo><mi>A</mi><mo>,</mo><msup><mi>A</mi><mo>′</mo></msup><mo stretchy="false" form="postfix">]</mo><mo>∩</mo><mi>r</mi><mo>≠</mo><mi>∅</mi></mrow><annotation encoding="application/x-tex">[A, A&#39;] \cap r \neq \emptyset</annotation></semantics></math>.
+Aplicando ahora el Teorema Ampliación del Punto 3 del Axioma P4, tenemos
+que, como
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mo>∈</mo><msup><mi>H</mi><mn>1</mn></msup></mrow><annotation encoding="application/x-tex">A \in
+  H^1</annotation></semantics></math>, no queda otra más que
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>A</mi><mo>′</mo></msup><mo>∈</mo><msup><mi>H</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">A&#39; \in H^2</annotation></semantics></math>.</p>
+<p>Ahora, nos fijaremos en que, por el punto 1 de la definición de
 <em>reflexión axial</em>, se tiene que
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>σ</mi><mo stretchy="false" form="prefix">(</mo><mi>r</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mi>r</mi></mrow><annotation encoding="application/x-tex">\sigma(r) = r</annotation></semantics></math>.
 Aplicando entonces la última parte del Teorema 2.18 —la que trata sobre
 los semiplanos—, tenemos que
-<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>H</mi><mn>1</mn></msup><annotation encoding="application/x-tex">H^{1}</annotation></semantics></math>
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>H</mi><mn>1</mn></msup><annotation encoding="application/x-tex">H^1</annotation></semantics></math>
 y
-<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>H</mi><mn>2</mn></msup><annotation encoding="application/x-tex">H^{2}</annotation></semantics></math>
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>H</mi><mn>2</mn></msup><annotation encoding="application/x-tex">H^2</annotation></semantics></math>
 son los semiplanos determinados por
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>σ</mi><mo stretchy="false" form="prefix">(</mo><mi>r</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\sigma(r)</annotation></semantics></math>.
 Entonces, quedarían dos posibilidades únicamente: que los semiplanos
 transformados sean los mismos o que se intercambien. Del resultado
 anterior, es decir, de que si
-<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mo>∈</mo><msup><mi>H</mi><mn>1</mn></msup></mrow><annotation encoding="application/x-tex">A \in H^{1}</annotation></semantics></math>
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mo>∈</mo><msup><mi>H</mi><mn>1</mn></msup></mrow><annotation encoding="application/x-tex">A \in H^1</annotation></semantics></math>
 entonces
-<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>A</mi><mo>′</mo></msup><mo>∈</mo><msup><mi>H</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">A&#39; \in H^{2}</annotation></semantics></math>,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>A</mi><mo>′</mo></msup><mo>∈</mo><msup><mi>H</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">A&#39; \in H^2</annotation></semantics></math>,
 se tiene que se intercambian siempre, es decir,</p>
-<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>σ</mi><mo stretchy="false" form="prefix">(</mo><msup><mi>H</mi><mn>1</mn></msup><mo stretchy="false" form="postfix">)</mo><mo>=</mo><msup><mi>H</mi><mn>2</mn></msup><mo>;</mo><mspace width="1.0em"></mspace><mi>σ</mi><mo stretchy="false" form="prefix">(</mo><msup><mi>H</mi><mn>2</mn></msup><mo stretchy="false" form="postfix">)</mo><mo>=</mo><msup><mi>H</mi><mn>1</mn></msup></mrow><annotation encoding="application/x-tex">\sigma(H^{1}) = H^{2};\quad\sigma(H^{2}) = H^{1}</annotation></semantics></math></p>
-<p>  <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>◼</mi><annotation encoding="application/x-tex">\blacksquare</annotation></semantics></math></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>σ</mi><mo stretchy="false" form="prefix">(</mo><msup><mi>H</mi><mn>1</mn></msup><mo stretchy="false" form="postfix">)</mo><mo>=</mo><msup><mi>H</mi><mn>2</mn></msup><mo>;</mo><mspace width="1.0em"></mspace><mi>σ</mi><mo stretchy="false" form="prefix">(</mo><msup><mi>H</mi><mn>2</mn></msup><mo stretchy="false" form="postfix">)</mo><mo>=</mo><msup><mi>H</mi><mn>1</mn></msup></mrow><annotation encoding="application/x-tex"> \sigma(H^1) = H^2; \quad \sigma(H^2) = H^1 </annotation></semantics></math><span
+class="env-last-symbol"> ▢</span></p>
+</div>
 </section>
 </section>
 <section id="referencias" class="level1 unnumbered">
 <h1 class="unnumbered">Referencias</h1>
+<div id="refs" class="references csl-bib-body" data-entry-spacing="0"
+role="list">
+<div id="ref-costa" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[1] </div><div
+class="csl-right-inline">Antonio F. Costa y Peter Buser, <em>Curso de
+geometría básica</em>, 1.ª ed. Sanz y Torres, 2010.</div>
+</div>
+<div id="ref-pineda" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[2] </div><div
+class="csl-right-inline">Miguel Delgado Pineda y José María Muñoz Bouzo,
+<em>Lenguaje matemático, conjuntos y números</em>, 2.ª ed. Sanz y
+Torres, 2020.</div>
+</div>
+<div id="ref-venema" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[3] </div><div
+class="csl-right-inline">Gerard A. Venema, <em>Foundations of
+Geometry</em>, 2.ª ed. Pearson, 2011.</div>
+</div>
+</div>
 </section>
 <section id="footnotes" class="footnotes footnotes-end-of-document"
 role="doc-endnotes">

@@ -43,39 +43,30 @@
     {
         "type": "LoadedResource",
         "verbosity": "INFO",
+        "for": "ajustes-pandoc/csl/ieee.csl",
+        "from": "ajustes-pandoc/csl/ieee.csl"
+    },
+    {
+        "type": "LoadedResource",
+        "verbosity": "INFO",
         "for": "./referencias.yaml",
         "from": "./referencias.yaml"
-    },
-    {
-        "type": "CiteprocWarning",
-        "verbosity": "WARNING",
-        "message": "citation costa not found"
-    },
-    {
-        "type": "CiteprocWarning",
-        "verbosity": "WARNING",
-        "message": "citation pineda not found"
-    },
-    {
-        "type": "CiteprocWarning",
-        "verbosity": "WARNING",
-        "message": "citation venema not found"
     },
     {
         "type": "FilterCompleted",
         "verbosity": "INFO",
         "path": "citeproc",
-        "milliseconds": "6"
+        "milliseconds": "8"
     },
     {
         "type": "RunningFilter",
         "verbosity": "INFO",
-        "path": "./ajustes-pandoc/filtros/math-envs.lua"
+        "path": "ajustes-pandoc/filtros/math-envs.lua"
     },
     {
         "type": "FilterCompleted",
         "verbosity": "INFO",
-        "path": "./ajustes-pandoc/filtros/math-envs.lua",
-        "milliseconds": "16"
+        "path": "ajustes-pandoc/filtros/math-envs.lua",
+        "milliseconds": "25"
     }
 ]

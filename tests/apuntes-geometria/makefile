@@ -28,12 +28,14 @@ help :
 
 
 
-html: $(CONTENTS)
-	pandoc $^ \
-		--metadata-file metadatos.yaml \
-		--citeproc \
-		--defaults ./ajustes-pandoc/defaults/web-apuntes-asignaturas.yaml \
-		--output $(OUTPUT_FILE_N).html ;
+html:
+	pandoc --defaults ./ajustes-pandoc/defaults/web-apuntes-asignaturas.yaml ;
+
+
+# html: $(CONTENTS)
+# 	pandoc $^ \
+# 		--defaults ./ajustes-pandoc/defaults/web-apuntes-asignaturas.yaml ;
+
 
 
 

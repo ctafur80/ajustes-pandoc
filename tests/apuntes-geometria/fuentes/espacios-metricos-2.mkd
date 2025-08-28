@@ -5,6 +5,7 @@
 
 ## Capítulo 1. Espacios métricos {#espacios-metricos}
 
+
 Este capítulo es algo distinto a los demás. Trata conceptos geométricos
 generales, válidos para todas las geometrías. En el siguiente ya nos
 introducimos en la geometría euclidiana, que será la que usemos a lo largo
@@ -23,9 +24,11 @@ ejemplos solo se plantean, sin resolverlos, y se presentan al final del
 mismo como ejercicios.
 
 
+---
 
-**pág. 11**. **Definición 1.1**. En lo que respecta a la **Definición 1.1
-(Métrica)**, me gusta más la siguiente, ya que me parece más "elegante".
+
+En lo que respecta a [@costa p. 11] **Definición 1.1 (Métrica)**, me gusta
+más la siguiente, ya que me parece más "elegante".
 
 ::: {.definition #def-metrica data-label="1.1 / Métrica (alt.)"}
   Dado un conjunto $\mathbf{P}$ no vacío, una _métrica_ (también llamada
@@ -33,15 +36,15 @@ mismo como ejercicios.
   \longrightarrow \mathbb{R}^+ \cup \{0\}$ en la que para cualesquiera $x,
   y, z \in \mathbf{P}$ se cumplen:
 
-  1. $d(x, y) = 0 \: \Longleftrightarrow \: x = y$.
-  2. $d(x, y) = d(y, x)$. (Simetría.)
-  3. $d(x, y) \leq d(x, z) + d(z, y)$. (Desigualdad triangular.)
+  i. $d(x, y) = 0 \ \Longleftrightarrow \ x = y$.
+  ii. $d(x, y) = d(y, x)$. (Simetría.)
+  iii. $d(x, y) \leq d(x, z) + d(z, y)$. (Desigualdad triangular.)
 :::
 
 Tal y como se explica en la [](#def-metrica), se ve que TKTK.
 
 La definición que dan en [@costa] establece como codominio a todo
-$\mathbb{R}$ y luego hace una corrección de este en el punto 1. Quizás se
+$\mathbb{R}$ y luego hace una corrección de este en el punto i. Quizás se
 deba a que resulta más cómoda si se desea comprobar punto por punto, en los
 ejercicios, demostraciones, etc.
 
@@ -51,8 +54,10 @@ Conviene hacerlo con el condicional contrarrecíproco, que sería lo mismo que
 en la definición de [@costa].
 
 
+---
 
-**pág. 11**. **Ejemplo 1.2**. No llega a demostrar, ni aquí ni en el
+
+En [@costa p. 11] **Ejemplo 1.2** no llega a demostrar, ni aquí ni en el
 **Ejercicio 1.2**, los dos primeros puntos. Aunque sea fácil, vamos a
 hacerlo aquí.
 
@@ -104,20 +109,24 @@ $$\begin{aligned}
     &= d_E (y,x)
 \end{aligned}$$
 
-En cuanto al **Ejemplo 1.3**, lo más relevante está en que nos podemos basar
+
+---
+
+
+En [@costa] **Ejemplo 1.3**, lo más relevante está en que nos podemos basar
 en la desigualdad triangular en $(\mathbb{R}, +)$ para demostrar que se
-cumple el punto 3 en la definición de *métrica*. Esta se da como
+cumple el punto 3 en la Definición 1.1 (Métrica). Esta se da como
 conocimiento básico, es decir, como prerrequisito.
 
-Aunque el **Teorema 1.4** (de la Métrica Inducida, pág. 12) pueda parecer
-más bien una definición, en realidad lo que viene a explicar es que la
-restricción del dominio de un espacio métrico es siempre un espacio métrico.
-A este se le suele llamar *espacio métrico inducido*, y, a esa métrica,
-*métrica inducida*. También se podía haber optado por llamarlo *espacio
-métrico restringido*.
+Aunque el **Teorema 1.4** (de la Métrica Inducida, [@costa p. 12]) pueda
+parecer más bien una definición, en realidad lo que viene a explicar es que
+la restricción del dominio de un espacio métrico es siempre un espacio
+métrico. A este se le suele llamar _espacio métrico inducido_, y, a esa
+métrica, _métrica inducida_. También se podía haber optado por llamarlo
+_espacio métrico restringido_.
 
-Para entender esto, además de conocer el concepto de *espacio métrico*, debe
-saber qué es una *restricción* de una aplicación, cosa que se estudia
+Para entender esto, además de conocer el concepto de _espacio métrico_, debe
+saber qué es una _restricción_ de una aplicación, cosa que se estudia
 normalmente en asignaturas de lógica y teoría de conjuntos.
 
 En cuanto a la notación, se podría usar también la notación usual para la
@@ -143,12 +152,16 @@ $$ \begin{array}{rrcl}
 
 En la demostración de este teorema, creo que, por hacerla más completa,
 quizás se debería comentar también que que ninguna de las propiedades de la
-definición de *métrica* es del tipo *closure*.
+definición de _métrica_ es del tipo _closure_.
 
-**Definición 1.5**. Alternativamente a como se define el concepto de
-*isometría*, podríamos definirla como
 
-$$ g: \: (M, \delta) \longrightarrow (M', \delta') $$
+---
+
+
+En [@costa] **Definición 1.5**, alternativamente a como se define el
+concepto de _isometría_, podríamos definirla como
+
+$$ g: \ (M, \delta) \longrightarrow (M', \delta') $$
 
 Y, de hecho, en [@costa] se usa esta notación un poco después, en la
 **Definición 1.8**. En el fondo, la que usa el libro se refiere de forma
@@ -159,8 +172,8 @@ las métricas en cada uno de los conjuntos.
 Básicamente, solo muestra las transformaciones que conducen a la
 conservación de distancias en estas nuevas relaciones, pero se deja todo lo
 relacionado con la teoría de conjuntos. Los hechos que faltan se basan en
-algunos resultados sobre las aplicaciones. Puede consultarlos en [@pineda
-pág. 104--105]. Concretamente, el 3.59 (de Caracterización de una Aplicación
+algunos resultados sobre las aplicaciones. Puede consultarlos en [@pineda p.
+104--105]. Concretamente, el 3.59 (de Caracterización de una Aplicación
 Biyectiva) y 3.60.
 
 Veamos primero la demostración de la inversa, $g^{-1}$. La relación inversa
@@ -188,16 +201,20 @@ tiene que $h \circ g$ será también biyectiva, con lo que todo valor $x \in
 M$ producirá un único valor de $M''$ por $h \circ g$ (por la inyectividad),
 y los valores producidos abarcarán a todo $M''$ (por la suprayectividad).
 
+
+---
+
+
 En la **Definición 1.8**, también se puede usar una notación más explícita,
 al igual que sucede con lo que dijimos antes sobre la definición de
-*isometría*. En este caso, sería $\text{Isom} (M, \delta)$.
+_isometría_. En este caso, sería $\text{Isom} (M, \delta)$.
 
 Al final de la página. Las propiedades 1 y 2 son casos particulares del
 Teorema 1.7. Por su parte, la demostración del punto 3 es trivial.
 
 **Nota 1.9**. Viene a decir que la estructura $(\text{Isom}(M, \delta),
 \circ)$ es un grupo, siendo $\circ$ la composición de aplicaciones. Se le
-suele llamar también *grupo de isometrías* $(\text{Isom}(M, \delta),
+suele llamar también _grupo de isometrías_ $(\text{Isom}(M, \delta),
 \circ)$, o, abreviadamente, $(M,\delta)$.
 
 Es fácil demostrar que se cumplen esas tres propiedades que la hacen un
@@ -228,17 +245,17 @@ algún $x \in G$.
 **Definición. 1.12**. Además de llamarlo "segmento de extremos $a$ y $b$",
 también se le suele llamar "segmento $a$ $b$".
 
-En la definición de *puntos alineados*, se podría explicar también que esto
-está relacionado con el concepto de *recta*, que se define en el capítulo
+En la definición de _puntos alineados_, se podría explicar también que esto
+está relacionado con el concepto de _recta_, que se define en el capítulo
 siguiente. Si tres elementos están alineados, también se dice que son
-*colineales*.
+_colineales_.
 
-La demostración del punto (i) de la **Ovservación 1.13** es, en su
-estructura, similar a muchas otras que aparecen a lo largo de todo el texto.
-Debe tener en cuenta que esos bicondicionales sirven para ir en los dos
-sentidos; es decir, en esta demostración en concreto, si la leemos de
-izquierda a derecha estaremos demostrando que $[a, a] \subseteq {a}$. Si se
-va en el otro sentido, que ${a} \subseteq [a, a]$.
+La demostración del punto i de la **Ovservación 1.13** es, en su estructura,
+similar a muchas otras que aparecen a lo largo de todo el texto. Debe tener
+en cuenta que esos bicondicionales sirven para ir en los dos sentidos; es
+decir, en esta demostración en concreto, si la leemos de izquierda a derecha
+estaremos demostrando que $[a, a] \subseteq \{a\}$. Si se va en el otro
+sentido, que $\{a\} \subseteq [a, a]$.
 
 **Ejercicio 1.3**. Debe tener cuidado con la demostración de la desigualdad
 triangular:

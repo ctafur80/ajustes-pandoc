@@ -1,0 +1,44 @@
+
+
+
+
+La fundamentación de la teoría de conjuntos parte de postular (o
+axiomatizar) la existencia de un conjunto, sin especificar de cuál se trata.
+De esto es fácil deducir, haciendo uso de otros axiomas, la existencia del
+conjunto vacío, "$\emptyset$".
+
+Advierta que estamos partiendo del concepto de _conjunto_ (_set_). Es decir,
+una clase de entidades que no es tan simple como una entidad en particular,
+pues un conjunto contiene a otras entidades (a las cuales se las llama
+_elementos_, _elements_).
+
+Se hace uso también de una lógica formal, pues sin esta no podríamos razonar
+sobre los conceptos de _pertenencia_, _igualdad_, etc.
+
+También se requiere de un sistema axiomático que permita construir nuevos
+conjuntos a partir de los ya existentes. Es decir, propicia la aparición de
+las operaciones unión, potencia, infinito, remplazo, etc.
+
+Metafóricamente, se podría decir que el conjunto vacío es el "primer
+ladrillo", pero la noción de conjunto y los axiomas son el "andamiaje" que
+hace posible levantar el edificio.
+
+El lenguaje de la teoría de conjuntos solo tiene una relación básica:
+"$\in$" ("pertenece a"). Y a partir de ahí, con los axiomas, se construye
+todo.
+
+De hecho, no todos aceptan que "el conjunto" sea el concepto fundamental de
+las matemáticas. Hay otras fundaciones:
+
+- Teoría de tipos (Russell, Church, Martin-Löf), usada mucho en lógica y en
+  informática teórica.
+- Topos y categorías, que funda las matemáticas en la noción de categoría en
+  lugar de conjunto.
+- Formalismos constructivistas. En lugar de aceptar "todos los conjuntos
+  posibles", solo se aceptan los que se pueden construir explícitamente.
+
+En esas alternativas, la circularidad se evita cambiando cuál es el
+"concepto primitivo", es decir, la clase de entidad básica.
+
+
+

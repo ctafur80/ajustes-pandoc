@@ -77,8 +77,8 @@ div.definition *:last-of-type {
 }
 
 
-/* Removing the accumulation ob bottom margins in MathML elements. */
-math[display='inline'] * {
+/* Removing the accumulation of bottom margins in MathML elements. */
+math > semantics * {
     margin-bottom: 0 !important;
 }
 
@@ -93,6 +93,7 @@ math mtext {
 
 
 /* Cambio la estética de las listas en los entornos. */
+/*
 div.axiom ol > li,
 div.theorem ol > li,
 div.lemma ol > li,
@@ -110,7 +111,7 @@ div.proposition ol > li::marker,
 div.definition ol > li::marker {
     content: counter(list, lower-roman) ". ";
 }
-
+*/
 
 
 /* Demostraciones */
@@ -135,6 +136,7 @@ div.definition ol > li::marker {
 /* TODO: Hacer que, si van dos seguidos, se haga una separación. El problema es que serían
  * muchas combinaciones, pues hay muchos tipos de entornos. */
 
+/*
 div.exercise > *:first-child::before {
     content: "Ejercicio.\2014\00a0";
     font-style: italic;
@@ -151,7 +153,7 @@ div.exercise > *:last-child::after {
     right: 0;
     bottom: 0;
 }
-
+*/
 
 
 

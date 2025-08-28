@@ -1,0 +1,64 @@
+
+
+
+## Introducción {.unnumbered}
+
+
+Se trata de una asignatura que sirve como transición a las matemáticas
+superiores. Abarca a la lógica, la teoría de conjuntos, álgebra abstracta y
+formalizaciones de conjuntos numéricos, como $\mathbb{Z}$, $\mathbb{R}$,
+etc.
+
+Algunas de estas partes no las trata tan en detalle como se podría hacer en
+una asignatura dedicada a tal materia. En gran parte se solapa con
+asignaturas sobre demostraciones, que suelen tenerse en muchas
+universidades. Tal y como digo, yo la veo más bien como una introducción a
+las matemáticas superiores; consecuentemente, le servirá para las demás
+asignaturas del grado en matemáticas.
+
+El texto base de la asignatura es [@pineda], creado por profesores de la
+UNED. Lo primero que se presenta en este es la lógica. En esta referencia no
+se puede decir que se aprenda mucho sobre lógica; solo lo básico para poder
+aplicar a las matemáticas. Si desea aprender de verdad las bases de la
+lógica, una referencia que me gusta mucho es [@forallx], aunque puede que en
+algún momento se cuestione si le merece la pena gastar su tiempo en esos
+contenidos más bien filosóficos. Quizás le baste a efectos prácticos con lo
+que se aprende en el anterior.
+
+En el Capítulo 2 se continúa con la lógica a la vez que se inicia la teoría
+de conjuntos, que se extiende también al Capítulo 3. Aunque esta última se
+presenta con mayor rigor y extensión que la parte de la lógica, tampoco se
+pllega a ver con la profundidad con la que se puede llegar a ver en una
+asignatura centrada en esta materia. Por ejemplo, se presenta la definición
+"ingenua" del concepto _conjunto_. En la sección de comentarios del capítulo
+2 se explica algo sobre cómo sería una definición rigurosa.
+
+La parte de la teoría de conjuntos puede complementarse con [@velleman], que
+es un libro con mucha fama. Tampoco llega a entrar en gran profundidad en
+algunos detalles de la teoría de conjuntos, pero sí que creo que tiene
+explicaciones muy buenas. El inconveniente que le encuentro es que hace un
+uso muy extenso de la prosa en detrimento de la simbología matemática.
+
+Un libro que es un clásico de la teoría de conjuntos, y con el que puede
+aprender esos detalles que se pasan aquí por alto, es [@enderton]. TKTK. Un
+libro de teoría de conjuntos más centrado en la filosofía pero que puede
+aclararle algunos detalles es [@ol-set-theory].
+
+También, a partir del capítulo 5, se da lo básico sobre el álgebra
+abstracta. TKTK.
+
+En cuanto a la presentación rigurosa de los números (enteros, reales, etc.),
+esto puede verlo también en muchos otros libros. TKTK.
+
+En cierto modo, se da cierta contradicción en este tipo de asignaturas. Por
+un lado, para poner ejemplos se usan algunos conceptos que ya conoce de
+cursos previos de matemáticas. Por ejemplo, el concepto de _función_.
+Conforme avanza en la asignatura, llega un punto en el que se le presentan
+definiciones de algunos de esos conceptos (como el de _función_) más
+rigurosas de las que ya conocía. Esto se hace por razones prácticas. Si no,
+casi no tendríamos ejemplos, pues se trata de una asignatura de
+"cimentación" de su conocimiento de las matemáticas.
+
+
+
+

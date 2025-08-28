@@ -13,5 +13,5 @@ keywords:
   - álgebra
 bibliography:
   - ./referencias.yaml
-
+link-citations: true
 

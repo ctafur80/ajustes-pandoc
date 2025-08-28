@@ -8,16 +8,67 @@ local references = {}
 
 -- Datos de configuración para cada tipo de entorno.
 local envs_data = {
-    definition = { title = "Definición", sep = ".— ", last_symbol = "" },
-    proof = { title = "Demostración", sep = ".— ", last_symbol = " ■" },
-    axiom = { title = "Axioma", sep = ".— ", last_symbol = "" },
-    theorem = { title = "Teorema", sep = ".— ", last_symbol = "" },
-    proposition = { title = "Proposición", sep = ".— ", last_symbol = "" },
-    lemma = { title = "Lema", sep = ".— ", last_symbol = "" },
-    corollary = { title = "Corolario", sep = ".— ", last_symbol = "" },
-    exercise = { title = "Ejercicio", sep = ".— ", last_symbol = "◀" },
-    example = { title = "Ejemplo", sep = ".— ", last_symbol = "◀" },
+    proof = {
+        title = "Demostración",
+        sep = ".— ",
+        last_symbol = " ▢", -- Alt. ■ o ◽
+    },
+
+    definition = {
+        title = "Definición",
+        sep = ".— ",
+        last_symbol = nil,
+    },
+
+    axiom = {
+        title = "Axioma",
+        sep = ".— ",
+        last_symbol = nil,
+    },
+
+    theorem = {
+        title = "Teorema",
+        sep = ".— ",
+        last_symbol = nil,
+    },
+
+    proposition = {
+        title = "Proposición",
+        sep = ".— ",
+        last_symbol = nil,
+    },
+
+    lemma = {
+        title = "Lema",
+        sep = ".— ",
+        last_symbol = nil,
+    },
+
+    corollary = {
+        title = "Corolario",
+        sep = ".— ",
+        last_symbol = nil,
+    },
+
+    exercise = {
+        title = "Ejercicio",
+        sep = ".— ",
+        last_symbol = " △", -- Alt. ◀
+    },
+
+    example = {
+        title = "Ejemplo",
+        sep = ".— ",
+        last_symbol = " △", -- Alt. ◀
+    },
 }
+
+
+
+
+
+
+
 
 -- Función auxiliar para comprobar si un elemento tiene una clase específica.
 function has_class(element, class_name)
@@ -67,7 +118,7 @@ local DivProcessor = {
         if end_symbol and end_symbol ~= "" then
           if #div.content > 0 and div.content[#div.content].t == "Para" then
             local last_block = div.content[#div.content]
-            local formatted_symbol = pandoc.Span(pandoc.Str(end_symbol), {class = "qed"})
+            local formatted_symbol = pandoc.Span(pandoc.Str(end_symbol), {class = "env-last-symbol"})
             table.insert(last_block.content, formatted_symbol)
           end
         end

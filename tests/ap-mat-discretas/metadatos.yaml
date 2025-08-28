@@ -1,0 +1,18 @@
+author: "Carlos E. Tafur Egido"
+metad-author: "Carlos E. Tafur Egido"
+lang: es
+otherlangs: en
+title: "Apuntes de Matemáticas Discretas"
+metad-title: "Apuntes de Matemáticas Discretas"
+date: 02/08/2025
+metad-date: 02/08/2025
+description: "Apuntes de la asignatura Matemáticas Discretas."
+keywords:
+  - matemáticas
+  - teoría de números
+  - teoría de grafos
+  - combinatoria
+bibliography:
+  - ./referencias.yaml
+link-citations: true
+

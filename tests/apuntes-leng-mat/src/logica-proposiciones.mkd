@@ -1,0 +1,182 @@
+
+
+
+
+
+## Capítulo 1. Lógica de proposiciones {#cap-logica-prop}
+
+La lógica surge en la filosofía, y de hecho la inició el filósofo
+Aristóteles de la Antigua Grecia. Muchas veces se suele decir que el
+propósito de la lógica es "sistematizar el razonamiento". Además de en
+filosofía, también se estudia, para su aplicación, en matemáticas y en
+ciencias de la computación[^informatica], o, de forma más general, en el
+estudio de los sistemas lógicos digitales[^logica-digital], aunque puede que
+tenga utilidad en prácticamente todas las ramas del conocimiento.
+
+[^informatica]: cosa que en España se conoce más como _informática_
+[^logica-digital]: A esta he visto que la llaman también lógica digital.
+
+En cada área donde se estudia se suelen usar unas reglas de estilo propias
+sobre la simbología de la lógica.
+
+También cambia la terminología y la notación en las distintas referencias.
+Por ejemplo, en [@forallx] llaman _truth-functional logic_ a lo que en
+[@pineda] llaman _lógica de proposiciones_, mientras que en [@velleman]
+llaman _lógica enunciativa_ (_sentential logic_) a la de proposiciones y
+también a la de predicados.
+
+En cualquier caso, lo que debe tener claro es que la lógica es también un
+lenguaje (_language_ TKTK) y podríamos hacer varias clasificaciones en
+cuanto a las expresiones, de más general a más particular:
+
+1. Verbalización (_utterance_). TKTK.
+2. Enunciado (_sentence_; también llamado _oración_ o _frase_). Los hay de
+   varios tipos: interrogativos, exclamativos, imperativos, declarativos
+   (también llamados _informativos_), etc.
+3. Afirmación (_statement_) o _proposición_ (_proposition_). Sería un
+   enunciado declarativo. Estos son los únicos que nos interesan en la
+   lógica. Estas producirán un valor de certeza (también llamado _valor de
+   verdad_, _lógico_ o _buleano_); es decir, _verdadero_ o _falso_.
+
+La lógica es un _lenguaje formal_ (_formal language_), en contraposición a
+los lenguajes naturales (_natural languages_). TKTK.
+
+La lógica se encarga de los _argumentos_ (_arguments_[^argument]). Estos son
+una afirmación que consta de varias afirmaciones y de una conclusión.
+
+[^argument]: Advierta que en inglés este término tiene polisemia. Además de
+  tener el sentido de nuestro _argumento_, tiene también el de _discusión_ o
+  _riña_.
+
+Esta afirmación puede contar con otras en su interior, a varios niveles de
+anidamiento (_nesting_).
+
+Dentro de los argumentos, a la lógica únicamente le interesan los que son
+_válidos_ (_valid_). Un argumento será válido si y solo si no puede ser
+cierta la conclusión cuando las premisas no sean todas ciertas.
+
+Si ya supuese algo de lógica, esto mismo se podría expresar diciendo que un
+argumento no es más que una proposición (también valdría luego para
+predicados) cuya conectiva principal (_main connective_) es un condicional,
+"$\mathbin{\longrightarrow}$". La expresión a la izquierda de esa conectiva
+es una conjunción de varias proposiciones; a estas se las conoce como
+_premisas_. A la parte derecha se la conoce como _conclusión_. En este
+capítulo se aprenden todos estos conceptos que he usado en este párrafo.
+Esto se pasa por alto en [@pineda], pero sí que se explica tanto en
+[@forallx] como en [@velleman].
+
+Una demostración matemática no es más que un argumento válido.
+
+Mediante el uso de la lógica, a partir de una serie de certezas ya
+establecidas _deducimos_ (_deduce_) otras, con lo que extendemos nuestro
+conocimiento sobre algo. La deducción no es la única forma de extender
+nuestro conocimiento en matemáticas, como veremos.
+
+Además de la validez de un argumento, se tiene también su _solidez_
+(_soundness_). TKTK.
+
+
+
+
+### Expresiones matemáticas. Proposiciones
+
+En cuanto a la notación, para las proposiciones lo más común es usar una
+letra mayúscula, como $P$, $Q$, etc. En [@pineda] se saltan esa regla y
+optan por usar una letra minúscula: $p$, $q$, etc.
+
+
+
+
+
+### Conectores lógicos básicos
+
+A las conectivas (_connectives_) también se las podría llamar _operadores_
+(_operators_).
+
+Me gustaría destacar la importancia de que conozca las alternativas que
+existen en lo que respecta al condicional. Así, se tienen condicional
+contrario (_inverse_), el recíproco (_converse_) y el contrarrecíproco
+(_contrapositive_), tal y como se muestra en [@pineda p. 11].
+
+La conectiva condicional (_conditional_) es quizás la más importante de
+todas. De hecho, es la que usamos al definir la _validez_ de un argumento.
+
+Vacuamente cierta TKTK.
+
+Algo que me gustaría aclarar, cuando se estudia la conectiva condicional, es
+que encontrará muchas definiciones, teoremas, etc. en los que no se expresa
+de forma correcta lo que se desea a este respecto.
+
+Por ejemplo, en matemáticas sucede muchas veces en definiciones que se usa
+un enunciado del tipo "si ..., entonces ..." cuando lo que se desea expresar
+es un bicondicional. Creo que se debe a la costumbre, y se entiende que el
+lector lo interpretará como un bicondicional. Aun así, personalmente creo
+que lo ideal sería TKTK.
+
+
+
+
+### Construcción de proposiciones nuevas
+
+Básicamente, es construir una proposición haciendo la sustitución de una de
+sus subproposiciones por otra que sea equivalente.
+
+Una proposición será equivalente a otra cuando el bicondicional de estas dos
+es una tautología, $\mathbf{1}$.
+
+
+
+
+### Leyes lógicas
+
+En lo que respecta a las secciones en las que se presentan las _leyes_
+(_laws_; también calificadas de _reglas_, _rules_) lógicas, en el fondo lo
+que se hace no es más que comprobar si, de forma global, esa proposición es
+una tautología, $\mathbf{1}$. De hecho, en lugar de _leyes_ o _reglas_ se
+las podría calificar también de _tautologías_, aunque no se suele hacer.
+
+Advierta, por ejemplo, que la propiedad distributiva se da para los dos
+tipos posibles, con los operadores "$\land$" y "$\lor$", cosa que contrasta
+con lo que sucede con los números (de cualquier tipo), TKTK.
+
+Una vez que contemos con un buen "arsenal" de reglas lógicas, podemos
+manipular las expresiones (lógicas) para llegar a la más simple posible. No
+olvide que para una expresión de dos proposiciones simples se tienen $16$
+tablas de verdad posibles, con lo que, por muy compleja y enrevesada que sea
+una expresión lógica compuesta basada en estas dos, al fin y al cabo será
+una de esas $16$ proposiciones. Para $3$ se tienen $256$ posibles
+proposiciones.
+
+La regla general, para $n \in \mathbb{Z}^+$ proposiciones simples, es,
+primero, sacar el número de filas, que no es más que $a = 2^n$. Entonces, a
+partir de este, ver todas las posibles tablas con ese número de filas, que
+serían $2^a$. Es decir, en total, para $n$ proposiciones simples se tienen
+${2^2}^n$.
+
+
+
+
+### Validación de proposiciones
+
+
+
+
+### Forma clausulada de proposiciones
+
+Echo en falta, al comienzo de la Sección 1.6 Forma clausulada de
+proposiciones, dar la definición de _literal_ (_literal_) de una expresión
+lógica. Este no es más que una proposición simple o su negación; por
+ejemplo, $p$ o $\neg p$.
+
+Pregunta. ¿Tienen que aparecer todos los términos en cada cláusula?
+
+A la forma normal conjiuntiva se la suele llamar, en ciencias de la
+computación, _maxitérmino_ (_maxterm_).
+
+Aunque no se explique, análogamente también se tiene la forma normal
+disyuntiva (en ciencias de la computación, _minitérmino_, _minterm_), que es
+una expresión de disyunciones de conjunciones de literales.
+
+
+
+

@@ -1,0 +1,21 @@
+author: "Carlos E. Tafur Egido"
+metad-author: "Carlos E. Tafur Egido"
+lang: es
+otherlangs: en
+title: "Apuntes de Lenguaje Matemático, Conjuntos y Números"
+metad-title: "Apuntes de Lenguaje Matemático, Conjuntos y Números"
+date: 02/08/2025
+metad-date: 02/08/2025
+description: "Apuntes de la asignatura Lenguaje Matemático, Conjuntos y Números."
+keywords:
+  - matemáticas
+  - lógica
+  - teoría de conjuntos
+  - teoría de grupos
+  - álgebra abstracta
+  - números
+bibliography:
+  - referencias.yaml
+
+# This can't be specified in the defaults file.
+link-citations: true

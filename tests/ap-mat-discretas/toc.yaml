@@ -1,0 +1,40 @@
+
+
+
+input-files:
+  - ./src/introduccion.mkd
+  - ./src/teor-numeros.mkd
+  -   ./src/teor-numeros/intro-teor-num.mkd
+  -   ./src/teor-numeros/numeros-enteros.mkd
+  # -     ./src/teor-numeros/numeros-enteros/introd-numeros-enteros.mkd
+  # -     ./src/teor-numeros/numeros-enteros/estr-alg-z.mkd
+  # -     ./src/teor-numeros/numeros-enteros/resta-y-div.mkd
+  # -     ./src/teor-numeros/numeros-enteros/mayor-que.mkd
+  # -     ./src/teor-numeros/numeros-enteros/prop-buena-ord.mkd
+  # -   ./src/teor-numeros/division-en-z.mkd
+  # -     ./src/teor-numeros/division-en-z/divide-a.mkd
+  # -     ./src/teor-numeros/division-en-z/div-en-z-resto.mkd
+  # -     ./src/teor-numeros/division-en-z/max-com-div.mkd
+  # -     ./src/teor-numeros/division-en-z/algo-euclides.mkd
+  # -   ./src/teor-numeros/numeros-primos.mkd
+  # -     ./src/teor-numeros/numeros-primos/introduccion.mkd
+  # -   ./src/teor-numeros/ec-diofanticas.mkd
+  # -     ./src/teor-numeros/ec-diofanticas/intro.mkd
+  # -     ./src/teor-numeros/ec-diofanticas/ec-lineal.mkd
+  # -     ./src/teor-numeros/ec-diofanticas/ec-resta-de-cuadrados.mkd
+  # -     ./src/teor-numeros/ec-diofanticas/factorizacion-fermat.mkd
+  # -     ./src/teor-numeros/ec-diofanticas/ternas-pitagoricas.mkd
+  # -     ./src/teor-numeros/ec-diofanticas/ultimo-teor-fermat.mkd
+  # -   ./src/teor-numeros/congruencias.mkd
+  # -     ./src/teor-numeros/congruencias/intro.mkd
+  # - ./src/combinatoria.mkd
+  # -   ./src/combinatoria/terminologia.mkd
+  # -   ./src/combinatoria/intro-combinatoria.mkd
+  # -   ./src/combinatoria/tecnicas-basicas.mkd
+  # -   ./src/combinatoria/perm-var-comb.mkd
+  # -   ./src/combinatoria/coef-bin-multi.mkd
+  # -   ./src/combinatoria/princ-incl-excl.mkd
+  # - ./src/referencias.m
+
+
+

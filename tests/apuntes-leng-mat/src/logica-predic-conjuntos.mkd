@@ -1,0 +1,824 @@
+
+
+
+## Capítulo 2. Conjuntos {#cap-conjuntos}
+
+
+
+### 2.1. Algunas ideas sobre conjuntos. Predicados
+
+En lo que respecta a los conjuntos, aunque existe un formalismo riguroso
+para presentar este concepto, normalmente en los cursos introductorios se
+opta por dar simplemente unas nociones intuitivas de estos; basta con que
+aprenda a operar con ellos, evitando los casos conflictivos que pueden
+surgir. Al fin y al cabo, el fin con el que se incluyen en asignaturas como
+esta es que aprenda a hacer demostraciones.
+
+A esta forma algo superficial de presentar la teoría de conjuntos se la
+suele calificar de _intuitiva_ o _ingenua_ (_naïve_), palabra que verá en
+muchos de los textos.
+
+Se explican junto con nociones de lógica, ya que se puede afirmar que la
+lógica y la teoría de conjuntos constituyen la base de todas las
+matemáticas. Advierta que a veces, en algunas asignaturas de matemáticas, se
+encuentra en un nivel de abstracción en el que "pierde de vista" los
+conjuntos. Es lo que sucede, por ejemplo, en el álgebra básica y el cálculo.
+Pero siempre, si se adentra un poco, llegará un punto en el que tenga que
+manejar conjuntos.
+
+Llegado un punto, se ve que la presentación ingenua tiene ciertas carencias.
+Pueden aparecer expresiones que en principio parece que se refieren a un
+conjunto pero en realidad no es así. A estas situaciones se las suele
+conocer como _paradojas_ (_paradoxes_), y son las que en su día motivaron
+una presentación rigurosa (o, dicho de otro modo, una formalización) de la
+teoría de conjuntos y, en definitiva, de las matemáticas. Por ejemplo, tal y
+como se muestra en [@pineda p. 34], una restricción que se debe imponer (de
+lo contrario, aparecerá una paradoja) es que un objeto no puede ser
+simultáneamente un conjunto y un elemento del mismo.
+
+En [@pineda p. 66] puede ver la definición rigurosa de _conjunto_ (_set_).
+Es una definición axiomática, como es habitual en matemáticas, pero aquí se
+presenta solo por si tiene curiosidad; no es materia que vaya a entrar en el
+examen. En [@ol-set-theory] se tratan los conjuntos de manera ingenua en la
+primera parte y, en la última (parte III), de manera rigurosa.
+
+A los conjuntos unitarios en inglés los llaman _singletons_.
+
+El concepto de _subconjunto_ (_subset_) es muy importante. Es una relación
+que a veces se llama _relación de contención_ o _de inclusión_.
+
+En cuanto a la notación que se emplea para esta relación, se puede decir que
+hay dos predominantes en la actualidad. La que creo que es la clásica es la
+que se usa en [@pineda]. En esta, el símbolo de _subconjunto_ es
+"$\mathbin{\subset}$". La notación que ahora se ve con más frecuencia es la
+que se sigue en [@ol-set-theory]. En esta, un subconjunto se indica con el
+símbolo "$\mathbin{\subseteq}$". Sería algo análogo a como se hace con el
+signo de "menor o igual que...", "$\mathbin{\leq}$"; cosa que tiene sentido
+ya que también se admite la posibilidad de que el conjunto contenido sea
+igual que el que lo contiene.
+
+Los símbolos "$\mathbin{\nsubset}$" y "$\mathbin{\nsubseteq}$" representan a
+las negaciones de la inclusión, en las respectivas notaciones.
+
+Algo que echo en falta en [@pineda], y que tiene relación con la notación de
+_subconjunto_, es el concepto de _subconjunto propio_. Este no es más que un
+subconjunto excluyendo la posibilidad de que sea igual que el conjunto que
+lo contiene. Es decir, dados dos conjuntos $A$ y $B$, se dice que $A$ es un
+subconjunto propio de $B$ si y solo si $A$ es un subconjunto de $B$ y $A
+\neq B$.
+
+En la notación moderna de _subconjunto_, la relación de _subconjunto propio_
+se suele expresar por medio del símbolo "$\mathbin{\subsetneq}$". En la
+antigua creo que no hay una simbología específica para esto. En cualquier
+caso, siempre se puede mencionar en la prosa.
+
+Tal y como verá, una de las dificultades de la teoría de conjuntos se
+encuentra en las situaciones en las que aparecen conjuntos de conjuntos. La
+notación a veces es complicada de entender. A este respecto, son de destacar
+[@pineda p. 45] **Ejercicio 2.14** y la definición de _familia_ de conjuntos
+de [@pineda p. 51].
+
+En cuanto a la terminología, conviene advertir de que muchas veces se
+hablará de _conjunto_, sin especificar de si se trata de un subconjunto;
+entre otras cosas, porque ni siquiera se sabe _a priori_. TKTK. Es decir,
+ese prefijo _sub-_, en este caso, sería como un adjetivo que no hay por qué
+mencionarlo siempre.
+
+Una consecuencia inmediata de la definición de _subconjunto_ es que, para
+todo conjunto $A$ se cumple
+
+$$ A \subseteq A $$
+
+Otra cosa que no se menciona en [@pineda] pero que creo que es importante
+presentarla al comienzo es que la relación de inclusión de conjuntos cumple
+la propiedad transitiva; es decir, dados tres conjuntos $A$, $B$ y $C$, si
+$A \subseteq B$ y $B \subseteq C$, entonces $A \subseteq C$. Es muy fácil de
+demostrar a partir de la definición de _subconjunto_.
+
+
+
+
+#### Predicados
+
+Se podría decir que los predicados son a las proposiciones como las
+variables (también llamadas _indeterminadas_) a los números. Es decir, se
+trata de un proceso de abstracción análogo al que se hace al pasar de la
+aritmética al álgebra (básica, es decir, de $\mathbb{Z}$, $\mathbb{R}$,
+etc.).
+
+En cuanto a la notación, aunque en [@pineda] ponen al designador del
+predicado en mayúsculas y el argumento como subíndice, por ejemplo, "$P_x$",
+también hay quien usa la notación como con las funciones; es decir, algo
+como "$P(x)$".
+
+En realidad, la lógica de predicados es mejor llamarla _lógica de primer
+orden_, pues, además de hablar de los predicados, se incluyen otras cosas
+respecto a la lógica de proposiciones, como, por ejemplo, los
+cuantificadores.
+
+Algo que me gustaría aclarar es que, cuando hablamos de conjuntos _por
+extensión_ o _por comprensión_ (que, por cierto, estas dos denominaciones
+reciben muchos otros nombres a este respecto; sobretodo la última), lo que
+estamos haciendo es _expresarlos_ o _definirlos_ (a los conjuntos).
+
+En una expresión por comprensión de un conjunto, se usa el símbolo
+"$\mathbin{|}$", o, alternativamente, "$\mathbin{:}$", que se puede leer
+como "tal que...". En realidad, si lo piensa, no es más que una conjunción,
+con lo que se podría leer como "y". Incluso a veces verá que una coma,
+"$\mathbin{,}$", se corresponde con una conjunción en la notación
+matemática. Esto también se explica en [@velleman].
+
+En la expresión por comprensión, a veces, se abusa de la notación y se ven
+expresiones como
+
+$$ \{2k \ | \ k \in \mathbb{N}\} $$
+
+en lugar de
+
+$$ \{x \in \mathbb{N} \ | \ (\exists x \in \mathbb{N}) \ x = 2k\} $$
+
+que es como debería ser. Formas así también se consideran válidas aunque en
+principio sean "agramaticales". Serían como lo que sucede con los modismos
+(_idioms_) en el estudio de los lenguajes naturales; se usan por comodidad.
+
+Por completar su conocimiento, quizás le interese saber la distinción entre
+_variable libre_ (_free variable_) y _variable ligada_ (_bound variable_) en
+un predicado. Puede consultar [@velleman].
+
+El _conjunto vacío_ (_empty set_) sería "$\mathbin{\{}{\}}$" en la expresión
+por extensión; es decir, tal y como indica su propio nombre, el conjunto sin
+elementos; aunque se suele preferir el símbolo "$\emptyset$" para denotarlo.
+Por comprensión, según pone en [@pineda], sería
+
+$$ \{x \in U \ | \ x \notin U\} $$
+
+En realidad serviría cualquier proposición que juntándola (es decir,
+conectándola mediante un operador conjunción, "$\mathbin{\land}$") con la
+que está a la izquierda de "$\mathbin{|}$", produzca el valor _falso_ para
+cualquier valor de $x$, ya que estas en forma conjunta no producirían ningún
+valor y por tanto se tendría el conjunto $\emptyset$. En particular, por la
+regla de la contradicción, se cumple para la expresión anterior, ya que
+
+$$ (x \in U) \ \land \ (x \notin U) $$
+
+produce un valor _falso_ para cualquiera que tome $x$; o, lo que es lo
+mismo, una contradicción. Cualquier predicado que junto con $x \in U$
+produzca el valor _falso_ para todos los valores de $x$ será un predicado
+equivalente TKTK.
+
+Por cierto, existe un único conjunto vacío. Esto se deduce de forma directa
+de la forma en la que hemos definido la igualdad de conjuntos (que en el
+fondo no es más que el Axioma de Extensionalidad de la definición formal de
+_conjunto_).
+
+También, algo que se puede demostrar ---ahora que se ha definido el conjunto
+vacío--- es que, para todo conjunto $A$, se cumple
+
+$$ \emptyset \subseteq A $$
+
+Se demuestra a partir de la definición de _subconjunto_ y se trataría de una
+proposición vacuamente cierta.
+
+En lo que respecta a la presentación de los números naturales que se da en
+[@pineda p. 38], hay que aclarar que en ese texto se adopta el convenio de
+admitir al $0$ como un número natural. Esto no es algo que se haga siempre;
+no existe un criterio unificado a este respecto en la comunidad matemática,
+y de hecho hay razones tanto para incluirlo como para no hacerlo, según el
+área de las matemáticas en la que nos encontremos. Por ejemplo, en la teoría
+de conjuntos y la combinatoria se suele incluir, mientras que en la teoría
+de números no.
+
+En cualquier caso, tanto los Axiomas de Peano como el Principio de Inducción
+serían igualmente válidos si se asumiese que $\mathbb{N}$ comienza en $1$ en
+lugar de en $0$.
+
+Hablando de esos axiomas, me gustaría aclarar lo que se hace con el $A_{5}$.
+Este hace que ese subconjunto sea $\mathbb{N}$ ya que, tal y como se dice en
+este, es un subconjunto de $\mathbb{N}$. Entonces, si se dan esas
+condiciones, $\mathbb{N}$ es un subconjunto de este. Entonces, al darse la
+doble inclusión, los dos conjuntos son iguales.
+
+El Principio de Inducción, puede verse también de un modo algo más general,
+tal y como se explica en [@pineda p. 66]. Se puede comenzar desde cualquier
+número natural; solo que entonces se cumpliría para todos a partir de este.
+
+Aunque no es muy común, a una definición recurrente también se la puede
+llamar _definición inductiva_ ya que esta hace uso del Principio de
+Inducción. Por cierto, a una expresión no recurrente también se la suele
+llamar _forma cerrada_ o _forma explícita_.
+
+En cuanto a la definición de _factorial_, a mí me gusta más la definición
+siguiente:
+
+$$ (n + 1)! = \left\{
+     \begin{array}{ll}
+         1            &\ \text{si } n + 1 = 0 \\
+         n!\,(n + 1)  &\ \text{si } n + 1 > 0
+     \end{array} \right. $$
+
+o, mejor aún,
+
+$$ n! = \left\{
+     \begin{array}{ll}
+         1              &\ \text{si } n = 0 \\
+         (n - 1)!\, n   &\ \text{si } n > 0
+     \end{array} \right. $$
+
+Tengo la manía de poner el factorial a la izquierda, pues no tengo claras
+las reglas de precedencia de este operador TKTK. La verdad es que me parece
+una simbología bastante desacertada. TKTK.
+
+Por cierto, existen funciones recurrentes en las que el término general
+depende de más de uno de los anteriores, con lo que, para concretar y dejar
+de tener una familia de funciones, deberíamos obtener más de un valor
+concreto. Es lo que sucede, por ejemplo, con la sucesión de Fibonacci, en
+[@pineda p. 64].
+
+
+
+
+#### Cuantificadores
+
+En lo que respecta a los cuantificadores, la notación a veces varía en los
+distintos textos. En [@pineda], se suele encerrar entre paréntesis la parte
+del cuantificador. Por ejemplo,
+
+$$ (\forall x \in C)\: P_x $$
+
+Es común ver, no solo en [@pineda], que en el uso de esta notación a veces
+se es un poco laxo y se quita ese paréntesis. En este caso, se suele poner
+un punto o una coma tras la variable del cuantificador, como indicación de
+separación entre la expresión del cuantificador y el predicado. Imagino que
+se hace con el propósito de que quede una expresión más "limpia", menos
+"cargada" (con menos paréntesis). Por ejemplo,
+
+$$ \forall x \in C,\ P_x $$
+
+En cuanto a [@velleman], la notación que emplea es mucho más rigurosa. Lo
+primero es que en la variable del cuantificador no se especifican aspectos
+de esa variable, que no son otra cosa más que predicados. Así, en lugar de
+'$\forall x \in C\ldots$', se pondría '$\forall x(x \in C \land \ldots)$'.
+
+Además, lo que se pone entre paréntesis ---o corchetes o llaves, según
+los anidamientos que existan--- es el predicado; no el cuantificador con
+su variable.
+
+$$ \forall x \ (x \in C \land P_x) $$
+
+A este respecto, se siguen las mismas reglas del uso de paréntesis que con
+el operador negación, '$\neg$'. Por ejemplo, se pondría
+
+$$ \forall x \ P_x $$
+
+pero,
+
+$$ \forall x \ x \in C \land P_x $$
+
+TKTK.
+
+Lo cierto es que, en matemáticas, la notación de [@velleman] a este respecto
+no se suele ver con frecuencia. La que se suele ver en los textos de
+matemáticas es la de [@pineda].
+
+Volviendo a la definición de _subconjunto_, podríamos decir que se tiene la
+siguiente equivalencia:
+
+$$ A \subseteq B \quad \Longleftrightarrow \quad \forall x \in A,\: x \in B
+$$
+
+o, en la notación de [@velleman],
+
+$$ A \subseteq B \quad \Longleftrightarrow \quad \forall x \ (x \in A
+  \rightarrow x \in B) $$
+
+o
+
+$$ [A \subseteq B] \ \Longleftrightarrow \ [\forall x \ (x \in A \rightarrow
+  x \in B)] $$
+
+Algo que se explica en [@velleman] pero no en [@pineda] es que en la lógica
+de primer orden también podemos usar constantes; es decir, variables con un
+valor fijado. Vea el ejemplo 2.1.2 punto 4.
+
+Una forma de justificar que
+
+$$ \forall x \in C,\ P_x\quad \Longleftrightarrow \quad C_P = C $$
+
+sería ver que, por un lado, al definir a $C_P$ del modo siguiente,
+
+$$ C_P = \{x \in C \ | \ P_x\} $$
+
+obviamente se cumple $C_P \subseteq C$, ya que para todo $x \in C_P$ se
+tiene que $x \in C$ (hemos aplicado la definición de _subconjunto_). Por
+otro lado, la expresión '$\forall x \in C,\: P_x$" viene a decir que para
+un $x \in C$ cualquiera se tiene que $P_x$ es verdadero y, por tanto, por la
+definición de $C_P$, se tiene que $x \in C_P$. Por tanto, se ha demostrado
+que $C \subseteq C_P$. Por la doble inclusión se tiene entonces que $C_P =
+C$.
+
+La otra expresión alternativa, es decir, la del cuantificador existencial,
+es bastante evidente a la vista de la definición del conjunto $C_P$.
+
+Lo que viene a decir la última parte de la observación de [@pineda p. 43] es
+que no hay una forma directa de transformar una expresión en lenguaje
+natural (español o inglés, por ejemplo) al lenguaje matemático. Por ejemplo,
+en el enunciado "Un número primo es impar" ese _un_ no se debe interpretar
+como se hace la mayoría de las veces, pues en este caso no se refiere a uno
+en particular, sino a uno genérico.[^sinecdoque] Es decir, es como si se
+dijese "Para todo número primo, este es impar".[^unico-primo-par]
+
+[^sinecdoque]: En la lingüística creo que a esta figura se la conoce como
+  sinécdoque de género por especie.
+
+[^unico-primo-par]: Por cierto, esa expresión es falsa ya que el $2$ es un
+  número primo que no es impar. Es fácil demostrar que es el único con esa
+  propiedad de entre todos los números primos, pero eso queda fuera de esta
+  asignatura.
+
+Respecto a lo que se comenta sobre si se hace mayor o menor uso de la
+simbología, en detrimento o favor de la prosa, personalmente soy de usar
+mucha simbología, pues me resulta más clara.
+
+
+
+
+
+#### Relaciones entre los cuantificadores '$\exists$" y '$\forall$'
+
+Partiendo del resultado siguiente de la sección anterior:
+
+$$ \forall x \in C,\ P_x \quad \Longleftrightarrow \quad C_P = C $$
+
+tenemos que
+
+$$ \neg(\forall x \in C,\ P_x) \quad \Longleftrightarrow \quad C_P \neq C $$
+
+Pero, como por la definición de $C_P$ se sigue cumpliendo $C_P \subseteq C$,
+se tiene entonces que $C \nsubseteq C_P$, y de esto podemos deducir, por la
+definición de _subconjunto_, que existe un $x \in C$ tal que $x \notin C_P$,
+cosa que podríamos expresar con el cuantificador existencial, '$\exists$',
+del modo siguiente:
+
+$$ \exists x \in C,\ \neg P_x $$
+
+A la otra equivalencia se llega de un modo análogo. Como vimos,
+
+$$ \exists x \in C,\ P_x \quad \Longleftrightarrow \quad C_P \neq \emptyset
+$$
+
+con lo que
+
+$$ \neg(\exists x \in C,\ P_x)\quad \Longleftrightarrow \quad C_P =
+\emptyset $$
+
+y aplicando la definición del conjunto $C_P$ tenemos que es lo mismo que
+
+$$ \forall x \in C,\ \neg P_x $$
+
+En el apartado b del ejercicio 18 se ve otra conclusión relacionada con
+esto.
+
+
+
+
+#### Complementario y partes de un conjunto
+
+Aunque se deje para más adelante (tabla en [@pineda p. 54]), conviene
+explicar aquí que existen las propiedades análogas, para la teoría de
+conjuntos, de las reglas de De Morgan (de la lógica). Para dos conjuntos $A$
+y $B$ arbitrarios, se cumplen
+
+$$ \begin{aligned}
+     \overline{A \cup B}  &= (\overline{A}) \cap (\overline{B}) \\
+     \overline{A \cap B}  &= (\overline{A}) \cup (\overline{B})
+   \end{aligned} $$
+
+Se demuestran de un modo bastante directo a partir de la definición del
+concepto de _complementario_ de un conjunto.
+
+Tras definir el conjunto de las partes de un conjunto (_power set_),
+tendríamos una expresión simbólica alternativa para los subconjuntos que nos
+vendrá bien en ciertas situaciones:
+
+$$ B \subseteq A \quad \Longleftrightarrow \quad B \in \mathcal{P}(A) $$
+
+Antes de continuar, me gustaría presentar un resultado de las partes de un
+conjunto.
+
+::: {.theorem}
+  Dados dos conjuntos $A$ y $B$, se cumple
+
+  $$ A \subseteq B \quad \Longrightarrow \quad\mathcal{P}(A) \subseteq
+  \mathcal{P}(B) $$
+:::
+
+::: {.proof}
+  La forma que me resulta más sencilla para demostrarlo es mediante el
+  condicional contrarrecíproco.
+
+  Partiendo de $\mathcal{P}(A) \nsubseteq \mathcal{P}(B)$, vemos que esto es
+  lo mismo que decir que existe un conjunto $C \in \mathcal{P}(A)$ tal que
+  $C \notin \mathcal{P}(B)$.
+
+  ESto es lo mismo que afirmar que existe un conjunto $C \neq \emptyset$
+  para el que $C \subseteq A$ y $C \nsubseteq B$.
+
+  Entonces, podemos decir que para todo elemento $x \in C$ se tiene que $x
+  \in A$, pero además existe un $x \in C$ tal que $x \notin B$.
+
+  Por tanto, existe un $x \in A$ tal que $x \notin B$, que es como decir que
+  $A \nsubseteq B$.
+:::
+
+Antes de seguir, vamos a dar una noción no muy formal del _cardinal_
+(_cardinal_) o _tamaño_ de un conjunto. TKTK.
+
+El ejercicio 2.14 ([@pineda p. 45]) es una demostración bastante conocida de
+las matemáticas. Una forma de hacerla es por la teoría de conjuntos, tal y
+como se hace aquí. No obstante, también se puede demostrar haciendo uso de
+otras áreas de las matemáticas.
+
+Voy a presentar aquí la misma demostración de [@pineda] solo que expresada a
+mi manera (incluyendo la simbología) y añadiendo algunas cosas del final que
+dejan sin completar.
+
+::: {.exercise data-label="2.14"}
+  Por abreviar, a $\text{card}(C)$ lo designaremos por $n$. También, a
+  $\text{card}(\mathcal{P}(C))$ lo designaremos por $a_n$. Advierta que
+  tiene que tener ese subíndice necesariamente.
+
+  Definimos otro conjunto:
+
+  $$ D = C \setminus \{x\} $$
+
+  para un $x \in C$. Evidentemente, se tiene que $D \subseteq C$. Si nos
+  fijamos en el número de elementos, tenemos, evidentemente, que
+  $\text{card}(D) = n - 1$. Además, según la notación que hemos establecido
+  para el número de elementos de las partes de un conjunto, se tendrá que
+  $\text{card}(\mathcal{P}(D)) = a_{n - 1}$.
+
+  Advierta que aún no sabemos cuál es la relación entre $n$ y $a_n$. De
+  hecho, eso es precisamente lo que deseamos hallar en este problema.
+
+  Ahora, vamos a definir a un conjunto $D'$ como
+
+  $$ D' = \mathcal{P}(D) $$
+
+  es decir, es el conjunto de todos los subconjuntos de $D$, o sea, de $C -
+  \{x\}$. Advierta que $D' \subseteq \mathcal{P}(C)$. Además, para todo
+  elemento (y, además, conjunto) $Y$ de $D'$ formamos un conjunto $Y \cup
+  \{x\}$. Al conjunto de todos estos conjuntos $Y \cup \{x\}$ lo designamos
+  por $D''$. Advierta que se cumple $D'' \subseteq \mathcal{P}(C)$.
+
+  Como $D$ tiene $n - 1$ elementos, se tendrá que $D'$ contiene $a_{n - 1}$
+  elementos (que a su vez son conjuntos). (Esa relación nos sigue siendo
+  desconocida, de momento.) Por otro lado, por la forma de construir al
+  conjunto $D''$, se tiene que este ha de tener el mismo número de elementos
+  que $D'$.
+
+  Además de lo anterior, se puede ver fácilmente que se cumplen
+
+  $$ \begin{aligned}
+         D' \cup D''  &= C \\
+         D' \cap D''  &= \emptyset
+     \end{aligned} $$
+
+  Son disjuntos (es decir, se cumple la segunda) porque no existe ningún
+  conjunto que contenga y no contenga (simultáneamente) a un elemento $x$.
+  La primera es bastante evidente. TKTK.
+
+  Por lo que sabemos de combinatoria, al cumplirse esas dos propiedades se
+  tiene que el conjunto unión de $D'$ y $D''$ tendrá como número de
+  elementos a la suma de esos dos; es decir, se cumple que
+
+  $$ a_n = a_{n - 1} + a_{n - 1} = 2\, a_{n - 1} $$
+
+  Advierta que esta es una definición recursiva, aunque incompleta. Hay que
+  tener en cuenta también algún valor concreto, pues, sin este, tendremos
+  una gama o familia de funciones. Esto es fácil. Para $C = \emptyset$
+  tenemos que $n = \text{card}(C) = \text{card}(\emptyset) = 0$. También, se
+  dará $a_{0} = \text{card}(\mathcal{P}(C)) = 1$, ya que
+  $\mathcal{P}(\emptyset) = \{\emptyset\}$.
+
+  Entonces, ahora sí tenemos una definición recursiva. Es la siguiente:
+
+  $$ a_n = \left\{
+       \begin{array}{ll}
+           1              &\ \text{si } n = 0 \\
+           2\, a_{n - 1}  &\ \text{si } n > 0
+       \end{array} \right. $$
+
+  A la vista de lo siguiente,
+
+  $$ a_n = 2\, a_{n - 1} = 2(2\, a_{n - 2}) = 2(2(2\, a_{n - 3})) = \cdots
+       = 2(2(2(2\, \cdot \cdots \cdot (2\, a_0)))) $$
+
+  tiene pinta que la fórmula explícita (es decir, no recursiva) será la
+  siguiente:
+
+  $$ a_n = a_0\,\prod_{i = 0}^n 2 = 1 \cdot 2^n = 2^n $$
+
+  pero esto no lo hemos demostrado; solo lo hemos intuido. Si aplicamos el
+  Principio de Inducción podemos ver si se cumple o no se cumple esto.
+
+  El caso base se dará para el valor $n = 0$. Para este se tiene que $a_0 =
+  1 = 2^0$. De momento, se cumple.
+
+  Ahora, pasamos a ver la hipótesis de inducción. Será $a_n = 2^n$; y la
+  meta de inducción será $a_{n + 1} = 2^{n + 1}$.
+
+  Vamos a ver si de la hipótesis se deduce la meta. Aplicando el resultado
+  obtenido antes tenemos
+
+  $$ a_{n + 1} = 2\, a_n = 2 \cdot 2^n = 2^{n + 1} $$
+
+  con lo que sí se cumple. Por tanto, se ha demostrado que la relación que
+  se cumple entre $n$ y $a_{n}$ es
+
+  $$ a_n = 2^n $$
+
+  Pero, mejor, vamos a presentar el resultado para que lo entienda
+  cualquiera sin necesidad de que conozca la terminología empleada en esta
+  demostración. Para todo conjunto $C$, se tiene que
+
+  $$ \text{card}(\mathcal{P}(C)) = 2^{\text{card}(C)} $$
+:::
+
+
+
+### Operaciones con conjuntos
+
+Para el ejemplo 2.26 de [@pineda], recuerde cómo se opera con desigualdades
+en las que aparece algún valor absoluto. (Vea el apéndice TKTK).
+
+Todas estas propiedades ([@pineda p. 46]) se pueden demostrar fácilmente. La
+primera se haría aplicando de forma directa la definición de _subconjuto_.
+La segunda y la tercera, teniendo en cuenta que la disyunción cumple las
+propiedades conmutativa y asociativa. La cuarta, porque $P_x \lor \mathbf{0}
+= P_x$, ya que se puede definir
+
+$$ \emptyset = \{x \in U \ | \ \mathbf{0}\} $$
+
+La quinta, porque $P_x \lor P_x = P_x$.
+
+Tal y como se explica en [@pineda p. 50], al igual que sucede con las
+proposiciones y los predicados, la propiedad asociativa nos permite usar
+expresiones como $A \cup B \cup C$ sin que estas sean ambiguas.
+
+El ejercicio 2.18 hace uso de estas propiedades. Tal y como expliqué antes,
+suelo hacer un mayor uso de la simbología ---tanto de la teoría de conjuntos
+como de la lógica de primer orden--- en mis demostraciones, ya que me
+resulta más claro así. También, presento las distintas fases o casos de un
+modo más visual (o tipográfico). Lo resuelvo aquí para tener un ejemplo de
+cómo lo suelo hacer.
+
+::: {.exercise data-label="2.18"}
+  Suponemos que los conjuntos $A$ y $B$ son subconjuntos de un conjunto
+  universal $U$ (universo de los predicados en las definiciones de dichos
+  conjuntos).
+
+  Fase 1 ($\Longrightarrow$). Tomamos un elemento arbitrario $x \in A$ y
+  hacemos manipulaciones de expresiones conjuntistas.
+
+  $$ \begin{array}{rcll}
+       x \in A
+         &\: \Longrightarrow
+           &\: x \in A \cup B
+           &\: \text{por la propiedad 1}  \\
+         &\: \Longrightarrow
+           &\: x \in B
+           &\: \text{por el antecedente }(A \cup B \subseteq B)
+     \end{array} $$
+
+  Fase 2 ($\Longleftarrow$).
+
+  Fase 2.1. ($A \subseteq B \ \Longrightarrow \ B \subseteq A \cup B$). Por
+  la propiedad 1, siempre se cumple que $B \subseteq A \cup B$; en
+  particular, también en los casos que se marcan en el antecedente.
+
+  Fase 2.2 ($A \subseteq B \ \Longrightarrow \ A \cup B \subseteq B$).
+  Partimos de un elemento $x \in A \cup B$ y deseamos llegar a $x \in B$. Se
+  tienen dos casos posibles:
+
+  1. $x \in B$. No hay nada que demostrar.
+  2. $x \in A$. Por el antecedente llegamos directamente a que $x \in B$.
+:::
+
+Las propiedades de la intersección de conjuntos se demuestran de modo
+análogo a como se hace con la unión. Muchas de estas se deducen de forma
+directa de las propiedades de la conjunción. Por ejemplo, $\mathbf{0} \land
+P_x \Longleftrightarrow \mathbf{0}$.
+
+Advierta que con la unión y la disyunción se cumplen los dos tipos de
+propiedades distributivas, al contrario de lo que sucede con la de la suma y
+el producto de números (del tipo que sea).
+
+En lo que respecta a las familias de conjuntos (indexadas o no indexadas),
+presentadas en [@pineda p. 51], advierta que con _familia_ no queremos más
+que decir _conjunto_. Se le llama de forma distinta para distinguir los
+distintos niveles de conjuntos, según el anidamiento.
+
+En lo que respecta a las propiedades de la diferencia de conjuntos, creo que
+la más importante, y que quizás se debería resaltar más en el texto, es
+
+$$ A \setminus B = A \cap \overline{B} $$
+
+La propiedad 1 de la diferencia de conjuntos se puede demostrar fácilmente
+manipulando expresiones conjuntistas.
+
+::: {.proof}
+$$ \begin{aligned}
+     A \setminus (A \cap B)
+       &= A \cap \overline{A \cap B} \\
+       &= A \cap (\overline{A} \cup \overline{B}) \\
+       &= (A \cap \overline{A}) \cup (A \cap \overline{B}) \\
+       &= \emptyset \cup (A \cap \overline{B}) \\
+       &= A \cap \overline{B} \\
+       &= A \setminus B
+   \end{aligned} $$
+:::
+
+En cuanto a [@pineda ejercicio 2.26], que es la demostración de la propiedad
+2, se podría haber hecho una demostración más directa, sin necesidad de ver
+los distintos casos, haciendo uso de la definición de _diferencia de
+conjuntos_.
+
+En [@pineda p. 53] **Ejercicio 2.28** se puede hacer más fácilmente mediante
+manipulaciones de las expresiones conjuntistas. Es sencillo.
+
+
+
+
+### Producto de dos conjuntos
+
+Evidentemente, aunque en [@pineda] no se presente, existe una definición
+rigurosa del concepto de _par ordenado_ (_ordered pair_). La que se suele
+dar es la definición de Viener-Kuratowski. TKTK.
+
+En realidad, al producto de conjuntos se le suele llamar en casi todos los
+textos _producto cartesiano_, aunque en [@pineda] lo mencionen solo de
+pasada.
+
+Las propiedades del producto cartesiano no presentan gran dificultad.
+
+
+
+
+### Relaciones entre conjuntos
+
+En lo que respecta al concepto de _relación_ binaria, debe saber que este es
+en realidad un predicado lógico simple de dos argumentos. En [@pineda p. 59]
+la llaman _relación lógica_, para distinguirla de la conjuntista que definen
+posteriormente. En realidad, pasar de las relaciones lógicas (las
+auténticas) a las conjuntistas es algo más complicado de lo que se nos
+muestra en [@pineda]. Puede consultar [@ol-set-theory] para ver que, aunque
+muchos conjuntos pueden sintetizar la información que nos da una relación,
+esto no siempre sucede.
+
+En cualquier caso, a nosotros en principio lo que nos interesa serán las
+relaciones desde el punto de vista conjuntista, y no nos detendremos en la
+cuestión anterior. Para nosotros, todas las relaciones que veremos se podrán
+definir desde el punto de vista conjuntista.
+
+En [@velleman] llaman _relación_ a las conjuntistas mientras que a las
+lógicas las llaman _predicados de dos argumentos_ (afirmaciones o
+predicados?? TKTK). Esto quizás sea lo que más sentido tenga.
+
+Si los argumentos del predicado son 2, será una relación _binaria_; si son
+3, terciaria, etc. En general, $n$-arias, para un $n \in \mathbb{Z}^{+}$. A
+esta cualidad se la conoce como la _aridad_ (_arity_) de la relación. Pero
+en realidad esta información casi nunca se da de forma explícita, sino que
+se entiende por los datos del problema o situación en particular. Es decir,
+normalmente, se habla de una _relación_, sin especificar su aridad.
+
+Me gustaría aclarar que a veces se usan definiciones algo distintas del
+concepto _relación_. Así, en [@ol-set-theory] la definen como un subconjunto
+de $A \times A$, siendo $A$ un conjunto. A esta, en nuestra terminología
+---que cuenta con una definición más general--- las llamamos _relaciones
+homogéneas_.
+
+En cuanto a la notación, personalmente me gusta usar "$\mathcal{R} \subseteq
+A \times B$" para las relaciones y reservar "$\mathcal{R}:A \longrightarrow
+B$" para las aplicaciones (también llamadas _funciones_), un tipo de
+relaciones que cumplen ciertas propiedades y que se estudian un poco más
+adelante. Me gusta distinguirlas así, simbólicamente. Si sigue esta misma
+notación, debe tener cuidado, pues en muchos textos también expresan las
+relaciones (en general) con expresiones del tipo de $\mathcal{R}:A
+\longrightarrow B$. Es lo que se hace en [@pineda], con lo que aquí usaré
+una notación algo distinta a este respecto.
+
+La terminología que se presenta al respecto de las relacioens en [@pineda p.
+60], en otros textos es común que tome otros nombres:
+
+- Al conjunto original (ojo, no el inicial) de la relación también se le
+  conoce como _dominio_ (_domain_), y se puede designar por
+  "$\text{Dom}(\mathcal{R})$".
+- Al final, _codominio_ (_codomain_).
+- Al conjunto imagen de la relación, _rango_ (_range_) o _recorrido_, y se
+  puede designar por "$\text{Im}(\mathcal{R})$".
+- Al (conjunto) original de un elemento del conjunto final por $\mathcal{R}$
+  también se le puede llamar _contraimagen_ (de ese mismo elemento por esa
+  misma relación).
+
+Por cierto, creo que no pasa nada si en lugar de decir "conjunto imagen" o
+"conjunto original" decimos simplemente "imagen" u "original",
+respectivamente, ya que se sobrentiende que se trata de conjuntos. Al igual
+que se puede omitir mencionar a qué relación nos referimos, si está claro
+por el contexto.
+
+También, me gustaría aclarar que una relación (conjuntista) y su grafo se
+diferencian en que en este último se "pierde" cierta información.
+Concretamente, no sabemos cuáles son el conjunto inicial ni el final.
+Podrían ser, respectivamente, cualaquier supraconjunto del conjunto original
+y del conjunto imagen.
+
+Por cierto _grafo_ sería básicamente un concepto que ya conoce de sus
+estudios previos: la gráfica de una función; aunque aquí, de momento,
+estamos estudiando relaciones, que es un concepto más amplio que el de
+_función_.
+
+Los ejercicios que se presentan aquí tienen relación con partes del álgebra
+básica y el precálculo. Si se fija, se muestran cosas como "$\mathcal{G}(1)
+= \{0\}$". Esto no es más que lo que en esas asignaturas expresaríamos por
+"$\mathcal{G}(1) = 0$", que, aunque le parezca increíble, en cierto modo es
+abusar de la notación. Sin embargo, no se podría hacer esa simplificación en
+la notación para $\mathcal{G}(x) = \{{-\sqrt{1 - x^2},\sqrt{1 - x^2}}\}$ ya
+que se tienen dos resultados; aunque también se podría presentar como
+$\mathcal{G}(x) = \pm \sqrt{1 - x^2}$.
+
+Como se verá en el capítulo siguiente, un tipo muy importante de relaciones
+son las que producen un único resultado; a estas se las llama _aplicaciones_
+o _funciones_,[^def-funcion-completa] y ya las conoce de asignaturas
+previas, solo que este concepto se lo definieron de formas menos rigurosas;
+por ejemplo, diciendo que se comportan como si se tratase de una máquina.
+
+[^def-funcion-completa]: Tampoco llega a ser esta una definición completa;
+  ya lo verá.
+
+En [@pineda] no se da la definición más amplia posible de la composición de
+relaciones, sino que usan relaciones $\mathcal{R}$ y $\mathcal{S}$ que
+tienen el mismo conjunto final e inicial, respectivamente, al cual denotan
+por $B$. Imagino que lo hacen por no hacerlo excesivamente complejo.
+
+Para la definición amplia se debería imponer una condición para que se pueda
+tener la composición de relaciones $\mathcal{S} \circ \mathcal{R}$. Debe
+cumplirse que el conjunto original de $\mathcal{S}$ sea un subconjunto del
+conjunto imagen de $\mathcal{R}$.
+
+Es decir, si tuviésemos dos relaciones $\mathcal{R} \subseteq A \times B$ y
+$\mathcal{S} \subseteq C \times D$, para tener $\mathcal{S} \circ
+\mathcal{R}$ se debería dar
+
+$$ \mathcal{S}^{-1}(D) \subseteq \mathcal{R}(A) $$
+
+o, lo que es lo mismo,
+
+$$ \text{Dom}(\mathcal{S}) \subseteq \text{Im}(\mathcal{R}) $$
+
+Si no se da esta condición, podría tenerse un elemento de $C$ que, aunque
+tenga su imagen por $\mathcal{S}$ en $D$, no tiene ninguna contraimagen por
+$\mathcal{R}$ en $A$. Sin embargo, sí está permitido que exista un elemento
+de $C$ que tenga una contraimagen por $\mathcal{R}$ en $A$ pero no tenga
+imagen por $\mathcal{S}$ en $D$.
+
+Por otro lado, estaría bien que se explicara que la composición viene a
+decir que, para un $x \in A$, se tiene
+
+$$ (\mathcal{S} \circ \mathcal{R})(x) = \mathcal{S}(\mathcal{R}(x)) $$
+
+En algún texto he visto que la definen justo al revés, pero es muy poco
+común verlo así.
+
+
+
+
+
+### Comentarios
+
+
+
+
+#### Sobre el método de inducción
+
+En [@pineda ejemplo 2.49], quizás debería dejar más claro que _sucesión_ y
+_progresión_ son lo mismo.
+
+Para pasar de una forma recursiva de una sucesión a una explícita, se suele
+usar el Principio de Inducción. Se puede ver, por ejemplo, cómo se aplica a
+las fórmulas de las sumas de sucesiones, o, lo que es lo mismo, el término
+general de una serie; por ejemplo, las que se presentan en [@pineda p. 66],
+es decir, las aritméticas y las geométricas.
+
+Como curiosidad, quizás le interese saber que existen formalismos
+alternativos de los números naturales en los que se tiene, en lugar del
+Principio de Inducción como quinto axioma, la Propiedad de Buena Ordenación.
+Tomando uno cualquiera de estos, se deduce el otro y por tanto es un
+teorema. Esto se explica en _Rosen Number Theory_.
+
+A la variante del método de inducción que llamamos _inducción completa_, a
+veces se prefiere calificarla de _fuerte_ (_strong_) o _estricta_, en lugar
+de _completa_.
+
+
+
+

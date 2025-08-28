@@ -1,0 +1,11 @@
+
+
+
+input-files:
+  - src/introd.mkd
+  - src/logica-proposiciones.mkd
+  - src/logica-predic-conjuntos.mkd
+  - src/rel-y-aplic.mkd
+  - src/referencias.mkd
+
+

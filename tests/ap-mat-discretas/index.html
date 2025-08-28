@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="Carlos E. Tafur Egido" />
+  <meta name="dcterms.date" content="2025-02-08" />
+  <meta name="keywords" content="matemáticas, teoría de números, teoría
+de grafos, combinatoria" />
+  <meta name="description" content="Apuntes de la asignatura Matemáticas Discretas." />
+  <title>Apuntes de Matemáticas Discretas</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    q { quotes: "“" "”" "‘" "’"; }
+    /* CSS for citations */
+    div.csl-bib-body { }
+    div.csl-entry {
+      clear: both;
+      margin-bottom: 0em;
+    }
+    .hanging-indent div.csl-entry {
+      margin-left:2em;
+      text-indent:-2em;
+    }
+    div.csl-left-margin {
+      min-width:2em;
+      float:left;
+    }
+    div.csl-right-inline {
+      margin-left:2em;
+      padding-left:1em;
+    }
+    div.csl-indent {
+      margin-left: 2em;
+    }  </style>
+  <link rel="stylesheet" href="./ajustes-pandoc/salida-web/css/variables/apuntes-asignaturas.css" />
+  <link rel="stylesheet" href="./ajustes-pandoc/salida-web/css/base-mobile-first.css" />
+  <link rel="stylesheet" href="./ajustes-pandoc/salida-web/css/tablas.css" />
+  <link rel="stylesheet" href="./ajustes-pandoc/salida-web/css/codigo.css" />
+  <link rel="stylesheet" href="./ajustes-pandoc/salida-web/css/matematicas.css" />
+  <link rel="stylesheet" href="./ajustes-pandoc/salida-web/css/desktop.css" />
+  <nav id="nav">
+    <!--<h2></h2>-->
+    <ul id="menu">
+    </ul>
+  </nav>
+
+  <!--<main>-->
+  <input type="checkbox" id="toc-check" />
+  <label id="toc-toggle" for="toc-check">ToC</label>
+  <script src="/Users/ctafur/Documents/disenno-tipografia/ajustes-pandoc/salida-web/javascript/breadcrumbs.js"></script>
+  <script src="/Users/ctafur/Documents/disenno-tipografia/ajustes-pandoc/salida-web/javascript/abre-cierra-nav-bar.js"></script>
+</head>
+<body>
+<div id="breadcrumb"></div>
+<header id="title-block-header">
+<h1 class="title">Apuntes de Matemáticas Discretas</h1>
+<p class="author">Carlos E. Tafur Egido</p>
+<p class="date">02/08/2025</p>
+</header>
+<nav id="TOC" role="doc-toc">
+<ul>
+<li><a href="#introducción" id="toc-introducción">Introducción</a></li>
+<li><a href="#teoría-de-números" id="toc-teoría-de-números">Teoría de
+números</a>
+<ul>
+<li><a href="#capítulo-1.-introducción-a-la-teoría-de-números"
+id="toc-capítulo-1.-introducción-a-la-teoría-de-números">Capítulo 1.
+Introducción a la teoría de números</a></li>
+</ul></li>
+</ul>
+</nav>
+<section id="introducción" class="level1">
+<h1>Introducción</h1>
+<p>Esta asignatura consta de tres partes, cada una de las cuales se
+podría estudiar en mayor profundidad en una asignatura propia. Estas son
+teoría de números, teoría de grafos y combinatoria. Evidentemente, todas
+y cada una de estas se engloban en las matemáticas discretas, es decir,
+las matemáticas de los conjuntos numerables. TKTK.</p>
+<p>El libro de texto que se sigue en la asignatura es <span
+class="citation" data-cites="bujalance-costa"><a
+href="#ref-bujalance-costa" role="doc-biblioref">[1]</a></span>, creado
+por profesores de la UNED. Me parece un libro que presenta los
+contenidos de un modo demasiado directo, y, por tanto, poco pedagógico.
+Además, han puesto poco cuidado en la tipografía; no parece que esté
+hecho en TeX o algo similar.</p>
+<p>Se ve que está muy inspirado en <span class="citation"
+data-cites="burton"><a href="#ref-burton"
+role="doc-biblioref">[2]</a></span>, un clásico de la teoría de números
+muy antiguo, aunque se ha seguido editando. Si se puede hacer con este
+último, puede ayudarle en su estudio, aunque también lo veo demasiado
+directo. También es más extenso que <span class="citation"
+data-cites="bujalance-costa"><a href="#ref-bujalance-costa"
+role="doc-biblioref">[1]</a></span> y presenta en mayor detalle muchos
+resultados útiles para manejarse en esta materia.</p>
+<p>Aunque algunos contenidos estén en otro orden, todo el contenido
+sobre teoría de números de <span class="citation"
+data-cites="bujalance-costa"><a href="#ref-bujalance-costa"
+role="doc-biblioref">[1]</a></span> se encuentra también en <span
+class="citation" data-cites="burton"><a href="#ref-burton"
+role="doc-biblioref">[2]</a></span>.</p>
+<p>Otro libro que puede servir para toda la parte de la teoría de
+números es <span class="citation" data-cites="rosen-number-th"><a
+href="#ref-rosen-number-th" role="doc-biblioref">[3]</a></span>, que es
+algo más moderno que <span class="citation" data-cites="burton"><a
+href="#ref-burton" role="doc-biblioref">[2]</a></span> y, personalmente,
+me gusta más. Es el que estoy usando yo como complemento del libro
+oficial. Por cierto, no lo confunda con el libro <em>Discrete
+Mathematics</em> del mismo autor, Kenneth H. Rosen. El principal
+problema que le encuentro a <span class="citation"
+data-cites="rosen-number-th"><a href="#ref-rosen-number-th"
+role="doc-biblioref">[3]</a></span> es que parece que trata de usar lo
+menos posible la simbología matemática.</p>
+<p>Al ser, tanto <span class="citation" data-cites="burton"><a
+href="#ref-burton" role="doc-biblioref">[2]</a></span> como <span
+class="citation" data-cites="rosen-number-th"><a
+href="#ref-rosen-number-th" role="doc-biblioref">[3]</a></span>, textos
+muy populares de la teoría de números, puede encontrar por la web las
+soluciones a sus ejercicios y problemas. Por ejemplo, <a
+href="http://www.americanriver.com/mathematics/elementary_number_theory.html">esta</a>
+para <span class="citation" data-cites="burton"><a href="#ref-burton"
+role="doc-biblioref">[2]</a></span>. En <span class="citation"
+data-cites="rosen-number-th"><a href="#ref-rosen-number-th"
+role="doc-biblioref">[3]</a></span> vienen las soluciones a los
+ejercicios pares al final. También, existe un libro de soluciones, en el
+que se dan las de todos los planteados.</p>
+<p>Otra referencia que me parece interesante es <span class="citation"
+data-cites="weissman"><a href="#ref-weissman"
+role="doc-biblioref">[4]</a></span>, que es bastante más moderna que las
+otras dos mencionadas. Esta incorpora algunas innovaciones que me
+parecen interesantes. Otro punto fuerte de este es el gran cuidado de
+las figuras que incluye.</p>
+<p>Otro libro sobre teoría de números que creo que se considera un
+clásico es <span class="citation"
+data-cites="theory-of-numbers-niven"><a
+href="#ref-theory-of-numbers-niven" role="doc-biblioref">[5]</a></span>,
+pero es difícil de encontrar actualmente. Creo que es algo más avanzado
+que los otros mencionados aquí. Además, creo que es difícil de encontrar
+actualmente.</p>
+<p>En lo que respecta a la parte de la teoría de grafos, TKTK.</p>
+<p>En lo que respecta a la parte de combinatoria, está muy bien <span
+class="citation" data-cites="brualdi"><a href="#ref-brualdi"
+role="doc-biblioref">[6]</a></span>. TKTK.</p>
+<p>Algo que también desearía explicar es que es común en matemáticas
+usar el condicional en muchas definiciones o resultados de cualquier
+tipo cuando en realidad se debería usar el bicondicional. Así, por
+ejemplo, la definición del operador <q>divide a…</q> que se da en <span
+class="citation" data-cites="bujalance-costa"><a
+href="#ref-bujalance-costa" role="doc-biblioref">[1]</a></span>es la
+siguiente:</p>
+<div class="definition">
+<p><strong><em>Definición (Operador "Divide a..." (mal)).—
+</em></strong>Dados
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi><mo>,</mo><mi>b</mi><mo>∈</mo><mi>ℤ</mi></mrow><annotation encoding="application/x-tex">a,b \in \mathbb{Z}</annotation></semantics></math>,
+si
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi><mo>≠</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">a \neq 0</annotation></semantics></math>
+y
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>b</mi><mo>=</mo><mi>a</mi><mo>⋅</mo><mi>q</mi></mrow><annotation encoding="application/x-tex">b = a \cdot q</annotation></semantics></math>
+para algún
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>q</mi><mo>∈</mo><mi>ℤ</mi></mrow><annotation encoding="application/x-tex">q
+  \in \mathbb{Z}</annotation></semantics></math>, diremos que
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>a</mi><annotation encoding="application/x-tex">a</annotation></semantics></math>
+divide a
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>b</mi><annotation encoding="application/x-tex">b</annotation></semantics></math>.</p>
+</div>
+<p>Si se fija, esa proposición hace uso del condicional. Entonces,
+supongamos que no se da el antecedente. En ese caso, el consecuente será
+cierto, pero no es eso lo que deseábamos expresar. En realidad, la
+definición debería hacer uso del bicondicional. Podría ser algo como lo
+siguiente:</p>
+<div class="definition">
+<p><strong><em>Definición (Operador "Divide a..." (bien)).—
+</em></strong>Dados
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi><mo>,</mo><mi>b</mi><mo>∈</mo><mi>ℤ</mi></mrow><annotation encoding="application/x-tex">a,b \in \mathbb{Z}</annotation></semantics></math>
+tales que
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi><mo>≠</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">a \neq 0</annotation></semantics></math>,
+diremos que
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>a</mi><annotation encoding="application/x-tex">a</annotation></semantics></math>
+divide a
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>b</mi><annotation encoding="application/x-tex">b</annotation></semantics></math>
+si y solo si
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>b</mi><mo>=</mo><mi>a</mi><mo>⋅</mo><mi>q</mi></mrow><annotation encoding="application/x-tex">b = a \cdot q</annotation></semantics></math>
+para algún
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>q</mi><mo>∈</mo><mi>ℤ</mi></mrow><annotation encoding="application/x-tex">q \in \mathbb{Z}</annotation></semantics></math>.</p>
+</div>
+</section>
+<section id="teoría-de-números" class="level1">
+<h1>Teoría de números</h1>
+<section id="capítulo-1.-introducción-a-la-teoría-de-números"
+class="level2">
+<h2>Capítulo 1. Introducción a la teoría de números</h2>
+<p>Hay que aclarar que el adjetivo <em>elemental</em>
+(<em>elemnentary</em>) de este título, así como de algunos libros, no se
+pone por casualidad. Tal y como se explica en <span class="citation"
+data-cites="rosen-number-th"><a href="#ref-rosen-number-th"
+role="doc-biblioref">[3]</a></span>, ese adjetivo se refiere a que no se
+apoyará en conocimiento avanzado de matemáticas como puede ser, entre
+otros, la teoría de grupos.</p>
+<p>Como verá, al tratarse de la elemental habrá cierta ambigüedad sobre
+lo que debe demostrar y lo que no. Hay afirmaciones, como, por ejemplo,
+que
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mi>−</mi><mi>a</mi><mo stretchy="false" form="postfix">)</mo><mo stretchy="false" form="prefix">(</mo><mi>−</mi><mi>b</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mi>a</mi><mi>b</mi></mrow><annotation encoding="application/x-tex">(-a)(-b) = ab</annotation></semantics></math>
+para
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi><mo>,</mo><mi>b</mi><mo>∈</mo><mi>ℤ</mi></mrow><annotation encoding="application/x-tex">a, b \in \mathbb{Z}</annotation></semantics></math>,
+que se admiten como ciertas porque usted ya las conoce (aunque quizás no
+sepa demostrarlas). No es el propósito de esta asignatura demostrar
+afirmaciones sobre las estructuras algebraicas numéricas que se usan
+(principalmente,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mi>ℤ</mi><mo>,</mo><mi>+</mi><mo>,</mo><mi>⋅</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">(\mathbb{Z},
+\mathbin{+}, \mathbin{\cdot})</annotation></semantics></math>), sino que
+nos dedicaremos a estudiar otros aspectos de los números enteros
+(principalmente), como la divisibilidad, los números primos, ecuaciones
+diofánticas, etc.</p>
+<p>Aun así, esta asignatura es de cierto nivel, pues se ven muchas
+demostraciones, con lo que evidentemente se tendrá como prerrequisito un
+conocimiento básico tanto de lógica como de teoría de conjuntos. Por
+ejemplo, podría cursarla simultáneamente con una de demostraciones o de
+transición a las matemáticas superiores.</p>
+<p>Tal y como he mencionado, los números enteros son los objetos a los
+que dedicamos más atención, con diferencia, en esta asignatura. En
+realidad, más que números enteros, lo que nos interesa son los números
+en el marco de las matemáticas discretas; dicho de otro modo, los
+conjuntos numerables (<em>countable</em>). Esto incluiría también a los
+racionales; puede ver una demostración de que
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>ℚ</mi><annotation encoding="application/x-tex">\mathbb{Q}</annotation></semantics></math>
+es numerable en el Teorema 1.4 de <span class="citation"
+data-cites="rosen-number-th"><a href="#ref-rosen-number-th"
+role="doc-biblioref">[3]</a></span>. En cualquier caso, los racionales
+casi no aparecerán.</p>
+<p>Pero usted ha manejado ya durante muchos años los números reales, que
+engloban a los racionales y a los enteros. <q>Creía que iría avanzando a
+números más complicados cada vez</q>, puede que piense. Hay varias
+respuestas a esto. Por un lado, lamento decirle que su conocimiento de
+los números enteros es algo superficial. Además, estos guardan secretos
+muy interesantes y con muchas aplicaciones sobre los que conviene
+detenernos. Cuando se estudian los números reales, estos aspectos se
+pasan por alto.</p>
+<p>Aunque hasta hace relativamente poco la teoría de números era
+simplemente un divertimento para matemáticos, algo así como
+rompecabezas, sin ninguna aplicación práctica<a href="#fn1"
+class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>,
+con la llegada de los computadores los matemáticos se dieron cuenta de
+que se podía aplicar a la criptografía, y actualmente es una parte
+fundamental de esta. En cualquier caso, por razones de tiempo, en esta
+asignatura apenas se dedicará tiempo a las aplicaciones prácticas de la
+teoría de números.</p>
+<p>De los libros principales que he consultado, el que tiene más
+contenidos sobre la relación de la teoría de números con las ciencias de
+la computación y la criptografía es <span class="citation"
+data-cites="rosen-number-th"><a href="#ref-rosen-number-th"
+role="doc-biblioref">[3]</a></span>.</p>
+<p>Por cierto, al haber pertenecido durante tantos años a las
+matemáticas que no tenían aplicación práctica, se la suele englobar en
+lo que se conoce como matemáticas <em>puras</em> (en contraposición a
+las matemáticas <em>aplicadas</em>). Esta distinción hoy en día no tiene
+mucho sentido y por eso actualmente no se suele mencionar.</p>
+<p>Números enteros</p>
+<p>En la primera parte de la Sección 1-1 de <span class="citation"
+data-cites="bujalance-costa"><a href="#ref-bujalance-costa"
+role="doc-biblioref">[1]</a></span> comienzan la teoría de números
+presentando a los números enteros,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>ℤ</mi><annotation encoding="application/x-tex">\mathbb{Z}</annotation></semantics></math>,
+junto a sus operaciones principales (es decir, la suma,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>+</mi><annotation encoding="application/x-tex">+</annotation></semantics></math>,
+y el producto,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>⋅</mi><annotation encoding="application/x-tex">\cdot</annotation></semantics></math>)
+y algunas de sus propiedades así como de funciones relacionadas, como,
+por ejemplo, el valor absoluto.</p>
+<p>Se mete también a explicar algo sobre esta estructura algebraica,
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>ℤ</mi><mo>,</mo><mi>+</mi><mo>,</mo><mi>⋅</mi></mrow><annotation encoding="application/x-tex">\mathbb{Z}, + , \cdot</annotation></semantics></math>),
+aunque en realidad no es necesario para esta asignatura. El contenido
+relevante es básicamente lo mismo que se presenta en el Apéndice A de
+<span class="citation" data-cites="rosen-number-th"><a
+href="#ref-rosen-number-th" role="doc-biblioref">[3]</a></span>. En la
+sección de ejercicios de dicho apéndice se presentan algunos de los
+resultados que se explican en la sección correspondiente en <span
+class="citation" data-cites="bujalance-costa"><a
+href="#ref-bujalance-costa" role="doc-biblioref">[1]</a></span>.</p>
+<p>En cualquier caso, me gustaría aclarar algunas partes de estos
+contenidos, por si tiene curiosidad y cierto conocimiento de álgabra
+abstracta.</p>
+<p>Primero, presentar algunas traducciones a este respecto. Lo que en
+inglés llaman <em>identity element</em> para nosotros (según la
+terminología de la asignatura Lenguaje Matemático, Conjuntos y Números)
+sería el <em>elemento neutro</em>. El <em>inverse element</em> es
+nuestro <em>elemento simétrico</em>. También puede ver que hay quien los
+llama <em>elemento identidad</em> y <em>elemento inverso</em>,
+respectivamente.</p>
+<p>Advierta que el elemento simétrico no es lo mismo necesariamente que
+el simétrico respecto al producto. En inglés, cuando se desea ser más
+específico a este respecto, se habla del <em>reciprocal
+element</em>.</p>
+<p>Es fácil ver que
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mi>ℤ</mi><mo>,</mo><mi>+</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">(\mathbb{Z}, +)</annotation></semantics></math>
+es un grupo conmutativo; a su elemento neutro lo designamos por
+<q><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>0</mn><annotation encoding="application/x-tex">0</annotation></semantics></math></q>.
+Para
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mi>ℤ</mi><mo>,</mo><mi>⋅</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">(\mathbb{Z}, \cdot)</annotation></semantics></math>,
+aunque la operación es interna para dicho conjunto, y se satisfacen las
+propiedades asociativa, elemento neutro (que se suele representar por
+<q><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>1</mn><annotation encoding="application/x-tex">1</annotation></semantics></math></q>)
+y conmutativa, no llega a ser un grupo, pues no cumple la propiedad del
+elemento simétrico. Es decir, si nos dan un
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi><mo>∈</mo><mi>ℤ</mi></mrow><annotation encoding="application/x-tex">a \in \mathbb{Z}</annotation></semantics></math>,
+es posible que en
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>ℤ</mi><annotation encoding="application/x-tex">\mathbb{Z}</annotation></semantics></math>
+no encontremos un elemento
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>b</mi><annotation encoding="application/x-tex">b</annotation></semantics></math>
+tal que
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi><mo>⋅</mo><mi>b</mi><mo>=</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">a \cdot b = 1</annotation></semantics></math>.
+De hecho, los únicos elementos de
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mi>ℤ</mi><mo>,</mo><mi>⋅</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">(\mathbb{Z}, \cdot)</annotation></semantics></math>
+que cuentan con elemento simétrico son el
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>−</mi><mn>1</mn></mrow><annotation encoding="application/x-tex">-1</annotation></semantics></math>
+y el
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>1</mn><annotation encoding="application/x-tex">1</annotation></semantics></math>.
+Evidentemente, se puede <q>ampliar</q> esta estructura y obtener otra en
+la que todos los elementos tengan su simétrico. El ejemplo clásico sería
+el de los números racionales,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>ℚ</mi><annotation encoding="application/x-tex">\mathbb{Q}</annotation></semantics></math>,
+pero en esta asignatura apenas se hablará de ellos.</p>
+<p>Advierta que la propiedad distributiva se da de la suma respecto al
+producto, y no al revés. Es decir, no podemos poner, en general, algo
+como
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi><mo>+</mo><mo stretchy="false" form="prefix">(</mo><mi>b</mi><mo>⋅</mo><mi>c</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mo stretchy="false" form="prefix">(</mo><mi>a</mi><mo>+</mo><mi>b</mi><mo stretchy="false" form="postfix">)</mo><mo stretchy="false" form="prefix">(</mo><mi>a</mi><mo>+</mo><mi>c</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">a + (b \cdot c) = (a + b)(a + c)</annotation></semantics></math>.</p>
+<p>A fin de cuentas, lo que tenemos es que
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mi>ℤ</mi><mo>,</mo><mi>+</mi><mo>,</mo><mi>⋅</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">(\mathbb{Z}, +, \cdot)</annotation></semantics></math>
+tiene la estructura algebraica de anillo conmutativo unitario. Más
+concretamente, el elemento unidad del producto es el
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>1</mn><annotation encoding="application/x-tex">1</annotation></semantics></math>,
+tal y como dijimos, y además no tiene divisores de
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>0</mn><annotation encoding="application/x-tex">0</annotation></semantics></math>,
+es decir, para cualesquiera
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi><mo>,</mo><mi>b</mi><mo>∈</mo><mi>ℤ</mi></mrow><annotation encoding="application/x-tex">a, b \in \mathbb{Z}</annotation></semantics></math>
+siendo
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi><mo>≠</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">a \neq 0</annotation></semantics></math>
+y
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>b</mi><mo>≠</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">b \neq 0</annotation></semantics></math>,
+nunca se da
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi><mi>b</mi><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">ab = 0</annotation></semantics></math>.
+Aplicando la lógica esto último sería como decir que, si
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi><mi>b</mi><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">ab = 0</annotation></semantics></math>,
+entonces se da necesariamente que
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">a = 0</annotation></semantics></math>
+o
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>b</mi><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">b = 0</annotation></semantics></math>
+(o ambos). Esta última propiedad la usaremos en algunos ejercicios y
+demostraciones, con lo que, aunque no sea capaz de demostrarla, debe
+conocerla de una forma práctica.</p>
+<p>Algo que debe tener también en cuenta es que hay textos que
+consideran al
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>0</mn><annotation encoding="application/x-tex">0</annotation></semantics></math>
+como un número natural y otros en los que no; es decir, no hay un
+criterio unificado sobre esta cuestión. En realidad, esto no tiene
+importancia siempre y cuando se sea constante con la opción que se haya
+adoptado. Esto se ve en los enunciados tanto de la Propiedad de Buena
+Ordenación como del Principio de Inducción (<span class="citation"
+data-cites="bujalance-costa rosen-number-th"><a
+href="#ref-bujalance-costa" role="doc-biblioref">[1, p. 101]</a>, <a
+href="#ref-rosen-number-th" role="doc-biblioref">[3, p.
+102]</a></span>), pero da igual el criterio que se adopte, pues, aparte
+de cuál sea el valor base del que se parte, serán iguales en lo
+relevante y se puede adoptar cualquiera de los dos criterios.</p>
+<p>En <span class="citation" data-cites="bujalance-costa"><a
+href="#ref-bujalance-costa" role="doc-biblioref">[1]</a></span> adoptan
+la convención de que
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0</mn><mo>∉</mo><mi>ℕ</mi></mrow><annotation encoding="application/x-tex">0 \notin \mathbb{N}</annotation></semantics></math>.
+En <span class="citation" data-cites="rosen-number-th"><a
+href="#ref-rosen-number-th" role="doc-biblioref">[3]</a></span>, por su
+parte, creo que tratan de evitar referirse a
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>ℕ</mi><annotation encoding="application/x-tex">\mathbb{N}</annotation></semantics></math>.
+Verá que suelen referirse a
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>ℤ</mi><mo>+</mo></msup><annotation encoding="application/x-tex">\mathbb{Z}^+</annotation></semantics></math>
+o a
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>ℤ</mi><mo>+</mo></msup><mo>∪</mo><mo stretchy="false" form="prefix">{</mo><mn>0</mn><mo stretchy="false" form="postfix">}</mo></mrow><annotation encoding="application/x-tex">\mathbb{Z}^+
+\cup \{0\}</annotation></semantics></math>.</p>
+<p>Algunas propiedades interesantes de los números enteros,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>ℤ</mi><annotation encoding="application/x-tex">\mathbb{Z}</annotation></semantics></math>
+—o, lo que es lo mismo, de la estructura
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mi>ℤ</mi><mo>,</mo><mi>+</mi><mo>,</mo><mi>⋅</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">(\mathbb{Z}, +, \cdot)</annotation></semantics></math>—,
+son las siguientes.</p>
+<div class="theorem">
+<p><strong><em>Teorema.— </em></strong>Dados
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi><mo>,</mo><mi>b</mi><mo>,</mo><mi>c</mi><mo>∈</mo><mi>ℤ</mi></mrow><annotation encoding="application/x-tex">a,b,c \in \mathbb{Z}</annotation></semantics></math>.</p>
+<ol type="1">
+<li><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0</mn><mo>⋅</mo><mi>a</mi><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">0 \cdot a = 0</annotation></semantics></math>.</li>
+<li><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi><mo stretchy="false" form="prefix">(</mo><mrow><mi>−</mi><mi>b</mi></mrow><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mrow><mi>−</mi><mo stretchy="false" form="prefix">(</mo><mi>a</mi><mi>b</mi><mo stretchy="false" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">a({-b}) = {-(ab)}</annotation></semantics></math>.</li>
+<li>Dado un
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi><mo>≠</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">a \neq 0</annotation></semantics></math>.
+Si
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi><mi>b</mi><mo>=</mo><mi>a</mi><mi>c</mi></mrow><annotation encoding="application/x-tex">ab = ac</annotation></semantics></math>,
+entonces
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>b</mi><mo>=</mo><mi>c</mi></mrow><annotation encoding="application/x-tex">b = c</annotation></semantics></math>.
+(Propiedad cancelativa.)</li>
+<li><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi>−</mi><mo stretchy="false" form="prefix">(</mo><mrow><mi>−</mi><mi>a</mi></mrow><mo stretchy="false" form="postfix">)</mo></mrow><mo>=</mo><mi>a</mi></mrow><annotation encoding="application/x-tex">{-({-a})} = a</annotation></semantics></math>.</li>
+<li><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mrow><mi>−</mi><mi>a</mi></mrow><mo stretchy="false" form="postfix">)</mo><mo stretchy="false" form="prefix">(</mo><mrow><mi>−</mi><mi>b</mi></mrow><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mi>a</mi><mi>b</mi></mrow><annotation encoding="application/x-tex">({-a})({-b}) = ab</annotation></semantics></math></li>
+</ol>
+</div>
+<p>Tal y como dijimos, tampoco es importante que sepa demostrar estos
+enunciados generales sobre los números enteros, pues ese no es el
+propósito de esta asignatura; lo sería, por ejemplo, de una asignatura
+de álgebra abstracta. Puede hacer uso de las propiedades que conoce de
+estos sin necesidad de demostrarlas.</p>
+<p>No obstante, presentamos aquí las demostraciones de estas
+últimas.</p>
+<div class="proof">
+<p><strong><em>Demostración.— </em></strong>Son estas.</p>
+<ol type="1">
+<li><p>Vea el Ejemplo A.1 de <span class="citation"
+data-cites="rosen-number-th"><a href="#ref-rosen-number-th"
+role="doc-biblioref">[3]</a></span>.</p></li>
+<li><p>TKTK</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mtable><mtr><mtd columnalign="right" style="text-align: right; padding-right: 0"><mi>a</mi><mo stretchy="false" form="prefix">(</mo><mi>−</mi><mi>b</mi><mo stretchy="false" form="postfix">)</mo></mtd><mtd columnalign="left" style="text-align: left; padding-left: 0"><mo>=</mo><mi>a</mi><mo stretchy="false" form="prefix">(</mo><mi>−</mi><mi>b</mi><mo stretchy="false" form="postfix">)</mo></mtd></mtr><mtr><mtd columnalign="right" style="text-align: right; padding-right: 0"><mi>a</mi><mo stretchy="false" form="prefix">(</mo><mi>−</mi><mi>b</mi><mo stretchy="false" form="postfix">)</mo><mo>+</mo><mi>a</mi><mi>b</mi></mtd><mtd columnalign="left" style="text-align: left; padding-left: 0"><mo>=</mo><mi>a</mi><mo stretchy="false" form="prefix">(</mo><mi>−</mi><mi>b</mi><mo stretchy="false" form="postfix">)</mo><mo>+</mo><mi>a</mi><mi>b</mi></mtd></mtr><mtr><mtd columnalign="right" style="text-align: right; padding-right: 0"><mi>a</mi><mo stretchy="false" form="prefix">(</mo><mi>−</mi><mi>b</mi><mo stretchy="false" form="postfix">)</mo><mo>+</mo><mi>a</mi><mi>b</mi></mtd><mtd columnalign="left" style="text-align: left; padding-left: 0"><mo>=</mo><mi>a</mi><mo stretchy="false" form="prefix">(</mo><mi>−</mi><mi>b</mi><mo>+</mo><mi>b</mi><mo stretchy="false" form="postfix">)</mo></mtd></mtr><mtr><mtd columnalign="right" style="text-align: right; padding-right: 0"><mi>a</mi><mo stretchy="false" form="prefix">(</mo><mi>−</mi><mi>b</mi><mo stretchy="false" form="postfix">)</mo><mo>+</mo><mi>a</mi><mi>b</mi></mtd><mtd columnalign="left" style="text-align: left; padding-left: 0"><mo>=</mo><mi>a</mi><mn>0</mn><mo>=</mo><mn>0</mn><mo>=</mo><mi>a</mi><mi>b</mi><mo>−</mo><mi>a</mi><mi>b</mi></mtd></mtr><mtr><mtd columnalign="right" style="text-align: right; padding-right: 0"><mo stretchy="false" form="prefix">[</mo><mi>a</mi><mo>−</mo><mi>b</mi><mo stretchy="false" form="postfix">)</mo><mo>+</mo><mi>a</mi><mi>b</mi><mo stretchy="false" form="postfix">]</mo><mo>−</mo><mi>a</mi><mi>b</mi></mtd><mtd columnalign="left" style="text-align: left; padding-left: 0"><mo>=</mo><mo stretchy="false" form="prefix">(</mo><mi>a</mi><mi>b</mi><mo>−</mo><mi>a</mi><mi>b</mi><mo stretchy="false" form="postfix">)</mo><mo>−</mo><mi>a</mi><mi>b</mi></mtd></mtr><mtr><mtd columnalign="right" style="text-align: right; padding-right: 0"><mi>a</mi><mo stretchy="false" form="prefix">(</mo><mi>−</mi><mi>b</mi><mo stretchy="false" form="postfix">)</mo><mo>+</mo><mo stretchy="false" form="prefix">(</mo><mi>a</mi><mi>b</mi><mo>−</mo><mi>a</mi><mi>b</mi><mo stretchy="false" form="postfix">)</mo></mtd><mtd columnalign="left" style="text-align: left; padding-left: 0"><mo>=</mo><mn>0</mn><mo>−</mo><mi>a</mi><mi>b</mi></mtd></mtr><mtr><mtd columnalign="right" style="text-align: right; padding-right: 0"><mi>a</mi><mo stretchy="false" form="prefix">(</mo><mi>−</mi><mi>b</mi><mo stretchy="false" form="postfix">)</mo><mo>+</mo><mn>0</mn></mtd><mtd columnalign="left" style="text-align: left; padding-left: 0"><mo>=</mo><mn>0</mn><mo>+</mo><mo stretchy="false" form="prefix">[</mo><mi>−</mi><mo stretchy="false" form="prefix">(</mo><mi>a</mi><mi>b</mi><mo stretchy="false" form="postfix">)</mo><mo stretchy="false" form="postfix">]</mo></mtd></mtr><mtr><mtd columnalign="right" style="text-align: right; padding-right: 0"><mi>a</mi><mo stretchy="false" form="prefix">(</mo><mi>−</mi><mi>b</mi><mo stretchy="false" form="postfix">)</mo></mtd><mtd columnalign="left" style="text-align: left; padding-left: 0"><mo>=</mo><mi>−</mi><mo stretchy="false" form="prefix">(</mo><mi>a</mi><mi>b</mi><mo stretchy="false" form="postfix">)</mo></mtd></mtr></mtable><annotation encoding="application/x-tex"> \begin{split}
+     a(-b) &amp;= a(-b) \\
+     a(-b) + ab &amp;= a(-b) + ab \\
+     a(-b) + ab &amp;= a(-b + b) \\
+     a(-b) + ab &amp;= a0 = 0 = ab - ab \\
+     [a-b) + ab] - ab &amp;= (ab - ab) - ab \\
+     a(-b) + (ab - ab) &amp;= 0 - ab \\
+     a(-b) + 0 &amp;= 0 + [-(ab)] \\
+     a(-b) &amp;= -(ab)
+   \end{split} </annotation></semantics></math></p></li>
+<li><p>Partimos de la ecuación
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi><mi>b</mi><mo>=</mo><mi>a</mi><mi>c</mi></mrow><annotation encoding="application/x-tex">ab = ac</annotation></semantics></math>,
+y operamos:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mtable><mtr><mtd columnalign="right" style="text-align: right"><mi>a</mi><mi>b</mi></mtd><mtd columnalign="left" style="text-align: left"><mo>=</mo><mi>a</mi><mi>c</mi></mtd></mtr><mtr><mtd columnalign="right" style="text-align: right"><mi>a</mi><mi>b</mi><mo>−</mo><mi>a</mi><mi>c</mi></mtd><mtd columnalign="left" style="text-align: left"><mo>=</mo><mi>a</mi><mi>c</mi><mo>−</mo><mi>a</mi><mi>c</mi></mtd><mtd columnalign="right" style="text-align: right"><mrow><mtext mathvariant="normal">restamos </mtext><mspace width="0.333em"></mspace></mrow><mrow><mi>a</mi><mi>c</mi></mrow></mtd></mtr><mtr><mtd columnalign="right" style="text-align: right"></mtd><mtd columnalign="left" style="text-align: left"><mo>=</mo><mn>0</mn></mtd><mtd columnalign="right" style="text-align: right"><mtext mathvariant="normal">hacemos la resta de la derecha</mtext></mtd></mtr><mtr><mtd columnalign="right" style="text-align: right"><mn>0</mn></mtd><mtd columnalign="left" style="text-align: left"><mo>=</mo><mi>a</mi><mo stretchy="false" form="prefix">(</mo><mi>b</mi><mo>−</mo><mi>c</mi><mo stretchy="false" form="postfix">)</mo></mtd><mtd columnalign="right" style="text-align: right"><mrow><mtext mathvariant="normal">sacamos factor común </mtext><mspace width="0.333em"></mspace></mrow><mi>a</mi></mtd></mtr></mtable><annotation encoding="application/x-tex"> \begin{align*}
+     ab &amp; = ac \\
+     ab - ac &amp; = ac - ac &amp; \text{restamos $ac$} \\
+       &amp; = 0 &amp; \text{hacemos la resta de la derecha} \\
+     0 &amp; = a(b - c) &amp; \text{sacamos factor común $a$}
+   \end{align*}</annotation></semantics></math></p>
+<p>Como se da la condición
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi><mo>≠</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">a \neq 0</annotation></semantics></math>,
+y, tal y como explicamos antes, en
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>ℤ</mi><annotation encoding="application/x-tex">\mathbb{Z}</annotation></semantics></math>
+no hay divisores de
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>0</mn><annotation encoding="application/x-tex">0</annotation></semantics></math>,
+entonces, para que se dé que</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi><mo stretchy="false" form="prefix">(</mo><mi>b</mi><mo>−</mo><mi>c</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex"> a(b - c) = 0 </annotation></semantics></math></p>
+<p>no queda otra que
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>b</mi><mo>−</mo><mi>c</mi><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">b - c = 0</annotation></semantics></math>,
+o, lo que es lo mismo,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>b</mi><mo>=</mo><mi>c</mi></mrow><annotation encoding="application/x-tex">b = c</annotation></semantics></math>.</p></li>
+<li><p>Nos vamos a auxiliar de otra variable
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>c</mi><annotation encoding="application/x-tex">c</annotation></semantics></math>
+que dependa de
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>a</mi><annotation encoding="application/x-tex">a</annotation></semantics></math>.
+Concretamente, decidimos que la dependencia sea
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>c</mi><mo>=</mo><mrow><mi>−</mi><mi>a</mi></mrow></mrow><annotation encoding="application/x-tex">c = {-a}</annotation></semantics></math>.
+Advierta que, si
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi><mo>∈</mo><mi>ℤ</mi></mrow><annotation encoding="application/x-tex">a \in \mathbb{Z}</annotation></semantics></math>,
+se tiene que
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>c</mi><mo>∈</mo><mi>ℤ</mi></mrow><annotation encoding="application/x-tex">c \in \mathbb{Z}</annotation></semantics></math>.
+Entonces,</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mtable><mtr><mtd columnalign="right" style="text-align: right"><mn>0</mn></mtd><mtd columnalign="left" style="text-align: left"><mo>=</mo><mi>c</mi><mo>−</mo><mi>c</mi></mtd></mtr><mtr><mtd columnalign="right" style="text-align: right"></mtd><mtd columnalign="left" style="text-align: left"><mo>=</mo><mi>c</mi><mo>+</mo><mo stretchy="false" form="prefix">(</mo><mi>−</mi><mi>c</mi><mo stretchy="false" form="postfix">)</mo></mtd></mtr><mtr><mtd columnalign="right" style="text-align: right"></mtd><mtd columnalign="left" style="text-align: left"><mo>=</mo><mi>−</mi><mi>a</mi><mo>+</mo><mo stretchy="false" form="prefix">[</mo><mi>−</mi><mo stretchy="false" form="prefix">(</mo><mi>−</mi><mi>a</mi><mo stretchy="false" form="postfix">)</mo><mo stretchy="false" form="postfix">]</mo></mtd><mtd columnalign="left" style="text-align: left"><mrow><mtext mathvariant="normal">c.d.v.: </mtext><mspace width="0.333em"></mspace></mrow><mrow><mi>c</mi><mo>=</mo><mi>−</mi><mi>a</mi></mrow></mtd></mtr><mtr><mtd columnalign="right" style="text-align: right"><mn>0</mn><mo>+</mo><mi>a</mi></mtd><mtd columnalign="left" style="text-align: left"><mo>=</mo><mo stretchy="false" form="prefix">{</mo><mo stretchy="false" form="prefix">(</mo><mi>−</mi><mi>a</mi><mo stretchy="false" form="postfix">)</mo><mo>+</mo><mo stretchy="false" form="prefix">[</mo><mi>−</mi><mo stretchy="false" form="prefix">(</mo><mi>−</mi><mi>a</mi><mo stretchy="false" form="postfix">)</mo><mo stretchy="false" form="postfix">]</mo><mo stretchy="false" form="postfix">}</mo><mo>+</mo><mi>a</mi></mtd><mtd columnalign="left" style="text-align: left"><mrow><mtext mathvariant="normal">sumamos </mtext><mspace width="0.333em"></mspace></mrow><mi>a</mi><mrow><mspace width="0.333em"></mspace><mtext mathvariant="normal"> en ambas partes</mtext></mrow></mtd></mtr><mtr><mtd columnalign="right" style="text-align: right"></mtd><mtd columnalign="left" style="text-align: left"><mo>=</mo><mo stretchy="false" form="prefix">{</mo><mi>−</mi><mo stretchy="false" form="prefix">(</mo><mi>−</mi><mi>a</mi><mo stretchy="false" form="postfix">)</mo><mo>+</mo><mo stretchy="false" form="prefix">(</mo><mi>−</mi><mi>a</mi><mo stretchy="false" form="postfix">)</mo><mo stretchy="false" form="postfix">}</mo><mo>+</mo><mi>a</mi></mtd><mtd columnalign="left" style="text-align: left"><mtext mathvariant="normal">prop. conmutativa de la suma</mtext></mtd></mtr><mtr><mtd columnalign="right" style="text-align: right"></mtd><mtd columnalign="left" style="text-align: left"><mo>=</mo><mi>−</mi><mo stretchy="false" form="prefix">(</mo><mi>−</mi><mi>a</mi><mo stretchy="false" form="postfix">)</mo><mo>+</mo><mo stretchy="false" form="prefix">[</mo><mo stretchy="false" form="prefix">(</mo><mi>−</mi><mi>a</mi><mo stretchy="false" form="postfix">)</mo><mo>+</mo><mi>a</mi><mo stretchy="false" form="postfix">]</mo></mtd><mtd columnalign="left" style="text-align: left"><mtext mathvariant="normal">prop. asociativa de la suma</mtext></mtd></mtr><mtr><mtd columnalign="right" style="text-align: right"></mtd><mtd columnalign="left" style="text-align: left"><mo>=</mo><mi>−</mi><mo stretchy="false" form="prefix">(</mo><mi>−</mi><mi>a</mi><mo stretchy="false" form="postfix">)</mo><mo>+</mo><mn>0</mn></mtd><mtd columnalign="left" style="text-align: left"><mtext mathvariant="normal">operamos en el paréntesis</mtext></mtd></mtr><mtr><mtd columnalign="right" style="text-align: right"><mi>a</mi></mtd><mtd columnalign="left" style="text-align: left"><mo>=</mo><mi>−</mi><mo stretchy="false" form="prefix">(</mo><mi>−</mi><mi>a</mi><mo stretchy="false" form="postfix">)</mo></mtd><mtd columnalign="left" style="text-align: left"><mtext mathvariant="normal">prop. elemento neutro</mtext></mtd></mtr></mtable><annotation encoding="application/x-tex"> \begin{array}{rll}
+     0
+       &amp;= c - c \\
+       &amp;= c + (-c) \\
+       &amp;= -a + [-(-a)]
+         &amp; \text{c.d.v.: $c = -a$} \\
+     0 + a
+       &amp;= \{(-a) + [-(-a)]\} + a
+         &amp; \text{sumamos $a$ en ambas partes} \\
+       &amp;= \{-(-a) + (-a)\} + a
+         &amp; \text{prop. conmutativa de la suma} \\
+       &amp;= -(-a) + [(-a) + a]
+         &amp; \text{prop. asociativa de la suma} \\
+       &amp; = -(-a) + 0
+         &amp; \text{operamos en el paréntesis} \\
+     a
+       &amp; = -(-a)
+         &amp; \text{prop. elemento neutro}
+   \end{array} </annotation></semantics></math></p></li>
+<li><p>Lo haremos con un cambio de variable y haciendo uso de las
+propiedades 2 y 4. Tomemos la variable
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>c</mi><mo>=</mo><mo stretchy="false" form="prefix">(</mo><mi>−</mi><mi>a</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">c = ( - a)</annotation></semantics></math>.
+Evidentemente, se tiene que
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>c</mi><mo>∈</mo><mi>ℤ</mi></mrow><annotation encoding="application/x-tex">c \in \mathbb{Z}</annotation></semantics></math>.
+Entonces,</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mtable><mtr><mtd columnalign="right" style="text-align: right"><mo stretchy="false" form="prefix">(</mo><mi>−</mi><mi>a</mi><mo stretchy="false" form="postfix">)</mo><mo stretchy="false" form="prefix">(</mo><mi>−</mi><mi>b</mi><mo stretchy="false" form="postfix">)</mo></mtd><mtd columnalign="left" style="text-align: left"><mo>=</mo><mi>c</mi><mo stretchy="false" form="prefix">(</mo><mi>−</mi><mi>b</mi><mo stretchy="false" form="postfix">)</mo></mtd><mtd columnalign="right" style="text-align: right"><mrow><mtext mathvariant="normal">cd.v.: </mtext><mspace width="0.333em"></mspace></mrow><mrow><mi>c</mi><mo>=</mo><mi>−</mi><mi>a</mi></mrow></mtd></mtr><mtr><mtd columnalign="right" style="text-align: right"></mtd><mtd columnalign="left" style="text-align: left"><mo>=</mo><mi>−</mi><mo stretchy="false" form="prefix">(</mo><mi>c</mi><mi>b</mi><mo stretchy="false" form="postfix">)</mo></mtd><mtd columnalign="right" style="text-align: right"><mtext mathvariant="normal">prop. 2</mtext></mtd></mtr><mtr><mtd columnalign="right" style="text-align: right"></mtd><mtd columnalign="left" style="text-align: left"><mo>=</mo><mi>−</mi><mo stretchy="false" form="prefix">(</mo><mi>b</mi><mi>c</mi><mo stretchy="false" form="postfix">)</mo></mtd><mtd columnalign="right" style="text-align: right"><mtext mathvariant="normal">prop. conmutativa de &quot;</mtext><mo>⋅</mo><mtext mathvariant="normal">&quot;</mtext></mtd></mtr><mtr><mtd columnalign="right" style="text-align: right"></mtd><mtd columnalign="left" style="text-align: left"><mo>=</mo><mo stretchy="false" form="prefix">(</mo><mi>−</mi><mi>c</mi><mo stretchy="false" form="postfix">)</mo><mi>b</mi></mtd><mtd columnalign="right" style="text-align: right"><mtext mathvariant="normal">prop. 2</mtext></mtd></mtr><mtr><mtd columnalign="right" style="text-align: right"></mtd><mtd columnalign="left" style="text-align: left"><mo>=</mo><mo stretchy="false" form="prefix">(</mo><mi>−</mi><mo stretchy="false" form="prefix">(</mo><mi>−</mi><mi>a</mi><mo stretchy="false" form="postfix">)</mo><mo stretchy="false" form="postfix">)</mo><mi>b</mi></mtd><mtd columnalign="right" style="text-align: right"><mrow><mtext mathvariant="normal">c.d.v.: </mtext><mspace width="0.333em"></mspace></mrow><mrow><mi>c</mi><mo>=</mo><mi>−</mi><mi>a</mi></mrow></mtd></mtr><mtr><mtd columnalign="right" style="text-align: right"></mtd><mtd columnalign="left" style="text-align: left"><mo>=</mo><mi>a</mi><mi>b</mi></mtd><mtd columnalign="right" style="text-align: right"><mtext mathvariant="normal">prop. 4</mtext></mtd></mtr></mtable><annotation encoding="application/x-tex"> \begin{align*}
+     (-a)(-b)
+       &amp;= c(-b) &amp; \text{cd.v.: $c = -a$} \\
+       &amp;= -(cb) &amp; \text{prop. 2} \\
+       &amp;= -(bc) &amp; \text{prop. conmutativa de &quot;$\cdot$&quot;} \\
+       &amp;= (-c)b &amp; \text{prop. 2} \\
+       &amp;= (-(-a))b &amp; \text{c.d.v.: $c = -a$} \\
+       &amp;= ab &amp; \text{prop. 4} 
+   \end{align*} </annotation></semantics></math></p></li>
+</ol>
+</div>
+<p>Sería interesante también el ejercicio siguiente, que guarda cierta
+relación con la ley de la tricotomía, que se menciona en <span
+class="citation" data-cites="rosen-number-th"><a
+href="#ref-rosen-number-th" role="doc-biblioref">[3]</a></span>.</p>
+<div class="exercise">
+<p><strong><em>Ejercicio.— </em></strong>Demuestre que, dado un
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi><mo>∈</mo><mi>ℤ</mi></mrow><annotation encoding="application/x-tex">a \in \mathbb{Z}</annotation></semantics></math>,
+si
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi><mo>&lt;</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">a &lt; 0</annotation></semantics></math>
+entonces
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>−</mi><mi>a</mi><mo>&gt;</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">-a &gt; 0</annotation></semantics></math>.</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mtable><mtr><mtd columnalign="right" style="text-align: right; padding-right: 0"><mi>a</mi></mtd><mtd columnalign="left" style="text-align: left; padding-left: 0"><mo>&lt;</mo><mn>0</mn></mtd></mtr><mtr><mtd columnalign="right" style="text-align: right; padding-right: 0"><mi>a</mi><mo>−</mo><mi>a</mi></mtd><mtd columnalign="left" style="text-align: left; padding-left: 0"><mo>&lt;</mo><mn>0</mn><mo>−</mo><mi>a</mi><mo>=</mo><mn>0</mn><mo>+</mo><mo stretchy="false" form="prefix">(</mo><mi>−</mi><mi>a</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mi>−</mi><mi>a</mi></mtd></mtr><mtr><mtd columnalign="right" style="text-align: right; padding-right: 0"><mn>0</mn></mtd><mtd columnalign="left" style="text-align: left; padding-left: 0"><mo>&lt;</mo><mi>−</mi><mi>a</mi></mtd></mtr></mtable><annotation encoding="application/x-tex"> \begin{aligned}
+       a &amp;&lt; 0 \\
+       a - a &amp;&lt; 0 - a = 0 + (-a) = -a \\
+       0 &amp;&lt; -a
+     \end{aligned} </annotation></semantics></math></p>
+<p>Las operaciones algebraicas que se pueden hacer con las desigualdades
+(<em>inequations</em>) tienen algunas sutilezas, pero en esta asignatura
+esas manipulaciones no suelen ser complicadas a este respecto.<span
+class="env-last-symbol"> △</span></p>
+</div>
+<p>Por cierto, al Principio de Buena Ordenación hay quien prefiere
+calificarlo de <em>propiedad</em>. Aunque dicha propiedad pueda parecer
+algo evidente y sin relevancia, se usa en muchas demostraciones, como
+veremos.</p>
+<p>En <span class="citation" data-cites="bujalance-costa"><a
+href="#ref-bujalance-costa" role="doc-biblioref">[1]</a></span> también
+presentan el concepto de <em>valor absoluto</em> con dominio en
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>ℤ</mi><annotation encoding="application/x-tex">\mathbb{Z}</annotation></semantics></math>
+y algunas de sus propiedades más interesantes. De hecho, antes de ver la
+divisibilidad, las propiedades generales que nos interesan del valor
+absoluto son las siguientes.</p>
+<div class="theorem">
+<p><strong><em>Teorema (Propiedades del Valor Absoluto).—
+</em></strong>Dados
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi><mo>,</mo><mi>b</mi><mo>∈</mo><mi>ℤ</mi></mrow><annotation encoding="application/x-tex">a,b \in \mathbb{Z}</annotation></semantics></math>,
+se cumplen</p>
+<ol type="i">
+<li><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">|</mo><mi>a</mi><mo>⋅</mo><mi>b</mi><mo stretchy="false" form="prefix">|</mo><mo>=</mo><mo stretchy="false" form="prefix">|</mo><mi>a</mi><mo stretchy="false" form="prefix">|</mo><mspace width="0.167em"></mspace><mo>⋅</mo><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">|</mo><mi>b</mi><mo stretchy="false" form="prefix">|</mo></mrow><annotation encoding="application/x-tex">|a \cdot b| = |a| \, \cdot \, |b|</annotation></semantics></math>.</li>
+<li><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">|</mo><mi>a</mi><mo>+</mo><mi>b</mi><mo stretchy="false" form="prefix">|</mo><mo>≤</mo><mo stretchy="false" form="prefix">|</mo><mi>a</mi><mo stretchy="false" form="prefix">|</mo><mspace width="0.167em"></mspace><mo>+</mo><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">|</mo><mi>b</mi><mo stretchy="false" form="prefix">|</mo></mrow><annotation encoding="application/x-tex">|a + b| \leq |a| \, + \, |b|</annotation></semantics></math>.
+(Desigualdad triangular.)</li>
+</ol>
+</div>
+<p>Se demuestran en <span class="citation"
+data-cites="bujalance-costa"><a href="#ref-bujalance-costa"
+role="doc-biblioref">[1]</a></span>. Estas demostraciones me parecen
+algo aparatosas, es decir, poco elegantes; pero existe una razón para
+que sea así: nos queremos restringir a los números enteros. Si
+pudiésemos hacer uso de los radicales, cosa que nos metería ya en los
+números reales, se podrían tener demostraciones más simples y elegantes,
+como la siguiente, para el punto i.</p>
+<p>Lo primero que se debe decir es que, para un
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi><mo>∈</mo><mi>ℝ</mi></mrow><annotation encoding="application/x-tex">a \in \mathbb{R}</annotation></semantics></math>,
+se tiene que
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">|</mo><mi>a</mi><mo stretchy="false" form="prefix">|</mo><mo>=</mo><msqrt><msup><mi>a</mi><mn>2</mn></msup></msqrt></mrow><annotation encoding="application/x-tex">|a| = \sqrt{a^{2}}</annotation></semantics></math>.
+Esta sería una expresión alternativa del valor absoluto. Sabiendo esto,
+podemos hacer lo siguiente:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">|</mo><mi>a</mi><mo>⋅</mo><mi>b</mi><mo stretchy="false" form="prefix">|</mo><mo>=</mo><msqrt><mrow><mo stretchy="false" form="prefix">(</mo><mi>a</mi><mo>⋅</mo><mi>b</mi><msup><mo stretchy="false" form="postfix">)</mo><mn>2</mn></msup></mrow></msqrt><mo>=</mo><msqrt><mrow><msup><mi>a</mi><mn>2</mn></msup><mo>⋅</mo><msup><mi>b</mi><mn>2</mn></msup></mrow></msqrt><mo>=</mo><msqrt><msup><mi>a</mi><mn>2</mn></msup></msqrt><mo>⋅</mo><msqrt><msup><mi>b</mi><mn>2</mn></msup></msqrt><mo>=</mo><mo stretchy="false" form="prefix">|</mo><mi>a</mi><mo stretchy="false" form="prefix">|</mo><mspace width="0.167em"></mspace><mo>⋅</mo><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">|</mo><mi>b</mi><mo stretchy="false" form="prefix">|</mo></mrow><annotation encoding="application/x-tex"> |a \cdot b| = \sqrt{(a \cdot b)^2} = \sqrt{a^2 \cdot b^2} = \sqrt{a^2}
+  \cdot \sqrt{b^2} = |a| \, \cdot \, |b| </annotation></semantics></math></p>
+<p>Solo hemos tenido que aplicar una propiedad de los radicales.</p>
+<p>Un ejercicio que me pareció curioso es el Ejemplo 1.19 de <span
+class="citation" data-cites="rosen-number-th"><a
+href="#ref-rosen-number-th" role="doc-biblioref">[3]</a></span>. Lo
+cierto es que no llego a ver cómo lo resuelve él, pero a mí se me
+ocurrió una forma que creo que es más fácil. Si se fija, los triángulos
+se pueden disponer de tal forma que vemos que hay dos triángulos de
+tamaño
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>k</mi><annotation encoding="application/x-tex">k</annotation></semantics></math>
+juntos y una línea de
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>k</mi><mo>+</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">k + 1</annotation></semantics></math>
+elementos debajo. Así, se tendría la ecuación</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mi>k</mi><mo>+</mo><mn>1</mn><msup><mo stretchy="false" form="postfix">)</mo><mn>2</mn></msup><mo>=</mo><mn>2</mn><msub><mi>t</mi><mi>k</mi></msub><mo>+</mo><mi>k</mi><mo>+</mo><mn>1</mn></mrow><annotation encoding="application/x-tex"> (k + 1)^2 = 2t_k + k + 1 </annotation></semantics></math></p>
+<p>De esto obtenemos que</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>t</mi><mi>k</mi></msub><mo>=</mo><mfrac><mrow><mi>k</mi><mo stretchy="false" form="prefix">(</mo><mi>k</mi><mo>+</mo><mn>1</mn><mo stretchy="false" form="postfix">)</mo></mrow><mn>2</mn></mfrac></mrow><annotation encoding="application/x-tex"> t_k = \frac{k(k + 1)}{2} </annotation></semantics></math></p>
+<p>igual que él.</p>
+<p>Por cierto, tiene sentido que sea el mismo resultado que la serie
+aritmética más básica, pues en realidad se trata de una serie
+aritmética.</p>
+<div id="refs" class="references csl-bib-body" data-entry-spacing="0"
+role="list">
+<div id="ref-bujalance-costa" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[1] </div><div
+class="csl-right-inline">Emilio Bujalance, Antonio F. Costa, y otros,
+<em>Elementos de matemática discreta</em>, 3.ª ed. Editorial Sanz y
+Torres, 2005.</div>
+</div>
+<div id="ref-burton" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[2] </div><div
+class="csl-right-inline">David M. Burton, <em>Elementary Number
+Theory</em>, 7.ª ed. William C. Brown Pub., 2010.</div>
+</div>
+<div id="ref-rosen-number-th" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[3] </div><div
+class="csl-right-inline">Kenneth H. Rosen, <em>Elementary Number Theory
+and Its Applications</em>, 6.ª ed. Pearson, 2010.</div>
+</div>
+<div id="ref-weissman" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[4] </div><div
+class="csl-right-inline">Martin H. Weissman, <em>An Illustrated Theory
+of Numbers</em>, 1.ª ed. American Mathematical Society, 2020. Disponible
+en: <a
+href="http://illustratedtheoryofnumbers.com/">http://illustratedtheoryofnumbers.com/</a></div>
+</div>
+<div id="ref-theory-of-numbers-niven" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[5] </div><div
+class="csl-right-inline">Ivan Niven, Herbert S. Zuckerman, y Hugh L.
+Montgomery, <em>An Introduction to the Theory of Numbers</em>, 5.ª ed.
+Wiley, 1991.</div>
+</div>
+<div id="ref-brualdi" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[6] </div><div
+class="csl-right-inline">Richard A. Brualdi, <em>Introductory
+Combinatorics</em>, 5.ª ed. Pearson, 2018.</div>
+</div>
+</div>
+</section>
+</section>
+<section id="footnotes" class="footnotes footnotes-end-of-document"
+role="doc-endnotes">
+<hr />
+<ol>
+<li id="fn1"><p>cosa de la que se jactaba el gran matemático
+G. H. Hardy, que era un pacifista y odiaría enterarse de que la teoría
+que él mismo estaba contribuyendo a desarrollar se usaría con fines
+bélicos<a href="#fnref1" class="footnote-back"
+role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section>
+<!--</main>-->
+</body>
+</html>
