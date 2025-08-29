@@ -76,31 +76,23 @@ end
 local DivProcessor = {
     Div = function(div)
 
-        local has_multiple_envs = false
+        local num_of_math_envs = 0
 
         for env_key, env_data in pairs(envs_data) do
             if has_class(div, env_key) then
 
-                -- Readying text to write in div
+                -- Checkings
+                num_of_math_envs = num_of_math_envs + 1
+                assert(num_of_math_envs, "Error. There is a div element with more than one math environment classes.")
+
+                -- Simpler names in this function scope.
                 local title_text = env_data.title
                 local title_sep = env_data.sep
                 local label = div.attr.attributes["data-label"]
+
+
                 -- Text to insert in cross reference
                 local ref_text = env_data.title
-
-
-                local formatted_title_sep = pandoc.read(title_sep, "markdown").blocks[1]
-
-                --[[
-                if label and label ~= "" then
-                    title_text = title_text .. " (" .. label .. ")"
-                    ref_text = ref_text .. " (" .. label .. ")"
-                end
-                --]]
-
-                -- local formatted_title_sep = pandoc.read(env_data.sep, "markdown").blocks[1]
-                -- title_text = title_text .. env_data.sep
-                -- title_text = title_text .. env_data.sep
 
                 -- TODO Quizás es demasiado enrevesado y no se necesite la tabla `references`.
                 -- Collecting cross references (if the div element has an ID)
@@ -109,33 +101,42 @@ local DivProcessor = {
                     references["#" .. id] = { pandoc.Str(ref_text) }
                 end
 
+
                 -- Writes title and data-label at the beginning of first paragraph in
                 -- enviroment.
                 if div.content[1] then
+
+                    -- Building the environment previous text.
+                    local formatted_title_sep = pandoc.read(title_sep, "markdown").blocks[1]
                     local env_prev_text = { pandoc.Str(title_text) }
+
+                    if label and label ~= "" then
+                        env_prev_text:insert(pandoc.Str(" ("))
+                        local formatted_label = pandoc.read(label, "markdown").blocks[1]
+                        env_prev_text:insert(formatted_label)
+
+                        env_prev_text:insert(pandoc.Str(")"))
+                    end
+                    env_prev_text:insert(pandoc.Str(formatted_title_sep))
+
+                    local formatted_env_prev_text
                     if div.content[1].t == "Para" then
-                        if label and label ~= "" then
-                            env_prev_text:insert(pandoc.Str(" ("))
-                            local formatted_label = pandoc.read(label, "markdown").blocks[1]
-                            for _, inline in ipairs(formatted_label.content) do
-                                env_prev_text:insert(inline)
-                            end
-                            env_prev_text:insert(pandoc.Str(")"))
-                        end
-
-                        env_prev_text:insert(pandoc.Str(formatted_title_sep))
-
-                        local formatted_whole_title = pandoc.Strong(pandoc.Emph(env_prev_text))
-                        div.content[1].content:insert(1, formatted_whole_title)
-                        -- Delete the label for avoiding duplications.
-                        div.attr.attributes["data-label"] = nil -- TODO Maybe not neccesary
+                        formatted_env_prev_text = pandoc.Strong(pandoc.Emph(env_prev_text))
+                        -- Delete the label for avoiding duplications. TODO Maybe not
+                        -- neccesary.
+                        div.attr.attributes["data-label"] = nil
                     else
+                        formatted_env_prev_text = pandoc.Para({pandoc.Strong(pandoc.Emph(env_prev_text))})
                         -- TODO Write the `title_text` in the first paragraph and then the
                         -- text begins in the next paragraph.
+                        div.attr.attributes["data-label"] = nil
                     end
+
+                    div.content[1].content:insert(1, formatted_env_prev_text)
                 end
 
-                -- Insert final symbol
+
+                -- Write environment final symbol.
                 local end_symbol = env_data.last_symbol
                 if end_symbol and end_symbol ~= "" then
                     if #div.content > 0 and div.content[#div.content].t == "Para" then
@@ -145,12 +146,8 @@ local DivProcessor = {
                     end
                 end
 
-                -- TODO Volver a hacerlo para que si detecta más de una de las clases en
-                -- `envs_data` no compile el documento y dé un problema.
-                break -- Environment processed. Exit loop
             end
         end
-
 
         return div
     end
