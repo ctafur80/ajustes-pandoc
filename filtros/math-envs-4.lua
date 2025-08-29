@@ -9,43 +9,43 @@
 -- Math environments data
 local envs_data = {
     proof = {
-        title = "demostración",
-        sep = ".--- ",
+        title = "Demostración",
+        sep = ".— ",
         last_symbol = " ▢",
     },
     definition = {
-        title = "definición",
+        title = "Definición",
         sep = ".--- ",
         last_symbol = nil,
     },
     axiom = {
-        title = "axioma",
-        sep = ".--- ",
+        title = "Axioma",
+        sep = ".— ",
         last_symbol = nil,
     },
     theorem = {
-        title = "teorema",
-        sep = ".--- ",
+        title = "Teorema",
+        sep = ".— ",
         last_symbol = nil,
     },
     lemma = {
         title = "Lema",
-        sep = ".--- ",
+        sep = ".— ",
         last_symbol = nil,
     },
     corollary = {
-        title = "corolario",
-        sep = ".--- ",
+        title = "Corolario",
+        sep = ".— ",
         last_symbol = nil,
     },
     exercise = {
-        title = "ejercicio",
-        sep = ".--- ",
+        title = "Ejercicio",
+        sep = ".— ",
         last_symbol = " △",
     },
     example = {
-        title = "ejemplo",
-        sep = ".--- ",
+        title = "Ejemplo",
+        sep = ".— ",
         last_symbol = " △",
     },
 }
@@ -53,14 +53,6 @@ local envs_data = {
 
 -- Stores references of IDs in the whole document.
 local references = {}
-
-
-
-
-function cap_string(str)
-    new_str = string.upper(string.sub(str, 1, 1)) .. string.sub(str, 2)
-    return new_str
-end
 
 
 
@@ -94,31 +86,19 @@ local DivProcessor = {
                 assert(num_of_math_envs <= 1, "Error. There is a div element with more than one math environment classes.")
 
                 -- Simpler names in this function scope.
-                local title_text = cap_string(env_data.title)
+                local title_text = env_data.title
                 local title_sep = env_data.sep
                 local label = div.attr.attributes["data-label"]
 
 
                 -- Text to insert in cross reference
-                local ref_text = cap_string(env_data.title)
+                local ref_text = env_data.title
 
                 -- TODO Quizás es demasiado enrevesado y no se necesite la tabla `references`.
                 -- Collecting cross references (if the div element has an ID)
                 local id = div.attr.identifier
                 if id and id ~= "" then
                     references["#" .. id] = { pandoc.Str(ref_text) }
-
-                    -- TODO Maybe make a function since this is repeated in the next
-                    -- paragraph.
-                    if label and label ~= "" then
-                        table.insert(references["#" .. id], pandoc.Str(" ("))
-                        local formatted_label = pandoc.read(label, "markdown").blocks[1]
-                        for _, inline in ipairs(formatted_label.content) do
-                            table.insert(references["#" .. id], inline)
-                        end
-                        table.insert(references["#" .. id], pandoc.Str(")"))
-                    end
-                    --]]
                 end
 
 
@@ -134,19 +114,17 @@ local DivProcessor = {
                     table.insert(title_inlines, pandoc.Str(")"))
                 end
 
-                -- Parse the separator as markdown to handle smart punctuation (e.g., '---'
-                -- -> '—').
-                local sep_block = pandoc.read(title_sep, "markdown").blocks[1]
-                if sep_block and sep_block.content then
-                    for _, inline in ipairs(sep_block.content) do
-                        table.insert(title_inlines, inline)
-                    end
+                local formatted_sep = pandoc.read(title_sep, "markdown").blocks[1]
+                --[[
+                for _, sep in ipairs(formatted_sep.content) do
+                    table.insert(formatted_sep, sep)
                 end
+                --]]
 
+                table.insert(table_inlines, pandoc.Str(formatted_sep))
                 local formatted_title = pandoc.Strong(pandoc.Emph(title_inlines))
 
-
-                -- Decide where to insert the title based on the div's content
+                -- Decide where to insert the title based on the div's content.
                 if #div.content == 0 or div.content[1].t ~= "Para" then
                     local title_paragraph = pandoc.Para({ formatted_title })
                     table.insert(div.content, 1, title_paragraph)
@@ -180,7 +158,7 @@ local DivProcessor = {
 
 
 
--- Scan 2. Replace empty links with collected text.
+-- Scan 2. Replace empty links with collected text
 -- ----------------------------------------------------------------------------------------
 local LinkResolver = {
     Link = function(link)
