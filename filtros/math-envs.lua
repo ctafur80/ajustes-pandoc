@@ -1,17 +1,17 @@
 
 
 
--- Fichero de filtro unificado para entornos matemáticos y referencias.
+-- Unified filters for maths and cross references to math environments
 
--- Tabla global para almacenar las referencias encontradas en la Pasada 1.
+-- Table for stoing cross references found in first scan
 local references = {}
 
--- Datos de configuración para cada tipo de entorno.
+-- Math environments data
 local envs_data = {
     proof = {
         title = "Demostración",
         sep = ".— ",
-        last_symbol = " ▢", -- Alt. ■ o ◽
+        last_symbol = " ▢",
     },
 
     definition = {
@@ -53,13 +53,13 @@ local envs_data = {
     exercise = {
         title = "Ejercicio",
         sep = ".— ",
-        last_symbol = " △", -- Alt. ◀
+        last_symbol = " △",
     },
 
     example = {
         title = "Ejemplo",
         sep = ".— ",
-        last_symbol = " △", -- Alt. ◀
+        last_symbol = " △",
     },
 }
 
@@ -68,85 +68,99 @@ local envs_data = {
 
 
 
-
-
--- Función auxiliar para comprobar si un elemento tiene una clase específica.
+-- Auxiliary function for checking if an element has a class
 function has_class(element, class_name)
-  if not element.attr or not element.attr.classes then return false end
-  for _, c in ipairs(element.attr.classes) do
-    if c == class_name then return true end
-  end
-  return false
+    if not element.attr or not element.attr.classes then return false end
+    for _, c in ipairs(element.attr.classes) do
+        if c == class_name then return true end
+    end
+    return false
 end
 
 
--- =============================================================================
--- PASADA 1: Modificar Divs y Recopilar Referencias
--- =============================================================================
+
+
+
+-- Scan 1. Modify div elements and collect cross references
+-- ----------------------------------------------------------------------------------------
 local DivProcessor = {
-  Div = function(div)
-    for env_key, env_data in pairs(envs_data) do
-      if has_class(div, env_key) then
+    Div = function(div)
+        for env_key, env_data in pairs(envs_data) do
+            if has_class(div, env_key) then
 
-        -- 1. PREPARAR TEXTOS
-        local title_text = env_data.title
-        local ref_text = env_data.title -- El texto para la referencia no lleva separador.
-        local label = div.attr.attributes["data-label"]
+                -- Readying texts
+                local title_text = env_data.title
+                local ref_text = env_data.title -- El texto para la referencia no lleva separador.
+                local label = div.attr.attributes["data-label"]
 
-        if label and label ~= "" then
-          title_text = title_text .. " (" .. label .. ")" .. env_data.sep
-          ref_text = ref_text .. " (" .. label .. ")"
-        else
-          title_text = title_text .. env_data.sep
+                if label and label ~= "" then
+                    title_text = title_text .. " (" .. label .. ")" .. env_data.sep
+                    ref_text = ref_text .. " (" .. label .. ")"
+                else
+                    title_text = title_text .. env_data.sep
+                end
+
+                -- Collecting cross references (if the div element has an ID)
+                local id = div.attr.identifier
+                if id and id ~= "" then
+                    references["#" .. id] = {pandoc.Str(ref_text)}
+                end
+
+                -- TODO Nosé por qué también pone como condición `div.content[1].t == "Para"`.
+                -- Insert title
+                if div.content[1] then
+                    local formatted_title = pandoc.Strong(pandoc.Emph(pandoc.Str(title_text)))
+                    div.content[1].content:insert(1, formatted_title)
+                    div.attr.attributes["data-label"] = nil -- Borrar para no duplicar
+                end
+
+                -- Insert final symbol
+                local end_symbol = env_data.last_symbol
+                if end_symbol and end_symbol ~= "" then
+                    if #div.content > 0 and div.content[#div.content].t == "Para" then
+                        local last_block = div.content[#div.content]
+                        local formatted_symbol = pandoc.Span(pandoc.Str(end_symbol), {class = "env-last-symbol"})
+                        table.insert(last_block.content, formatted_symbol)
+                    end
+                end
+
+                break -- Environment processed. Exit loop
+            end
         end
 
-        -- 2. RECOPILAR REFERENCIA (si el div tiene ID)
-        local id = div.attr.identifier
-        if id and id ~= "" then
-          references["#" .. id] = {pandoc.Str(ref_text)}
-        end
 
-        -- 3. INSERTAR TÍTULO
-        if div.content[1] and div.content[1].t == "Para" then
-          local formatted_title = pandoc.Strong(pandoc.Emph(pandoc.Str(title_text)))
-          div.content[1].content:insert(1, formatted_title)
-          div.attr.attributes["data-label"] = nil -- Borrar para no duplicar
-        end
-
-        -- 4. INSERTAR SÍMBOLO FINAL
-        local end_symbol = env_data.last_symbol
-        if end_symbol and end_symbol ~= "" then
-          if #div.content > 0 and div.content[#div.content].t == "Para" then
-            local last_block = div.content[#div.content]
-            local formatted_symbol = pandoc.Span(pandoc.Str(end_symbol), {class = "env-last-symbol"})
-            table.insert(last_block.content, formatted_symbol)
-          end
-        end
-
-        break -- Entorno procesado, salir del bucle.
-      end
+        return div
     end
-    return div
-  end
 }
 
--- =============================================================================
--- PASADA 2: Reemplazar los enlaces vacíos con el texto recopilado.
--- =============================================================================
+
+
+
+
+-- Scan 2. Replace empty links with collected text
+-- ----------------------------------------------------------------------------------------
 local LinkResolver = {
-  Link = function(link)
-    if #link.content == 0 and link.target:match("^#") then
-      local ref_content = references[link.target]
-      if ref_content then
-        link.content = ref_content
-      end
+    Link = function(link)
+        if #link.content == 0 and link.target:match("^#") then
+            local ref_content = references[link.target]
+            if ref_content then
+                link.content = ref_content
+            end
+        end
+        return link
     end
-    return link
-  end
 }
+
+
+
 
 -- El filtro devuelve una lista de "pasadas". Pandoc las ejecutará en orden.
 return {
-  DivProcessor,
-  LinkResolver
+    DivProcessor,
+    LinkResolver
 }
+
+
+
+
+
