@@ -5,9 +5,9 @@ input-files:
   - ./src/introduccion.mkd
   - ./src/teor-numeros.mkd
   -   ./src/teor-numeros/intro-teor-num.mkd
-  -   ./src/teor-numeros/numeros-enteros.mkd
-  # -     ./src/teor-numeros/numeros-enteros/introd-numeros-enteros.mkd
-  # -     ./src/teor-numeros/numeros-enteros/estr-alg-z.mkd
+  -     ./src/teor-numeros/numeros-enteros.mkd
+  -       ./src/teor-numeros/numeros-enteros/introd-numeros-enteros.mkd
+  -       ./src/teor-numeros/numeros-enteros/estr-alg-z.mkd
   # -     ./src/teor-numeros/numeros-enteros/resta-y-div.mkd
   # -     ./src/teor-numeros/numeros-enteros/mayor-que.mkd
   # -     ./src/teor-numeros/numeros-enteros/prop-buena-ord.mkd
@@ -34,7 +34,7 @@ input-files:
   # -   ./src/combinatoria/perm-var-comb.mkd
   # -   ./src/combinatoria/coef-bin-multi.mkd
   # -   ./src/combinatoria/princ-incl-excl.mkd
-  # - ./src/referencias.m
+  - ./src/referencias.mkd
 
 
 

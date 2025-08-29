@@ -5,8 +5,9 @@
 
 
     body {
-        /* width: 840px; */
+        width: 690px;
         font-size: 115%;
+        /* margin: 0 150px; */
     }
 
 
@@ -25,4 +26,32 @@
 
 
 }
+
+
+
+@media (width > 860px) {
+
+    body {
+        width: 760px;
+        font-size: 115%;
+        /* margin: 0 150px; */
+    }
+
+
+
+    /*
+    img {
+        width: 100%;
+    }
+    */
+
+    figure {
+        transform: scale(1.1);
+        margin: 48px;
+    }
+
+
+
+}
+
 
