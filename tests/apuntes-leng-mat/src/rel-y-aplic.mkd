@@ -47,9 +47,9 @@ simetría, bastaría con ver que, para cualesquiera $x, y \in \mathbb{R}$, se
 cumple:
 
 $$ (x, y) \in \mathcal{G}
-     \: \Longleftrightarrow \: x^2 + y^2 = 1
-     \: \Longleftrightarrow \: y^2 + x^2 = 1
-     \: \Longleftrightarrow \: (y, x) \in \mathcal{G} $$
+     \ \Longleftrightarrow \ x^2 + y^2 = 1
+     \ \Longleftrightarrow \ y^2 + x^2 = 1
+     \ \Longleftrightarrow \ (y, x) \in \mathcal{G} $$
 
 Para ver que en el ejercicio 2.42 no se cumple, bastaría con encontrar un
 contraejemplo. Tomando los valores $x = 4$ e $y = 2$, se tiene que se cumple

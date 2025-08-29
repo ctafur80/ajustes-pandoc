@@ -56,7 +56,7 @@
         "type": "FilterCompleted",
         "verbosity": "INFO",
         "path": "citeproc",
-        "milliseconds": "38"
+        "milliseconds": "37"
     },
     {
         "type": "RunningFilter",
@@ -67,6 +67,6 @@
         "type": "FilterCompleted",
         "verbosity": "INFO",
         "path": "ajustes-pandoc/filtros/math-envs.lua",
-        "milliseconds": "18"
+        "milliseconds": "19"
     }
 ]

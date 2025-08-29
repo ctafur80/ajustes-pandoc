@@ -3,7 +3,7 @@
 
 
 
-## Capítulo 2
+## Capítulo 2. Axiomas del plano euclideo
 
 
 ### 2.1. Introducción

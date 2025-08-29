@@ -1,10 +1,10 @@
 
 
+-- Filter for math-notes documents. It allows the use of web enviromnents (like in LaTeX)
+-- and the use of automatic titles in references (kind of as with `nameref` LaTeX package).
 
--- Unified filters for maths and cross references to math environments
 
--- Table for stoing cross references found in first scan
-local references = {}
+
 
 -- Math environments data
 local envs_data = {
@@ -13,49 +13,36 @@ local envs_data = {
         sep = ".— ",
         last_symbol = " ▢",
     },
-
     definition = {
         title = "Definición",
-        sep = ".— ",
+        sep = ".--- ",
         last_symbol = nil,
     },
-
     axiom = {
         title = "Axioma",
         sep = ".— ",
         last_symbol = nil,
     },
-
     theorem = {
         title = "Teorema",
         sep = ".— ",
         last_symbol = nil,
     },
-
-    proposition = {
-        title = "Proposición",
-        sep = ".— ",
-        last_symbol = nil,
-    },
-
     lemma = {
         title = "Lema",
         sep = ".— ",
         last_symbol = nil,
     },
-
     corollary = {
         title = "Corolario",
         sep = ".— ",
         last_symbol = nil,
     },
-
     exercise = {
         title = "Ejercicio",
         sep = ".— ",
         last_symbol = " △",
     },
-
     example = {
         title = "Ejemplo",
         sep = ".— ",
@@ -64,12 +51,15 @@ local envs_data = {
 }
 
 
+-- Stores references of IDs in the whole document.
+local references = {}
 
 
 
 
--- Auxiliary function for checking if an element has a class
+-- Helping function for checking if an element has a class
 function has_class(element, class_name)
+    -- TODO Maybe the first condition in test is not neccesary.
     if not element.attr or not element.attr.classes then return false end
     for _, c in ipairs(element.attr.classes) do
         if c == class_name then return true end
@@ -81,37 +71,68 @@ end
 
 
 
--- Scan 1. Modify div elements and collect cross references
+-- Scan 1. Write environment title and collect cross references
 -- ----------------------------------------------------------------------------------------
 local DivProcessor = {
     Div = function(div)
+
+        local has_multiple_envs = false
+
         for env_key, env_data in pairs(envs_data) do
             if has_class(div, env_key) then
 
-                -- Readying texts
+                -- Readying text to write in div
                 local title_text = env_data.title
-                local ref_text = env_data.title -- El texto para la referencia no lleva separador.
+                local title_sep = env_data.sep
                 local label = div.attr.attributes["data-label"]
+                -- Text to insert in cross reference
+                local ref_text = env_data.title
 
+
+                local formatted_title_sep = pandoc.read(title_sep, "markdown").blocks[1]
+
+                --[[
                 if label and label ~= "" then
-                    title_text = title_text .. " (" .. label .. ")" .. env_data.sep
+                    title_text = title_text .. " (" .. label .. ")"
                     ref_text = ref_text .. " (" .. label .. ")"
-                else
-                    title_text = title_text .. env_data.sep
                 end
+                --]]
 
+                -- local formatted_title_sep = pandoc.read(env_data.sep, "markdown").blocks[1]
+                -- title_text = title_text .. env_data.sep
+                -- title_text = title_text .. env_data.sep
+
+                -- TODO Quizás es demasiado enrevesado y no se necesite la tabla `references`.
                 -- Collecting cross references (if the div element has an ID)
                 local id = div.attr.identifier
                 if id and id ~= "" then
-                    references["#" .. id] = {pandoc.Str(ref_text)}
+                    references["#" .. id] = { pandoc.Str(ref_text) }
                 end
 
-                -- TODO Nosé por qué también pone como condición `div.content[1].t == "Para"`.
-                -- Insert title
+                -- Writes title and data-label at the beginning of first paragraph in
+                -- enviroment.
                 if div.content[1] then
-                    local formatted_title = pandoc.Strong(pandoc.Emph(pandoc.Str(title_text)))
-                    div.content[1].content:insert(1, formatted_title)
-                    div.attr.attributes["data-label"] = nil -- Borrar para no duplicar
+                    local env_prev_text = { pandoc.Str(title_text) }
+                    if div.content[1].t == "Para" then
+                        if label and label ~= "" then
+                            env_prev_text:insert(pandoc.Str(" ("))
+                            local formatted_label = pandoc.read(label, "markdown").blocks[1]
+                            for _, inline in ipairs(formatted_label.content) do
+                                env_prev_text:insert(inline)
+                            end
+                            env_prev_text:insert(pandoc.Str(")"))
+                        end
+
+                        env_prev_text:insert(pandoc.Str(formatted_title_sep))
+
+                        local formatted_whole_title = pandoc.Strong(pandoc.Emph(env_prev_text))
+                        div.content[1].content:insert(1, formatted_whole_title)
+                        -- Delete the label for avoiding duplications.
+                        div.attr.attributes["data-label"] = nil -- TODO Maybe not neccesary
+                    else
+                        -- TODO Write the `title_text` in the first paragraph and then the
+                        -- text begins in the next paragraph.
+                    end
                 end
 
                 -- Insert final symbol
@@ -124,6 +145,8 @@ local DivProcessor = {
                     end
                 end
 
+                -- TODO Volver a hacerlo para que si detecta más de una de las clases en
+                -- `envs_data` no compile el documento y dé un problema.
                 break -- Environment processed. Exit loop
             end
         end
