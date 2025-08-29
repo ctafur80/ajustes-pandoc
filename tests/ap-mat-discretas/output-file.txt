@@ -1,0 +1,7329 @@
+Pandoc
+  Meta
+    { unMeta =
+        fromList
+          [ ( "author"
+            , MetaInlines
+                [ Str "Carlos"
+                , Space
+                , Str "E."
+                , Space
+                , Str "Tafur"
+                , Space
+                , Str "Egido"
+                ]
+            )
+          , ( "bibliography"
+            , MetaList [ MetaInlines [ Str "./referencias.yaml" ] ]
+            )
+          , ( "csl" , MetaString "ajustes-pandoc/csl/ieee.csl" )
+          , ( "date" , MetaInlines [ Str "02/08/2025" ] )
+          , ( "description"
+            , MetaInlines
+                [ Str "Apuntes"
+                , Space
+                , Str "de"
+                , Space
+                , Str "la"
+                , Space
+                , Str "asignatura"
+                , Space
+                , Str "Matem\225ticas"
+                , Space
+                , Str "Discretas."
+                ]
+            )
+          , ( "keywords"
+            , MetaList
+                [ MetaInlines [ Str "matem\225ticas" ]
+                , MetaInlines
+                    [ Str "teor\237a"
+                    , Space
+                    , Str "de"
+                    , Space
+                    , Str "n\250meros"
+                    ]
+                , MetaInlines
+                    [ Str "teor\237a"
+                    , Space
+                    , Str "de"
+                    , Space
+                    , Str "grafos"
+                    ]
+                , MetaInlines [ Str "combinatoria" ]
+                ]
+            )
+          , ( "lang" , MetaInlines [ Str "es" ] )
+          , ( "link-citations" , MetaBool True )
+          , ( "metad-author"
+            , MetaInlines
+                [ Str "Carlos"
+                , Space
+                , Str "E."
+                , Space
+                , Str "Tafur"
+                , Space
+                , Str "Egido"
+                ]
+            )
+          , ( "metad-date" , MetaInlines [ Str "02/08/2025" ] )
+          , ( "metad-title"
+            , MetaInlines
+                [ Str "Apuntes"
+                , Space
+                , Str "de"
+                , Space
+                , Str "Matem\225ticas"
+                , Space
+                , Str "Discretas"
+                ]
+            )
+          , ( "otherlangs" , MetaInlines [ Str "en" ] )
+          , ( "title"
+            , MetaInlines
+                [ Str "Apuntes"
+                , Space
+                , Str "de"
+                , Space
+                , Str "Matem\225ticas"
+                , Space
+                , Str "Discretas"
+                ]
+            )
+          ]
+    }
+  [ Header
+      1 ( "introducci\243n" , [] , [] ) [ Str "Introducci\243n" ]
+  , Para
+      [ Span
+          ( "" , [ "ntitle" ] , [] )
+          [ Str "Vista"
+          , Space
+          , Str "general"
+          , Space
+          , Str "de"
+          , Space
+          , Str "la"
+          , Space
+          , Str "asignatura"
+          ]
+      , SoftBreak
+      , Str "Esta"
+      , Space
+      , Str "asignatura"
+      , Space
+      , Str "consta"
+      , Space
+      , Str "de"
+      , Space
+      , Str "tres"
+      , Space
+      , Str "partes,"
+      , Space
+      , Str "cada"
+      , Space
+      , Str "una"
+      , Space
+      , Str "de"
+      , Space
+      , Str "las"
+      , Space
+      , Str "cuales"
+      , Space
+      , Str "se"
+      , Space
+      , Str "podr\237a"
+      , SoftBreak
+      , Str "estudiar"
+      , Space
+      , Str "en"
+      , Space
+      , Str "mayor"
+      , Space
+      , Str "profundidad"
+      , Space
+      , Str "en"
+      , Space
+      , Str "una"
+      , Space
+      , Str "asignatura"
+      , Space
+      , Str "propia."
+      , Space
+      , Str "Estas"
+      , Space
+      , Str "son"
+      , Space
+      , Str "teor\237a"
+      , Space
+      , Str "de"
+      , SoftBreak
+      , Str "n\250meros"
+      , Space
+      , Str "("
+      , Emph [ Str "number" , Space , Str "theory" ]
+      , Str ","
+      , Space
+      , Str "teor\237a"
+      , Space
+      , Str "de"
+      , Space
+      , Str "grafos"
+      , Space
+      , Str "("
+      , Emph [ Str "graph" , Space , Str "theory" ]
+      , Str ")"
+      , Space
+      , Str "y"
+      , Space
+      , Str "combinatoria"
+      , SoftBreak
+      , Str "("
+      , Emph [ Str "combinatorics" ]
+      , Str ")."
+      , Space
+      , Str "Evidentemente,"
+      , Space
+      , Str "todas"
+      , Space
+      , Str "y"
+      , Space
+      , Str "cada"
+      , Space
+      , Str "una"
+      , Space
+      , Str "de"
+      , Space
+      , Str "estas"
+      , Space
+      , Str "se"
+      , Space
+      , Str "engloban"
+      , Space
+      , Str "en"
+      , SoftBreak
+      , Str "las"
+      , Space
+      , Str "matem\225ticas"
+      , Space
+      , Str "discretas,"
+      , Space
+      , Str "es"
+      , Space
+      , Str "decir,"
+      , Space
+      , Str "las"
+      , Space
+      , Str "matem\225ticas"
+      , Space
+      , Str "de"
+      , Space
+      , Str "los"
+      , Space
+      , Str "conjuntos"
+      , SoftBreak
+      , Str "numerables."
+      , Space
+      , Str "TKTK."
+      ]
+  , Para
+      [ Str "El"
+      , Space
+      , Str "libro"
+      , Space
+      , Str "de"
+      , Space
+      , Str "texto"
+      , Space
+      , Str "que"
+      , Space
+      , Str "se"
+      , Space
+      , Str "sigue"
+      , Space
+      , Str "en"
+      , Space
+      , Str "la"
+      , Space
+      , Str "asignatura"
+      , Space
+      , Str "es"
+      , Space
+      , Cite
+          [ Citation
+              { citationId = "bujalance-costa"
+              , citationPrefix = []
+              , citationSuffix = []
+              , citationMode = NormalCitation
+              , citationNoteNum = 1
+              , citationHash = 0
+              }
+          ]
+          [ Link
+              ( "" , [] , [] )
+              [ Str "[1]" ]
+              ( "#ref-bujalance-costa" , "" )
+          ]
+      , Str ","
+      , SoftBreak
+      , Str "creado"
+      , Space
+      , Str "por"
+      , Space
+      , Str "profesores"
+      , Space
+      , Str "de"
+      , Space
+      , Str "la"
+      , Space
+      , Str "UNED."
+      , Space
+      , Str "Me"
+      , Space
+      , Str "parece"
+      , Space
+      , Str "un"
+      , Space
+      , Str "libro"
+      , Space
+      , Str "que"
+      , Space
+      , Str "presenta"
+      , Space
+      , Str "los"
+      , SoftBreak
+      , Str "contenidos"
+      , Space
+      , Str "de"
+      , Space
+      , Str "un"
+      , Space
+      , Str "modo"
+      , Space
+      , Str "demasiado"
+      , Space
+      , Str "directo,"
+      , Space
+      , Str "y,"
+      , Space
+      , Str "por"
+      , Space
+      , Str "tanto,"
+      , Space
+      , Str "poco"
+      , Space
+      , Str "pedag\243gico."
+      , SoftBreak
+      , Str "Adem\225s,"
+      , Space
+      , Str "han"
+      , Space
+      , Str "puesto"
+      , Space
+      , Str "poco"
+      , Space
+      , Str "cuidado"
+      , Space
+      , Str "en"
+      , Space
+      , Str "la"
+      , Space
+      , Str "tipograf\237a;"
+      , Space
+      , Str "no"
+      , Space
+      , Str "parece"
+      , Space
+      , Str "que"
+      , Space
+      , Str "est\233"
+      , Space
+      , Str "hecho"
+      , SoftBreak
+      , Str "en"
+      , Space
+      , Str "TeX"
+      , Space
+      , Str "o"
+      , Space
+      , Str "algo"
+      , Space
+      , Str "similar."
+      ]
+  , Para
+      [ Str "Se"
+      , Space
+      , Str "ve"
+      , Space
+      , Str "que"
+      , Space
+      , Str "est\225"
+      , Space
+      , Str "muy"
+      , Space
+      , Str "inspirado"
+      , Space
+      , Str "en"
+      , Space
+      , Cite
+          [ Citation
+              { citationId = "burton"
+              , citationPrefix = []
+              , citationSuffix = []
+              , citationMode = NormalCitation
+              , citationNoteNum = 2
+              , citationHash = 0
+              }
+          ]
+          [ Link ( "" , [] , [] ) [ Str "[2]" ] ( "#ref-burton" , "" )
+          ]
+      , Str ","
+      , Space
+      , Str "un"
+      , Space
+      , Str "cl\225sico"
+      , Space
+      , Str "de"
+      , Space
+      , Str "la"
+      , Space
+      , Str "teor\237a"
+      , Space
+      , Str "de"
+      , SoftBreak
+      , Str "n\250meros"
+      , Space
+      , Str "muy"
+      , Space
+      , Str "antiguo,"
+      , Space
+      , Str "aunque"
+      , Space
+      , Str "se"
+      , Space
+      , Str "ha"
+      , Space
+      , Str "seguido"
+      , Space
+      , Str "editando."
+      , Space
+      , Str "Si"
+      , Space
+      , Str "se"
+      , Space
+      , Str "puede"
+      , Space
+      , Str "hacer"
+      , Space
+      , Str "con"
+      , SoftBreak
+      , Str "este"
+      , Space
+      , Str "\250ltimo,"
+      , Space
+      , Str "puede"
+      , Space
+      , Str "ayudarle"
+      , Space
+      , Str "en"
+      , Space
+      , Str "su"
+      , Space
+      , Str "estudio,"
+      , Space
+      , Str "aunque"
+      , Space
+      , Str "tambi\233n"
+      , Space
+      , Str "lo"
+      , Space
+      , Str "veo"
+      , Space
+      , Str "demasiado"
+      , SoftBreak
+      , Str "directo."
+      , Space
+      , Str "Tambi\233n"
+      , Space
+      , Str "es"
+      , Space
+      , Str "m\225s"
+      , Space
+      , Str "extenso"
+      , Space
+      , Str "que"
+      , Space
+      , Cite
+          [ Citation
+              { citationId = "bujalance-costa"
+              , citationPrefix = []
+              , citationSuffix = []
+              , citationMode = NormalCitation
+              , citationNoteNum = 3
+              , citationHash = 0
+              }
+          ]
+          [ Link
+              ( "" , [] , [] )
+              [ Str "[1]" ]
+              ( "#ref-bujalance-costa" , "" )
+          ]
+      , Space
+      , Str "y"
+      , Space
+      , Str "presenta"
+      , Space
+      , Str "en"
+      , Space
+      , Str "mayor"
+      , SoftBreak
+      , Str "detalle"
+      , Space
+      , Str "muchos"
+      , Space
+      , Str "resultados"
+      , Space
+      , Str "\250tiles"
+      , Space
+      , Str "para"
+      , Space
+      , Str "manejarse"
+      , Space
+      , Str "en"
+      , Space
+      , Str "esta"
+      , Space
+      , Str "materia."
+      ]
+  , Para
+      [ Str "Aunque"
+      , Space
+      , Str "algunos"
+      , Space
+      , Str "contenidos"
+      , Space
+      , Str "est\233n"
+      , Space
+      , Str "en"
+      , Space
+      , Str "otro"
+      , Space
+      , Str "orden,"
+      , Space
+      , Str "todo"
+      , Space
+      , Str "el"
+      , Space
+      , Str "contenido"
+      , Space
+      , Str "sobre"
+      , SoftBreak
+      , Str "teor\237a"
+      , Space
+      , Str "de"
+      , Space
+      , Str "n\250meros"
+      , Space
+      , Str "de"
+      , Space
+      , Cite
+          [ Citation
+              { citationId = "bujalance-costa"
+              , citationPrefix = []
+              , citationSuffix = []
+              , citationMode = NormalCitation
+              , citationNoteNum = 4
+              , citationHash = 0
+              }
+          ]
+          [ Link
+              ( "" , [] , [] )
+              [ Str "[1]" ]
+              ( "#ref-bujalance-costa" , "" )
+          ]
+      , Space
+      , Str "se"
+      , Space
+      , Str "encuentra"
+      , Space
+      , Str "tambi\233n"
+      , Space
+      , Str "en"
+      , Space
+      , Cite
+          [ Citation
+              { citationId = "burton"
+              , citationPrefix = []
+              , citationSuffix = []
+              , citationMode = NormalCitation
+              , citationNoteNum = 5
+              , citationHash = 0
+              }
+          ]
+          [ Link ( "" , [] , [] ) [ Str "[2]" ] ( "#ref-burton" , "" )
+          ]
+      , Str "."
+      ]
+  , Para
+      [ Str "Otro"
+      , Space
+      , Str "libro"
+      , Space
+      , Str "que"
+      , Space
+      , Str "puede"
+      , Space
+      , Str "servir"
+      , Space
+      , Str "para"
+      , Space
+      , Str "toda"
+      , Space
+      , Str "la"
+      , Space
+      , Str "parte"
+      , Space
+      , Str "de"
+      , Space
+      , Str "la"
+      , Space
+      , Str "teor\237a"
+      , Space
+      , Str "de"
+      , Space
+      , Str "n\250meros"
+      , Space
+      , Str "es"
+      , SoftBreak
+      , Cite
+          [ Citation
+              { citationId = "rosen-number-th"
+              , citationPrefix = []
+              , citationSuffix = []
+              , citationMode = NormalCitation
+              , citationNoteNum = 6
+              , citationHash = 0
+              }
+          ]
+          [ Link
+              ( "" , [] , [] )
+              [ Str "[3]" ]
+              ( "#ref-rosen-number-th" , "" )
+          ]
+      , Str ","
+      , Space
+      , Str "que"
+      , Space
+      , Str "es"
+      , Space
+      , Str "algo"
+      , Space
+      , Str "m\225s"
+      , Space
+      , Str "moderno"
+      , Space
+      , Str "que"
+      , Space
+      , Cite
+          [ Citation
+              { citationId = "burton"
+              , citationPrefix = []
+              , citationSuffix = []
+              , citationMode = NormalCitation
+              , citationNoteNum = 7
+              , citationHash = 0
+              }
+          ]
+          [ Link ( "" , [] , [] ) [ Str "[2]" ] ( "#ref-burton" , "" )
+          ]
+      , Space
+      , Str "y,"
+      , Space
+      , Str "personalmente,"
+      , SoftBreak
+      , Str "me"
+      , Space
+      , Str "gusta"
+      , Space
+      , Str "m\225s."
+      , Space
+      , Str "Es"
+      , Space
+      , Str "el"
+      , Space
+      , Str "que"
+      , Space
+      , Str "estoy"
+      , Space
+      , Str "usando"
+      , Space
+      , Str "yo"
+      , Space
+      , Str "como"
+      , Space
+      , Str "complemento"
+      , Space
+      , Str "del"
+      , Space
+      , Str "libro"
+      , Space
+      , Str "oficial."
+      , SoftBreak
+      , Str "Por"
+      , Space
+      , Str "cierto,"
+      , Space
+      , Str "no"
+      , Space
+      , Str "lo"
+      , Space
+      , Str "confunda"
+      , Space
+      , Str "con"
+      , Space
+      , Str "el"
+      , Space
+      , Str "libro"
+      , Space
+      , Emph [ Str "Discrete" , Space , Str "Mathematics" ]
+      , Space
+      , Str "del"
+      , Space
+      , Str "mismo"
+      , SoftBreak
+      , Str "autor,"
+      , Space
+      , Str "Kenneth"
+      , Space
+      , Str "H."
+      , Space
+      , Str "Rosen."
+      , Space
+      , Str "El"
+      , Space
+      , Str "principal"
+      , Space
+      , Str "problema"
+      , Space
+      , Str "que"
+      , Space
+      , Str "le"
+      , Space
+      , Str "encuentro"
+      , Space
+      , Str "a"
+      , SoftBreak
+      , Cite
+          [ Citation
+              { citationId = "rosen-number-th"
+              , citationPrefix = []
+              , citationSuffix = []
+              , citationMode = NormalCitation
+              , citationNoteNum = 8
+              , citationHash = 0
+              }
+          ]
+          [ Link
+              ( "" , [] , [] )
+              [ Str "[3]" ]
+              ( "#ref-rosen-number-th" , "" )
+          ]
+      , Space
+      , Str "es"
+      , Space
+      , Str "que"
+      , Space
+      , Str "parece"
+      , Space
+      , Str "que"
+      , Space
+      , Str "trata"
+      , Space
+      , Str "de"
+      , Space
+      , Str "usar"
+      , Space
+      , Str "lo"
+      , Space
+      , Str "menos"
+      , Space
+      , Str "posible"
+      , Space
+      , Str "la"
+      , SoftBreak
+      , Str "simbolog\237a"
+      , Space
+      , Str "matem\225tica."
+      ]
+  , Para
+      [ Str "Al"
+      , Space
+      , Str "ser,"
+      , Space
+      , Str "tanto"
+      , Space
+      , Cite
+          [ Citation
+              { citationId = "burton"
+              , citationPrefix = []
+              , citationSuffix = []
+              , citationMode = NormalCitation
+              , citationNoteNum = 9
+              , citationHash = 0
+              }
+          ]
+          [ Link ( "" , [] , [] ) [ Str "[2]" ] ( "#ref-burton" , "" )
+          ]
+      , Space
+      , Str "como"
+      , Space
+      , Cite
+          [ Citation
+              { citationId = "rosen-number-th"
+              , citationPrefix = []
+              , citationSuffix = []
+              , citationMode = NormalCitation
+              , citationNoteNum = 10
+              , citationHash = 0
+              }
+          ]
+          [ Link
+              ( "" , [] , [] )
+              [ Str "[3]" ]
+              ( "#ref-rosen-number-th" , "" )
+          ]
+      , Str ","
+      , Space
+      , Str "textos"
+      , Space
+      , Str "muy"
+      , Space
+      , Str "populares"
+      , Space
+      , Str "de"
+      , Space
+      , Str "la"
+      , SoftBreak
+      , Str "teor\237a"
+      , Space
+      , Str "de"
+      , Space
+      , Str "n\250meros,"
+      , Space
+      , Str "si"
+      , Space
+      , Str "busca"
+      , Space
+      , Str "un"
+      , Space
+      , Str "poco"
+      , Space
+      , Str "puede"
+      , Space
+      , Str "encontrar"
+      , Space
+      , Str "las"
+      , Space
+      , Str "soluciones"
+      , Space
+      , Str "a"
+      , Space
+      , Str "los"
+      , SoftBreak
+      , Str "ejercicios"
+      , Space
+      , Str "planteados"
+      , Space
+      , Str "en"
+      , Space
+      , Str "ambos"
+      , Space
+      , Str "textos."
+      , Space
+      , Str "Por"
+      , Space
+      , Str "ejemplo,"
+      , Space
+      , Link
+          ( "" , [] , [] )
+          [ Str "las"
+          , Space
+          , Str "de"
+          , SoftBreak
+          , Cite
+              [ Citation
+                  { citationId = "burton"
+                  , citationPrefix = []
+                  , citationSuffix = []
+                  , citationMode = NormalCitation
+                  , citationNoteNum = 11
+                  , citationHash = 0
+                  }
+              ]
+              [ Link
+                  ( "" , [] , [] ) [ Str "[2]" ] ( "#ref-burton" , "" )
+              ]
+          ]
+          ( "http://www.americanriver.com/mathematics/elementary_number_theory.html"
+          , ""
+          )
+      , Str "."
+      , Space
+      , Str "En"
+      , Space
+      , Str "cuanto"
+      , Space
+      , Str "a"
+      , Space
+      , Cite
+          [ Citation
+              { citationId = "rosen-number-th"
+              , citationPrefix = []
+              , citationSuffix = []
+              , citationMode = NormalCitation
+              , citationNoteNum = 12
+              , citationHash = 0
+              }
+          ]
+          [ Link
+              ( "" , [] , [] )
+              [ Str "[3]" ]
+              ( "#ref-rosen-number-th" , "" )
+          ]
+      , Str ","
+      , Space
+      , Str "en"
+      , Space
+      , Str "este"
+      , SoftBreak
+      , Str "vienen"
+      , Space
+      , Str "las"
+      , Space
+      , Str "soluciones"
+      , Space
+      , Str "a"
+      , Space
+      , Str "los"
+      , Space
+      , Str "ejercicios"
+      , Space
+      , Str "pares"
+      , Space
+      , Str "al"
+      , Space
+      , Str "final."
+      , Space
+      , Str "Tambi\233n,"
+      , Space
+      , Str "existe"
+      , Space
+      , Str "un"
+      , SoftBreak
+      , Str "libro"
+      , Space
+      , Str "de"
+      , Space
+      , Str "soluciones,"
+      , Space
+      , Str "en"
+      , Space
+      , Str "el"
+      , Space
+      , Str "que"
+      , Space
+      , Str "se"
+      , Space
+      , Str "dan"
+      , Space
+      , Str "las"
+      , Space
+      , Str "de"
+      , Space
+      , Str "todos"
+      , Space
+      , Str "los"
+      , Space
+      , Str "planteados."
+      ]
+  , Para
+      [ Str "Otra"
+      , Space
+      , Str "referencia"
+      , Space
+      , Str "que"
+      , Space
+      , Str "me"
+      , Space
+      , Str "parece"
+      , Space
+      , Str "interesante"
+      , Space
+      , Str "es"
+      , Space
+      , Cite
+          [ Citation
+              { citationId = "weissman"
+              , citationPrefix = []
+              , citationSuffix = []
+              , citationMode = NormalCitation
+              , citationNoteNum = 13
+              , citationHash = 0
+              }
+          ]
+          [ Link
+              ( "" , [] , [] ) [ Str "[4]" ] ( "#ref-weissman" , "" )
+          ]
+      , Str ","
+      , Space
+      , Str "que"
+      , Space
+      , Str "es"
+      , Space
+      , Str "bastante"
+      , SoftBreak
+      , Str "m\225s"
+      , Space
+      , Str "moderna"
+      , Space
+      , Str "que"
+      , Space
+      , Str "las"
+      , Space
+      , Str "otras"
+      , Space
+      , Str "dos"
+      , Space
+      , Str "mencionadas."
+      , Space
+      , Str "Esta"
+      , Space
+      , Str "incorpora"
+      , Space
+      , Str "algunas"
+      , SoftBreak
+      , Str "innovaciones"
+      , Space
+      , Str "que"
+      , Space
+      , Str "me"
+      , Space
+      , Str "parecen"
+      , Space
+      , Str "interesantes."
+      , Space
+      , Str "Otro"
+      , Space
+      , Str "punto"
+      , Space
+      , Str "fuerte"
+      , Space
+      , Str "de"
+      , Space
+      , Str "este"
+      , Space
+      , Str "es"
+      , Space
+      , Str "el"
+      , SoftBreak
+      , Str "gran"
+      , Space
+      , Str "cuidado"
+      , Space
+      , Str "de"
+      , Space
+      , Str "las"
+      , Space
+      , Str "figuras"
+      , Space
+      , Str "que"
+      , Space
+      , Str "incluye."
+      ]
+  , Para
+      [ Str "Otro"
+      , Space
+      , Str "libro"
+      , Space
+      , Str "sobre"
+      , Space
+      , Str "teor\237a"
+      , Space
+      , Str "de"
+      , Space
+      , Str "n\250meros"
+      , Space
+      , Str "que"
+      , Space
+      , Str "creo"
+      , Space
+      , Str "que"
+      , Space
+      , Str "se"
+      , Space
+      , Str "considera"
+      , Space
+      , Str "un"
+      , Space
+      , Str "cl\225sico"
+      , Space
+      , Str "es"
+      , SoftBreak
+      , Cite
+          [ Citation
+              { citationId = "theory-of-numbers-niven"
+              , citationPrefix = []
+              , citationSuffix = []
+              , citationMode = NormalCitation
+              , citationNoteNum = 14
+              , citationHash = 0
+              }
+          ]
+          [ Link
+              ( "" , [] , [] )
+              [ Str "[5]" ]
+              ( "#ref-theory-of-numbers-niven" , "" )
+          ]
+      , Str ","
+      , Space
+      , Str "pero"
+      , Space
+      , Str "es"
+      , Space
+      , Str "dif\237cil"
+      , Space
+      , Str "de"
+      , Space
+      , Str "encontrar"
+      , Space
+      , Str "actualmente."
+      , Space
+      , Str "Creo"
+      , SoftBreak
+      , Str "que"
+      , Space
+      , Str "es"
+      , Space
+      , Str "algo"
+      , Space
+      , Str "m\225s"
+      , Space
+      , Str "avanzado"
+      , Space
+      , Str "que"
+      , Space
+      , Str "los"
+      , Space
+      , Str "otros"
+      , Space
+      , Str "mencionados"
+      , Space
+      , Str "aqu\237."
+      , Space
+      , Str "Adem\225s,"
+      , Space
+      , Str "creo"
+      , Space
+      , Str "que"
+      , Space
+      , Str "es"
+      , SoftBreak
+      , Str "dif\237cil"
+      , Space
+      , Str "de"
+      , Space
+      , Str "encontrar"
+      , Space
+      , Str "actualmente."
+      ]
+  , Para
+      [ Str "En"
+      , Space
+      , Str "lo"
+      , Space
+      , Str "que"
+      , Space
+      , Str "respecta"
+      , Space
+      , Str "a"
+      , Space
+      , Str "la"
+      , Space
+      , Str "parte"
+      , Space
+      , Str "de"
+      , Space
+      , Str "la"
+      , Space
+      , Str "teor\237a"
+      , Space
+      , Str "de"
+      , Space
+      , Str "grafos,"
+      , Space
+      , Str "TKTK."
+      ]
+  , Para
+      [ Str "En"
+      , Space
+      , Str "lo"
+      , Space
+      , Str "que"
+      , Space
+      , Str "respecta"
+      , Space
+      , Str "a"
+      , Space
+      , Str "la"
+      , Space
+      , Str "parte"
+      , Space
+      , Str "de"
+      , Space
+      , Str "combinatoria,"
+      , Space
+      , Str "est\225"
+      , Space
+      , Str "muy"
+      , Space
+      , Str "bien"
+      , Space
+      , Cite
+          [ Citation
+              { citationId = "brualdi"
+              , citationPrefix = []
+              , citationSuffix = []
+              , citationMode = NormalCitation
+              , citationNoteNum = 15
+              , citationHash = 0
+              }
+          ]
+          [ Link
+              ( "" , [] , [] ) [ Str "[6]" ] ( "#ref-brualdi" , "" )
+          ]
+      , Str "."
+      , SoftBreak
+      , Str "TKTK."
+      ]
+  , HorizontalRule
+  , Para
+      [ Span
+          ( "" , [ "ntitle" ] , [] )
+          [ Str "Imprecisi\243n"
+          , Space
+          , Str "en"
+          , Space
+          , Str "enunciados"
+          ]
+      , SoftBreak
+      , Str "Algo"
+      , Space
+      , Str "que"
+      , Space
+      , Str "tambi\233n"
+      , Space
+      , Str "desear\237a"
+      , Space
+      , Str "explicar"
+      , Space
+      , Str "es"
+      , Space
+      , Str "que"
+      , Space
+      , Str "es"
+      , Space
+      , Str "com\250n"
+      , Space
+      , Str "en"
+      , Space
+      , Str "matem\225ticas"
+      , Space
+      , Str "usar"
+      , Space
+      , Str "el"
+      , SoftBreak
+      , Str "condicional"
+      , Space
+      , Str "en"
+      , Space
+      , Str "muchas"
+      , Space
+      , Str "definiciones"
+      , Space
+      , Str "o"
+      , Space
+      , Str "resultados"
+      , Space
+      , Str "de"
+      , Space
+      , Str "cualquier"
+      , Space
+      , Str "tipo"
+      , Space
+      , Str "cuando"
+      , Space
+      , Str "en"
+      , SoftBreak
+      , Str "realidad"
+      , Space
+      , Str "se"
+      , Space
+      , Str "deber\237a"
+      , Space
+      , Str "usar"
+      , Space
+      , Str "el"
+      , Space
+      , Str "bicondicional."
+      , Space
+      , Str "As\237,"
+      , Space
+      , Str "por"
+      , Space
+      , Str "ejemplo,"
+      , Space
+      , Str "la"
+      , Space
+      , Str "definici\243n"
+      , SoftBreak
+      , Str "del"
+      , Space
+      , Str "operador"
+      , Space
+      , Quoted DoubleQuote [ Str "divide" , Space , Str "a\8230" ]
+      , Space
+      , Str "que"
+      , Space
+      , Str "se"
+      , Space
+      , Str "da"
+      , Space
+      , Str "en"
+      , Space
+      , Cite
+          [ Citation
+              { citationId = "bujalance-costa"
+              , citationPrefix = []
+              , citationSuffix = []
+              , citationMode = NormalCitation
+              , citationNoteNum = 16
+              , citationHash = 0
+              }
+          ]
+          [ Link
+              ( "" , [] , [] )
+              [ Str "[1]" ]
+              ( "#ref-bujalance-costa" , "" )
+          ]
+      , Space
+      , Str "es"
+      , Space
+      , Str "la"
+      , Space
+      , Str "siguiente:"
+      ]
+  , Div
+      ( "" , [ "definition" ] , [] )
+      [ Para
+          [ Strong
+              [ Emph
+                  [ Str
+                      "Definici\243n (Operador \"Divide a...\" (mal)).\8212 "
+                  ]
+              ]
+          , Str "Dados"
+          , Space
+          , Math InlineMath "a,b \\in \\mathbb{Z}"
+          , Str ","
+          , Space
+          , Str "si"
+          , Space
+          , Math InlineMath "a \\neq 0"
+          , Space
+          , Str "y"
+          , Space
+          , Math InlineMath "b = a \\cdot q"
+          , Space
+          , Str "para"
+          , Space
+          , Str "alg\250n"
+          , Space
+          , Math InlineMath "q\n  \\in \\mathbb{Z}"
+          , Str ","
+          , Space
+          , Str "diremos"
+          , Space
+          , Str "que"
+          , Space
+          , Math InlineMath "a"
+          , Space
+          , Str "divide"
+          , Space
+          , Str "a"
+          , Space
+          , Math InlineMath "b"
+          , Str "."
+          ]
+      ]
+  , Para
+      [ Str "Si"
+      , Space
+      , Str "se"
+      , Space
+      , Str "fija,"
+      , Space
+      , Str "esa"
+      , Space
+      , Str "proposici\243n"
+      , Space
+      , Str "hace"
+      , Space
+      , Str "uso"
+      , Space
+      , Str "del"
+      , Space
+      , Str "condicional."
+      , Space
+      , Str "Entonces,"
+      , Space
+      , Str "supongamos"
+      , SoftBreak
+      , Str "que"
+      , Space
+      , Str "no"
+      , Space
+      , Str "se"
+      , Space
+      , Str "da"
+      , Space
+      , Str "el"
+      , Space
+      , Str "antecedente."
+      , Space
+      , Str "En"
+      , Space
+      , Str "ese"
+      , Space
+      , Str "caso,"
+      , Space
+      , Str "el"
+      , Space
+      , Str "consecuente"
+      , Space
+      , Str "ser\225"
+      , Space
+      , Str "cierto,"
+      , Space
+      , Str "pero"
+      , SoftBreak
+      , Str "no"
+      , Space
+      , Str "es"
+      , Space
+      , Str "eso"
+      , Space
+      , Str "lo"
+      , Space
+      , Str "que"
+      , Space
+      , Str "dese\225bamos"
+      , Space
+      , Str "expresar."
+      , Space
+      , Str "En"
+      , Space
+      , Str "realidad,"
+      , Space
+      , Str "la"
+      , Space
+      , Str "definici\243n"
+      , Space
+      , Str "deber\237a"
+      , SoftBreak
+      , Str "hacer"
+      , Space
+      , Str "uso"
+      , Space
+      , Str "del"
+      , Space
+      , Str "bicondicional."
+      , Space
+      , Str "Podr\237a"
+      , Space
+      , Str "ser"
+      , Space
+      , Str "algo"
+      , Space
+      , Str "como"
+      , Space
+      , Str "lo"
+      , Space
+      , Str "siguiente:"
+      ]
+  , Div
+      ( "" , [ "definition" ] , [] )
+      [ Para
+          [ Strong
+              [ Emph
+                  [ Str
+                      "Definici\243n (Operador \"Divide a...\" (bien)).\8212 "
+                  ]
+              ]
+          , Str "Dados"
+          , Space
+          , Math InlineMath "a,b \\in \\mathbb{Z}"
+          , Space
+          , Str "tales"
+          , Space
+          , Str "que"
+          , Space
+          , Math InlineMath "a \\neq 0"
+          , Str ","
+          , Space
+          , Str "diremos"
+          , Space
+          , Str "que"
+          , Space
+          , Math InlineMath "a"
+          , Space
+          , Str "divide"
+          , Space
+          , Str "a"
+          , SoftBreak
+          , Math InlineMath "b"
+          , Space
+          , Str "si"
+          , Space
+          , Str "y"
+          , Space
+          , Str "solo"
+          , Space
+          , Str "si"
+          , Space
+          , Math InlineMath "b = a \\cdot q"
+          , Space
+          , Str "para"
+          , Space
+          , Str "alg\250n"
+          , Space
+          , Math InlineMath "q \\in \\mathbb{Z}"
+          , Str "."
+          ]
+      ]
+  , Header
+      1
+      ( "teoria-numeros" , [] , [] )
+      [ Str "Parte"
+      , Space
+      , Str "1."
+      , Space
+      , Str "Teor\237a"
+      , Space
+      , Str "de"
+      , Space
+      , Str "n\250meros"
+      ]
+  , Header
+      2
+      ( "cap\237tulo-1.-introducci\243n-a-la-teor\237a-de-n\250meros"
+      , []
+      , []
+      )
+      [ Str "Cap\237tulo"
+      , Space
+      , Str "1."
+      , Space
+      , Str "Introducci\243n"
+      , Space
+      , Str "a"
+      , Space
+      , Str "la"
+      , Space
+      , Str "teor\237a"
+      , Space
+      , Str "de"
+      , Space
+      , Str "n\250meros"
+      ]
+  , Para
+      [ Str "Hay"
+      , Space
+      , Str "que"
+      , Space
+      , Str "aclarar"
+      , Space
+      , Str "que"
+      , Space
+      , Str "el"
+      , Space
+      , Str "adjetivo"
+      , Space
+      , Emph [ Str "elemental" ]
+      , Space
+      , Str "("
+      , Emph [ Str "elemnentary" ]
+      , Str ")"
+      , Space
+      , Str "de"
+      , Space
+      , Str "este"
+      , Space
+      , Str "t\237tulo,"
+      , SoftBreak
+      , Str "as\237"
+      , Space
+      , Str "como"
+      , Space
+      , Str "de"
+      , Space
+      , Str "algunos"
+      , Space
+      , Str "libros,"
+      , Space
+      , Str "no"
+      , Space
+      , Str "se"
+      , Space
+      , Str "pone"
+      , Space
+      , Str "por"
+      , Space
+      , Str "casualidad."
+      , Space
+      , Str "Tal"
+      , Space
+      , Str "y"
+      , Space
+      , Str "como"
+      , Space
+      , Str "se"
+      , Space
+      , Str "explica"
+      , SoftBreak
+      , Str "en"
+      , Space
+      , Cite
+          [ Citation
+              { citationId = "rosen-number-th"
+              , citationPrefix = []
+              , citationSuffix = []
+              , citationMode = NormalCitation
+              , citationNoteNum = 17
+              , citationHash = 0
+              }
+          ]
+          [ Link
+              ( "" , [] , [] )
+              [ Str "[3]" ]
+              ( "#ref-rosen-number-th" , "" )
+          ]
+      , Str ","
+      , Space
+      , Str "ese"
+      , Space
+      , Str "adjetivo"
+      , Space
+      , Str "se"
+      , Space
+      , Str "refiere"
+      , Space
+      , Str "a"
+      , Space
+      , Str "que"
+      , Space
+      , Str "no"
+      , Space
+      , Str "se"
+      , Space
+      , Str "apoyar\225"
+      , Space
+      , Str "en"
+      , SoftBreak
+      , Str "conocimiento"
+      , Space
+      , Str "avanzado"
+      , Space
+      , Str "de"
+      , Space
+      , Str "matem\225ticas"
+      , Space
+      , Str "como"
+      , Space
+      , Str "puede"
+      , Space
+      , Str "ser,"
+      , Space
+      , Str "entre"
+      , Space
+      , Str "otros,"
+      , Space
+      , Str "la"
+      , Space
+      , Str "teor\237a"
+      , SoftBreak
+      , Str "de"
+      , Space
+      , Str "grupos."
+      ]
+  , Para
+      [ Str "Como"
+      , Space
+      , Str "ver\225,"
+      , Space
+      , Str "al"
+      , Space
+      , Str "tratarse"
+      , Space
+      , Str "de"
+      , Space
+      , Str "la"
+      , Space
+      , Str "elemental"
+      , Space
+      , Str "habr\225"
+      , Space
+      , Str "cierta"
+      , Space
+      , Str "ambig\252edad"
+      , Space
+      , Str "sobre"
+      , Space
+      , Str "lo"
+      , Space
+      , Str "que"
+      , SoftBreak
+      , Str "debe"
+      , Space
+      , Str "demostrar"
+      , Space
+      , Str "y"
+      , Space
+      , Str "lo"
+      , Space
+      , Str "que"
+      , Space
+      , Str "no."
+      , Space
+      , Str "Hay"
+      , Space
+      , Str "afirmaciones,"
+      , Space
+      , Str "como,"
+      , Space
+      , Str "por"
+      , Space
+      , Str "ejemplo,"
+      , Space
+      , Str "que"
+      , SoftBreak
+      , Math InlineMath "(-a)(-b) = ab"
+      , Space
+      , Str "para"
+      , Space
+      , Math InlineMath "a, b \\in \\mathbb{Z}"
+      , Str ","
+      , Space
+      , Str "que"
+      , Space
+      , Str "se"
+      , Space
+      , Str "admiten"
+      , Space
+      , Str "como"
+      , Space
+      , Str "ciertas"
+      , SoftBreak
+      , Str "porque"
+      , Space
+      , Str "usted"
+      , Space
+      , Str "ya"
+      , Space
+      , Str "las"
+      , Space
+      , Str "conoce"
+      , Space
+      , Str "(aunque"
+      , Space
+      , Str "quiz\225s"
+      , Space
+      , Str "no"
+      , Space
+      , Str "sepa"
+      , Space
+      , Str "demostrarlas)."
+      , Space
+      , Str "No"
+      , Space
+      , Str "es"
+      , Space
+      , Str "el"
+      , SoftBreak
+      , Str "prop\243sito"
+      , Space
+      , Str "de"
+      , Space
+      , Str "esta"
+      , Space
+      , Str "asignatura"
+      , Space
+      , Str "demostrar"
+      , Space
+      , Str "afirmaciones"
+      , Space
+      , Str "sobre"
+      , Space
+      , Str "las"
+      , Space
+      , Str "estructuras"
+      , SoftBreak
+      , Str "algebraicas"
+      , Space
+      , Str "num\233ricas"
+      , Space
+      , Str "que"
+      , Space
+      , Str "se"
+      , Space
+      , Str "usan"
+      , Space
+      , Str "(principalmente,"
+      , Space
+      , Math
+          InlineMath "(\\mathbb{Z},\n\\mathbin{+}, \\mathbin{\\cdot})"
+      , Str "),"
+      , Space
+      , Str "sino"
+      , Space
+      , Str "que"
+      , Space
+      , Str "nos"
+      , Space
+      , Str "dedicaremos"
+      , Space
+      , Str "a"
+      , Space
+      , Str "estudiar"
+      , Space
+      , Str "otros"
+      , SoftBreak
+      , Str "aspectos"
+      , Space
+      , Str "de"
+      , Space
+      , Str "los"
+      , Space
+      , Str "n\250meros"
+      , Space
+      , Str "enteros"
+      , Space
+      , Str "(principalmente),"
+      , Space
+      , Str "como"
+      , Space
+      , Str "la"
+      , Space
+      , Str "divisibilidad,"
+      , Space
+      , Str "los"
+      , SoftBreak
+      , Str "n\250meros"
+      , Space
+      , Str "primos,"
+      , Space
+      , Str "ecuaciones"
+      , Space
+      , Str "diof\225nticas,"
+      , Space
+      , Str "etc."
+      ]
+  , Para
+      [ Str "Aun"
+      , Space
+      , Str "as\237,"
+      , Space
+      , Str "esta"
+      , Space
+      , Str "asignatura"
+      , Space
+      , Str "es"
+      , Space
+      , Str "de"
+      , Space
+      , Str "cierto"
+      , Space
+      , Str "nivel,"
+      , Space
+      , Str "pues"
+      , Space
+      , Str "se"
+      , Space
+      , Str "ven"
+      , Space
+      , Str "muchas"
+      , SoftBreak
+      , Str "demostraciones,"
+      , Space
+      , Str "con"
+      , Space
+      , Str "lo"
+      , Space
+      , Str "que"
+      , Space
+      , Str "evidentemente"
+      , Space
+      , Str "se"
+      , Space
+      , Str "tendr\225"
+      , Space
+      , Str "como"
+      , Space
+      , Str "prerrequisito"
+      , Space
+      , Str "un"
+      , SoftBreak
+      , Str "conocimiento"
+      , Space
+      , Str "b\225sico"
+      , Space
+      , Str "tanto"
+      , Space
+      , Str "de"
+      , Space
+      , Str "l\243gica"
+      , Space
+      , Str "como"
+      , Space
+      , Str "de"
+      , Space
+      , Str "teor\237a"
+      , Space
+      , Str "de"
+      , Space
+      , Str "conjuntos."
+      , Space
+      , Str "Por"
+      , SoftBreak
+      , Str "ejemplo,"
+      , Space
+      , Str "podr\237a"
+      , Space
+      , Str "cursarla"
+      , Space
+      , Str "simult\225neamente"
+      , Space
+      , Str "con"
+      , Space
+      , Str "una"
+      , Space
+      , Str "de"
+      , Space
+      , Str "demostraciones"
+      , Space
+      , Str "o"
+      , Space
+      , Str "de"
+      , SoftBreak
+      , Str "transici\243n"
+      , Space
+      , Str "a"
+      , Space
+      , Str "las"
+      , Space
+      , Str "matem\225ticas"
+      , Space
+      , Str "superiores."
+      ]
+  , Para
+      [ Str "Tal"
+      , Space
+      , Str "y"
+      , Space
+      , Str "como"
+      , Space
+      , Str "he"
+      , Space
+      , Str "mencionado,"
+      , Space
+      , Str "los"
+      , Space
+      , Str "n\250meros"
+      , Space
+      , Str "enteros"
+      , Space
+      , Str "son"
+      , Space
+      , Str "los"
+      , Space
+      , Str "objetos"
+      , Space
+      , Str "a"
+      , Space
+      , Str "los"
+      , Space
+      , Str "que"
+      , SoftBreak
+      , Str "dedicamos"
+      , Space
+      , Str "m\225s"
+      , Space
+      , Str "atenci\243n,"
+      , Space
+      , Str "con"
+      , Space
+      , Str "diferencia,"
+      , Space
+      , Str "en"
+      , Space
+      , Str "esta"
+      , Space
+      , Str "asignatura."
+      , Space
+      , Str "En"
+      , Space
+      , Str "realidad,"
+      , Space
+      , Str "m\225s"
+      , SoftBreak
+      , Str "que"
+      , Space
+      , Str "n\250meros"
+      , Space
+      , Str "enteros,"
+      , Space
+      , Str "lo"
+      , Space
+      , Str "que"
+      , Space
+      , Str "nos"
+      , Space
+      , Str "interesa"
+      , Space
+      , Str "son"
+      , Space
+      , Str "los"
+      , Space
+      , Str "n\250meros"
+      , Space
+      , Str "en"
+      , Space
+      , Str "el"
+      , Space
+      , Str "marco"
+      , Space
+      , Str "de"
+      , Space
+      , Str "las"
+      , SoftBreak
+      , Str "matem\225ticas"
+      , Space
+      , Str "discretas;"
+      , Space
+      , Str "dicho"
+      , Space
+      , Str "de"
+      , Space
+      , Str "otro"
+      , Space
+      , Str "modo,"
+      , Space
+      , Str "los"
+      , Space
+      , Str "conjuntos"
+      , Space
+      , Str "numerables"
+      , SoftBreak
+      , Str "("
+      , Emph [ Str "countable" ]
+      , Str ")."
+      , Space
+      , Str "Esto"
+      , Space
+      , Str "incluir\237a"
+      , Space
+      , Str "tambi\233n"
+      , Space
+      , Str "a"
+      , Space
+      , Str "los"
+      , Space
+      , Str "racionales;"
+      , Space
+      , Str "puede"
+      , Space
+      , Str "ver"
+      , Space
+      , Str "una"
+      , SoftBreak
+      , Str "demostraci\243n"
+      , Space
+      , Str "de"
+      , Space
+      , Str "que"
+      , Space
+      , Math InlineMath "\\mathbb{Q}"
+      , Space
+      , Str "es"
+      , Space
+      , Str "numerable"
+      , Space
+      , Str "en"
+      , Space
+      , Str "el"
+      , Space
+      , Str "Teorema"
+      , Space
+      , Str "1.4"
+      , Space
+      , Str "de"
+      , SoftBreak
+      , Cite
+          [ Citation
+              { citationId = "rosen-number-th"
+              , citationPrefix = []
+              , citationSuffix = []
+              , citationMode = NormalCitation
+              , citationNoteNum = 18
+              , citationHash = 0
+              }
+          ]
+          [ Link
+              ( "" , [] , [] )
+              [ Str "[3]" ]
+              ( "#ref-rosen-number-th" , "" )
+          ]
+      , Str "."
+      , Space
+      , Str "En"
+      , Space
+      , Str "cualquier"
+      , Space
+      , Str "caso,"
+      , Space
+      , Str "los"
+      , Space
+      , Str "racionales"
+      , Space
+      , Str "casi"
+      , Space
+      , Str "no"
+      , Space
+      , Str "aparecer\225n."
+      ]
+  , Para
+      [ Str "Pero"
+      , Space
+      , Str "usted"
+      , Space
+      , Str "ha"
+      , Space
+      , Str "manejado"
+      , Space
+      , Str "ya"
+      , Space
+      , Str "durante"
+      , Space
+      , Str "muchos"
+      , Space
+      , Str "a\241os"
+      , Space
+      , Str "los"
+      , Space
+      , Str "n\250meros"
+      , Space
+      , Str "reales,"
+      , Space
+      , Str "que"
+      , SoftBreak
+      , Str "engloban"
+      , Space
+      , Str "a"
+      , Space
+      , Str "los"
+      , Space
+      , Str "racionales"
+      , Space
+      , Str "y"
+      , Space
+      , Str "a"
+      , Space
+      , Str "los"
+      , Space
+      , Str "enteros."
+      , Space
+      , Quoted
+          DoubleQuote
+          [ Str "Cre\237a"
+          , Space
+          , Str "que"
+          , Space
+          , Str "ir\237a"
+          , Space
+          , Str "avanzando"
+          , Space
+          , Str "a"
+          , SoftBreak
+          , Str "n\250meros"
+          , Space
+          , Str "m\225s"
+          , Space
+          , Str "complicados"
+          , Space
+          , Str "cada"
+          , Space
+          , Str "vez"
+          ]
+      , Str ","
+      , Space
+      , Str "puede"
+      , Space
+      , Str "que"
+      , Space
+      , Str "piense."
+      , Space
+      , Str "Hay"
+      , Space
+      , Str "varias"
+      , Space
+      , Str "respuestas"
+      , Space
+      , Str "a"
+      , SoftBreak
+      , Str "esto."
+      , Space
+      , Str "Por"
+      , Space
+      , Str "un"
+      , Space
+      , Str "lado,"
+      , Space
+      , Str "lamento"
+      , Space
+      , Str "decirle"
+      , Space
+      , Str "que"
+      , Space
+      , Str "su"
+      , Space
+      , Str "conocimiento"
+      , Space
+      , Str "de"
+      , Space
+      , Str "los"
+      , Space
+      , Str "n\250meros"
+      , SoftBreak
+      , Str "enteros"
+      , Space
+      , Str "es"
+      , Space
+      , Str "algo"
+      , Space
+      , Str "superficial."
+      , Space
+      , Str "Adem\225s,"
+      , Space
+      , Str "estos"
+      , Space
+      , Str "guardan"
+      , Space
+      , Str "secretos"
+      , Space
+      , Str "muy"
+      , Space
+      , Str "interesantes"
+      , SoftBreak
+      , Str "y"
+      , Space
+      , Str "con"
+      , Space
+      , Str "muchas"
+      , Space
+      , Str "aplicaciones"
+      , Space
+      , Str "sobre"
+      , Space
+      , Str "los"
+      , Space
+      , Str "que"
+      , Space
+      , Str "conviene"
+      , Space
+      , Str "detenernos."
+      , Space
+      , Str "Cuando"
+      , Space
+      , Str "se"
+      , SoftBreak
+      , Str "estudian"
+      , Space
+      , Str "los"
+      , Space
+      , Str "n\250meros"
+      , Space
+      , Str "reales,"
+      , Space
+      , Str "estos"
+      , Space
+      , Str "aspectos"
+      , Space
+      , Str "se"
+      , Space
+      , Str "pasan"
+      , Space
+      , Str "por"
+      , Space
+      , Str "alto."
+      ]
+  , Para
+      [ Str "Aunque"
+      , Space
+      , Str "hasta"
+      , Space
+      , Str "hace"
+      , Space
+      , Str "relativamente"
+      , Space
+      , Str "poco"
+      , Space
+      , Str "la"
+      , Space
+      , Str "teor\237a"
+      , Space
+      , Str "de"
+      , Space
+      , Str "n\250meros"
+      , Space
+      , Str "era"
+      , Space
+      , Str "simplemente"
+      , Space
+      , Str "un"
+      , SoftBreak
+      , Str "divertimento"
+      , Space
+      , Str "para"
+      , Space
+      , Str "matem\225ticos,"
+      , Space
+      , Str "algo"
+      , Space
+      , Str "as\237"
+      , Space
+      , Str "como"
+      , Space
+      , Str "rompecabezas,"
+      , Space
+      , Str "sin"
+      , Space
+      , Str "ninguna"
+      , SoftBreak
+      , Str "aplicaci\243n"
+      , Space
+      , Str "pr\225ctica"
+      , Note
+          [ Para
+              [ Str "cosa"
+              , Space
+              , Str "de"
+              , Space
+              , Str "la"
+              , Space
+              , Str "que"
+              , Space
+              , Str "se"
+              , Space
+              , Str "jactaba"
+              , Space
+              , Str "el"
+              , Space
+              , Str "gran"
+              , Space
+              , Str "matem\225tico"
+              , Space
+              , Str "G.\160H.\160Hardy,"
+              , Space
+              , Str "que"
+              , Space
+              , Str "era"
+              , Space
+              , Str "un"
+              , SoftBreak
+              , Str "pacifista"
+              , Space
+              , Str "y"
+              , Space
+              , Str "odiar\237a"
+              , Space
+              , Str "enterarse"
+              , Space
+              , Str "de"
+              , Space
+              , Str "que"
+              , Space
+              , Str "la"
+              , Space
+              , Str "teor\237a"
+              , Space
+              , Str "que"
+              , Space
+              , Str "\233l"
+              , Space
+              , Str "mismo"
+              , Space
+              , Str "estaba"
+              , SoftBreak
+              , Str "contribuyendo"
+              , Space
+              , Str "a"
+              , Space
+              , Str "desarrollar"
+              , Space
+              , Str "se"
+              , Space
+              , Str "usar\237a"
+              , Space
+              , Str "con"
+              , Space
+              , Str "fines"
+              , Space
+              , Str "b\233licos"
+              ]
+          ]
+      , Str ","
+      , Space
+      , Str "con"
+      , Space
+      , Str "la"
+      , Space
+      , Str "llegada"
+      , Space
+      , Str "de"
+      , Space
+      , Str "los"
+      , Space
+      , Str "computadores"
+      , Space
+      , Str "los"
+      , Space
+      , Str "matem\225ticos"
+      , SoftBreak
+      , Str "se"
+      , Space
+      , Str "dieron"
+      , Space
+      , Str "cuenta"
+      , Space
+      , Str "de"
+      , Space
+      , Str "que"
+      , Space
+      , Str "se"
+      , Space
+      , Str "pod\237a"
+      , Space
+      , Str "aplicar"
+      , Space
+      , Str "a"
+      , Space
+      , Str "la"
+      , Space
+      , Str "criptograf\237a,"
+      , Space
+      , Str "y"
+      , Space
+      , Str "actualmente"
+      , Space
+      , Str "es"
+      , SoftBreak
+      , Str "una"
+      , Space
+      , Str "parte"
+      , Space
+      , Str "fundamental"
+      , Space
+      , Str "de"
+      , Space
+      , Str "esta."
+      , Space
+      , Str "En"
+      , Space
+      , Str "cualquier"
+      , Space
+      , Str "caso,"
+      , Space
+      , Str "por"
+      , Space
+      , Str "razones"
+      , Space
+      , Str "de"
+      , Space
+      , Str "tiempo,"
+      , Space
+      , Str "en"
+      , SoftBreak
+      , Str "esta"
+      , Space
+      , Str "asignatura"
+      , Space
+      , Str "apenas"
+      , Space
+      , Str "se"
+      , Space
+      , Str "dedicar\225"
+      , Space
+      , Str "tiempo"
+      , Space
+      , Str "a"
+      , Space
+      , Str "las"
+      , Space
+      , Str "aplicaciones"
+      , Space
+      , Str "pr\225cticas"
+      , Space
+      , Str "de"
+      , Space
+      , Str "la"
+      , SoftBreak
+      , Str "teor\237a"
+      , Space
+      , Str "de"
+      , Space
+      , Str "n\250meros."
+      ]
+  , Para
+      [ Str "De"
+      , Space
+      , Str "los"
+      , Space
+      , Str "libros"
+      , Space
+      , Str "principales"
+      , Space
+      , Str "que"
+      , Space
+      , Str "he"
+      , Space
+      , Str "consultado,"
+      , Space
+      , Str "el"
+      , Space
+      , Str "que"
+      , Space
+      , Str "tiene"
+      , Space
+      , Str "m\225s"
+      , Space
+      , Str "contenidos"
+      , SoftBreak
+      , Str "sobre"
+      , Space
+      , Str "la"
+      , Space
+      , Str "relaci\243n"
+      , Space
+      , Str "de"
+      , Space
+      , Str "la"
+      , Space
+      , Str "teor\237a"
+      , Space
+      , Str "de"
+      , Space
+      , Str "n\250meros"
+      , Space
+      , Str "con"
+      , Space
+      , Str "las"
+      , Space
+      , Str "ciencias"
+      , Space
+      , Str "de"
+      , Space
+      , Str "la"
+      , Space
+      , Str "computaci\243n"
+      , SoftBreak
+      , Str "y"
+      , Space
+      , Str "la"
+      , Space
+      , Str "criptograf\237a"
+      , Space
+      , Str "es"
+      , Space
+      , Cite
+          [ Citation
+              { citationId = "rosen-number-th"
+              , citationPrefix = []
+              , citationSuffix = []
+              , citationMode = NormalCitation
+              , citationNoteNum = 20
+              , citationHash = 0
+              }
+          ]
+          [ Link
+              ( "" , [] , [] )
+              [ Str "[3]" ]
+              ( "#ref-rosen-number-th" , "" )
+          ]
+      , Str "."
+      ]
+  , Para
+      [ Str "Por"
+      , Space
+      , Str "cierto,"
+      , Space
+      , Str "al"
+      , Space
+      , Str "haber"
+      , Space
+      , Str "pertenecido"
+      , Space
+      , Str "durante"
+      , Space
+      , Str "tantos"
+      , Space
+      , Str "a\241os"
+      , Space
+      , Str "a"
+      , Space
+      , Str "las"
+      , Space
+      , Str "matem\225ticas"
+      , Space
+      , Str "que"
+      , SoftBreak
+      , Str "no"
+      , Space
+      , Str "ten\237an"
+      , Space
+      , Str "aplicaci\243n"
+      , Space
+      , Str "pr\225ctica,"
+      , Space
+      , Str "se"
+      , Space
+      , Str "la"
+      , Space
+      , Str "suele"
+      , Space
+      , Str "englobar"
+      , Space
+      , Str "en"
+      , Space
+      , Str "lo"
+      , Space
+      , Str "que"
+      , Space
+      , Str "se"
+      , Space
+      , Str "conoce"
+      , Space
+      , Str "como"
+      , SoftBreak
+      , Str "matem\225ticas"
+      , Space
+      , Emph [ Str "puras" ]
+      , Space
+      , Str "(en"
+      , Space
+      , Str "contraposici\243n"
+      , Space
+      , Str "a"
+      , Space
+      , Str "las"
+      , Space
+      , Str "matem\225ticas"
+      , Space
+      , Emph [ Str "aplicadas" ]
+      , Str ")."
+      , Space
+      , Str "Esta"
+      , SoftBreak
+      , Str "distinci\243n"
+      , Space
+      , Str "hoy"
+      , Space
+      , Str "en"
+      , Space
+      , Str "d\237a"
+      , Space
+      , Str "no"
+      , Space
+      , Str "tiene"
+      , Space
+      , Str "mucho"
+      , Space
+      , Str "sentido"
+      , Space
+      , Str "y"
+      , Space
+      , Str "por"
+      , Space
+      , Str "eso"
+      , Space
+      , Str "actualmente"
+      , Space
+      , Str "no"
+      , Space
+      , Str "se"
+      , SoftBreak
+      , Str "suele"
+      , Space
+      , Str "mencionar."
+      ]
+  , Header
+      3
+      ( "n\250meros-enteros" , [] , [] )
+      [ Str "N\250meros" , Space , Str "enteros" ]
+  , Para
+      [ Span
+          ( "" , [ "ntitle" ] , [] )
+          [ Str "Sobre"
+          , Space
+          , Str "las"
+          , Space
+          , Str "referencias"
+          ]
+      , SoftBreak
+      , Str "En"
+      , Space
+      , Str "la"
+      , Space
+      , Str "primera"
+      , Space
+      , Str "parte"
+      , Space
+      , Str "de"
+      , Space
+      , Str "la"
+      , Space
+      , Strong [ Str "Secci\243n" , Space , Str "1-1" ]
+      , Space
+      , Str "de"
+      , Space
+      , Cite
+          [ Citation
+              { citationId = "bujalance-costa"
+              , citationPrefix = []
+              , citationSuffix = []
+              , citationMode = NormalCitation
+              , citationNoteNum = 21
+              , citationHash = 0
+              }
+          ]
+          [ Link
+              ( "" , [] , [] )
+              [ Str "[1]" ]
+              ( "#ref-bujalance-costa" , "" )
+          ]
+      , Space
+      , Str "comienzan"
+      , Space
+      , Str "la"
+      , SoftBreak
+      , Str "teor\237a"
+      , Space
+      , Str "de"
+      , Space
+      , Str "n\250meros"
+      , Space
+      , Str "presentando"
+      , Space
+      , Str "a"
+      , Space
+      , Str "los"
+      , Space
+      , Str "n\250meros"
+      , Space
+      , Str "enteros,"
+      , Space
+      , Math InlineMath "\\mathbb{Z}"
+      , Str ","
+      , Space
+      , Str "junto"
+      , Space
+      , Str "a"
+      , SoftBreak
+      , Str "sus"
+      , Space
+      , Str "operaciones"
+      , Space
+      , Str "principales"
+      , Space
+      , Str "(es"
+      , Space
+      , Str "decir,"
+      , Space
+      , Str "la"
+      , Space
+      , Str "suma,"
+      , Space
+      , Quoted DoubleQuote [ Math InlineMath "+" ]
+      , Str ","
+      , Space
+      , Str "y"
+      , Space
+      , Str "el"
+      , Space
+      , Str "producto,"
+      , SoftBreak
+      , Quoted DoubleQuote [ Math InlineMath "\\cdot" ]
+      , Str ")"
+      , Space
+      , Str "y"
+      , Space
+      , Str "algunas"
+      , Space
+      , Str "de"
+      , Space
+      , Str "sus"
+      , Space
+      , Str "propiedades"
+      , Space
+      , Str "as\237"
+      , Space
+      , Str "como"
+      , Space
+      , Str "de"
+      , Space
+      , Str "funciones"
+      , Space
+      , Str "relacionadas,"
+      , SoftBreak
+      , Str "como,"
+      , Space
+      , Str "por"
+      , Space
+      , Str "ejemplo,"
+      , Space
+      , Str "el"
+      , Space
+      , Str "valor"
+      , Space
+      , Str "absoluto."
+      ]
+  , Para
+      [ Str "Se"
+      , Space
+      , Str "mete"
+      , Space
+      , Str "tambi\233n"
+      , Space
+      , Str "a"
+      , Space
+      , Str "explicar"
+      , Space
+      , Str "algo"
+      , Space
+      , Str "sobre"
+      , Space
+      , Str "esta"
+      , Space
+      , Str "estructura"
+      , Space
+      , Str "algebraica,"
+      , SoftBreak
+      , Str "("
+      , Math InlineMath "\\mathbb{Z}, +, \\cdot"
+      , Str "),"
+      , Space
+      , Str "aunque"
+      , Space
+      , Str "en"
+      , Space
+      , Str "realidad"
+      , Space
+      , Str "no"
+      , Space
+      , Str "es"
+      , Space
+      , Str "necesario"
+      , Space
+      , Str "para"
+      , Space
+      , Str "esta"
+      , SoftBreak
+      , Str "asignatura."
+      , Space
+      , Str "El"
+      , Space
+      , Str "contenido"
+      , Space
+      , Str "relevante"
+      , Space
+      , Str "es"
+      , Space
+      , Str "b\225sicamente"
+      , Space
+      , Str "lo"
+      , Space
+      , Str "mismo"
+      , Space
+      , Str "que"
+      , Space
+      , Str "se"
+      , Space
+      , Str "presenta"
+      , SoftBreak
+      , Str "en"
+      , Space
+      , Str "el"
+      , Space
+      , Str "Ap\233ndice"
+      , Space
+      , Str "A"
+      , Space
+      , Str "de"
+      , Space
+      , Cite
+          [ Citation
+              { citationId = "rosen-number-th"
+              , citationPrefix = []
+              , citationSuffix = []
+              , citationMode = NormalCitation
+              , citationNoteNum = 22
+              , citationHash = 0
+              }
+          ]
+          [ Link
+              ( "" , [] , [] )
+              [ Str "[3]" ]
+              ( "#ref-rosen-number-th" , "" )
+          ]
+      , Str "."
+      , Space
+      , Str "En"
+      , Space
+      , Str "la"
+      , Space
+      , Str "secci\243n"
+      , Space
+      , Str "de"
+      , Space
+      , Str "ejercicios"
+      , Space
+      , Str "de"
+      , Space
+      , Str "dicho"
+      , SoftBreak
+      , Str "ap\233ndice"
+      , Space
+      , Str "se"
+      , Space
+      , Str "presentan"
+      , Space
+      , Str "algunos"
+      , Space
+      , Str "de"
+      , Space
+      , Str "los"
+      , Space
+      , Str "resultados"
+      , Space
+      , Str "que"
+      , Space
+      , Str "se"
+      , Space
+      , Str "explican"
+      , Space
+      , Str "en"
+      , Space
+      , Str "la"
+      , SoftBreak
+      , Str "secci\243n"
+      , Space
+      , Str "correspondiente"
+      , Space
+      , Str "en"
+      , Space
+      , Cite
+          [ Citation
+              { citationId = "bujalance-costa"
+              , citationPrefix = []
+              , citationSuffix = []
+              , citationMode = NormalCitation
+              , citationNoteNum = 23
+              , citationHash = 0
+              }
+          ]
+          [ Link
+              ( "" , [] , [] )
+              [ Str "[1]" ]
+              ( "#ref-bujalance-costa" , "" )
+          ]
+      , Str "."
+      ]
+  , Para
+      [ Str "En"
+      , Space
+      , Str "cualquier"
+      , Space
+      , Str "caso,"
+      , Space
+      , Str "me"
+      , Space
+      , Str "gustar\237a"
+      , Space
+      , Str "aclarar"
+      , Space
+      , Str "algunas"
+      , Space
+      , Str "partes"
+      , Space
+      , Str "de"
+      , Space
+      , Str "estos"
+      , Space
+      , Str "contenidos,"
+      , SoftBreak
+      , Str "por"
+      , Space
+      , Str "si"
+      , Space
+      , Str "tiene"
+      , Space
+      , Str "curiosidad"
+      , Space
+      , Str "y"
+      , Space
+      , Str "cierto"
+      , Space
+      , Str "conocimiento"
+      , Space
+      , Str "de"
+      , Space
+      , Str "\225lgabra"
+      , Space
+      , Str "abstracta."
+      ]
+  , HorizontalRule
+  , Para
+      [ Span ( "" , [ "ntitle" ] , [] ) [ Str "Terminolog\237a" ]
+      , SoftBreak
+      , Str "Primero,"
+      , Space
+      , Str "presentar"
+      , Space
+      , Str "algunas"
+      , Space
+      , Str "traducciones"
+      , Space
+      , Str "a"
+      , Space
+      , Str "este"
+      , Space
+      , Str "respecto."
+      , Space
+      , Str "Lo"
+      , Space
+      , Str "que"
+      , Space
+      , Str "en"
+      , Space
+      , Str "ingl\233s"
+      , SoftBreak
+      , Str "llaman"
+      , Space
+      , Emph [ Str "identity" , Space , Str "element" ]
+      , Space
+      , Str "para"
+      , Space
+      , Str "nosotros"
+      , Space
+      , Str "(seg\250n"
+      , Space
+      , Str "la"
+      , Space
+      , Str "terminolog\237a"
+      , Space
+      , Str "de"
+      , Space
+      , Str "la"
+      , SoftBreak
+      , Str "asignatura"
+      , Space
+      , Str "Lenguaje"
+      , Space
+      , Str "Matem\225tico,"
+      , Space
+      , Str "Conjuntos"
+      , Space
+      , Str "y"
+      , Space
+      , Str "N\250meros)"
+      , Space
+      , Str "ser\237a"
+      , Space
+      , Str "el"
+      , Space
+      , Emph [ Str "elemento" , SoftBreak , Str "neutro" ]
+      , Str "."
+      , Space
+      , Str "El"
+      , Space
+      , Emph [ Str "inverse" , Space , Str "element" ]
+      , Space
+      , Str "es"
+      , Space
+      , Str "nuestro"
+      , Space
+      , Emph [ Str "elemento" , Space , Str "sim\233trico" ]
+      , Str "."
+      , Space
+      , Str "Tambi\233n"
+      , Space
+      , Str "puede"
+      , SoftBreak
+      , Str "ver"
+      , Space
+      , Str "que"
+      , Space
+      , Str "hay"
+      , Space
+      , Str "quien"
+      , Space
+      , Str "los"
+      , Space
+      , Str "llama"
+      , Space
+      , Emph [ Str "elemento" , Space , Str "identidad" ]
+      , Space
+      , Str "y"
+      , Space
+      , Emph [ Str "elemento" , Space , Str "inverso" ]
+      , Str ","
+      , SoftBreak
+      , Str "respectivamente."
+      ]
+  , Para
+      [ Str "Advierta"
+      , Space
+      , Str "que"
+      , Space
+      , Str "el"
+      , Space
+      , Str "elemento"
+      , Space
+      , Str "sim\233trico"
+      , Space
+      , Str "no"
+      , Space
+      , Str "es"
+      , Space
+      , Str "lo"
+      , Space
+      , Str "mismo"
+      , Space
+      , Str "necesariamente"
+      , Space
+      , Str "que"
+      , Space
+      , Str "el"
+      , SoftBreak
+      , Str "sim\233trico"
+      , Space
+      , Str "respecto"
+      , Space
+      , Str "al"
+      , Space
+      , Str "producto."
+      , Space
+      , Str "En"
+      , Space
+      , Str "ingl\233s,"
+      , Space
+      , Str "cuando"
+      , Space
+      , Str "se"
+      , Space
+      , Str "desea"
+      , Space
+      , Str "ser"
+      , Space
+      , Str "m\225s"
+      , SoftBreak
+      , Str "espec\237fico"
+      , Space
+      , Str "a"
+      , Space
+      , Str "este"
+      , Space
+      , Str "respecto,"
+      , Space
+      , Str "se"
+      , Space
+      , Str "habla"
+      , Space
+      , Str "del"
+      , Space
+      , Emph [ Str "reciprocal" , Space , Str "element" ]
+      , Str "."
+      ]
+  , HorizontalRule
+  , Para
+      [ Span
+          ( "" , [ "ntitle" ] , [] )
+          [ Str "Estructura"
+          , Space
+          , Str "algebraica"
+          , Space
+          , Str "de"
+          , Space
+          , Math InlineMath "\\mathbb{Z}"
+          ]
+      , SoftBreak
+      , Str "Es"
+      , Space
+      , Str "f\225cil"
+      , Space
+      , Str "ver"
+      , Space
+      , Str "que"
+      , Space
+      , Math InlineMath "(\\mathbb{Z}, +)"
+      , Space
+      , Str "es"
+      , Space
+      , Str "un"
+      , Space
+      , Str "grupo"
+      , Space
+      , Str "conmutativo;"
+      , Space
+      , Str "a"
+      , Space
+      , Str "su"
+      , Space
+      , Str "elemento"
+      , SoftBreak
+      , Str "neutro"
+      , Space
+      , Str "lo"
+      , Space
+      , Str "designamos"
+      , Space
+      , Str "por"
+      , Space
+      , Quoted DoubleQuote [ Math InlineMath "0" ]
+      , Str "."
+      , Space
+      , Str "Para"
+      , Space
+      , Math InlineMath "(\\mathbb{Z}, \\cdot)"
+      , Str ","
+      , Space
+      , Str "aunque"
+      , Space
+      , Str "la"
+      , SoftBreak
+      , Str "operaci\243n"
+      , Space
+      , Str "es"
+      , Space
+      , Str "interna"
+      , Space
+      , Str "para"
+      , Space
+      , Str "dicho"
+      , Space
+      , Str "conjunto,"
+      , Space
+      , Str "y"
+      , Space
+      , Str "se"
+      , Space
+      , Str "satisfacen"
+      , Space
+      , Str "las"
+      , Space
+      , Str "propiedades"
+      , SoftBreak
+      , Str "asociativa,"
+      , Space
+      , Str "elemento"
+      , Space
+      , Str "neutro"
+      , Space
+      , Str "(que"
+      , Space
+      , Str "se"
+      , Space
+      , Str "suele"
+      , Space
+      , Str "representar"
+      , Space
+      , Str "por"
+      , Space
+      , Quoted DoubleQuote [ Math InlineMath "1" ]
+      , Str ")"
+      , Space
+      , Str "y"
+      , SoftBreak
+      , Str "conmutativa,"
+      , Space
+      , Str "no"
+      , Space
+      , Str "llega"
+      , Space
+      , Str "a"
+      , Space
+      , Str "ser"
+      , Space
+      , Str "un"
+      , Space
+      , Str "grupo,"
+      , Space
+      , Str "pues"
+      , Space
+      , Str "no"
+      , Space
+      , Str "cumple"
+      , Space
+      , Str "la"
+      , Space
+      , Str "propiedad"
+      , Space
+      , Str "del"
+      , SoftBreak
+      , Str "elemento"
+      , Space
+      , Str "sim\233trico."
+      , Space
+      , Str "Es"
+      , Space
+      , Str "decir,"
+      , Space
+      , Str "si"
+      , Space
+      , Str "nos"
+      , Space
+      , Str "dan"
+      , Space
+      , Str "un"
+      , Space
+      , Math InlineMath "a \\in \\mathbb{Z}"
+      , Str ","
+      , Space
+      , Str "es"
+      , Space
+      , Str "posible"
+      , SoftBreak
+      , Str "que"
+      , Space
+      , Str "en"
+      , Space
+      , Math InlineMath "\\mathbb{Z}"
+      , Space
+      , Str "no"
+      , Space
+      , Str "encontremos"
+      , Space
+      , Str "un"
+      , Space
+      , Str "elemento"
+      , Space
+      , Math InlineMath "b"
+      , Space
+      , Str "tal"
+      , Space
+      , Str "que"
+      , Space
+      , Math InlineMath "a \\cdot b = 1"
+      , Str "."
+      , SoftBreak
+      , Str "De"
+      , Space
+      , Str "hecho,"
+      , Space
+      , Str "los"
+      , Space
+      , Str "\250nicos"
+      , Space
+      , Str "elementos"
+      , Space
+      , Str "de"
+      , Space
+      , Math InlineMath "(\\mathbb{Z}, \\cdot)"
+      , Space
+      , Str "que"
+      , Space
+      , Str "cuentan"
+      , Space
+      , Str "con"
+      , SoftBreak
+      , Str "elemento"
+      , Space
+      , Str "sim\233trico"
+      , Space
+      , Str "son"
+      , Space
+      , Str "el"
+      , Space
+      , Math InlineMath "-1"
+      , Space
+      , Str "y"
+      , Space
+      , Str "el"
+      , Space
+      , Math InlineMath "1"
+      , Str "."
+      , Space
+      , Str "Evidentemente,"
+      , Space
+      , Str "se"
+      , Space
+      , Str "puede"
+      , Space
+      , Quoted DoubleQuote [ Str "ampliar" ]
+      , SoftBreak
+      , Str "esta"
+      , Space
+      , Str "estructura"
+      , Space
+      , Str "y"
+      , Space
+      , Str "obtener"
+      , Space
+      , Str "otra"
+      , Space
+      , Str "en"
+      , Space
+      , Str "la"
+      , Space
+      , Str "que"
+      , Space
+      , Str "todos"
+      , Space
+      , Str "los"
+      , Space
+      , Str "elementos"
+      , Space
+      , Str "tengan"
+      , Space
+      , Str "su"
+      , SoftBreak
+      , Str "sim\233trico."
+      , Space
+      , Str "El"
+      , Space
+      , Str "ejemplo"
+      , Space
+      , Str "cl\225sico"
+      , Space
+      , Str "ser\237a"
+      , Space
+      , Str "el"
+      , Space
+      , Str "de"
+      , Space
+      , Str "los"
+      , Space
+      , Str "n\250meros"
+      , Space
+      , Str "racionales,"
+      , SoftBreak
+      , Math InlineMath "\\mathbb{Q}"
+      , Str ","
+      , Space
+      , Str "pero"
+      , Space
+      , Str "en"
+      , Space
+      , Str "esta"
+      , Space
+      , Str "asignatura"
+      , Space
+      , Str "apenas"
+      , Space
+      , Str "se"
+      , Space
+      , Str "hablar\225"
+      , Space
+      , Str "de"
+      , Space
+      , Str "ellos."
+      ]
+  , Para
+      [ Str "Advierta"
+      , Space
+      , Str "que"
+      , Space
+      , Str "la"
+      , Space
+      , Str "propiedad"
+      , Space
+      , Str "distributiva"
+      , Space
+      , Str "se"
+      , Space
+      , Str "da"
+      , Space
+      , Str "de"
+      , Space
+      , Str "la"
+      , Space
+      , Str "suma"
+      , Space
+      , Str "respecto"
+      , Space
+      , Str "al"
+      , SoftBreak
+      , Str "producto,"
+      , Space
+      , Str "y"
+      , Space
+      , Str "no"
+      , Space
+      , Str "al"
+      , Space
+      , Str "rev\233s."
+      , Space
+      , Str "Es"
+      , Space
+      , Str "decir,"
+      , Space
+      , Str "no"
+      , Space
+      , Str "podemos"
+      , Space
+      , Str "poner,"
+      , Space
+      , Str "en"
+      , Space
+      , Str "general,"
+      , Space
+      , Str "algo"
+      , Space
+      , Str "como"
+      , SoftBreak
+      , Math InlineMath "a + (b \\cdot c) = (a + b)(a + c)"
+      , Str "."
+      ]
+  , Para
+      [ Str "A"
+      , Space
+      , Str "fin"
+      , Space
+      , Str "de"
+      , Space
+      , Str "cuentas,"
+      , Space
+      , Str "lo"
+      , Space
+      , Str "que"
+      , Space
+      , Str "tenemos"
+      , Space
+      , Str "es"
+      , Space
+      , Str "que"
+      , Space
+      , Math InlineMath "(\\mathbb{Z}, +, \\cdot)"
+      , Space
+      , Str "tiene"
+      , Space
+      , Str "la"
+      , SoftBreak
+      , Str "estructura"
+      , Space
+      , Str "algebraica"
+      , Space
+      , Str "de"
+      , Space
+      , Str "anillo"
+      , Space
+      , Str "conmutativo"
+      , Space
+      , Str "unitario."
+      , Space
+      , Str "M\225s"
+      , Space
+      , Str "concretamente,"
+      , Space
+      , Str "el"
+      , SoftBreak
+      , Str "elemento"
+      , Space
+      , Str "unidad"
+      , Space
+      , Str "del"
+      , Space
+      , Str "producto"
+      , Space
+      , Str "es"
+      , Space
+      , Str "el"
+      , Space
+      , Math InlineMath "1"
+      , Str ","
+      , Space
+      , Str "tal"
+      , Space
+      , Str "y"
+      , Space
+      , Str "como"
+      , Space
+      , Str "dijimos,"
+      , Space
+      , Str "y"
+      , Space
+      , Str "adem\225s"
+      , Space
+      , Str "no"
+      , SoftBreak
+      , Str "tiene"
+      , Space
+      , Str "divisores"
+      , Space
+      , Str "de"
+      , Space
+      , Math InlineMath "0"
+      , Str ","
+      , Space
+      , Str "es"
+      , Space
+      , Str "decir,"
+      , Space
+      , Str "para"
+      , Space
+      , Str "cualesquiera"
+      , Space
+      , Math InlineMath "a, b \\in \\mathbb{Z}"
+      , SoftBreak
+      , Str "siendo"
+      , Space
+      , Math InlineMath "a \\neq 0"
+      , Space
+      , Str "y"
+      , Space
+      , Math InlineMath "b \\neq 0"
+      , Str ","
+      , Space
+      , Str "nunca"
+      , Space
+      , Str "se"
+      , Space
+      , Str "da"
+      , Space
+      , Math InlineMath "ab = 0"
+      , Str "."
+      , Space
+      , Str "Aplicando"
+      , Space
+      , Str "la"
+      , Space
+      , Str "l\243gica"
+      , SoftBreak
+      , Str "esto"
+      , Space
+      , Str "\250ltimo"
+      , Space
+      , Str "ser\237a"
+      , Space
+      , Str "como"
+      , Space
+      , Str "decir"
+      , Space
+      , Str "que,"
+      , Space
+      , Str "si"
+      , Space
+      , Math InlineMath "ab = 0"
+      , Str ","
+      , Space
+      , Str "entonces"
+      , Space
+      , Str "se"
+      , Space
+      , Str "da"
+      , Space
+      , Str "necesariamente"
+      , SoftBreak
+      , Str "que"
+      , Space
+      , Math InlineMath "a = 0"
+      , Space
+      , Str "o"
+      , Space
+      , Math InlineMath "b = 0"
+      , Space
+      , Str "(o"
+      , Space
+      , Str "ambos)."
+      , Space
+      , Str "Esta"
+      , Space
+      , Str "\250ltima"
+      , Space
+      , Str "propiedad"
+      , Space
+      , Str "la"
+      , Space
+      , Str "usaremos"
+      , Space
+      , Str "en"
+      , SoftBreak
+      , Str "algunos"
+      , Space
+      , Str "ejercicios"
+      , Space
+      , Str "y"
+      , Space
+      , Str "demostraciones,"
+      , Space
+      , Str "con"
+      , Space
+      , Str "lo"
+      , Space
+      , Str "que,"
+      , Space
+      , Str "aunque"
+      , Space
+      , Str "no"
+      , Space
+      , Str "sea"
+      , Space
+      , Str "capaz"
+      , Space
+      , Str "de"
+      , SoftBreak
+      , Str "demostrarla,"
+      , Space
+      , Str "debe"
+      , Space
+      , Str "conocerla"
+      , Space
+      , Str "de"
+      , Space
+      , Str "una"
+      , Space
+      , Str "forma"
+      , Space
+      , Str "pr\225ctica."
+      ]
+  , Para
+      [ Str "Algo"
+      , Space
+      , Str "que"
+      , Space
+      , Str "debe"
+      , Space
+      , Str "tener"
+      , Space
+      , Str "tambi\233n"
+      , Space
+      , Str "en"
+      , Space
+      , Str "cuenta"
+      , Space
+      , Str "es"
+      , Space
+      , Str "que"
+      , Space
+      , Str "hay"
+      , Space
+      , Str "textos"
+      , Space
+      , Str "que"
+      , Space
+      , Str "consideran"
+      , Space
+      , Str "al"
+      , SoftBreak
+      , Math InlineMath "0"
+      , Space
+      , Str "como"
+      , Space
+      , Str "un"
+      , Space
+      , Str "n\250mero"
+      , Space
+      , Str "natural"
+      , Space
+      , Str "y"
+      , Space
+      , Str "otros"
+      , Space
+      , Str "en"
+      , Space
+      , Str "los"
+      , Space
+      , Str "que"
+      , Space
+      , Str "no;"
+      , Space
+      , Str "es"
+      , Space
+      , Str "decir,"
+      , Space
+      , Str "no"
+      , Space
+      , Str "hay"
+      , Space
+      , Str "un"
+      , SoftBreak
+      , Str "criterio"
+      , Space
+      , Str "unificado"
+      , Space
+      , Str "sobre"
+      , Space
+      , Str "esta"
+      , Space
+      , Str "cuesti\243n."
+      , Space
+      , Str "En"
+      , Space
+      , Str "realidad,"
+      , Space
+      , Str "esto"
+      , Space
+      , Str "no"
+      , Space
+      , Str "tiene"
+      , SoftBreak
+      , Str "importancia"
+      , Space
+      , Str "siempre"
+      , Space
+      , Str "y"
+      , Space
+      , Str "cuando"
+      , Space
+      , Str "se"
+      , Space
+      , Str "sea"
+      , Space
+      , Str "constante"
+      , Space
+      , Str "con"
+      , Space
+      , Str "la"
+      , Space
+      , Str "opci\243n"
+      , Space
+      , Str "que"
+      , Space
+      , Str "se"
+      , Space
+      , Str "haya"
+      , SoftBreak
+      , Str "adoptado."
+      , Space
+      , Str "Esto"
+      , Space
+      , Str "se"
+      , Space
+      , Str "ve"
+      , Space
+      , Str "en"
+      , Space
+      , Str "los"
+      , Space
+      , Str "enunciados"
+      , Space
+      , Str "tanto"
+      , Space
+      , Str "de"
+      , Space
+      , Str "la"
+      , Space
+      , Str "Propiedad"
+      , Space
+      , Str "de"
+      , Space
+      , Str "Buena"
+      , SoftBreak
+      , Str "Ordenaci\243n"
+      , Space
+      , Str "como"
+      , Space
+      , Str "del"
+      , Space
+      , Str "Principio"
+      , Space
+      , Str "de"
+      , Space
+      , Str "Inducci\243n"
+      , Space
+      , Str "("
+      , Cite
+          [ Citation
+              { citationId = "bujalance-costa"
+              , citationPrefix = []
+              , citationSuffix = []
+              , citationMode = NormalCitation
+              , citationNoteNum = 24
+              , citationHash = 0
+              }
+          , Citation
+              { citationId = "rosen-number-th"
+              , citationPrefix = []
+              , citationSuffix = []
+              , citationMode = NormalCitation
+              , citationNoteNum = 24
+              , citationHash = 0
+              }
+          ]
+          [ Link
+              ( "" , [] , [] )
+              [ Str "[1]" ]
+              ( "#ref-bujalance-costa" , "" )
+          , Str ","
+          , Space
+          , Link
+              ( "" , [] , [] )
+              [ Str "[3]" ]
+              ( "#ref-rosen-number-th" , "" )
+          ]
+      , Str "),"
+      , Space
+      , Str "pero"
+      , Space
+      , Str "da"
+      , Space
+      , Str "igual"
+      , Space
+      , Str "el"
+      , Space
+      , Str "criterio"
+      , Space
+      , Str "que"
+      , Space
+      , Str "se"
+      , Space
+      , Str "adopte,"
+      , Space
+      , Str "pues,"
+      , Space
+      , Str "aparte"
+      , Space
+      , Str "de"
+      , SoftBreak
+      , Str "cu\225l"
+      , Space
+      , Str "sea"
+      , Space
+      , Str "el"
+      , Space
+      , Str "valor"
+      , Space
+      , Str "base"
+      , Space
+      , Str "del"
+      , Space
+      , Str "que"
+      , Space
+      , Str "se"
+      , Space
+      , Str "parte,"
+      , Space
+      , Str "ser\225n"
+      , Space
+      , Str "iguales"
+      , Space
+      , Str "en"
+      , Space
+      , Str "lo"
+      , Space
+      , Str "relevante"
+      , Space
+      , Str "y"
+      , Space
+      , Str "se"
+      , SoftBreak
+      , Str "puede"
+      , Space
+      , Str "adoptar"
+      , Space
+      , Str "cualquiera"
+      , Space
+      , Str "de"
+      , Space
+      , Str "los"
+      , Space
+      , Str "dos"
+      , Space
+      , Str "criterios."
+      ]
+  , Para
+      [ Str "En"
+      , Space
+      , Cite
+          [ Citation
+              { citationId = "bujalance-costa"
+              , citationPrefix = []
+              , citationSuffix = []
+              , citationMode = NormalCitation
+              , citationNoteNum = 25
+              , citationHash = 0
+              }
+          ]
+          [ Link
+              ( "" , [] , [] )
+              [ Str "[1]" ]
+              ( "#ref-bujalance-costa" , "" )
+          ]
+      , Space
+      , Str "adoptan"
+      , Space
+      , Str "la"
+      , Space
+      , Str "convenci\243n"
+      , Space
+      , Str "de"
+      , Space
+      , Str "que"
+      , Space
+      , Math InlineMath "0 \\notin \\mathbb{N}"
+      , Str "."
+      , Space
+      , Str "En"
+      , SoftBreak
+      , Cite
+          [ Citation
+              { citationId = "rosen-number-th"
+              , citationPrefix = []
+              , citationSuffix = []
+              , citationMode = NormalCitation
+              , citationNoteNum = 26
+              , citationHash = 0
+              }
+          ]
+          [ Link
+              ( "" , [] , [] )
+              [ Str "[3]" ]
+              ( "#ref-rosen-number-th" , "" )
+          ]
+      , Str ","
+      , Space
+      , Str "por"
+      , Space
+      , Str "su"
+      , Space
+      , Str "parte,"
+      , Space
+      , Str "creo"
+      , Space
+      , Str "que"
+      , Space
+      , Str "tratan"
+      , Space
+      , Str "de"
+      , Space
+      , Str "evitar"
+      , Space
+      , Str "referirse"
+      , Space
+      , Str "a"
+      , SoftBreak
+      , Math InlineMath "\\mathbb{N}"
+      , Str "."
+      , Space
+      , Str "Ver\225"
+      , Space
+      , Str "que"
+      , Space
+      , Str "suelen"
+      , Space
+      , Str "referirse"
+      , Space
+      , Str "a"
+      , Space
+      , Math InlineMath "\\mathbb{Z}^+"
+      , Space
+      , Str "o"
+      , Space
+      , Str "a"
+      , Space
+      , Math InlineMath "\\mathbb{Z}^+\n\\cup \\{0\\}"
+      , Str "."
+      ]
+  , HorizontalRule
+  , Para
+      [ Span
+          ( "" , [ "ntitle" ] , [] )
+          [ Str "Propiedades"
+          , Space
+          , Str "de"
+          , Space
+          , Math InlineMath "\\mathbb{Z}"
+          ]
+      , SoftBreak
+      , Str "Algunas"
+      , Space
+      , Str "propiedades"
+      , Space
+      , Str "interesantes"
+      , Space
+      , Str "de"
+      , Space
+      , Str "los"
+      , Space
+      , Str "n\250meros"
+      , Space
+      , Str "enteros,"
+      , Space
+      , Math InlineMath "\\mathbb{Z}"
+      , Space
+      , Str "\8212o,"
+      , SoftBreak
+      , Str "lo"
+      , Space
+      , Str "que"
+      , Space
+      , Str "es"
+      , Space
+      , Str "lo"
+      , Space
+      , Str "mismo,"
+      , Space
+      , Str "de"
+      , Space
+      , Str "la"
+      , Space
+      , Str "estructura"
+      , Space
+      , Math InlineMath "(\\mathbb{Z}, +, \\cdot)"
+      , Str "\8212,"
+      , Space
+      , Str "son"
+      , Space
+      , Str "las"
+      , SoftBreak
+      , Str "siguientes."
+      ]
+  , Div
+      ( "" , [ "theorem" ] , [] )
+      [ Para
+          [ Strong [ Emph [ Str "Teorema.\8212 " ] ]
+          , Str "Dados"
+          , Space
+          , Math InlineMath "a,b,c \\in \\mathbb{Z}"
+          , Str "."
+          ]
+      , OrderedList
+          ( 1 , Decimal , Period )
+          [ [ Plain [ Math InlineMath "0 \\cdot a = 0" , Str "." ] ]
+          , [ Plain [ Math InlineMath "a({-b}) = {-(ab)}" , Str "." ]
+            ]
+          , [ Plain
+                [ Str "Dado"
+                , Space
+                , Str "un"
+                , Space
+                , Math InlineMath "a \\neq 0"
+                , Str "."
+                , Space
+                , Str "Si"
+                , Space
+                , Math InlineMath "ab = ac"
+                , Str ","
+                , Space
+                , Str "entonces"
+                , Space
+                , Math InlineMath "b = c"
+                , Str "."
+                , Space
+                , Str "(Propiedad"
+                , SoftBreak
+                , Str "cancelativa.)"
+                ]
+            ]
+          , [ Plain [ Math InlineMath "{-({-a})} = a" , Str "." ] ]
+          , [ Plain [ Math InlineMath "({-a})({-b}) = ab" ] ]
+          ]
+      ]
+  , Para
+      [ Str "Tal"
+      , Space
+      , Str "y"
+      , Space
+      , Str "como"
+      , Space
+      , Str "dijimos,"
+      , Space
+      , Str "tampoco"
+      , Space
+      , Str "es"
+      , Space
+      , Str "importante"
+      , Space
+      , Str "que"
+      , Space
+      , Str "sepa"
+      , Space
+      , Str "demostrar"
+      , Space
+      , Str "estos"
+      , SoftBreak
+      , Str "enunciados"
+      , Space
+      , Str "generales"
+      , Space
+      , Str "sobre"
+      , Space
+      , Str "los"
+      , Space
+      , Str "n\250meros"
+      , Space
+      , Str "enteros,"
+      , Space
+      , Str "pues"
+      , Space
+      , Str "ese"
+      , Space
+      , Str "no"
+      , Space
+      , Str "es"
+      , Space
+      , Str "el"
+      , Space
+      , Str "prop\243sito"
+      , SoftBreak
+      , Str "de"
+      , Space
+      , Str "esta"
+      , Space
+      , Str "asignatura;"
+      , Space
+      , Str "lo"
+      , Space
+      , Str "ser\237a,"
+      , Space
+      , Str "por"
+      , Space
+      , Str "ejemplo,"
+      , Space
+      , Str "de"
+      , Space
+      , Str "una"
+      , Space
+      , Str "asignatura"
+      , Space
+      , Str "de"
+      , Space
+      , Str "\225lgebra"
+      , SoftBreak
+      , Str "abstracta."
+      , Space
+      , Str "Puede"
+      , Space
+      , Str "hacer"
+      , Space
+      , Str "uso"
+      , Space
+      , Str "de"
+      , Space
+      , Str "las"
+      , Space
+      , Str "propiedades"
+      , Space
+      , Str "que"
+      , Space
+      , Str "conoce"
+      , Space
+      , Str "de"
+      , Space
+      , Str "estos"
+      , Space
+      , Str "sin"
+      , SoftBreak
+      , Str "necesidad"
+      , Space
+      , Str "de"
+      , Space
+      , Str "demostrarlas."
+      ]
+  , Para
+      [ Str "No"
+      , Space
+      , Str "obstante,"
+      , Space
+      , Str "presentamos"
+      , Space
+      , Str "aqu\237"
+      , Space
+      , Str "las"
+      , Space
+      , Str "demostraciones"
+      , Space
+      , Str "de"
+      , Space
+      , Str "estas"
+      , Space
+      , Str "\250ltimas."
+      ]
+  , Div
+      ( "" , [ "proof" ] , [] )
+      [ Para
+          [ Strong [ Emph [ Str "Demostraci\243n.\8212 " ] ]
+          , Str "Son"
+          , Space
+          , Str "estas."
+          ]
+      , OrderedList
+          ( 1 , Decimal , Period )
+          [ [ Para
+                [ Str "Vea"
+                , Space
+                , Str "el"
+                , Space
+                , Str "Ejemplo"
+                , Space
+                , Str "A.1"
+                , Space
+                , Str "de"
+                , Space
+                , Cite
+                    [ Citation
+                        { citationId = "rosen-number-th"
+                        , citationPrefix = []
+                        , citationSuffix = []
+                        , citationMode = NormalCitation
+                        , citationNoteNum = 27
+                        , citationHash = 0
+                        }
+                    ]
+                    [ Link
+                        ( "" , [] , [] )
+                        [ Str "[3]" ]
+                        ( "#ref-rosen-number-th" , "" )
+                    ]
+                , Str "."
+                ]
+            ]
+          , [ Para [ Str "TKTK" ]
+            , Para
+                [ Math
+                    DisplayMath
+                    " \\begin{split}\n     a(-b) &= a(-b) \\\\\n     a(-b) + ab &= a(-b) + ab \\\\\n     a(-b) + ab &= a(-b + b) \\\\\n     a(-b) + ab &= a0 = 0 = ab - ab \\\\\n     [a-b) + ab] - ab &= (ab - ab) - ab \\\\\n     a(-b) + (ab - ab) &= 0 - ab \\\\\n     a(-b) + 0 &= 0 + [-(ab)] \\\\\n     a(-b) &= -(ab)\n   \\end{split} "
+                ]
+            ]
+          , [ Para
+                [ Str "Partimos"
+                , Space
+                , Str "de"
+                , Space
+                , Str "la"
+                , Space
+                , Str "ecuaci\243n"
+                , Space
+                , Math InlineMath "ab = ac"
+                , Str ","
+                , Space
+                , Str "y"
+                , Space
+                , Str "operamos:"
+                ]
+            , Para
+                [ Math
+                    DisplayMath
+                    " \\begin{align*}\n     ab & = ac \\\\\n     ab - ac & = ac - ac & \\text{restamos $ac$} \\\\\n       & = 0 & \\text{hacemos la resta de la derecha} \\\\\n     0 & = a(b - c) & \\text{sacamos factor com\250n $a$}\n   \\end{align*}"
+                ]
+            , Para
+                [ Str "Como"
+                , Space
+                , Str "se"
+                , Space
+                , Str "da"
+                , Space
+                , Str "la"
+                , Space
+                , Str "condici\243n"
+                , Space
+                , Math InlineMath "a \\neq 0"
+                , Str ","
+                , Space
+                , Str "y,"
+                , Space
+                , Str "tal"
+                , Space
+                , Str "y"
+                , Space
+                , Str "como"
+                , Space
+                , Str "explicamos"
+                , Space
+                , Str "antes,"
+                , Space
+                , Str "en"
+                , SoftBreak
+                , Math InlineMath "\\mathbb{Z}"
+                , Space
+                , Str "no"
+                , Space
+                , Str "hay"
+                , Space
+                , Str "divisores"
+                , Space
+                , Str "de"
+                , Space
+                , Math InlineMath "0"
+                , Str ","
+                , Space
+                , Str "entonces,"
+                , Space
+                , Str "para"
+                , Space
+                , Str "que"
+                , Space
+                , Str "se"
+                , Space
+                , Str "d\233"
+                , Space
+                , Str "que"
+                ]
+            , Para [ Math DisplayMath " a(b - c) = 0 " ]
+            , Para
+                [ Str "no"
+                , Space
+                , Str "queda"
+                , Space
+                , Str "otra"
+                , Space
+                , Str "que"
+                , Space
+                , Math InlineMath "b - c = 0"
+                , Str ","
+                , Space
+                , Str "o,"
+                , Space
+                , Str "lo"
+                , Space
+                , Str "que"
+                , Space
+                , Str "es"
+                , Space
+                , Str "lo"
+                , Space
+                , Str "mismo,"
+                , Space
+                , Math InlineMath "b = c"
+                , Str "."
+                ]
+            ]
+          , [ Para
+                [ Str "Nos"
+                , Space
+                , Str "vamos"
+                , Space
+                , Str "a"
+                , Space
+                , Str "auxiliar"
+                , Space
+                , Str "de"
+                , Space
+                , Str "otra"
+                , Space
+                , Str "variable"
+                , Space
+                , Math InlineMath "c"
+                , Space
+                , Str "que"
+                , Space
+                , Str "dependa"
+                , Space
+                , Str "de"
+                , Space
+                , Math InlineMath "a"
+                , Str "."
+                , SoftBreak
+                , Str "Concretamente,"
+                , Space
+                , Str "decidimos"
+                , Space
+                , Str "que"
+                , Space
+                , Str "la"
+                , Space
+                , Str "dependencia"
+                , Space
+                , Str "sea"
+                , Space
+                , Math InlineMath "c = {-a}"
+                , Str "."
+                , Space
+                , Str "Advierta"
+                , SoftBreak
+                , Str "que,"
+                , Space
+                , Str "si"
+                , Space
+                , Math InlineMath "a \\in \\mathbb{Z}"
+                , Str ","
+                , Space
+                , Str "se"
+                , Space
+                , Str "tiene"
+                , Space
+                , Str "que"
+                , Space
+                , Math InlineMath "c \\in \\mathbb{Z}"
+                , Str "."
+                , Space
+                , Str "Entonces,"
+                ]
+            , Para
+                [ Math
+                    DisplayMath
+                    " \\begin{array}{rll}\n     0\n       &= c - c \\\\\n       &= c + (-c) \\\\\n       &= -a + [-(-a)]\n         & \\text{c.d.v.: $c = -a$} \\\\\n     0 + a\n       &= \\{(-a) + [-(-a)]\\} + a\n         & \\text{sumamos $a$ en ambas partes} \\\\\n       &= \\{-(-a) + (-a)\\} + a\n         & \\text{prop. conmutativa de la suma} \\\\\n       &= -(-a) + [(-a) + a]\n         & \\text{prop. asociativa de la suma} \\\\\n       & = -(-a) + 0\n         & \\text{operamos en el par\233ntesis} \\\\\n     a\n       & = -(-a)\n         & \\text{prop. elemento neutro}\n   \\end{array} "
+                ]
+            ]
+          , [ Para
+                [ Str "Lo"
+                , Space
+                , Str "haremos"
+                , Space
+                , Str "con"
+                , Space
+                , Str "un"
+                , Space
+                , Str "cambio"
+                , Space
+                , Str "de"
+                , Space
+                , Str "variable"
+                , Space
+                , Str "y"
+                , Space
+                , Str "haciendo"
+                , Space
+                , Str "uso"
+                , Space
+                , Str "de"
+                , Space
+                , Str "las"
+                , SoftBreak
+                , Str "propiedades"
+                , Space
+                , Str "2"
+                , Space
+                , Str "y"
+                , Space
+                , Str "4."
+                , Space
+                , Str "Tomemos"
+                , Space
+                , Str "la"
+                , Space
+                , Str "variable"
+                , Space
+                , Math InlineMath "c = ( - a)"
+                , Str "."
+                , Space
+                , Str "Evidentemente,"
+                , SoftBreak
+                , Str "se"
+                , Space
+                , Str "tiene"
+                , Space
+                , Str "que"
+                , Space
+                , Math InlineMath "c \\in \\mathbb{Z}"
+                , Str "."
+                , Space
+                , Str "Entonces,"
+                ]
+            , Para
+                [ Math
+                    DisplayMath
+                    " \\begin{align*}\n     (-a)(-b)\n       &= c(-b) & \\text{cd.v.: $c = -a$} \\\\\n       &= -(cb) & \\text{prop. 2} \\\\\n       &= -(bc) & \\text{prop. conmutativa de \"$\\cdot$\"} \\\\\n       &= (-c)b & \\text{prop. 2} \\\\\n       &= (-(-a))b & \\text{c.d.v.: $c = -a$} \\\\\n       &= ab & \\text{prop. 4} \n   \\end{align*} "
+                ]
+            ]
+          ]
+      ]
+  , Para
+      [ Str "Ser\237a"
+      , Space
+      , Str "interesante"
+      , Space
+      , Str "tambi\233n"
+      , Space
+      , Str "el"
+      , Space
+      , Str "ejercicio"
+      , Space
+      , Str "siguiente,"
+      , Space
+      , Str "que"
+      , Space
+      , Str "guarda"
+      , Space
+      , Str "cierta"
+      , Space
+      , Str "relaci\243n"
+      , SoftBreak
+      , Str "con"
+      , Space
+      , Str "la"
+      , Space
+      , Str "ley"
+      , Space
+      , Str "de"
+      , Space
+      , Str "la"
+      , Space
+      , Str "tricotom\237a,"
+      , Space
+      , Str "que"
+      , Space
+      , Str "se"
+      , Space
+      , Str "menciona"
+      , Space
+      , Str "en"
+      , Space
+      , Cite
+          [ Citation
+              { citationId = "rosen-number-th"
+              , citationPrefix = []
+              , citationSuffix = []
+              , citationMode = NormalCitation
+              , citationNoteNum = 28
+              , citationHash = 0
+              }
+          ]
+          [ Link
+              ( "" , [] , [] )
+              [ Str "[3]" ]
+              ( "#ref-rosen-number-th" , "" )
+          ]
+      , Str "."
+      ]
+  , Div
+      ( "" , [ "exercise" ] , [] )
+      [ Para
+          [ Strong [ Emph [ Str "Ejercicio.\8212 " ] ]
+          , Str "Demuestre"
+          , Space
+          , Str "que,"
+          , Space
+          , Str "dado"
+          , Space
+          , Str "un"
+          , Space
+          , Math InlineMath "a \\in \\mathbb{Z}"
+          , Str ","
+          , Space
+          , Str "si"
+          , Space
+          , Math InlineMath "a < 0"
+          , Space
+          , Str "entonces"
+          , Space
+          , Math InlineMath "-a > 0"
+          , Str "."
+          ]
+      , Para
+          [ Math
+              DisplayMath
+              " \\begin{aligned}\n       a &< 0 \\\\\n       a - a &< 0 - a = 0 + (-a) = -a \\\\\n       0 &< -a\n     \\end{aligned} "
+          ]
+      , Para
+          [ Str "Las"
+          , Space
+          , Str "operaciones"
+          , Space
+          , Str "algebraicas"
+          , Space
+          , Str "que"
+          , Space
+          , Str "se"
+          , Space
+          , Str "pueden"
+          , Space
+          , Str "hacer"
+          , Space
+          , Str "con"
+          , Space
+          , Str "las"
+          , Space
+          , Str "desigualdades"
+          , SoftBreak
+          , Str "("
+          , Emph [ Str "inequations" ]
+          , Str ")"
+          , Space
+          , Str "tienen"
+          , Space
+          , Str "algunas"
+          , Space
+          , Str "sutilezas,"
+          , Space
+          , Str "pero"
+          , Space
+          , Str "en"
+          , Space
+          , Str "esta"
+          , Space
+          , Str "asignatura"
+          , Space
+          , Str "esas"
+          , SoftBreak
+          , Str "manipulaciones"
+          , Space
+          , Str "no"
+          , Space
+          , Str "suelen"
+          , Space
+          , Str "ser"
+          , Space
+          , Str "complicadas"
+          , Space
+          , Str "a"
+          , Space
+          , Str "este"
+          , Space
+          , Str "respecto."
+          , Span ( "" , [ "env-last-symbol" ] , [] ) [ Str " \9651" ]
+          ]
+      ]
+  , HorizontalRule
+  , Para
+      [ Span ( "" , [ "ntitle" ] , [] ) [ Str "Terminolog\237a" ]
+      , SoftBreak
+      , Str "Por"
+      , Space
+      , Str "cierto,"
+      , Space
+      , Str "al"
+      , Space
+      , Str "Principio"
+      , Space
+      , Str "de"
+      , Space
+      , Str "Buena"
+      , Space
+      , Str "Ordenaci\243n"
+      , Space
+      , Str "hay"
+      , Space
+      , Str "quien"
+      , Space
+      , Str "prefiere"
+      , Space
+      , Str "calificarlo"
+      , SoftBreak
+      , Str "de"
+      , Space
+      , Emph [ Str "propiedad" ]
+      , Str "."
+      , Space
+      , Str "Aunque"
+      , Space
+      , Str "dicha"
+      , Space
+      , Str "propiedad"
+      , Space
+      , Str "pueda"
+      , Space
+      , Str "parecer"
+      , Space
+      , Str "algo"
+      , Space
+      , Str "evidente"
+      , Space
+      , Str "y"
+      , Space
+      , Str "sin"
+      , SoftBreak
+      , Str "relevancia,"
+      , Space
+      , Str "se"
+      , Space
+      , Str "usa"
+      , Space
+      , Str "en"
+      , Space
+      , Str "muchas"
+      , Space
+      , Str "demostraciones,"
+      , Space
+      , Str "como"
+      , Space
+      , Str "veremos."
+      ]
+  , HorizontalRule
+  , Para
+      [ Span
+          ( "" , [ "ntitle" ] , [] )
+          [ Str "Valor" , Space , Str "absoluto" ]
+      , SoftBreak
+      , Str "En"
+      , Space
+      , Cite
+          [ Citation
+              { citationId = "bujalance-costa"
+              , citationPrefix = []
+              , citationSuffix = []
+              , citationMode = NormalCitation
+              , citationNoteNum = 29
+              , citationHash = 0
+              }
+          ]
+          [ Link
+              ( "" , [] , [] )
+              [ Str "[1]" ]
+              ( "#ref-bujalance-costa" , "" )
+          ]
+      , Space
+      , Str "tambi\233n"
+      , Space
+      , Str "presentan"
+      , Space
+      , Str "el"
+      , Space
+      , Str "concepto"
+      , Space
+      , Str "de"
+      , Space
+      , Emph [ Str "valor" , Space , Str "absoluto" ]
+      , Space
+      , Str "con"
+      , SoftBreak
+      , Str "dominio"
+      , Space
+      , Str "en"
+      , Space
+      , Math InlineMath "\\mathbb{Z}"
+      , Space
+      , Str "y"
+      , Space
+      , Str "algunas"
+      , Space
+      , Str "de"
+      , Space
+      , Str "sus"
+      , Space
+      , Str "propiedades"
+      , Space
+      , Str "m\225s"
+      , Space
+      , Str "interesantes."
+      , Space
+      , Str "De"
+      , SoftBreak
+      , Str "hecho,"
+      , Space
+      , Str "antes"
+      , Space
+      , Str "de"
+      , Space
+      , Str "ver"
+      , Space
+      , Str "la"
+      , Space
+      , Str "divisibilidad,"
+      , Space
+      , Str "las"
+      , Space
+      , Str "propiedades"
+      , Space
+      , Str "generales"
+      , Space
+      , Str "que"
+      , Space
+      , Str "nos"
+      , SoftBreak
+      , Str "interesan"
+      , Space
+      , Str "del"
+      , Space
+      , Str "valor"
+      , Space
+      , Str "absoluto"
+      , Space
+      , Str "son"
+      , Space
+      , Str "las"
+      , Space
+      , Str "siguientes."
+      ]
+  , Div
+      ( "" , [ "theorem" ] , [] )
+      [ Para
+          [ Strong
+              [ Emph
+                  [ Str
+                      "Teorema (Propiedades del Valor Absoluto).\8212 "
+                  ]
+              ]
+          , Str "Dados"
+          , Space
+          , Math InlineMath "a,b \\in \\mathbb{Z}"
+          , Str ","
+          , Space
+          , Str "se"
+          , Space
+          , Str "cumplen"
+          ]
+      , OrderedList
+          ( 1 , LowerRoman , Period )
+          [ [ Plain
+                [ Math
+                    InlineMath "|a \\cdot b| = |a| \\, \\cdot \\, |b|"
+                , Str "."
+                ]
+            ]
+          , [ Plain
+                [ Math InlineMath "|a + b| \\leq |a| \\, + \\, |b|"
+                , Str "."
+                , Space
+                , Str "(Desigualdad"
+                , Space
+                , Str "triangular.)"
+                ]
+            ]
+          ]
+      ]
+  , Para
+      [ Str "Se"
+      , Space
+      , Str "demuestran"
+      , Space
+      , Str "en"
+      , Space
+      , Cite
+          [ Citation
+              { citationId = "bujalance-costa"
+              , citationPrefix = []
+              , citationSuffix = []
+              , citationMode = NormalCitation
+              , citationNoteNum = 30
+              , citationHash = 0
+              }
+          ]
+          [ Link
+              ( "" , [] , [] )
+              [ Str "[1]" ]
+              ( "#ref-bujalance-costa" , "" )
+          ]
+      , Str "."
+      , Space
+      , Str "Estas"
+      , Space
+      , Str "demostraciones"
+      , Space
+      , Str "me"
+      , Space
+      , Str "parecen"
+      , Space
+      , Str "algo"
+      , SoftBreak
+      , Str "aparatosas,"
+      , Space
+      , Str "es"
+      , Space
+      , Str "decir,"
+      , Space
+      , Str "poco"
+      , Space
+      , Str "elegantes;"
+      , Space
+      , Str "pero"
+      , Space
+      , Str "existe"
+      , Space
+      , Str "una"
+      , Space
+      , Str "raz\243n"
+      , Space
+      , Str "para"
+      , Space
+      , Str "que"
+      , Space
+      , Str "sea"
+      , SoftBreak
+      , Str "as\237:"
+      , Space
+      , Str "nos"
+      , Space
+      , Str "queremos"
+      , Space
+      , Str "restringir"
+      , Space
+      , Str "a"
+      , Space
+      , Str "los"
+      , Space
+      , Str "n\250meros"
+      , Space
+      , Str "enteros."
+      , Space
+      , Str "Si"
+      , Space
+      , Str "pudi\233semos"
+      , Space
+      , Str "hacer"
+      , Space
+      , Str "uso"
+      , SoftBreak
+      , Str "de"
+      , Space
+      , Str "los"
+      , Space
+      , Str "radicales,"
+      , Space
+      , Str "cosa"
+      , Space
+      , Str "que"
+      , Space
+      , Str "nos"
+      , Space
+      , Str "meter\237a"
+      , Space
+      , Str "ya"
+      , Space
+      , Str "en"
+      , Space
+      , Str "los"
+      , Space
+      , Str "n\250meros"
+      , Space
+      , Str "reales,"
+      , Space
+      , Str "se"
+      , Space
+      , Str "podr\237an"
+      , SoftBreak
+      , Str "tener"
+      , Space
+      , Str "demostraciones"
+      , Space
+      , Str "m\225s"
+      , Space
+      , Str "simples"
+      , Space
+      , Str "y"
+      , Space
+      , Str "elegantes,"
+      , Space
+      , Str "como"
+      , Space
+      , Str "la"
+      , Space
+      , Str "siguiente,"
+      , Space
+      , Str "para"
+      , Space
+      , Str "el"
+      , SoftBreak
+      , Str "punto"
+      , Space
+      , Str "i."
+      ]
+  , Para
+      [ Str "Lo"
+      , Space
+      , Str "primero"
+      , Space
+      , Str "que"
+      , Space
+      , Str "se"
+      , Space
+      , Str "debe"
+      , Space
+      , Str "decir"
+      , Space
+      , Str "es"
+      , Space
+      , Str "que,"
+      , Space
+      , Str "para"
+      , Space
+      , Str "un"
+      , Space
+      , Math InlineMath "a \\in \\mathbb{R}"
+      , Str ","
+      , Space
+      , Str "se"
+      , Space
+      , Str "tiene"
+      , SoftBreak
+      , Str "que"
+      , Space
+      , Math InlineMath "|a| = \\sqrt{a^{2}}"
+      , Str "."
+      , Space
+      , Str "Esta"
+      , Space
+      , Str "ser\237a"
+      , Space
+      , Str "una"
+      , Space
+      , Str "expresi\243n"
+      , Space
+      , Str "alternativa"
+      , Space
+      , Str "del"
+      , Space
+      , Str "valor"
+      , SoftBreak
+      , Str "absoluto."
+      , Space
+      , Str "Sabiendo"
+      , Space
+      , Str "esto,"
+      , Space
+      , Str "podemos"
+      , Space
+      , Str "hacer"
+      , Space
+      , Str "lo"
+      , Space
+      , Str "siguiente:"
+      ]
+  , Para
+      [ Math
+          DisplayMath
+          " |a \\cdot b| = \\sqrt{(a \\cdot b)^2} = \\sqrt{a^2 \\cdot b^2} = \\sqrt{a^2}\n  \\cdot \\sqrt{b^2} = |a| \\, \\cdot \\, |b| "
+      ]
+  , Para
+      [ Str "Solo"
+      , Space
+      , Str "hemos"
+      , Space
+      , Str "tenido"
+      , Space
+      , Str "que"
+      , Space
+      , Str "aplicar"
+      , Space
+      , Str "una"
+      , Space
+      , Str "propiedad"
+      , Space
+      , Str "de"
+      , Space
+      , Str "los"
+      , Space
+      , Str "radicales."
+      ]
+  , HorizontalRule
+  , Para
+      [ Span
+          ( "" , [ "ntitle" ] , [] )
+          [ Str "Ejercicio"
+          , Space
+          , Str "1.19"
+          , Space
+          , Str "de"
+          , Space
+          , Cite
+              [ Citation
+                  { citationId = "rosen-number-th"
+                  , citationPrefix = []
+                  , citationSuffix = []
+                  , citationMode = NormalCitation
+                  , citationNoteNum = 31
+                  , citationHash = 0
+                  }
+              ]
+              [ Link
+                  ( "" , [] , [] )
+                  [ Str "[3]" ]
+                  ( "#ref-rosen-number-th" , "" )
+              ]
+          ]
+      , SoftBreak
+      , Str "Me"
+      , Space
+      , Str "gust\243"
+      , Space
+      , Str "este"
+      , Space
+      , Str "ejercicio."
+      , Space
+      , Str "Lo"
+      , Space
+      , Str "cierto"
+      , Space
+      , Str "es"
+      , Space
+      , Str "que"
+      , Space
+      , Str "no"
+      , Space
+      , Str "llego"
+      , Space
+      , Str "a"
+      , Space
+      , Str "ver"
+      , Space
+      , Str "c\243mo"
+      , Space
+      , Str "lo"
+      , Space
+      , Str "resuelve"
+      , SoftBreak
+      , Str "\233l,"
+      , Space
+      , Str "pero"
+      , Space
+      , Str "a"
+      , Space
+      , Str "m\237"
+      , Space
+      , Str "se"
+      , Space
+      , Str "me"
+      , Space
+      , Str "ocurri\243"
+      , Space
+      , Str "una"
+      , Space
+      , Str "forma"
+      , Space
+      , Str "que"
+      , Space
+      , Str "creo"
+      , Space
+      , Str "que"
+      , Space
+      , Str "es"
+      , Space
+      , Str "m\225s"
+      , Space
+      , Str "f\225cil."
+      , Space
+      , Str "Si"
+      , Space
+      , Str "se"
+      , Space
+      , Str "fija,"
+      , SoftBreak
+      , Str "los"
+      , Space
+      , Str "tri\225ngulos"
+      , Space
+      , Str "se"
+      , Space
+      , Str "pueden"
+      , Space
+      , Str "disponer"
+      , Space
+      , Str "de"
+      , Space
+      , Str "tal"
+      , Space
+      , Str "forma"
+      , Space
+      , Str "que"
+      , Space
+      , Str "vemos"
+      , Space
+      , Str "que"
+      , Space
+      , Str "hay"
+      , Space
+      , Str "dos"
+      , SoftBreak
+      , Str "tri\225ngulos"
+      , Space
+      , Str "de"
+      , Space
+      , Str "tama\241o"
+      , Space
+      , Math InlineMath "k"
+      , Space
+      , Str "juntos"
+      , Space
+      , Str "y"
+      , Space
+      , Str "una"
+      , Space
+      , Str "l\237nea"
+      , Space
+      , Str "de"
+      , Space
+      , Math InlineMath "k + 1"
+      , Space
+      , Str "elementos"
+      , Space
+      , Str "debajo."
+      , SoftBreak
+      , Str "As\237,"
+      , Space
+      , Str "se"
+      , Space
+      , Str "tendr\237a"
+      , Space
+      , Str "la"
+      , Space
+      , Str "ecuaci\243n"
+      ]
+  , Para [ Math DisplayMath " (k + 1)^2 = 2t_k + k + 1 " ]
+  , Para
+      [ Str "De"
+      , Space
+      , Str "esto"
+      , Space
+      , Str "obtenemos"
+      , Space
+      , Str "que"
+      ]
+  , Para [ Math DisplayMath " t_k = \\frac{k(k + 1)}{2} " ]
+  , Para
+      [ Str "igual" , Space , Str "que" , Space , Str "\233l." ]
+  , Para
+      [ Str "Por"
+      , Space
+      , Str "cierto,"
+      , Space
+      , Str "tiene"
+      , Space
+      , Str "sentido"
+      , Space
+      , Str "que"
+      , Space
+      , Str "sea"
+      , Space
+      , Str "el"
+      , Space
+      , Str "mismo"
+      , Space
+      , Str "resultado"
+      , Space
+      , Str "que"
+      , Space
+      , Str "la"
+      , Space
+      , Str "serie"
+      , Space
+      , Str "aritm\233tica"
+      , SoftBreak
+      , Str "m\225s"
+      , Space
+      , Str "b\225sica,"
+      , Space
+      , Str "pues"
+      , Space
+      , Str "en"
+      , Space
+      , Str "realidad"
+      , Space
+      , Str "se"
+      , Space
+      , Str "trata"
+      , Space
+      , Str "de"
+      , Space
+      , Str "una"
+      , Space
+      , Str "serie"
+      , Space
+      , Str "aritm\233tica."
+      ]
+  , Header
+      4
+      ( "introducci\243n-1" , [] , [] )
+      [ Str "Introducci\243n" ]
+  , Para
+      [ Str "A"
+      , Space
+      , Str "la"
+      , Space
+      , Str "teor\237a"
+      , Space
+      , Str "de"
+      , Space
+      , Str "n\250meros"
+      , Space
+      , Str "("
+      , Emph [ Str "number" , Space , Str "theory" ]
+      , Str ")"
+      , Space
+      , Str "hay"
+      , Space
+      , Str "quien"
+      , Space
+      , Str "la"
+      , Space
+      , Str "define"
+      , Space
+      , Str "como"
+      , Space
+      , Str "las"
+      , SoftBreak
+      , Str "matem\225ticas"
+      , Space
+      , Str "de"
+      , Space
+      , Str "los"
+      , Space
+      , Str "n\250meros"
+      , Space
+      , Str "enteros,"
+      , Space
+      , Math InlineMath "\\mathbb{Z}"
+      , Str ","
+      , Space
+      , Str "y,"
+      , Space
+      , Str "aunque"
+      , Space
+      , Str "es"
+      , Space
+      , Str "verdad"
+      , Space
+      , Str "que"
+      , SoftBreak
+      , Str "ese"
+      , Space
+      , Str "es"
+      , Space
+      , Str "el"
+      , Space
+      , Str "conjunto"
+      , Space
+      , Str "m\225s"
+      , Space
+      , Str "importante"
+      , Space
+      , Str "y"
+      , Space
+      , Str "sobre"
+      , Space
+      , Str "el"
+      , Space
+      , Str "que"
+      , Space
+      , Str "nos"
+      , Space
+      , Str "movemos"
+      , Space
+      , Str "con"
+      , Space
+      , Str "mayor"
+      , SoftBreak
+      , Str "frecuencia"
+      , Space
+      , Str "en"
+      , Space
+      , Str "esta"
+      , Space
+      , Str "materia,"
+      , Space
+      , Str "no"
+      , Space
+      , Str "llega"
+      , Space
+      , Str "a"
+      , Space
+      , Str "ser"
+      , Space
+      , Str "cierto"
+      , Space
+      , Str "del"
+      , Space
+      , Str "todo."
+      ]
+  , Para
+      [ Str "Tal"
+      , Space
+      , Str "y"
+      , Space
+      , Str "como"
+      , Space
+      , Str "dije"
+      , Space
+      , Str "en"
+      , Space
+      , Str "la"
+      , Space
+      , Str "secci\243n"
+      , Space
+      , Str "introductoria"
+      , Space
+      , Str "de"
+      , Space
+      , Str "estos"
+      , Space
+      , Str "apuntes,"
+      , Space
+      , Str "voy"
+      , Space
+      , Str "a"
+      , Space
+      , Str "poner"
+      , SoftBreak
+      , Str "las"
+      , Space
+      , Str "definiciones,"
+      , Space
+      , Str "teoremas,"
+      , Space
+      , Str "etc."
+      , Space
+      , Str "algo"
+      , Space
+      , Str "distintas."
+      , Space
+      , Str "Lo"
+      , Space
+      , Str "que"
+      , Space
+      , Str "har\233"
+      , Space
+      , Str "ser\225"
+      , Space
+      , Str "hacerlos"
+      , SoftBreak
+      , Str "lo"
+      , Space
+      , Str "m\225s"
+      , Space
+      , Str "amplios"
+      , Space
+      , Str "posible,"
+      , Space
+      , Str "pues"
+      , Space
+      , Str "TKTK."
+      ]
+  , Para
+      [ Str "No"
+      , Space
+      , Str "obstante,"
+      , Space
+      , Str "es"
+      , Space
+      , Str "una"
+      , Space
+      , Str "buena"
+      , Space
+      , Str "idea"
+      , Space
+      , Str "comenzar"
+      , Space
+      , Str "presentando"
+      , Space
+      , Str "la"
+      , Space
+      , Str "estructura"
+      , Space
+      , Str "algebraica"
+      , SoftBreak
+      , Str "en"
+      , Space
+      , Math InlineMath "\\mathbb{Z}"
+      , Space
+      , Str "que"
+      , Space
+      , Str "seguiremos."
+      ]
+  , Header
+      4
+      ( "estructura-algebraica-de-mathbbz" , [] , [] )
+      [ Str "Estructura"
+      , Space
+      , Str "algebraica"
+      , Space
+      , Str "de"
+      , Space
+      , Math InlineMath "\\mathbb{Z}"
+      ]
+  , Para
+      [ Str "En"
+      , Space
+      , Str "realidad,"
+      , Space
+      , Str "no"
+      , Space
+      , Str "hace"
+      , Space
+      , Str "falta"
+      , Space
+      , Str "hablar"
+      , Space
+      , Str "de"
+      , Space
+      , Str "estructuras"
+      , Space
+      , Str "algebraicas"
+      , Space
+      , Str "para"
+      , Space
+      , Str "adentrarse"
+      , SoftBreak
+      , Str "en"
+      , Space
+      , Str "la"
+      , Space
+      , Str "teor\237a"
+      , Space
+      , Str "elemental"
+      , Space
+      , Str "de"
+      , Space
+      , Str "n\250meros."
+      , Space
+      , Str "Basta"
+      , Space
+      , Str "con"
+      , Space
+      , Str "conocer"
+      , Space
+      , Str "algunas"
+      , Space
+      , Str "de"
+      , Space
+      , Str "las"
+      , SoftBreak
+      , Str "propiedades"
+      , Space
+      , Str "de"
+      , Space
+      , Str "los"
+      , Space
+      , Str "n\250meros"
+      , Space
+      , Str "enteros."
+      ]
+  , Para
+      [ Str "Lo"
+      , Space
+      , Str "que"
+      , Space
+      , Str "se"
+      , Space
+      , Str "explica"
+      , Space
+      , Str "en"
+      , Space
+      , Cite
+          [ Citation
+              { citationId = "bujalance-costa"
+              , citationPrefix = []
+              , citationSuffix = []
+              , citationMode = NormalCitation
+              , citationNoteNum = 32
+              , citationHash = 0
+              }
+          ]
+          [ Link
+              ( "" , [] , [] )
+              [ Str "[1]" ]
+              ( "#ref-bujalance-costa" , "" )
+          ]
+      , Space
+      , Str "a"
+      , Space
+      , Str "este"
+      , Space
+      , Str "respecto"
+      , Space
+      , Str "es"
+      , Space
+      , Str "parecido"
+      , Space
+      , Str "a"
+      , Space
+      , Str "lo"
+      , Space
+      , Str "que"
+      , SoftBreak
+      , Str "se"
+      , Space
+      , Str "explica"
+      , Space
+      , Str "en"
+      , Space
+      , Str "el"
+      , Space
+      , Str "Ap\233ndice"
+      , Space
+      , Str "A"
+      , Space
+      , Str "de"
+      , Space
+      , Cite
+          [ Citation
+              { citationId = "rosen-number-th"
+              , citationPrefix = []
+              , citationSuffix = []
+              , citationMode = NormalCitation
+              , citationNoteNum = 33
+              , citationHash = 0
+              }
+          ]
+          [ Link
+              ( "" , [] , [] )
+              [ Str "[3]" ]
+              ( "#ref-rosen-number-th" , "" )
+          ]
+      , Str "."
+      , Space
+      , Str "En"
+      , Space
+      , Str "la"
+      , Space
+      , Str "secci\243n"
+      , Space
+      , Str "de"
+      , SoftBreak
+      , Str "ejercicios"
+      , Space
+      , Str "de"
+      , Space
+      , Str "dicho"
+      , Space
+      , Str "ap\233ndice"
+      , Space
+      , Str "se"
+      , Space
+      , Str "presentan"
+      , Space
+      , Str "algunos"
+      , Space
+      , Str "de"
+      , Space
+      , Str "los"
+      , Space
+      , Str "resultados"
+      , Space
+      , Str "que"
+      , Space
+      , Str "se"
+      , SoftBreak
+      , Str "explican"
+      , Space
+      , Str "en"
+      , Space
+      , Cite
+          [ Citation
+              { citationId = "bujalance-costa"
+              , citationPrefix = []
+              , citationSuffix = []
+              , citationMode = NormalCitation
+              , citationNoteNum = 34
+              , citationHash = 0
+              }
+          ]
+          [ Link
+              ( "" , [] , [] )
+              [ Str "[1]" ]
+              ( "#ref-bujalance-costa" , "" )
+          ]
+      , Str "."
+      , Space
+      , Str "Por"
+      ]
+  , Para
+      [ Str "Aqu\237,"
+      , Space
+      , Str "vamos"
+      , Space
+      , Str "a"
+      , Space
+      , Str "presentar"
+      , Space
+      , Str "la"
+      , Space
+      , Str "estructura"
+      , Space
+      , Str "algebraica"
+      , Space
+      , Str "de"
+      , Space
+      , Str "los"
+      , Space
+      , Str "n\250meros"
+      , Space
+      , Str "enteros,"
+      , SoftBreak
+      , Math InlineMath "\\mathbb{Z}"
+      , Str ","
+      , Space
+      , Str "que"
+      , Space
+      , Str "es"
+      , Space
+      , Str "el"
+      , Space
+      , Str "conjunto"
+      , Space
+      , Str "en"
+      , Space
+      , Str "el"
+      , Space
+      , Str "que"
+      , Space
+      , Str "nos"
+      , Space
+      , Str "solemos"
+      , Space
+      , Str "mover"
+      , Space
+      , Str "en"
+      , Space
+      , Str "la"
+      , Space
+      , Str "teor\237a"
+      , Space
+      , Str "de"
+      , SoftBreak
+      , Str "n\250meros"
+      , Space
+      , Str "(aunque"
+      , Space
+      , Str "no"
+      , Space
+      , Str "siempre)."
+      , Space
+      , Str "Para"
+      , Space
+      , Str "esto,"
+      , Space
+      , Str "se"
+      , Space
+      , Str "requiere"
+      , Space
+      , Str "de"
+      , Space
+      , Str "cierto"
+      , Space
+      , Str "conocimiento"
+      , SoftBreak
+      , Str "de"
+      , Space
+      , Str "\225lgebra"
+      , Space
+      , Str "abstracta."
+      , Space
+      , Str "Si"
+      , Space
+      , Str "no"
+      , Space
+      , Str "los"
+      , Space
+      , Str "tiene,"
+      , Space
+      , Str "tambi\233n"
+      , Space
+      , Str "puede"
+      , Space
+      , Str "seguir"
+      , Space
+      , Str "esta"
+      , Space
+      , Str "asignatura."
+      , SoftBreak
+      , Str "Simplemente,"
+      , Space
+      , Str "qu\233dese"
+      , Space
+      , Str "con"
+      , Space
+      , Str "las"
+      , Space
+      , Str "partes"
+      , Space
+      , Str "importantes"
+      , Space
+      , Str "de"
+      , Space
+      , Str "esta"
+      , Space
+      , Str "secci\243n."
+      , Space
+      , Str "TKTK."
+      ]
+  , Para
+      [ Str "La"
+      , Space
+      , Str "estructura"
+      , Space
+      , Str "algebraica"
+      , Space
+      , Str "de"
+      , Space
+      , Str "los"
+      , Space
+      , Str "n\250meros"
+      , Space
+      , Str "enteros"
+      , Space
+      , Str "consta"
+      , Space
+      , Str "de"
+      , Space
+      , Str "esas"
+      , Space
+      , Str "entidades"
+      , SoftBreak
+      , Str "\8212es"
+      , Space
+      , Str "decir,"
+      , Space
+      , Str "los"
+      , Space
+      , Str "n\250meros"
+      , Space
+      , Str "enteros\8212"
+      , Space
+      , Str "y"
+      , Space
+      , Str "de"
+      , Space
+      , Str "dos"
+      , Space
+      , Str "operaciones:"
+      , Space
+      , Str "la"
+      , Space
+      , Str "suma,"
+      , Space
+      , Quoted DoubleQuote [ Math InlineMath "+" ]
+      , Str ","
+      , Space
+      , Str "y"
+      , SoftBreak
+      , Str "la"
+      , Space
+      , Str "multiplicaci\243n,"
+      , Space
+      , Quoted DoubleQuote [ Math InlineMath "\\cdot" ]
+      , Space
+      , Str "(a"
+      , Space
+      , Str "veces"
+      , Space
+      , Str "se"
+      , Space
+      , Str "representa"
+      , Space
+      , Str "por"
+      , Space
+      , Str "otra"
+      , Space
+      , Str "simbolog\237a,"
+      , SoftBreak
+      , Str "como"
+      , Space
+      , Quoted DoubleQuote [ Math InlineMath "\\times" ]
+      , Space
+      , Str "o"
+      , Space
+      , Str "por"
+      , Space
+      , Str "aposici\243n);"
+      , Space
+      , Str "me"
+      , Space
+      , Str "refiero"
+      , Space
+      , Str "a"
+      , Space
+      , Str "las"
+      , Space
+      , Str "versiones"
+      , Space
+      , Str "est\225ndar"
+      , Space
+      , Str "que"
+      , SoftBreak
+      , Str "seguro"
+      , Space
+      , Str "que"
+      , Space
+      , Str "conoce."
+      , Space
+      , Str "A"
+      , Space
+      , Str "esta"
+      , Space
+      , Str "estructura"
+      , Space
+      , Str "se"
+      , Space
+      , Str "la"
+      , Space
+      , Str "denota"
+      , Space
+      , Str "por"
+      , Space
+      , Quoted
+          DoubleQuote [ Math InlineMath "(\\mathbb{Z}, +,\n\\cdot)" ]
+      , Space
+      , Str "(es"
+      , Space
+      , Str "decir,"
+      , Space
+      , Str "por"
+      , Space
+      , Str "una"
+      , Space
+      , Str "terna"
+      , Space
+      , Str "ordenada)"
+      , Space
+      , Str "o,"
+      , Space
+      , Str "tambi\233n,"
+      , Space
+      , Str "por"
+      , Space
+      , Quoted
+          DoubleQuote [ Math InlineMath "(\\mathbb{Z},\n+, \\times)" ]
+      , Str ";"
+      , Space
+      , Str "como"
+      , Space
+      , Str "prefiera."
+      ]
+  , Para
+      [ Str "Por"
+      , Space
+      , Str "un"
+      , Space
+      , Str "lado,"
+      , Space
+      , Str "tenemos"
+      , Space
+      , Str "que"
+      , Space
+      , Math InlineMath "(\\mathbb{Z}, +)"
+      , Space
+      , Str "es"
+      , Space
+      , Str "un"
+      , Space
+      , Str "grupo"
+      , Space
+      , Str "conmutativo,"
+      , Space
+      , Str "puesto"
+      , SoftBreak
+      , Str "que"
+      , Space
+      , Str "la"
+      , Space
+      , Str "operaci\243n"
+      , Space
+      , Quoted DoubleQuote [ Math InlineMath "+" ]
+      , Space
+      , Str "ser\225"
+      , Space
+      , Str "interna"
+      , Space
+      , Str "(cumple"
+      , Space
+      , Str "la"
+      , Space
+      , Str "propiedad"
+      , Space
+      , Str "de"
+      , Space
+      , Str "cierre,"
+      , SoftBreak
+      , Emph [ Str "closure" ]
+      , Str ")"
+      , Space
+      , Str "para"
+      , Space
+      , Str "dicho"
+      , Space
+      , Str "conjunto"
+      , Space
+      , Str "y,"
+      , Space
+      , Str "adem\225s"
+      , Space
+      , Str "se"
+      , Space
+      , Str "cumplir\225n"
+      , Space
+      , Str "las"
+      , Space
+      , Str "propiedades"
+      , SoftBreak
+      , Str "asociativa,"
+      , Space
+      , Str "elemento"
+      , Space
+      , Str "neutro"
+      , Note
+          [ Para
+              [ Str "En"
+              , Space
+              , Str "algunos"
+              , Space
+              , Str "textos"
+              , Space
+              , Str "lo"
+              , Space
+              , Str "llaman"
+              , Space
+              , Emph [ Str "elemento" , Space , Str "identidad" ]
+              , Space
+              , Str "por"
+              , SoftBreak
+              , Str "adopci\243n"
+              , Space
+              , Str "del"
+              , Space
+              , Str "ing\233s"
+              , Space
+              , Emph [ Str "identity" , Space , Str "element" ]
+              , Str "."
+              ]
+          ]
+      , Space
+      , Str "\8212que"
+      , Space
+      , Str "se"
+      , Space
+      , Str "suele"
+      , Space
+      , Str "representar"
+      , Space
+      , Str "como"
+      , SoftBreak
+      , Quoted DoubleQuote [ Math InlineMath "0" ]
+      , Str "\8212,"
+      , Space
+      , Str "elemento"
+      , Space
+      , Str "sim\233trico"
+      , Note
+          [ Para
+              [ Str "En"
+              , Space
+              , Str "algunos"
+              , Space
+              , Str "textos"
+              , Space
+              , Str "lo"
+              , Space
+              , Str "llaman"
+              , Space
+              , Emph [ Str "elemento" , Space , Str "inverso" ]
+              , Space
+              , Str "por"
+              , Space
+              , Str "adopci\243n"
+              , SoftBreak
+              , Str "del"
+              , Space
+              , Str "ing\233s"
+              , Space
+              , Emph [ Str "inverse" , Space , Str "element" ]
+              , Str "."
+              ]
+          ]
+      , Space
+      , Str "y"
+      , Space
+      , Str "conmutativa."
+      , Space
+      , Str "Cuando"
+      , Space
+      , Str "tenemos"
+      , Space
+      , Str "en"
+      , SoftBreak
+      , Str "cuenta"
+      , Space
+      , Str "los"
+      , Space
+      , Str "elementos"
+      , Space
+      , Str "sim\233tricos"
+      , Space
+      , Str "por"
+      , Space
+      , Str "la"
+      , Space
+      , Str "suma,"
+      , Space
+      , Str "tenemos"
+      , Space
+      , Str "ya"
+      , Space
+      , Str "los"
+      , Space
+      , Str "n\250meros"
+      , SoftBreak
+      , Str "negativos,"
+      , Space
+      , Str "con"
+      , Space
+      , Str "los"
+      , Space
+      , Str "que"
+      , Space
+      , Str "aparece"
+      , Space
+      , Str "la"
+      , Space
+      , Str "operaci\243n"
+      , Space
+      , Str "resta."
+      ]
+  , Para
+      [ Str "Por"
+      , Space
+      , Str "el"
+      , Space
+      , Str "otro,"
+      , Space
+      , Str "tenemos"
+      , Space
+      , Str "que"
+      , Space
+      , Math InlineMath "(\\mathbb{Z}, \\cdot)"
+      , Str ","
+      , Space
+      , Str "aunque"
+      , Space
+      , Str "la"
+      , Space
+      , Str "operaci\243n"
+      , Space
+      , Str "es"
+      , SoftBreak
+      , Str "interna"
+      , Space
+      , Str "para"
+      , Space
+      , Str "dicho"
+      , Space
+      , Str "conjunto,"
+      , Space
+      , Str "y"
+      , Space
+      , Str "se"
+      , Space
+      , Str "satisfacen"
+      , Space
+      , Str "las"
+      , Space
+      , Str "propiedades"
+      , Space
+      , Str "asociativa,"
+      , SoftBreak
+      , Str "elemento"
+      , Space
+      , Str "neutro"
+      , Space
+      , Str "\8212que"
+      , Space
+      , Str "se"
+      , Space
+      , Str "suele"
+      , Space
+      , Str "representar"
+      , Space
+      , Str "por"
+      , Space
+      , Quoted DoubleQuote [ Math InlineMath "1" ]
+      , Str "\8212"
+      , Space
+      , Str "y"
+      , Space
+      , Str "conmutativa,"
+      , Space
+      , Str "no"
+      , SoftBreak
+      , Str "llega"
+      , Space
+      , Str "a"
+      , Space
+      , Str "ser"
+      , Space
+      , Str "un"
+      , Space
+      , Str "grupo,"
+      , Space
+      , Str "pues"
+      , Space
+      , Str "no"
+      , Space
+      , Str "cumple"
+      , Space
+      , Str "la"
+      , Space
+      , Str "propiedad"
+      , Space
+      , Str "del"
+      , Space
+      , Str "elemento"
+      , Space
+      , Str "sim\233trico."
+      , Space
+      , Str "Es"
+      , SoftBreak
+      , Str "decir,"
+      , Space
+      , Str "si"
+      , Space
+      , Str "nos"
+      , Space
+      , Str "dan"
+      , Space
+      , Str "un"
+      , Space
+      , Math InlineMath "a \\in \\mathbb{Z}"
+      , Str ","
+      , Space
+      , Str "es"
+      , Space
+      , Str "posible"
+      , Space
+      , Str "que"
+      , Space
+      , Str "en"
+      , Space
+      , Math InlineMath "\\mathbb{Z}"
+      , Space
+      , Str "no"
+      , SoftBreak
+      , Str "encontremos"
+      , Space
+      , Str "un"
+      , Space
+      , Str "elemento"
+      , Space
+      , Math InlineMath "b"
+      , Space
+      , Str "tal"
+      , Space
+      , Str "que"
+      , Space
+      , Math InlineMath "a \\cdot b = e"
+      , Str ","
+      , Space
+      , Str "siendo"
+      , Space
+      , Str "este"
+      , Space
+      , Math InlineMath "e"
+      , Space
+      , Str "el"
+      , SoftBreak
+      , Str "elemento"
+      , Space
+      , Str "neutro"
+      , Space
+      , Str "del"
+      , Space
+      , Str "producto,"
+      , Space
+      , Str "o"
+      , Space
+      , Str "sea,"
+      , Space
+      , Math InlineMath "1"
+      , Str "."
+      , Space
+      , Str "De"
+      , Space
+      , Str "hecho,"
+      , Space
+      , Str "los"
+      , Space
+      , Str "\250nicos"
+      , Space
+      , Str "elementos"
+      , Space
+      , Str "de"
+      , SoftBreak
+      , Math InlineMath "\\mathbb{Z}"
+      , Space
+      , Str "que"
+      , Space
+      , Str "cuentan"
+      , Space
+      , Str "con"
+      , Space
+      , Str "elemento"
+      , Space
+      , Str "sim\233trico"
+      , Space
+      , Str "son"
+      , Space
+      , Str "el"
+      , Space
+      , Math InlineMath "-1"
+      , Space
+      , Str "y"
+      , Space
+      , Str "el"
+      , Space
+      , Math InlineMath "1"
+      , Str "."
+      , SoftBreak
+      , Str "Evidentemente,"
+      , Space
+      , Str "se"
+      , Space
+      , Str "puede"
+      , Space
+      , Quoted DoubleQuote [ Str "ampliar" ]
+      , Space
+      , Str "esta"
+      , Space
+      , Str "estructura"
+      , Space
+      , Str "y"
+      , Space
+      , Str "obtener"
+      , Space
+      , Str "otra"
+      , Space
+      , Str "en"
+      , Space
+      , Str "la"
+      , Space
+      , Str "que"
+      , SoftBreak
+      , Str "todos"
+      , Space
+      , Str "los"
+      , Space
+      , Str "elementos"
+      , Space
+      , Str "tengan"
+      , Space
+      , Str "su"
+      , Space
+      , Str "sim\233trico."
+      , Space
+      , Str "El"
+      , Space
+      , Str "ejemplo"
+      , Space
+      , Str "cl\225sico"
+      , Space
+      , Str "ser\237a"
+      , Space
+      , Str "el"
+      , Space
+      , Str "de"
+      , Space
+      , Str "los"
+      , SoftBreak
+      , Str "n\250meros"
+      , Space
+      , Str "racionales,"
+      , Space
+      , Str "pero"
+      , Space
+      , Str "en"
+      , Space
+      , Str "esta"
+      , Space
+      , Str "asignatura"
+      , Space
+      , Str "apenas"
+      , Space
+      , Str "se"
+      , Space
+      , Str "hablar\225"
+      , Space
+      , Str "de"
+      , Space
+      , Str "ellos."
+      ]
+  , Para
+      [ Str "En"
+      , Space
+      , Math InlineMath "(\\mathbb{Z}, +, \\cdot)"
+      , Str ","
+      , Space
+      , Str "tambi\233n"
+      , Space
+      , Str "se"
+      , Space
+      , Str "satisface"
+      , Space
+      , Str "la"
+      , Space
+      , Str "propiedad"
+      , Space
+      , Str "distributiva"
+      , SoftBreak
+      , Str "del"
+      , Space
+      , Str "producto"
+      , Space
+      , Str "respecto"
+      , Space
+      , Str "a"
+      , Space
+      , Str "la"
+      , Space
+      , Str "suma."
+      , Space
+      , Str "Es"
+      , Space
+      , Str "decir,"
+      , Space
+      , Str "dados"
+      , Space
+      , Math InlineMath "a,b,c \\in \\mathbb{Z}"
+      , Str ","
+      , Space
+      , Str "se"
+      , SoftBreak
+      , Str "cumplen"
+      ]
+  , Para
+      [ Math
+          DisplayMath
+          " \\begin{aligned}\n     a(b + c) &= ab + ac \\\\\n     (b + c)a &= ba + ca\n   \\end{aligned} "
+      ]
+  , Para
+      [ Str "Ojo,"
+      , Space
+      , Str "la"
+      , Space
+      , Str "distribuci\243n"
+      , Space
+      , Str "de"
+      , Space
+      , Str "la"
+      , Space
+      , Str "suma"
+      , Space
+      , Str "respecto"
+      , Space
+      , Str "al"
+      , Space
+      , Str "producto"
+      , Space
+      , Str "no"
+      , Space
+      , Str "se"
+      , Space
+      , Str "cumple."
+      , Space
+      , Str "Es"
+      , Space
+      , Str "decir,"
+      , SoftBreak
+      , Str "no"
+      , Space
+      , Str "podemos"
+      , Space
+      , Str "poner,"
+      , Space
+      , Str "en"
+      , Space
+      , Str "general,"
+      , Space
+      , Str "algo"
+      , Space
+      , Str "como"
+      , Space
+      , Math InlineMath "a + (b \\cdot c) = (a + b)(a + c)"
+      , Str "."
+      ]
+  , Para
+      [ Str "Todo"
+      , Space
+      , Str "esto"
+      , Space
+      , Str "nos"
+      , Space
+      , Str "da,"
+      , Space
+      , Str "tal"
+      , Space
+      , Str "y"
+      , Space
+      , Str "como"
+      , Space
+      , Str "dijimos,"
+      , Space
+      , Str "para"
+      , Space
+      , Math InlineMath "(\\mathbb{Z}, +, \\cdot)"
+      , Str ","
+      , Space
+      , Str "la"
+      , SoftBreak
+      , Str "estructura"
+      , Space
+      , Str "algebraica"
+      , Space
+      , Str "de"
+      , Space
+      , Str "anillo"
+      , Space
+      , Str "conmutativo"
+      , Space
+      , Str "unitario."
+      , Space
+      , Str "M\225s"
+      , Space
+      , Str "concretamente,"
+      , Space
+      , Str "el"
+      , SoftBreak
+      , Str "elemento"
+      , Space
+      , Str "unidad"
+      , Space
+      , Str "del"
+      , Space
+      , Str "producto"
+      , Space
+      , Str "es"
+      , Space
+      , Str "el"
+      , Space
+      , Math InlineMath "1"
+      , Str ","
+      , Space
+      , Str "tal"
+      , Space
+      , Str "y"
+      , Space
+      , Str "como"
+      , Space
+      , Str "dijimos,"
+      , Space
+      , Str "y"
+      , Space
+      , Str "no"
+      , Space
+      , Str "tiene"
+      , SoftBreak
+      , Str "divisores"
+      , Space
+      , Str "de"
+      , Space
+      , Math InlineMath "0"
+      , Str "."
+      , Space
+      , Str "Esto"
+      , Space
+      , Str "\250ltimo"
+      , Space
+      , Str "hace"
+      , Space
+      , Str "que"
+      , Space
+      , Str "se"
+      , Space
+      , Str "d\233"
+      , Space
+      , Str "la"
+      , Space
+      , Str "propiedad"
+      , Space
+      , Str "siguiente,"
+      , Space
+      , Str "que"
+      , Space
+      , Str "se"
+      , SoftBreak
+      , Str "usar\225"
+      , Space
+      , Str "en"
+      , Space
+      , Str "varias"
+      , Space
+      , Str "demostraciones"
+      , Space
+      , Str "y"
+      , Space
+      , Str "ejercicios."
+      ]
+  , Div
+      ( "" , [ "theorem" ] , [] )
+      [ Para
+          [ Strong
+              [ Emph
+                  [ Str
+                      "Teorema (Propiedad del Producto de N\250meros Enteros con      Resultado 0).\8212 "
+                  ]
+              ]
+          , Str "Dados"
+          , Space
+          , Math InlineMath "a,b \\in \\mathbb{Z}"
+          , Str ","
+          , Space
+          , Str "si"
+          , Space
+          , Math InlineMath "ab = 0"
+          , Str ","
+          , Space
+          , Str "entonces"
+          , Space
+          , Str "se"
+          , Space
+          , Str "da"
+          , Space
+          , Str "necesariamente"
+          , Space
+          , Str "que"
+          , SoftBreak
+          , Math InlineMath "a = 0"
+          , Str ","
+          , Space
+          , Math InlineMath "b = 0"
+          , Space
+          , Str "(o"
+          , Space
+          , Str "ambos)."
+          ]
+      ]
+  , Para
+      [ Str "Tampoco"
+      , Space
+      , Str "vamos"
+      , Space
+      , Str "a"
+      , Space
+      , Str "demostrar"
+      , Space
+      , Str "todo"
+      , Space
+      , Str "en"
+      , Space
+      , Str "tanto"
+      , Space
+      , Str "detalle"
+      , Space
+      , Str "como"
+      , Space
+      , Str "se"
+      , Space
+      , Str "hace"
+      , Space
+      , Str "en"
+      , Space
+      , Str "una"
+      , SoftBreak
+      , Str "asignatura"
+      , Space
+      , Str "de"
+      , Space
+      , Str "estructuras"
+      , Space
+      , Str "algebraicas."
+      ]
+  , Para
+      [ Str "Otras"
+      , Space
+      , Str "propiedades"
+      , Space
+      , Str "interesantes"
+      , Space
+      , Str "de"
+      , Space
+      , Str "la"
+      , Space
+      , Str "estructura"
+      , Space
+      , Math InlineMath "(\\mathbb{Z}, +, \\cdot)"
+      , Str ","
+      , Space
+      , Str "y"
+      , SoftBreak
+      , Str "que"
+      , Space
+      , Str "tambi\233n"
+      , Space
+      , Str "usaremos"
+      , Space
+      , Str "en"
+      , Space
+      , Str "la"
+      , Space
+      , Str "teor\237a"
+      , Space
+      , Str "de"
+      , Space
+      , Str "n\250meros,"
+      , Space
+      , Str "son"
+      , Space
+      , Str "las"
+      , Space
+      , Str "siguientes."
+      ]
+  , Div
+      ( "" , [ "theorem" ] , [] )
+      [ Para
+          [ Strong
+              [ Emph
+                  [ Str
+                      "Teorema (Propiedades de los N\250meros Enteros).\8212 "
+                  ]
+              ]
+          , Str "Dados"
+          , Space
+          , Math InlineMath "a, b, c \\in \\mathbb{Z}"
+          , Str ","
+          , Space
+          , Str "se"
+          , Space
+          , Str "cumplen:"
+          ]
+      , OrderedList
+          ( 1 , LowerRoman , Period )
+          [ [ Plain [ Math InlineMath "0 \\cdot a = 0" , Str "." ] ]
+          , [ Plain [ Math InlineMath "a(-b) = (-ab)" , Str "." ] ]
+          , [ Plain
+                [ Str "Dado"
+                , Space
+                , Str "un"
+                , Space
+                , Math InlineMath "a \\neq 0"
+                , Str "."
+                , Space
+                , Str "Si"
+                , Space
+                , Math InlineMath "ab = ac"
+                , Str ","
+                , Space
+                , Str "entonces"
+                , Space
+                , Math InlineMath "b = c"
+                , Str "."
+                , Space
+                , Str "(Propiedad"
+                , SoftBreak
+                , Str "cancelativa.)"
+                ]
+            ]
+          , [ Plain [ Math InlineMath "(-(-a)) = a" , Str "." ] ]
+          , [ Plain [ Math InlineMath "(-a)(-b) = ab" ] ]
+          ]
+      ]
+  , Div
+      ( "" , [ "proof" ] , [] )
+      [ Para
+          [ Strong [ Emph [ Str "Demostraci\243n.\8212 " ] ]
+          , Str "TKTK."
+          ]
+      , OrderedList
+          ( 1 , Decimal , Period )
+          [ [ Para
+                [ Str "Partimos"
+                , Space
+                , Str "de"
+                , Space
+                , Str "la"
+                , Space
+                , Str "expresi\243n"
+                , Space
+                , Math InlineMath "0a"
+                , Str ","
+                , Space
+                , Str "y"
+                , Space
+                , Str "operamos:"
+                ]
+            , Para
+                [ Math
+                    DisplayMath
+                    " \\begin{aligned}\n     0a &= (0 + 0)a & \\text{prop. elemento neutro} \\\\\n     0a &= 0a + 0a & \\text{prop. distributiva } \\\\\n     0a - 0a &= (0a + 0a) - 0a & \\text{restamos $0a$} \\\\\n     0a - 0a &= 0a + (0a - 0a) & \\text{prop. asociativa de la suma} \\\\\n     0 &= 0a + (0a - 0a) & \\\\\n     0 &= 0a + 0 & \\\\\n     0 &= 0a & \\text{prop. elemento neutro}\n\\end{aligned} "
+                ]
+            ]
+          , [ Para
+                [ Str "Partimos"
+                , Space
+                , Str "de"
+                , Space
+                , Str "la"
+                , Space
+                , Str "expresi\243n"
+                , Space
+                , Math InlineMath "a(-b) + ab"
+                , Str ","
+                , Space
+                , Str "y"
+                , Space
+                , Str "operamos:"
+                ]
+            , Para
+                [ Math
+                    DisplayMath
+                    " \\begin{aligned}\n     a(-b) + ab\n       &= a[(-b) + b]\n       & \\text{prop. distributiva} \\\\\n       &= a0\n       & \\text{operamos en los corchetes} \\\\\n       &= 0\n       & \\text{prop. 1} \\\\\n       &= ab - ab\n       & \\text{def. de $0$} \\\\\n     [a(-b) + ab] - ab\n       &= (ab - ab) - ab\n       & \\text{restamos $ab$} \\\\\n     a(-b) + (ab - ab)\n       &= (ab - ab) - ab\n       & \\text{propiedad asociativa} \\\\\n     a(-b) + 0\n       &= 0 - ab\n       & \\text{operamos en los par\233ntesis} \\\\\n     a(-b)\n       &= (-ab)\n       & \\text{def. elemento neutro}\n   \\end{aligned} "
+                ]
+            ]
+          , [ Para
+                [ Str "Partimos"
+                , Space
+                , Str "de"
+                , Space
+                , Str "la"
+                , Space
+                , Str "ecuaci\243n"
+                , Space
+                , Math InlineMath "ab = ac"
+                , Str ","
+                , Space
+                , Str "y"
+                , Space
+                , Str "operamos:"
+                ]
+            , Para
+                [ Math
+                    DisplayMath
+                    " \\begin{aligned}\n     ab &= ac & \\\\\n     ab - ac &= ac - ac & \\text{restamos $ac$} \\\\\n      &= 0 & \\text{hacemos la resta de la derecha} \\\\\n     0 &= a(b - c) & \\text{sacamos factor com\250n $a$} \\\\\n      &= a(b - c) & \n   \\end{aligned} "
+                ]
+            , Para
+                [ Str "Como"
+                , Space
+                , Str "se"
+                , Space
+                , Str "da"
+                , Space
+                , Str "la"
+                , Space
+                , Str "condici\243n"
+                , Space
+                , Math InlineMath "a \\neq 0"
+                , Str ","
+                , Space
+                , Str "para"
+                , Space
+                , Str "que"
+                , Space
+                , Str "se"
+                , Space
+                , Str "d\233"
+                , Space
+                , Str "que"
+                ]
+            , Para [ Math DisplayMath " a(b - c) = 0 " ]
+            , Para
+                [ Str "no"
+                , Space
+                , Str "queda"
+                , Space
+                , Str "otra"
+                , Space
+                , Str "que"
+                , Space
+                , Math InlineMath "b - c = 0"
+                , Str ","
+                , Space
+                , Str "o,"
+                , Space
+                , Str "lo"
+                , Space
+                , Str "que"
+                , Space
+                , Str "es"
+                , Space
+                , Str "lo"
+                , Space
+                , Str "mismo,"
+                , Space
+                , Math InlineMath "b = c"
+                , Str "."
+                ]
+            ]
+          , [ Para
+                [ Str "Nos"
+                , Space
+                , Str "vamos"
+                , Space
+                , Str "a"
+                , Space
+                , Str "auxiliar"
+                , Space
+                , Str "en"
+                , Space
+                , Str "otra"
+                , Space
+                , Str "variable"
+                , Space
+                , Math InlineMath "c"
+                , Space
+                , Str "que"
+                , Space
+                , Str "dependa"
+                , Space
+                , Str "de"
+                , Space
+                , Math InlineMath "a"
+                , Str "."
+                , SoftBreak
+                , Str "Concretamente,"
+                , Space
+                , Str "decidimos"
+                , Space
+                , Str "que"
+                , Space
+                , Str "la"
+                , Space
+                , Str "dependencia"
+                , Space
+                , Str "sea"
+                , Space
+                , Math InlineMath "c = -a"
+                , Str "."
+                , Space
+                , Str "Advierta"
+                , Space
+                , Str "que,"
+                , SoftBreak
+                , Str "si"
+                , Space
+                , Math InlineMath "a \\in \\mathbb{Z}"
+                , Str ","
+                , Space
+                , Str "se"
+                , Space
+                , Str "tiene"
+                , Space
+                , Str "que"
+                , Space
+                , Math InlineMath "c \\in \\mathbb{Z}"
+                , Str "."
+                , Space
+                , Str "Entonces,"
+                ]
+            , Para
+                [ Math
+                    DisplayMath
+                    " \\begin{aligned}\n     0 & = c - c \\\\\n      & = c + (-c) \\\\\n      & = -a + [-(-a)] & \\text{c.d.v.: $c = -a$} \\\\\n     0 + a & = \\{(-a) + [-(-a)]\\} + a & \\text{sumamos $a$} \\\\\n      & = \\{-(-a) + (-a)\\} + a & \\text{prop. conmutativa de \"$+$\"} \\\\\n      & = -(-a) + [(-a) + a] & \\text{prop. asociativa de \"$+$\"} \\\\\n      & = -(-a) + 0 & \\text{operamos en el par\233ntesis} \\\\\n     a & = -(-a) & \\text{prop. elemento neutro}\n   \\end{aligned} "
+                ]
+            ]
+          , [ Para
+                [ Str "Lo"
+                , Space
+                , Str "haremos"
+                , Space
+                , Str "con"
+                , Space
+                , Str "un"
+                , Space
+                , Str "cambio"
+                , Space
+                , Str "de"
+                , Space
+                , Str "variable"
+                , Space
+                , Str "y"
+                , Space
+                , Str "haciendo"
+                , Space
+                , Str "uso"
+                , Space
+                , Str "de"
+                , Space
+                , Str "las"
+                , Space
+                , Str "propiedades"
+                , Space
+                , Str "2"
+                , SoftBreak
+                , Str "y"
+                , Space
+                , Str "4."
+                , Space
+                , Str "Tomemos"
+                , Space
+                , Str "la"
+                , Space
+                , Str "variable"
+                , Space
+                , Math InlineMath "c = (-a)"
+                , Str "."
+                , Space
+                , Str "Evidentemente,"
+                , Space
+                , Str "se"
+                , Space
+                , Str "tiene"
+                , Space
+                , Str "que"
+                , Space
+                , Math InlineMath "c \\in\n\\mathbb{Z}"
+                , Str "."
+                , Space
+                , Str "Entonces,"
+                ]
+            , Para
+                [ Math
+                    DisplayMath
+                    " \\begin{aligned}\n     (-a)(-b)\n      &= c(-b)     & \\text{c.d.v.: $c = -a$} \\\\\n      &= -(cb)     & \\text{prop. 2} \\\\\n      &= -(bc)     & \\text{prop. conmutativa de \"$\\cdot$\"} \\\\\n      &= (-c)b     & \\text{prop. 2} \\\\\n      &= (-(-a))b  & \\text{c.d.v.: $c = -a$} \\\\\n      &= ab        & \\text{prop. 4}\n   \\end{aligned} "
+                ]
+            ]
+          ]
+      ]
+  , Header
+      1
+      ( "referencias" , [ "unnumbered" ] , [] )
+      [ Str "Referencias" ]
+  , Div
+      ( "refs"
+      , [ "references" , "csl-bib-body" ]
+      , [ ( "entry-spacing" , "0" ) ]
+      )
+      [ Div
+          ( "ref-bujalance-costa" , [ "csl-entry" ] , [] )
+          [ Para
+              [ Span
+                  ( "" , [ "csl-left-margin" ] , [] )
+                  [ Str "[1]" , Space ]
+              , Span
+                  ( "" , [ "csl-right-inline" ] , [] )
+                  [ Str "Emilio"
+                  , Space
+                  , Str "Bujalance,"
+                  , Space
+                  , Str "Antonio"
+                  , Space
+                  , Str "F."
+                  , Space
+                  , Str "Costa,"
+                  , Space
+                  , Str "y"
+                  , Space
+                  , Str "otros,"
+                  , Space
+                  , Emph
+                      [ Str "Elementos"
+                      , Space
+                      , Str "de"
+                      , Space
+                      , Str "matem\225tica"
+                      , Space
+                      , Str "discreta"
+                      ]
+                  , Str ","
+                  , Space
+                  , Str "3.\170"
+                  , Space
+                  , Str "ed."
+                  , Space
+                  , Str "Editorial"
+                  , Space
+                  , Str "Sanz"
+                  , Space
+                  , Str "y"
+                  , Space
+                  , Str "Torres,"
+                  , Space
+                  , Str "2005."
+                  ]
+              ]
+          ]
+      , Div
+          ( "ref-burton" , [ "csl-entry" ] , [] )
+          [ Para
+              [ Span
+                  ( "" , [ "csl-left-margin" ] , [] )
+                  [ Str "[2]" , Space ]
+              , Span
+                  ( "" , [ "csl-right-inline" ] , [] )
+                  [ Str "David"
+                  , Space
+                  , Str "M."
+                  , Space
+                  , Str "Burton,"
+                  , Space
+                  , Emph
+                      [ Str "Elementary"
+                      , Space
+                      , Str "Number"
+                      , Space
+                      , Str "Theory"
+                      ]
+                  , Str ","
+                  , Space
+                  , Str "7.\170"
+                  , Space
+                  , Str "ed."
+                  , Space
+                  , Str "William"
+                  , Space
+                  , Str "C."
+                  , Space
+                  , Str "Brown"
+                  , Space
+                  , Str "Pub.,"
+                  , Space
+                  , Str "2010."
+                  ]
+              ]
+          ]
+      , Div
+          ( "ref-rosen-number-th" , [ "csl-entry" ] , [] )
+          [ Para
+              [ Span
+                  ( "" , [ "csl-left-margin" ] , [] )
+                  [ Str "[3]" , Space ]
+              , Span
+                  ( "" , [ "csl-right-inline" ] , [] )
+                  [ Str "Kenneth"
+                  , Space
+                  , Str "H."
+                  , Space
+                  , Str "Rosen,"
+                  , Space
+                  , Emph
+                      [ Str "Elementary"
+                      , Space
+                      , Str "Number"
+                      , Space
+                      , Str "Theory"
+                      , Space
+                      , Str "and"
+                      , Space
+                      , Str "Its"
+                      , Space
+                      , Str "Applications"
+                      ]
+                  , Str ","
+                  , Space
+                  , Str "6.\170"
+                  , Space
+                  , Str "ed."
+                  , Space
+                  , Str "Pearson,"
+                  , Space
+                  , Str "2010."
+                  ]
+              ]
+          ]
+      , Div
+          ( "ref-weissman" , [ "csl-entry" ] , [] )
+          [ Para
+              [ Span
+                  ( "" , [ "csl-left-margin" ] , [] )
+                  [ Str "[4]" , Space ]
+              , Span
+                  ( "" , [ "csl-right-inline" ] , [] )
+                  [ Str "Martin"
+                  , Space
+                  , Str "H."
+                  , Space
+                  , Str "Weissman,"
+                  , Space
+                  , Emph
+                      [ Str "An"
+                      , Space
+                      , Str "Illustrated"
+                      , Space
+                      , Str "Theory"
+                      , Space
+                      , Str "of"
+                      , Space
+                      , Str "Numbers"
+                      ]
+                  , Str ","
+                  , Space
+                  , Str "1.\170"
+                  , Space
+                  , Str "ed."
+                  , Space
+                  , Str "American"
+                  , Space
+                  , Str "Mathematical"
+                  , Space
+                  , Str "Society,"
+                  , Space
+                  , Str "2020."
+                  , Space
+                  , Str "Disponible"
+                  , Space
+                  , Str "en:"
+                  , Space
+                  , Link
+                      ( "" , [] , [] )
+                      [ Str "http://illustratedtheoryofnumbers.com/" ]
+                      ( "http://illustratedtheoryofnumbers.com/" , "" )
+                  ]
+              ]
+          ]
+      , Div
+          ( "ref-theory-of-numbers-niven" , [ "csl-entry" ] , [] )
+          [ Para
+              [ Span
+                  ( "" , [ "csl-left-margin" ] , [] )
+                  [ Str "[5]" , Space ]
+              , Span
+                  ( "" , [ "csl-right-inline" ] , [] )
+                  [ Str "Ivan"
+                  , Space
+                  , Str "Niven,"
+                  , Space
+                  , Str "Herbert"
+                  , Space
+                  , Str "S."
+                  , Space
+                  , Str "Zuckerman,"
+                  , Space
+                  , Str "y"
+                  , Space
+                  , Str "Hugh"
+                  , Space
+                  , Str "L."
+                  , Space
+                  , Str "Montgomery,"
+                  , Space
+                  , Emph
+                      [ Str "An"
+                      , Space
+                      , Str "Introduction"
+                      , Space
+                      , Str "to"
+                      , Space
+                      , Str "the"
+                      , Space
+                      , Str "Theory"
+                      , Space
+                      , Str "of"
+                      , Space
+                      , Str "Numbers"
+                      ]
+                  , Str ","
+                  , Space
+                  , Str "5.\170"
+                  , Space
+                  , Str "ed."
+                  , Space
+                  , Str "Wiley,"
+                  , Space
+                  , Str "1991."
+                  ]
+              ]
+          ]
+      , Div
+          ( "ref-brualdi" , [ "csl-entry" ] , [] )
+          [ Para
+              [ Span
+                  ( "" , [ "csl-left-margin" ] , [] )
+                  [ Str "[6]" , Space ]
+              , Span
+                  ( "" , [ "csl-right-inline" ] , [] )
+                  [ Str "Richard"
+                  , Space
+                  , Str "A."
+                  , Space
+                  , Str "Brualdi,"
+                  , Space
+                  , Emph
+                      [ Str "Introductory"
+                      , Space
+                      , Str "Combinatorics"
+                      ]
+                  , Str ","
+                  , Space
+                  , Str "5.\170"
+                  , Space
+                  , Str "ed."
+                  , Space
+                  , Str "Pearson,"
+                  , Space
+                  , Str "2018."
+                  ]
+              ]
+          ]
+      ]
+  ]
