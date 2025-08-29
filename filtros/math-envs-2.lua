@@ -104,32 +104,35 @@ local DivProcessor = {
 
                 -- Writes title and data-label at the beginning of first paragraph in
                 -- enviroment.
-                local title_inlines = { pandoc.Str(title_text) }
-                if label and label ~= "" then
-                    table.insert(title_inlines, pandoc.Str(" ("))
-                    local formatted_label = pandoc.read(label, "markdown").blocks[1]
-                    for _, inline in ipairs(formatted_label.content) do
-                        table.insert(title_inlines, inline)
+                if div.content[1] then
+                    -- Build the title's inline content
+                    local title_inlines = { pandoc.Str(title_text) }
+                    if label and label ~= "" then
+                        title_inlines:insert(pandoc.Str(" ("))
+                        local formatted_label = pandoc.read(label, "markdown").blocks[1]
+                        -- Insert the content of the label, not the block itself
+                        for _, inline in ipairs(formatted_label.content) do
+                            title_inlines:insert(inline)
+                        end
+                        title_inlines:insert(pandoc.Str(")"))
                     end
-                    table.insert(title_inlines, pandoc.Str(")"))
-                end
-                table.insert(title_inlines, pandoc.Str(title_sep))
-                local formatted_title = pandoc.Strong(pandoc.Emph(title_inlines))
+                    title_inlines:insert(pandoc.Str(title_sep))
 
-                -- Decide where to insert the title based on the div's content
-                if #div.content == 0 or div.content[1].t ~= "Para" then
-                    -- Case 1: The div is empty or doesn't start with a paragraph.
-                    -- Insert a new paragraph with the title at the beginning.
-                    local title_paragraph = pandoc.Para({ formatted_title })
-                    table.insert(div.content, 1, title_paragraph)
-                else
-                    -- Case 2: The div starts with a paragraph. Prepend the title to it.
-                    div.content[1].content:insert(1, formatted_title)
-                    div.content[1].content:insert(2, pandoc.Space())
-                end
+                    if div.content[1].t == "Para" then
+                        -- Case 1: The first block is a paragraph. Prepend the title to it.
+                        local formatted_title = pandoc.Strong(pandoc.Emph(title_inlines))
+                        div.content[1].content:insert(1, formatted_title)
+                        div.content[1].content:insert(2, pandoc.Space()) -- Add a space after the title
+                    else
+                        -- Case 2: The first block is not a paragraph. Insert a new title paragraph.
+                        local formatted_title = pandoc.Strong(pandoc.Emph(title_inlines))
+                        local title_paragraph = pandoc.Para({ formatted_title })
+                        table.insert(div.content, 1, title_paragraph)
+                    end
 
-                -- Delete the label for avoiding duplications.
-                div.attr.attributes["data-label"] = nil
+                    -- Delete the label for avoiding duplications.
+                    div.attr.attributes["data-label"] = nil
+                end
 
 
                 -- Write environment final symbol.

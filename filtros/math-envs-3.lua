@@ -106,14 +106,14 @@ local DivProcessor = {
                 -- enviroment.
                 local title_inlines = { pandoc.Str(title_text) }
                 if label and label ~= "" then
-                    table.insert(title_inlines, pandoc.Str(" ("))
+                    title_inlines:insert(pandoc.Str(" ("))
                     local formatted_label = pandoc.read(label, "markdown").blocks[1]
                     for _, inline in ipairs(formatted_label.content) do
-                        table.insert(title_inlines, inline)
+                        title_inlines:insert(inline)
                     end
-                    table.insert(title_inlines, pandoc.Str(")"))
+                    title_inlines:insert(pandoc.Str(")"))
                 end
-                table.insert(title_inlines, pandoc.Str(title_sep))
+                title_inlines:insert(pandoc.Str(title_sep))
                 local formatted_title = pandoc.Strong(pandoc.Emph(title_inlines))
 
                 -- Decide where to insert the title based on the div's content
