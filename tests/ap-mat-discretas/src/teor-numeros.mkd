@@ -1,6 +1,6 @@
 
 
-## Teoría de números
+## Parte 1. Teoría de números {#teoria-numeros}
 
 
 

@@ -32,6 +32,21 @@ mtext {
 
 
 
+
+
+/* Note title */
+p span.ntitle {
+    font-style: italic;
+    font-weight: 700;
+}
+
+p span.ntitle::after {
+    contents: " --- ";
+    /* contents: "&nbsp;---&nbsp;"; */
+}
+
+
+
 /* ----------------------------------------- */
 
 /* Entornos de tipo teorema */

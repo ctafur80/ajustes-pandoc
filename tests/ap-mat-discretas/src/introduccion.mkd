@@ -5,11 +5,13 @@
 
 
 
+[Vista general de la asignatura]{.ntitle}
 Esta asignatura consta de tres partes, cada una de las cuales se podría
 estudiar en mayor profundidad en una asignatura propia. Estas son teoría de
-números, teoría de grafos y combinatoria. Evidentemente, todas y cada una de
-estas se engloban en las matemáticas discretas, es decir, las matemáticas de
-los conjuntos numerables. TKTK.
+números (_number theory_, teoría de grafos (_graph theory_) y combinatoria
+(_combinatorics_). Evidentemente, todas y cada una de estas se engloban en
+las matemáticas discretas, es decir, las matemáticas de los conjuntos
+numerables. TKTK.
 
 El libro de texto que se sigue en la asignatura es [@bujalance-costa],
 creado por profesores de la UNED. Me parece un libro que presenta los
@@ -35,12 +37,13 @@ autor, Kenneth H. Rosen. El principal problema que le encuentro a
 simbología matemática.
 
 Al ser, tanto [@burton] como [@rosen-number-th], textos muy populares de la
-teoría de números, puede encontrar por la web las soluciones a sus
-ejercicios y problemas. Por ejemplo,
-[esta](http://www.americanriver.com/mathematics/elementary_number_theory.html)
-para [@burton]. En [@rosen-number-th] vienen las soluciones a los ejercicios
-pares al final. También, existe un libro de soluciones, en el que se dan las
-de todos los planteados.
+teoría de números, si busca un poco puede encontrar las soluciones a los
+ejercicios planteados en ambos textos. Por ejemplo, [las de
+[@burton]][burton-ejercicios-sols]. En cuanto a [@rosen-number-th], en este
+vienen las soluciones a los ejercicios pares al final. También, existe un
+libro de soluciones, en el que se dan las de todos los planteados.
+
+[burton-ejercicios-sols]: http://www.americanriver.com/mathematics/elementary_number_theory.html
 
 Otra referencia que me parece interesante es [@weissman], que es bastante
 más moderna que las otras dos mencionadas. Esta incorpora algunas
@@ -57,10 +60,15 @@ En lo que respecta a la parte de la teoría de grafos, TKTK.
 En lo que respecta a la parte de combinatoria, está muy bien [@brualdi].
 TKTK.
 
+
+---
+
+
+[Imprecisión en enunciados]{.ntitle}
 Algo que también desearía explicar es que es común en matemáticas usar el
 condicional en muchas definiciones o resultados de cualquier tipo cuando en
 realidad se debería usar el bicondicional. Así, por ejemplo, la definición
-del operador "divide a..." que se da en [@bujalance-costa]es la siguiente:
+del operador "divide a..." que se da en [@bujalance-costa] es la siguiente:
 
 ::: {.definition data-label="Operador \"Divide a...\" (mal)"}
   Dados $a,b \in \mathbb{Z}$, si $a \neq 0$ y $b = a \cdot q$ para algún $q

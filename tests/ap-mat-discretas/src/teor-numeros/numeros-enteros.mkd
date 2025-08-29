@@ -5,15 +5,15 @@
 #### Números enteros
 
 
-
-En la primera parte de la Sección 1-1 de [@bujalance-costa] comienzan la
+[Sobre las referencias]{.ntitle}
+En la primera parte de la **Sección 1-1** de [@bujalance-costa] comienzan la
 teoría de números presentando a los números enteros, $\mathbb{Z}$, junto a
-sus operaciones principales (es decir, la suma, $+$, y el producto, $\cdot$)
-y algunas de sus propiedades así como de funciones relacionadas, como, por
-ejemplo, el valor absoluto.
+sus operaciones principales (es decir, la suma, "$+$", y el producto,
+"$\cdot$") y algunas de sus propiedades así como de funciones relacionadas,
+como, por ejemplo, el valor absoluto.
 
 Se mete también a explicar algo sobre esta estructura algebraica,
-($\mathbb{Z}, + , \cdot$), aunque en realidad no es necesario para esta
+($\mathbb{Z}, +, \cdot$), aunque en realidad no es necesario para esta
 asignatura. El contenido relevante es básicamente lo mismo que se presenta
 en el Apéndice A de [@rosen-number-th]. En la sección de ejercicios de dicho
 apéndice se presentan algunos de los resultados que se explican en la
@@ -22,17 +22,27 @@ sección correspondiente en [@bujalance-costa].
 En cualquier caso, me gustaría aclarar algunas partes de estos contenidos,
 por si tiene curiosidad y cierto conocimiento de álgabra abstracta.
 
+
+---
+
+
+[Terminología]{.ntitle}
 Primero, presentar algunas traducciones a este respecto. Lo que en inglés
-llaman *identity element* para nosotros (según la terminología de la
-asignatura Lenguaje Matemático, Conjuntos y Números) sería el *elemento
-neutro*. El *inverse element* es nuestro *elemento simétrico*. También puede
-ver que hay quien los llama *elemento identidad* y *elemento inverso*,
+llaman _identity element_ para nosotros (según la terminología de la
+asignatura Lenguaje Matemático, Conjuntos y Números) sería el _elemento
+neutro_. El _inverse element_ es nuestro _elemento simétrico_. También puede
+ver que hay quien los llama _elemento identidad_ y _elemento inverso_,
 respectivamente.
 
 Advierta que el elemento simétrico no es lo mismo necesariamente que el
 simétrico respecto al producto. En inglés, cuando se desea ser más
-específico a este respecto, se habla del *reciprocal element*.
+específico a este respecto, se habla del _reciprocal element_.
 
+
+---
+
+
+[Estructura algebraica de $\mathbb{Z}$]{.ntitle}
 Es fácil ver que $(\mathbb{Z}, +)$ es un grupo conmutativo; a su elemento
 neutro lo designamos por "$0$". Para $(\mathbb{Z}, \cdot)$, aunque la
 operación es interna para dicho conjunto, y se satisfacen las propiedades
@@ -75,6 +85,11 @@ En [@bujalance-costa] adoptan la convención de que $0 \notin \mathbb{N}$. En
 $\mathbb{N}$. Verá que suelen referirse a $\mathbb{Z}^+$ o a $\mathbb{Z}^+
 \cup \{0\}$.
 
+
+---
+
+
+[Propiedades de $\mathbb{Z}$]{.ntitle}
 Algunas propiedades interesantes de los números enteros, $\mathbb{Z}$ ---o,
 lo que es lo mismo, de la estructura $(\mathbb{Z}, +, \cdot)$---, son las
 siguientes.
@@ -188,11 +203,21 @@ con la ley de la tricotomía, que se menciona en [@rosen-number-th].
   manipulaciones no suelen ser complicadas a este respecto.
 :::
 
+
+---
+
+
+[Terminología]{.ntitle}
 Por cierto, al Principio de Buena Ordenación hay quien prefiere calificarlo
-de *propiedad*. Aunque dicha propiedad pueda parecer algo evidente y sin
+de _propiedad_. Aunque dicha propiedad pueda parecer algo evidente y sin
 relevancia, se usa en muchas demostraciones, como veremos.
 
-En [@bujalance-costa] también presentan el concepto de *valor absoluto* con
+
+---
+
+
+[Valor absoluto]{.ntitle}
+En [@bujalance-costa] también presentan el concepto de _valor absoluto_ con
 dominio en $\mathbb{Z}$ y algunas de sus propiedades más interesantes. De
 hecho, antes de ver la divisibilidad, las propiedades generales que nos
 interesan del valor absoluto son las siguientes.
@@ -220,12 +245,16 @@ $$ |a \cdot b| = \sqrt{(a \cdot b)^2} = \sqrt{a^2 \cdot b^2} = \sqrt{a^2}
 
 Solo hemos tenido que aplicar una propiedad de los radicales.
 
-Un ejercicio que me pareció curioso es el Ejemplo 1.19 de
-[@rosen-number-th]. Lo cierto es que no llego a ver cómo lo resuelve él,
-pero a mí se me ocurrió una forma que creo que es más fácil. Si se fija, los
-triángulos se pueden disponer de tal forma que vemos que hay dos triángulos
-de tamaño $k$ juntos y una línea de $k + 1$ elementos debajo. Así, se
-tendría la ecuación
+
+---
+
+
+[Ejercicio 1.19 de [@rosen-number-th]]{.ntitle}
+Me gustó este ejercicio. Lo cierto es que no llego a ver cómo lo resuelve
+él, pero a mí se me ocurrió una forma que creo que es más fácil. Si se fija,
+los triángulos se pueden disponer de tal forma que vemos que hay dos
+triángulos de tamaño $k$ juntos y una línea de $k + 1$ elementos debajo.
+Así, se tendría la ecuación
 
 $$ (k + 1)^2 = 2t_k + k + 1 $$
 

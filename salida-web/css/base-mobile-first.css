@@ -153,6 +153,7 @@ hr::before {
     content: "\00a0\00a0\00a0\00a0*\00a0\00a0\00a0\00a0*\00a0\00a0\00a0\00a0*";
     display: block;
     text-align: center;
+    margin: 1em auto;
 }
 
 

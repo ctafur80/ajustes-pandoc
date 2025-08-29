@@ -5,37 +5,44 @@
 
 En realidad, no hace falta hablar de estructuras algebraicas para adentrarse
 en la teoría elemental de números. Basta con conocer algunas de las
-propiedades de la de los números enteros.
+propiedades de los números enteros.
 
-Lo que se explica en [@bujalance-costa] a este respecto, es parecido a lo
-que se explica en el Apéndice A de [@rosen-number-th]. En la sección de
+Lo que se explica en [@bujalance-costa] a este respecto es parecido a lo que
+se explica en el Apéndice A de [@rosen-number-th]. En la sección de
 ejercicios de dicho apéndice se presentan algunos de los resultados que se
 explican en [@bujalance-costa]. Por
 
 Aquí, vamos a presentar la estructura algebraica de los números enteros,
 $\mathbb{Z}$, que es el conjunto en el que nos solemos mover en la teoría de
-números (aunque no siempre). Para esto, se requiere conocimiento básico de
-álgebra abstracta. Si no los tiene, también puede seguir esta asignatura.
+números (aunque no siempre). Para esto, se requiere de cierto conocimiento
+de álgebra abstracta. Si no los tiene, también puede seguir esta asignatura.
 Simplemente, quédese con las partes importantes de esta sección. TKTK.
 
-La estructura algebraica de los números enteros consta, además de esos
-números, de dos operaciones: la suma, "$+$", y la multiplicación, '$\cdot$"
-(a veces se representa por otra simbología, como "$\times$" o por
-aposición); me refiero a las versiones estándar que seguro que conoce. A
-esta estructura se la denota por $(\mathbb{Z}, +, \cdot)$ (es decir, por una
-terna ordenada) o, también, por $(\mathbb{Z}, +, \times)$; como prefiera.
+La estructura algebraica de los números enteros consta de esas entidades
+---es decir, los números enteros--- y de dos operaciones: la suma, "$+$", y
+la multiplicación, "$\cdot$" (a veces se representa por otra simbología,
+como "$\times$" o por aposición); me refiero a las versiones estándar que
+seguro que conoce. A esta estructura se la denota por "$(\mathbb{Z}, +,
+\cdot)$" (es decir, por una terna ordenada) o, también, por "$(\mathbb{Z},
++, \times)$"; como prefiera.
 
 Por un lado, tenemos que $(\mathbb{Z}, +)$ es un grupo conmutativo, puesto
-que la operación "$+$" será interna para dicho conjunto y, además se
-cumplirán las propiedades asociativa, elemento neutro (identidad) (que se
-suele representar como "$0$"), elemento simétrico (inverso) y conmutativa.
-Cuando tenemos en cuenta los elementos simétricos por la suma, tenemos ya
-los números negativos, con los que aparece la operación resta.
+que la operación "$+$" será interna (cumple la propiedad de cierre,
+_closure_) para dicho conjunto y, además se cumplirán las propiedades
+asociativa, elemento neutro[^neutro-term] ---que se suele representar como
+"$0$"---, elemento simétrico[^inverso-term] y conmutativa. Cuando tenemos en
+cuenta los elementos simétricos por la suma, tenemos ya los números
+negativos, con los que aparece la operación resta.
+
+[^neutro-term]: En algunos textos lo llaman _elemento identidad_ por
+  adopción del ingés _identity element_.
+[^inverso-term]: En algunos textos lo llaman _elemento inverso_ por adopción
+  del ingés _inverse element_.
 
 Por el otro, tenemos que $(\mathbb{Z}, \cdot)$, aunque la operación es
 interna para dicho conjunto, y se satisfacen las propiedades asociativa,
-elemento neutro (que se suele representar por '$1$') y conmutativa, no llega
-a ser un grupo, pues no cumple la propiedad del elemento simétrico. Es
+elemento neutro ---que se suele representar por "$1$"--- y conmutativa, no
+llega a ser un grupo, pues no cumple la propiedad del elemento simétrico. Es
 decir, si nos dan un $a \in \mathbb{Z}$, es posible que en $\mathbb{Z}$ no
 encontremos un elemento $b$ tal que $a \cdot b = e$, siendo este $e$ el
 elemento neutro del producto, o sea, $1$. De hecho, los únicos elementos de
@@ -59,15 +66,20 @@ no podemos poner, en general, algo como $a + (b \cdot c) = (a + b)(a + c)$.
 Todo esto nos da, tal y como dijimos, para $(\mathbb{Z}, +, \cdot)$, la
 estructura algebraica de anillo conmutativo unitario. Más concretamente, el
 elemento unidad del producto es el $1$, tal y como dijimos, y no tiene
-divisores de $0$. Esto último hace que, dados $a,b \in \mathbb{Z}$, si $ab =
-0$, entonces se da necesariamente que $a = 0$, $b = 0$ o ambos. Esta última
-propiedad la usaremos en algunos ejercicios.
+divisores de $0$. Esto último hace que se dé la propiedad siguiente, que se
+usará en varias demostraciones y ejercicios.
+
+::: {.theorem data-label="Propiedad del Producto de Números Enteros con
+     Resultado 0"}
+  Dados $a,b \in \mathbb{Z}$, si $ab = 0$, entonces se da necesariamente que
+  $a = 0$, $b = 0$ (o ambos).
+:::
 
 Tampoco vamos a demostrar todo en tanto detalle como se hace en una
 asignatura de estructuras algebraicas.
 
-Algunas propiedades interesantes de la estructura $(\mathbb{Z}, +, \cdot)$
-son las siguientes.
+Otras propiedades interesantes de la estructura $(\mathbb{Z}, +, \cdot)$, y
+que también usaremos en la teoría de números, son las siguientes.
 
 ::: {.theorem data-label="Propiedades de los Números Enteros"}
   Dados $a, b, c \in \mathbb{Z}$, se cumplen:
