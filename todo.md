@@ -9,6 +9,7 @@ pequeños que los de las secciones.
 ---
 
 
+Hacer un filtro que inserte figuras TikZ.
 
 
 

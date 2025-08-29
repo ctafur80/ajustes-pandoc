@@ -5,7 +5,6 @@
 
 
 
-
 -- Math environments data
 local envs_data = {
     proof = {
@@ -29,7 +28,7 @@ local envs_data = {
         last_symbol = nil,
     },
     lemma = {
-        title = "Lema",
+        title = "lema",
         sep = ".--- ",
         last_symbol = nil,
     },
@@ -51,12 +50,12 @@ local envs_data = {
 }
 
 
--- Stores references of IDs in the whole document.
+-- binds env IDs with its titles.
 local references = {}
 
 
 
-
+-- Capitalise the string
 function cap_string(str)
     new_str = string.upper(string.sub(str, 1, 1)) .. string.sub(str, 2)
     return new_str
@@ -102,7 +101,6 @@ local DivProcessor = {
                 -- Text to insert in cross reference
                 local ref_text = cap_string(env_data.title)
 
-                -- TODO Quizás es demasiado enrevesado y no se necesite la tabla `references`.
                 -- Collecting cross references (if the div element has an ID)
                 local id = div.attr.identifier
                 if id and id ~= "" then
@@ -118,7 +116,6 @@ local DivProcessor = {
                         end
                         table.insert(references["#" .. id], pandoc.Str(")"))
                     end
-                    --]]
                 end
 
 
@@ -155,6 +152,7 @@ local DivProcessor = {
                     div.content[1].content:insert(2, pandoc.Space())
                 end
 
+                -- TODO No llego a entender por qué es necesario.
                 -- Delete the label for avoiding duplications.
                 div.attr.attributes["data-label"] = nil
 
@@ -197,7 +195,7 @@ local LinkResolver = {
 
 
 
--- El filtro devuelve una lista de "pasadas". Pandoc las ejecutará en orden.
+-- This filter returns a list of "scans". Pandoc will run them in order.
 return {
     DivProcessor,
     LinkResolver
