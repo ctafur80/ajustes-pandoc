@@ -9,42 +9,42 @@
 local envs_data = {
     proof = {
         title = "demostración",
-        sep = ".--- ",
+        sep = ".---",
         last_symbol = " ▢",
     },
     definition = {
         title = "definición",
-        sep = ".--- ",
+        sep = ".---",
         last_symbol = nil,
     },
     axiom = {
         title = "axioma",
-        sep = ".--- ",
+        sep = ".---",
         last_symbol = nil,
     },
     theorem = {
         title = "teorema",
-        sep = ".--- ",
+        sep = ".---",
         last_symbol = nil,
     },
     lemma = {
         title = "lema",
-        sep = ".--- ",
+        sep = ".---",
         last_symbol = nil,
     },
     corollary = {
         title = "corolario",
-        sep = ".--- ",
+        sep = ".---",
         last_symbol = nil,
     },
     exercise = {
         title = "ejercicio",
-        sep = ".--- ",
+        sep = ".---",
         last_symbol = " △",
     },
     example = {
         title = "ejemplo",
-        sep = ".--- ",
+        sep = ".---",
         last_symbol = " △",
     },
 }
@@ -60,6 +60,8 @@ function cap_string(str)
     new_str = string.upper(string.sub(str, 1, 1)) .. string.sub(str, 2)
     return new_str
 end
+
+
 
 
 
@@ -96,19 +98,33 @@ local DivProcessor = {
                 local title_text = cap_string(env_data.title)
                 local title_sep = env_data.sep
                 local label = div.attr.attributes["data-label"]
-
-
-                -- Text to insert in cross reference
                 local ref_text = cap_string(env_data.title)
 
-                -- Collecting cross references (if the div element has an ID)
-                local id = div.attr.identifier
-                if id and id ~= "" then
-                    references["#" .. id] = { pandoc.Str(ref_text) }
 
-                    -- TODO Maybe make a function since this is repeated in the next
-                    -- paragraph.
-                    if label and label ~= "" then
+                -- Builds titles to insert in envs and in references.
+                local id = div.attr.identifier
+                local title_inlines = { pandoc.Str(title_text) }
+                if label and label ~= "" then
+
+                    -- 1. For envs.
+                    table.insert(title_inlines, pandoc.Str(" ("))
+                    local formatted_label = pandoc.read(label, "markdown").blocks[1]
+                    for _, inline in ipairs(formatted_label.content) do
+                        table.insert(title_inlines, inline)
+                    end
+                    table.insert(title_inlines, pandoc.Str(")"))
+
+                    -- Title text separator
+                    local sep_block = pandoc.read(title_sep, "markdown").blocks[1]
+                    if sep_block and sep_block.content then
+                        for _, inline in ipairs(sep_block.content) do
+                            table.insert(title_inlines, inline)
+                        end
+                    end
+
+                    -- 2. For references.
+                    if id and id ~= "" then
+                        references["#" .. id] = { pandoc.Str(ref_text) }
                         table.insert(references["#" .. id], pandoc.Str(" ("))
                         local formatted_label = pandoc.read(label, "markdown").blocks[1]
                         for _, inline in ipairs(formatted_label.content) do
@@ -119,31 +135,10 @@ local DivProcessor = {
                 end
 
 
-                -- Writes title and data-label at the beginning of first paragraph in
-                -- enviroment.
-                local title_inlines = { pandoc.Str(title_text) }
-                if label and label ~= "" then
-                    table.insert(title_inlines, pandoc.Str(" ("))
-                    local formatted_label = pandoc.read(label, "markdown").blocks[1]
-                    for _, inline in ipairs(formatted_label.content) do
-                        table.insert(title_inlines, inline)
-                    end
-                    table.insert(title_inlines, pandoc.Str(")"))
-                end
-
-                -- Parse the separator as markdown to handle smart punctuation (e.g., '---'
-                -- -> '—').
-                local sep_block = pandoc.read(title_sep, "markdown").blocks[1]
-                if sep_block and sep_block.content then
-                    for _, inline in ipairs(sep_block.content) do
-                        table.insert(title_inlines, inline)
-                    end
-                end
-
                 local formatted_title = pandoc.Strong(pandoc.Emph(title_inlines))
 
 
-                -- Decide where to insert the title based on the div's content
+                -- Decide where to insert the title based on the div's content.
                 if #div.content == 0 or div.content[1].t ~= "Para" then
                     local title_paragraph = pandoc.Para({ formatted_title })
                     table.insert(div.content, 1, title_paragraph)
