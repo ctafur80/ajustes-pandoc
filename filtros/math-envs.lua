@@ -50,7 +50,7 @@ local envs_data = {
 }
 
 
--- binds env IDs with its titles.
+-- binds env IDs with the text to insert in the link.
 local references = {}
 
 

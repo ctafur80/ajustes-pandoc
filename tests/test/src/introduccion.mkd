@@ -1,0 +1,121 @@
+
+
+
+## Capítulo 1
+
+
+
+
+### 1.1 Introducción
+
+Algo que conviene hacer en esta asignatura es siempre dibujar la situación.
+Aunque se trate de un caso particular y, por tanto, no sirva como
+demostración ni como resolución de un ejercicio,[^ejercicio] dibujar la
+situación que se nos presenta nos saca en muchas ocasiones de la ofuscación
+en la que nos encontramos.
+
+[^ejercicio]: Esto y lo otro...
+
+1. Uno
+
+   1.  otro
+   2.  otro más
+
+2. Dos
+
+3. Tres
+
+Esto es solo una prueba de código Python:
+
+``` python
+def funcion():
+  print("Hola, mundo!!!")
+```
+
+$$ \int_0^t t^2 \ dt $$
+
+
+---
+
+
+Ahora, una tabla:
+
+-------- -------- -------- --------
+uno      Exam 1   Exam 2   Exam 3
+John     dos      $a$      cuatro
+Mary     tres     $a$      $a$
+Robert   $b$      $a$      $b$
+-------- -------- -------- --------
+
+: Tabla de ejemplo
+
+
+::: {.definition #def-metrica data-label="de Métrica"}
+  Dado un conjunto $\mathbf{P}$ no vacío, una _métrica_ o _distancia_ es
+  toda aplicación $d:\mathbf{P} \times \mathbf{P} \longrightarrow
+  \mathbb{R}^{+} \cup \left\{ 0 \right\}$ en la que para cualesquiera $x,y,z
+  \in \mathbf{P}$ se cumple:
+
+  i. $d(x,y) = 0 \ \Longleftrightarrow \ x = y$.
+  ii. $d(x,y) = d(y,x)$. (Simetría.)
+  iii. $d(x,y) \leq d(x,z) + d(z,y)$. (Desigualdad triangular.)
+:::
+
+Esto es lo que se explica en la [](#def-metrica) cuando se ve que...
+
+En cuanto a la notación, se podría usar también la notación usual para la
+restricción de una aplicación, que en este caso sería algo como $\delta|_{M'
+\times M'}$, para $M' \subseteq M$.
+
+Tal y como se explica en [@venema] se tiene que...
+
+
+---
+
+
+La nueva función se comporta del mismo modo que la vieja, solo que en un
+dominio más restringido.
+
+$$ \begin{aligned}
+  \delta: & & M \times M & \longrightarrow & & \mathbb{R} \\
+    & & (x,y) & \longmapsto & & \delta(x,y)
+\end{aligned} $$
+
+mientras que
+
+$$ \begin{aligned}
+  \delta|_{M' \times M'}: & & M' \times M' & \longrightarrow & & \mathbb{R} \\
+   & & (x,y) & \longmapsto & & \delta|_{M' \times M'}(x,y) = \delta(x,y)
+\end{aligned} $$
+
+En la demostración de este teorema, creo que, por hacerla más completa,
+quizás se debería comentar también que que ninguna de las propiedades de la
+definición de _métrica_ es del tipo _closure_.
+
+
+
+
+## 1.2 Segunda sección
+
+La nueva función se comporta del mismo modo que la vieja, solo que en un
+dominio más restringido.
+
+$$ \begin{aligned}
+  \delta: & & M \times M & \longrightarrow & & \mathbb{R} \\
+    & & (x,y) & \longmapsto & & \delta(x,y)
+\end{aligned} $$
+
+mientras que
+
+$$ \begin{aligned}
+  \delta|_{M' \times M'}: & & M' \times M' & \longrightarrow & & \mathbb{R} \\
+   & & (x,y) & \longmapsto & & \delta|_{M' \times M'}(x,y) = \delta(x,y)
+\end{aligned} $$
+
+En la demostración de este teorema, creo que, por hacerla más completa,
+quizás se debería comentar también que que ninguna de las propiedades de la
+definición de _métrica_ es del tipo _closure_.
+
+
+
+
