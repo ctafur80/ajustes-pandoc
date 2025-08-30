@@ -55,14 +55,11 @@ local references = {}
 
 
 
--- Capitalise the string
+-- Capitalises a string
 function cap_string(str)
     new_str = string.upper(string.sub(str, 1, 1)) .. string.sub(str, 2)
     return new_str
 end
-
-
-
 
 
 
@@ -94,7 +91,7 @@ local DivProcessor = {
                 num_of_math_envs = num_of_math_envs + 1
                 assert(num_of_math_envs <= 1, "Error. There is a div element with more than one math environment classes.")
 
-                -- Simpler names in this function scope.
+                -- Simpler names for this function scope.
                 local title_text = cap_string(env_data.title)
                 local title_sep = env_data.sep
                 local label = div.attr.attributes["data-label"]
@@ -106,7 +103,7 @@ local DivProcessor = {
                 local title_inlines = { pandoc.Str(title_text) }
                 if label and label ~= "" then
 
-                    -- 1. For envs.
+                    -- 1. For environments.
                     table.insert(title_inlines, pandoc.Str(" ("))
                     local formatted_label = pandoc.read(label, "markdown").blocks[1]
                     for _, inline in ipairs(formatted_label.content) do
@@ -114,7 +111,7 @@ local DivProcessor = {
                     end
                     table.insert(title_inlines, pandoc.Str(")"))
 
-                    -- Title text separator
+                    -- Title-text separator
                     local sep_block = pandoc.read(title_sep, "markdown").blocks[1]
                     if sep_block and sep_block.content then
                         for _, inline in ipairs(sep_block.content) do
@@ -132,6 +129,10 @@ local DivProcessor = {
                         end
                         table.insert(references["#" .. id], pandoc.Str(")"))
                     end
+
+                    -- TODO No llego a entender por qué es necesario.
+                    -- Delete the label for avoiding duplications.
+                    div.attr.attributes["data-label"] = nil
                 end
 
 
@@ -146,10 +147,6 @@ local DivProcessor = {
                     div.content[1].content:insert(1, formatted_title)
                     div.content[1].content:insert(2, pandoc.Space())
                 end
-
-                -- TODO No llego a entender por qué es necesario.
-                -- Delete the label for avoiding duplications.
-                div.attr.attributes["data-label"] = nil
 
 
                 -- Write environment final symbol.

@@ -32,6 +32,8 @@ def funcion():
   print("Hola, mundo!!!")
 ```
 
+Ahora, una ecuación:
+
 $$ \int_0^t t^2 \ dt $$
 
 
@@ -76,10 +78,10 @@ Tal y como se explica en [@venema] se tiene que...
 La nueva función se comporta del mismo modo que la vieja, solo que en un
 dominio más restringido.
 
-$$ \begin{aligned}
-  \delta: & & M \times M & \longrightarrow & & \mathbb{R} \\
-    & & (x,y) & \longmapsto & & \delta(x,y)
-\end{aligned} $$
+$$ \begin{array}{rrcl}
+  \delta: & & M \times M & \longrightarrow & \mathbb{R} \\
+    & & (x, y) & \longmapsto & \delta(x,y)
+\end{array} $$
 
 mientras que
 
