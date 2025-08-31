@@ -62,6 +62,22 @@ function cap_string(str)
 end
 
 
+--[[
+function format_string(str, language)
+    -- Checkings
+    -- TODO `language` tiene que ser un lenguaje válido para Pandoc.
+
+    local str_formatted = pandoc.read(str, language).blocks[1]
+    if str_formatted and str_formatted.content then
+        for _, inline in ipairs(str_formatted.content) do
+            table.insert(str_formatted, inline)
+        end
+    end
+
+    return str_formatted
+end
+--]]
+
 
 -- Helping function for checking if an element has a class
 function has_class(element, class_name)
@@ -110,6 +126,8 @@ local DivProcessor = {
                         table.insert(title_inlines, inline)
                     end
                     table.insert(title_inlines, pandoc.Str(")"))
+
+                    -- TODO Make `read_markdown()` function.
 
                     -- Title-text separator
                     local sep_block = pandoc.read(title_sep, "markdown").blocks[1]

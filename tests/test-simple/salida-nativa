@@ -1,0 +1,68 @@
+Pandoc
+  Meta
+    { unMeta =
+        fromList
+          [ ( "author"
+            , MetaInlines
+                [ Str "Carlos"
+                , Space
+                , Str "E."
+                , Space
+                , Str "Tafur"
+                , Space
+                , Str "Egido"
+                ]
+            )
+          , ( "bibliography"
+            , MetaList [ MetaInlines [ Str "./referencias.yaml" ] ]
+            )
+          , ( "csl" , MetaString "ajustes-pandoc/csl/ieee.csl" )
+          , ( "date" , MetaInlines [ Str "02/08/2025" ] )
+          , ( "description"
+            , MetaInlines
+                [ Str "Apuntes"
+                , Space
+                , Str "de"
+                , Space
+                , Str "Geometr\237a"
+                , Space
+                , Str "B\225sica."
+                ]
+            )
+          , ( "keywords"
+            , MetaList
+                [ MetaInlines [ Str "matem\225ticas" ]
+                , MetaInlines [ Str "geometr\237a" ]
+                , MetaInlines [ Str "\225lgebra" ]
+                ]
+            )
+          , ( "lang" , MetaInlines [ Str "es" ] )
+          , ( "link-citations" , MetaBool True )
+          , ( "metad-author"
+            , MetaInlines
+                [ Str "Carlos"
+                , Space
+                , Str "E."
+                , Space
+                , Str "Tafur"
+                , Space
+                , Str "Egido"
+                ]
+            )
+          , ( "metad-date" , MetaInlines [ Str "02/08/2025" ] )
+          , ( "metad-title"
+            , MetaInlines
+                [ Str "Apuntes"
+                , Space
+                , Str "de"
+                , Space
+                , Str "Geometr\237a"
+                , Space
+                , Str "B\225sica"
+                ]
+            )
+          , ( "otherlangs" , MetaInlines [ Str "en" ] )
+          , ( "title" , MetaInlines [ Str "T\237tulo" ] )
+          ]
+    }
+  []

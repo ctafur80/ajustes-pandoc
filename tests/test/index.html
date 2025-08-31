@@ -208,15 +208,47 @@ style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/M
 </tr>
 </tbody>
 </table>
+<p>pero también me gusta hacer tablas de este otro modo:</p>
+<table>
+<thead>
+<tr>
+<th>uno</th>
+<th>Exam 1</th>
+<th>Exam 2</th>
+<th>Exam 3</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>John</td>
+<td>dos</td>
+<td>$a$</td>
+<td>cuatro</td>
+</tr>
+<tr>
+<td>Mary</td>
+<td>tres</td>
+<td>$a$</td>
+<td>$a$</td>
+</tr>
+<tr>
+<td>Robert</td>
+<td>$b$</td>
+<td>$a$</td>
+<td>$b$</td>
+</tr>
+</tbody>
+</table>
+<p>Esto se ve claramente en…</p>
 <div id="def-metrica" class="definition">
 <p><strong><em>Definición (de Métrica).—</em></strong> Dado un conjunto
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>𝐏</mi><annotation encoding="application/x-tex">\mathbf{P}</annotation></semantics></math>
 no vacío, una <em>métrica</em> o <em>distancia</em> es toda aplicación
-<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>d</mi><mo>:</mo><mi>𝐏</mi><mo>×</mo><mi>𝐏</mi><mo>→</mo><msup><mi>ℝ</mi><mo>+</mo></msup><mo>∪</mo><mrow><mo stretchy="true" form="prefix">{</mo><mn>0</mn><mo stretchy="true" form="postfix">}</mo></mrow></mrow><annotation encoding="application/x-tex">d:\mathbf{P} \times \mathbf{P} \longrightarrow
-  \mathbb{R}^{+} \cup \left\{ 0 \right\}</annotation></semantics></math>
-en la que para cualesquiera
-<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>,</mo><mi>y</mi><mo>,</mo><mi>z</mi><mo>∈</mo><mi>𝐏</mi></mrow><annotation encoding="application/x-tex">x,y,z
-  \in \mathbf{P}</annotation></semantics></math> se cumple:</p>
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>d</mi><mo>:</mo><mi>𝐏</mi><mo>×</mo><mi>𝐏</mi><mo>→</mo><msup><mi>ℝ</mi><mo>+</mo></msup><mo>∪</mo><mo stretchy="false" form="prefix">{</mo><mn>0</mn><mo stretchy="false" form="postfix">}</mo></mrow><annotation encoding="application/x-tex">d:\mathbf{P} \times \mathbf{P} \longrightarrow
+  \mathbb{R}^+ \cup \{0\}</annotation></semantics></math> en la que para
+cualesquiera
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>,</mo><mi>y</mi><mo>,</mo><mi>z</mi><mo>∈</mo><mi>𝐏</mi></mrow><annotation encoding="application/x-tex">x, y, z \in
+  \mathbf{P}</annotation></semantics></math> se cumple:</p>
 <ol type="i">
 <li><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>d</mi><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>0</mn><mspace width="0.222em"></mspace><mo>⇔</mo><mspace width="0.222em"></mspace><mi>x</mi><mo>=</mo><mi>y</mi></mrow><annotation encoding="application/x-tex">d(x,y) = 0 \ \Longleftrightarrow \ x = y</annotation></semantics></math>.</li>
 <li><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>d</mi><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mi>d</mi><mo stretchy="false" form="prefix">(</mo><mi>y</mi><mo>,</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">d(x,y) = d(y,x)</annotation></semantics></math>.
@@ -270,6 +302,30 @@ un dominio más restringido.</p>
 completa, quizás se debería comentar también que que ninguna de las
 propiedades de la definición de <em>métrica</em> es del tipo
 <em>closure</em>.</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mtable><mtr><mtd columnalign="right" style="text-align: right; padding-right: 0"><mi>a</mi><mo stretchy="false" form="prefix">(</mo><mi>−</mi><mi>b</mi><mo stretchy="false" form="postfix">)</mo><mo>+</mo><mi>a</mi><mi>b</mi></mtd><mtd columnalign="left" style="text-align: left; padding-left: 0"><mo>=</mo><mi>a</mi><mo stretchy="false" form="prefix">[</mo><mo stretchy="false" form="prefix">(</mo><mi>−</mi><mi>b</mi><mo stretchy="false" form="postfix">)</mo><mo>+</mo><mi>b</mi><mo stretchy="false" form="postfix">]</mo></mtd><mtd columnalign="right" style="text-align: right; padding-right: 0"></mtd><mtd columnalign="left" style="text-align: left; padding-left: 0"><mtext mathvariant="normal">prop. distributiva</mtext></mtd></mtr><mtr><mtd columnalign="right" style="text-align: right; padding-right: 0"></mtd><mtd columnalign="left" style="text-align: left; padding-left: 0"><mo>=</mo><mi>a</mi><mn>0</mn></mtd><mtd columnalign="right" style="text-align: right; padding-right: 0"></mtd><mtd columnalign="left" style="text-align: left; padding-left: 0"><mtext mathvariant="normal">operamos en los corchetes</mtext></mtd></mtr><mtr><mtd columnalign="right" style="text-align: right; padding-right: 0"></mtd><mtd columnalign="left" style="text-align: left; padding-left: 0"><mo>=</mo><mn>0</mn></mtd><mtd columnalign="right" style="text-align: right; padding-right: 0"></mtd><mtd columnalign="left" style="text-align: left; padding-left: 0"><mtext mathvariant="normal">prop. 1</mtext></mtd></mtr><mtr><mtd columnalign="right" style="text-align: right; padding-right: 0"></mtd><mtd columnalign="left" style="text-align: left; padding-left: 0"><mo>=</mo><mi>a</mi><mi>b</mi><mo>−</mo><mi>a</mi><mi>b</mi></mtd><mtd columnalign="right" style="text-align: right; padding-right: 0"></mtd><mtd columnalign="left" style="text-align: left; padding-left: 0"><mrow><mtext mathvariant="normal">def. de </mtext><mspace width="0.333em"></mspace></mrow><mn>0</mn></mtd></mtr><mtr><mtd columnalign="right" style="text-align: right; padding-right: 0"><mo stretchy="false" form="prefix">[</mo><mi>a</mi><mo stretchy="false" form="prefix">(</mo><mi>−</mi><mi>b</mi><mo stretchy="false" form="postfix">)</mo><mo>+</mo><mi>a</mi><mi>b</mi><mo stretchy="false" form="postfix">]</mo><mo>−</mo><mi>a</mi><mi>b</mi></mtd><mtd columnalign="left" style="text-align: left; padding-left: 0"><mo>=</mo><mo stretchy="false" form="prefix">(</mo><mi>a</mi><mi>b</mi><mo>−</mo><mi>a</mi><mi>b</mi><mo stretchy="false" form="postfix">)</mo><mo>−</mo><mi>a</mi><mi>b</mi></mtd><mtd columnalign="right" style="text-align: right; padding-right: 0"></mtd><mtd columnalign="left" style="text-align: left; padding-left: 0"><mrow><mtext mathvariant="normal">restamos </mtext><mspace width="0.333em"></mspace></mrow><mrow><mi>a</mi><mi>b</mi></mrow></mtd></mtr><mtr><mtd columnalign="right" style="text-align: right; padding-right: 0"><mi>a</mi><mo stretchy="false" form="prefix">(</mo><mi>−</mi><mi>b</mi><mo stretchy="false" form="postfix">)</mo><mo>+</mo><mo stretchy="false" form="prefix">(</mo><mi>a</mi><mi>b</mi><mo>−</mo><mi>a</mi><mi>b</mi><mo stretchy="false" form="postfix">)</mo></mtd><mtd columnalign="left" style="text-align: left; padding-left: 0"><mo>=</mo><mo stretchy="false" form="prefix">(</mo><mi>a</mi><mi>b</mi><mo>−</mo><mi>a</mi><mi>b</mi><mo stretchy="false" form="postfix">)</mo><mo>−</mo><mi>a</mi><mi>b</mi></mtd><mtd columnalign="right" style="text-align: right; padding-right: 0"></mtd><mtd columnalign="left" style="text-align: left; padding-left: 0"><mtext mathvariant="normal">propiedad asociativa</mtext></mtd></mtr><mtr><mtd columnalign="right" style="text-align: right; padding-right: 0"><mi>a</mi><mo stretchy="false" form="prefix">(</mo><mi>−</mi><mi>b</mi><mo stretchy="false" form="postfix">)</mo><mo>+</mo><mn>0</mn></mtd><mtd columnalign="left" style="text-align: left; padding-left: 0"><mo>=</mo><mn>0</mn><mo>−</mo><mi>a</mi><mi>b</mi></mtd><mtd columnalign="right" style="text-align: right; padding-right: 0"></mtd><mtd columnalign="left" style="text-align: left; padding-left: 0"><mtext mathvariant="normal">operamos en los paréntesis</mtext></mtd></mtr><mtr><mtd columnalign="right" style="text-align: right; padding-right: 0"><mi>a</mi><mo stretchy="false" form="prefix">(</mo><mi>−</mi><mi>b</mi><mo stretchy="false" form="postfix">)</mo></mtd><mtd columnalign="left" style="text-align: left; padding-left: 0"><mo>=</mo><mo stretchy="false" form="prefix">(</mo><mi>−</mi><mi>a</mi><mi>b</mi><mo stretchy="false" form="postfix">)</mo></mtd><mtd columnalign="right" style="text-align: right; padding-right: 0"></mtd><mtd columnalign="left" style="text-align: left; padding-left: 0"><mtext mathvariant="normal">def. elemento neutro</mtext></mtd></mtr></mtable><annotation encoding="application/x-tex">\begin{align*}
+  a(-b) + ab
+    &amp;= a[(-b) + b]
+    &amp;&amp; \text{prop. distributiva} \\
+    &amp;= a0
+    &amp;&amp; \text{operamos en los corchetes} \\
+    &amp;= 0
+    &amp;&amp; \text{prop. 1} \\
+    &amp;= ab - ab
+    &amp;&amp; \text{def. de $0$} \\
+  [a(-b) + ab] - ab
+    &amp;= (ab - ab) - ab
+    &amp;&amp; \text{restamos $ab$} \\
+  a(-b) + (ab - ab)
+    &amp;= (ab - ab) - ab
+    &amp;&amp; \text{propiedad asociativa} \\
+  a(-b) + 0
+    &amp;= 0 - ab
+    &amp;&amp; \text{operamos en los paréntesis} \\
+  a(-b)
+    &amp;= (-ab)
+    &amp;&amp; \text{def. elemento neutro}
+\end{align*}</annotation></semantics></math></p>
+<p>Esto es simplemente una ecuación.</p>
 </section>
 <section id="referencias" class="level1 unnumbered">
 <h1 class="unnumbered">Referencias</h1>

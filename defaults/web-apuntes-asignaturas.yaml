@@ -4,10 +4,12 @@
 # cómoda la navegación por el documento, incluyendo referencias cruzadas.
 
 
-from: markdown
+from: markdown+raw_attribute
 to: html
+# to: native
 
 output-file: index.html
+# output-file: salida-nativa
 
 metadata-files:
   - metadatos.yaml
@@ -26,7 +28,7 @@ number-sections: false
 filters:
   - citeproc
   - ajustes-pandoc/filtros/math-envs.lua
-
+  - ajustes-pandoc/filtros/csv-filter.py
 
 cite-method: citeproc
 csl: ajustes-pandoc/csl/ieee.csl

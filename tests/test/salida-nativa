@@ -1,0 +1,901 @@
+Pandoc
+  Meta
+    { unMeta =
+        fromList
+          [ ( "author"
+            , MetaInlines
+                [ Str "Carlos"
+                , Space
+                , Str "E."
+                , Space
+                , Str "Tafur"
+                , Space
+                , Str "Egido"
+                ]
+            )
+          , ( "bibliography"
+            , MetaList [ MetaInlines [ Str "./referencias.yaml" ] ]
+            )
+          , ( "csl" , MetaString "ajustes-pandoc/csl/ieee.csl" )
+          , ( "date" , MetaInlines [ Str "02/08/2025" ] )
+          , ( "description"
+            , MetaInlines
+                [ Str "Apuntes"
+                , Space
+                , Str "de"
+                , Space
+                , Str "Geometr\237a"
+                , Space
+                , Str "B\225sica."
+                ]
+            )
+          , ( "keywords"
+            , MetaList
+                [ MetaInlines [ Str "matem\225ticas" ]
+                , MetaInlines [ Str "geometr\237a" ]
+                , MetaInlines [ Str "\225lgebra" ]
+                ]
+            )
+          , ( "lang" , MetaInlines [ Str "es" ] )
+          , ( "link-citations" , MetaBool True )
+          , ( "metad-author"
+            , MetaInlines
+                [ Str "Carlos"
+                , Space
+                , Str "E."
+                , Space
+                , Str "Tafur"
+                , Space
+                , Str "Egido"
+                ]
+            )
+          , ( "metad-date" , MetaInlines [ Str "02/08/2025" ] )
+          , ( "metad-title"
+            , MetaInlines
+                [ Str "Apuntes"
+                , Space
+                , Str "de"
+                , Space
+                , Str "Geometr\237a"
+                , Space
+                , Str "B\225sica"
+                ]
+            )
+          , ( "otherlangs" , MetaInlines [ Str "en" ] )
+          , ( "title"
+            , MetaInlines
+                [ Str "Apuntes"
+                , Space
+                , Str "de"
+                , Space
+                , Str "Geometr\237a"
+                , Space
+                , Str "B\225sica"
+                ]
+            )
+          ]
+    }
+  [ Header
+      1
+      ( "cap\237tulo-1" , [] , [] )
+      [ Str "Cap\237tulo" , Space , Str "1" ]
+  , Header
+      2
+      ( "introducci\243n" , [] , [] )
+      [ Str "1.1" , Space , Str "Introducci\243n" ]
+  , Para
+      [ Str "Algo"
+      , Space
+      , Str "que"
+      , Space
+      , Str "conviene"
+      , Space
+      , Str "hacer"
+      , Space
+      , Str "en"
+      , Space
+      , Str "esta"
+      , Space
+      , Str "asignatura"
+      , Space
+      , Str "es"
+      , Space
+      , Str "siempre"
+      , Space
+      , Str "dibujar"
+      , Space
+      , Str "la"
+      , Space
+      , Str "situaci\243n."
+      , SoftBreak
+      , Str "Aunque"
+      , Space
+      , Str "se"
+      , Space
+      , Str "trate"
+      , Space
+      , Str "de"
+      , Space
+      , Str "un"
+      , Space
+      , Str "caso"
+      , Space
+      , Str "particular"
+      , Space
+      , Str "y,"
+      , Space
+      , Str "por"
+      , Space
+      , Str "tanto,"
+      , Space
+      , Str "no"
+      , Space
+      , Str "sirva"
+      , Space
+      , Str "como"
+      , SoftBreak
+      , Str "demostraci\243n"
+      , Space
+      , Str "ni"
+      , Space
+      , Str "como"
+      , Space
+      , Str "resoluci\243n"
+      , Space
+      , Str "de"
+      , Space
+      , Str "un"
+      , Space
+      , Str "ejercicio,"
+      , Note
+          [ Para
+              [ Str "Esto"
+              , Space
+              , Str "y"
+              , Space
+              , Str "lo"
+              , Space
+              , Str "otro\8230"
+              ]
+          ]
+      , Space
+      , Str "dibujar"
+      , Space
+      , Str "la"
+      , SoftBreak
+      , Str "situaci\243n"
+      , Space
+      , Str "que"
+      , Space
+      , Str "se"
+      , Space
+      , Str "nos"
+      , Space
+      , Str "presenta"
+      , Space
+      , Str "nos"
+      , Space
+      , Str "saca"
+      , Space
+      , Str "en"
+      , Space
+      , Str "muchas"
+      , Space
+      , Str "ocasiones"
+      , Space
+      , Str "de"
+      , Space
+      , Str "la"
+      , Space
+      , Str "ofuscaci\243n"
+      , SoftBreak
+      , Str "en"
+      , Space
+      , Str "la"
+      , Space
+      , Str "que"
+      , Space
+      , Str "nos"
+      , Space
+      , Str "encontramos."
+      ]
+  , OrderedList
+      ( 1 , Decimal , Period )
+      [ [ Para [ Str "Uno" ]
+        , OrderedList
+            ( 1 , Decimal , Period )
+            [ [ Plain [ Str "otro" ] ]
+            , [ Plain [ Str "otro" , Space , Str "m\225s" ] ]
+            ]
+        ]
+      , [ Para [ Str "Dos" ] ]
+      , [ Para [ Str "Tres" ] ]
+      ]
+  , Para
+      [ Str "Esto"
+      , Space
+      , Str "es"
+      , Space
+      , Str "solo"
+      , Space
+      , Str "una"
+      , Space
+      , Str "prueba"
+      , Space
+      , Str "de"
+      , Space
+      , Str "c\243digo"
+      , Space
+      , Str "Python:"
+      ]
+  , CodeBlock
+      ( "" , [ "python" ] , [] )
+      "def funcion():\n  print(\"Hola, mundo!!!\")"
+  , Para
+      [ Str "Ahora,"
+      , Space
+      , Str "una"
+      , Space
+      , Str "ecuaci\243n:"
+      ]
+  , Para [ Math DisplayMath " \\int_0^t t^2 \\ dt " ]
+  , HorizontalRule
+  , Para
+      [ Str "Ahora," , Space , Str "una" , Space , Str "tabla:" ]
+  , Table
+      ( "" , [] , [] )
+      (Caption
+         Nothing
+         [ Plain
+             [ Str "Tabla" , Space , Str "de" , Space , Str "ejemplo" ]
+         ])
+      [ ( AlignLeft , ColWidthDefault )
+      , ( AlignLeft , ColWidthDefault )
+      , ( AlignLeft , ColWidthDefault )
+      , ( AlignLeft , ColWidthDefault )
+      ]
+      (TableHead ( "" , [] , [] ) [])
+      [ TableBody
+          ( "" , [] , [] )
+          (RowHeadColumns 0)
+          []
+          [ Row
+              ( "" , [] , [] )
+              [ Cell
+                  ( "" , [] , [] )
+                  AlignDefault
+                  (RowSpan 1)
+                  (ColSpan 1)
+                  [ Plain [ Str "uno" ] ]
+              , Cell
+                  ( "" , [] , [] )
+                  AlignDefault
+                  (RowSpan 1)
+                  (ColSpan 1)
+                  [ Plain [ Str "Exam" , Space , Str "1" ] ]
+              , Cell
+                  ( "" , [] , [] )
+                  AlignDefault
+                  (RowSpan 1)
+                  (ColSpan 1)
+                  [ Plain [ Str "Exam" , Space , Str "2" ] ]
+              , Cell
+                  ( "" , [] , [] )
+                  AlignDefault
+                  (RowSpan 1)
+                  (ColSpan 1)
+                  [ Plain [ Str "Exam" , Space , Str "3" ] ]
+              ]
+          , Row
+              ( "" , [] , [] )
+              [ Cell
+                  ( "" , [] , [] )
+                  AlignDefault
+                  (RowSpan 1)
+                  (ColSpan 1)
+                  [ Plain [ Str "John" ] ]
+              , Cell
+                  ( "" , [] , [] )
+                  AlignDefault
+                  (RowSpan 1)
+                  (ColSpan 1)
+                  [ Plain [ Str "dos" ] ]
+              , Cell
+                  ( "" , [] , [] )
+                  AlignDefault
+                  (RowSpan 1)
+                  (ColSpan 1)
+                  [ Plain [ Math InlineMath "a" ] ]
+              , Cell
+                  ( "" , [] , [] )
+                  AlignDefault
+                  (RowSpan 1)
+                  (ColSpan 1)
+                  [ Plain [ Str "cuatro" ] ]
+              ]
+          , Row
+              ( "" , [] , [] )
+              [ Cell
+                  ( "" , [] , [] )
+                  AlignDefault
+                  (RowSpan 1)
+                  (ColSpan 1)
+                  [ Plain [ Str "Mary" ] ]
+              , Cell
+                  ( "" , [] , [] )
+                  AlignDefault
+                  (RowSpan 1)
+                  (ColSpan 1)
+                  [ Plain [ Str "tres" ] ]
+              , Cell
+                  ( "" , [] , [] )
+                  AlignDefault
+                  (RowSpan 1)
+                  (ColSpan 1)
+                  [ Plain [ Math InlineMath "a" ] ]
+              , Cell
+                  ( "" , [] , [] )
+                  AlignDefault
+                  (RowSpan 1)
+                  (ColSpan 1)
+                  [ Plain [ Math InlineMath "a" ] ]
+              ]
+          , Row
+              ( "" , [] , [] )
+              [ Cell
+                  ( "" , [] , [] )
+                  AlignDefault
+                  (RowSpan 1)
+                  (ColSpan 1)
+                  [ Plain [ Str "Robert" ] ]
+              , Cell
+                  ( "" , [] , [] )
+                  AlignDefault
+                  (RowSpan 1)
+                  (ColSpan 1)
+                  [ Plain [ Math InlineMath "b" ] ]
+              , Cell
+                  ( "" , [] , [] )
+                  AlignDefault
+                  (RowSpan 1)
+                  (ColSpan 1)
+                  [ Plain [ Math InlineMath "a" ] ]
+              , Cell
+                  ( "" , [] , [] )
+                  AlignDefault
+                  (RowSpan 1)
+                  (ColSpan 1)
+                  [ Plain [ Math InlineMath "b" ] ]
+              ]
+          ]
+      ]
+      (TableFoot ( "" , [] , [] ) [])
+  , Para
+      [ Str "pero"
+      , Space
+      , Str "tambi\233n"
+      , Space
+      , Str "me"
+      , Space
+      , Str "gusta"
+      , Space
+      , Str "hacer"
+      , Space
+      , Str "tablas"
+      , Space
+      , Str "de"
+      , Space
+      , Str "este"
+      , Space
+      , Str "otro"
+      , Space
+      , Str "modo:"
+      ]
+  , Para
+      [ Str "Esto"
+      , Space
+      , Str "se"
+      , Space
+      , Str "ve"
+      , Space
+      , Str "claramente"
+      , Space
+      , Str "en\8230"
+      ]
+  , Div
+      ( "def-metrica" , [ "definition" ] , [] )
+      [ Para
+          [ Strong
+              [ Emph
+                  [ Str "Definici\243n"
+                  , Str " ("
+                  , Str "de"
+                  , Space
+                  , Str "M\233trica"
+                  , Str ")"
+                  , Str ".\8212"
+                  ]
+              ]
+          , Space
+          , Str "Dado"
+          , Space
+          , Str "un"
+          , Space
+          , Str "conjunto"
+          , Space
+          , Math InlineMath "\\mathbf{P}"
+          , Space
+          , Str "no"
+          , Space
+          , Str "vac\237o,"
+          , Space
+          , Str "una"
+          , Space
+          , Emph [ Str "m\233trica" ]
+          , Space
+          , Str "o"
+          , Space
+          , Emph [ Str "distancia" ]
+          , Space
+          , Str "es"
+          , SoftBreak
+          , Str "toda"
+          , Space
+          , Str "aplicaci\243n"
+          , Space
+          , Math
+              InlineMath
+              "d:\\mathbf{P} \\times \\mathbf{P} \\longrightarrow\n  \\mathbb{R}^+ \\cup \\{0\\}"
+          , Space
+          , Str "en"
+          , Space
+          , Str "la"
+          , Space
+          , Str "que"
+          , Space
+          , Str "para"
+          , Space
+          , Str "cualesquiera"
+          , Space
+          , Math InlineMath "x, y, z \\in\n  \\mathbf{P}"
+          , Space
+          , Str "se"
+          , Space
+          , Str "cumple:"
+          ]
+      , OrderedList
+          ( 1 , LowerRoman , Period )
+          [ [ Plain
+                [ Math
+                    InlineMath
+                    "d(x,y) = 0 \\ \\Longleftrightarrow \\ x = y"
+                , Str "."
+                ]
+            ]
+          , [ Plain
+                [ Math InlineMath "d(x,y) = d(y,x)"
+                , Str "."
+                , Space
+                , Str "(Simetr\237a.)"
+                ]
+            ]
+          , [ Plain
+                [ Math InlineMath "d(x,y) \\leq d(x,z) + d(z,y)"
+                , Str "."
+                , Space
+                , Str "(Desigualdad"
+                , Space
+                , Str "triangular.)"
+                ]
+            ]
+          ]
+      ]
+  , Para
+      [ Str "Esto"
+      , Space
+      , Str "es"
+      , Space
+      , Str "lo"
+      , Space
+      , Str "que"
+      , Space
+      , Str "se"
+      , Space
+      , Str "explica"
+      , Space
+      , Str "en"
+      , Space
+      , Str "la"
+      , Space
+      , Link
+          ( "" , [] , [] )
+          [ Str "Definici\243n"
+          , Str " ("
+          , Str "de"
+          , Space
+          , Str "M\233trica"
+          , Str ")"
+          ]
+          ( "#def-metrica" , "" )
+      , Space
+      , Str "cuando"
+      , Space
+      , Str "se"
+      , Space
+      , Str "ve"
+      , Space
+      , Str "que\8230"
+      ]
+  , Para
+      [ Str "En"
+      , Space
+      , Str "cuanto"
+      , Space
+      , Str "a"
+      , Space
+      , Str "la"
+      , Space
+      , Str "notaci\243n,"
+      , Space
+      , Str "se"
+      , Space
+      , Str "podr\237a"
+      , Space
+      , Str "usar"
+      , Space
+      , Str "tambi\233n"
+      , Space
+      , Str "la"
+      , Space
+      , Str "notaci\243n"
+      , Space
+      , Str "usual"
+      , Space
+      , Str "para"
+      , Space
+      , Str "la"
+      , SoftBreak
+      , Str "restricci\243n"
+      , Space
+      , Str "de"
+      , Space
+      , Str "una"
+      , Space
+      , Str "aplicaci\243n,"
+      , Space
+      , Str "que"
+      , Space
+      , Str "en"
+      , Space
+      , Str "este"
+      , Space
+      , Str "caso"
+      , Space
+      , Str "ser\237a"
+      , Space
+      , Str "algo"
+      , Space
+      , Str "como"
+      , Space
+      , Math InlineMath "\\delta|_{M'\n\\times M'}"
+      , Str ","
+      , Space
+      , Str "para"
+      , Space
+      , Math InlineMath "M' \\subseteq M"
+      , Str "."
+      ]
+  , Para
+      [ Str "Tal"
+      , Space
+      , Str "y"
+      , Space
+      , Str "como"
+      , Space
+      , Str "se"
+      , Space
+      , Str "explica"
+      , Space
+      , Str "en"
+      , Space
+      , Cite
+          [ Citation
+              { citationId = "venema"
+              , citationPrefix = []
+              , citationSuffix = []
+              , citationMode = NormalCitation
+              , citationNoteNum = 2
+              , citationHash = 0
+              }
+          ]
+          [ Link ( "" , [] , [] ) [ Str "[1]" ] ( "#ref-venema" , "" )
+          ]
+      , Space
+      , Str "se"
+      , Space
+      , Str "tiene"
+      , Space
+      , Str "que\8230"
+      ]
+  , HorizontalRule
+  , Para
+      [ Str "La"
+      , Space
+      , Str "nueva"
+      , Space
+      , Str "funci\243n"
+      , Space
+      , Str "se"
+      , Space
+      , Str "comporta"
+      , Space
+      , Str "del"
+      , Space
+      , Str "mismo"
+      , Space
+      , Str "modo"
+      , Space
+      , Str "que"
+      , Space
+      , Str "la"
+      , Space
+      , Str "vieja,"
+      , Space
+      , Str "solo"
+      , Space
+      , Str "que"
+      , Space
+      , Str "en"
+      , Space
+      , Str "un"
+      , SoftBreak
+      , Str "dominio"
+      , Space
+      , Str "m\225s"
+      , Space
+      , Str "restringido."
+      ]
+  , Para
+      [ Math
+          DisplayMath
+          " \\begin{array}{rrcl}\n  \\delta: & & M \\times M & \\longrightarrow & \\mathbb{R} \\\\\n    & & (x, y) & \\longmapsto & \\delta(x,y)\n\\end{array} "
+      ]
+  , Para [ Str "mientras" , Space , Str "que" ]
+  , Para
+      [ Math
+          DisplayMath
+          " \\begin{aligned}\n  \\delta|_{M' \\times M'}: & & M' \\times M' & \\longrightarrow & & \\mathbb{R} \\\\\n   & & (x,y) & \\longmapsto & & \\delta|_{M' \\times M'}(x,y) = \\delta(x,y)\n\\end{aligned} "
+      ]
+  , Para
+      [ Str "En"
+      , Space
+      , Str "la"
+      , Space
+      , Str "demostraci\243n"
+      , Space
+      , Str "de"
+      , Space
+      , Str "este"
+      , Space
+      , Str "teorema,"
+      , Space
+      , Str "creo"
+      , Space
+      , Str "que,"
+      , Space
+      , Str "por"
+      , Space
+      , Str "hacerla"
+      , Space
+      , Str "m\225s"
+      , Space
+      , Str "completa,"
+      , SoftBreak
+      , Str "quiz\225s"
+      , Space
+      , Str "se"
+      , Space
+      , Str "deber\237a"
+      , Space
+      , Str "comentar"
+      , Space
+      , Str "tambi\233n"
+      , Space
+      , Str "que"
+      , Space
+      , Str "que"
+      , Space
+      , Str "ninguna"
+      , Space
+      , Str "de"
+      , Space
+      , Str "las"
+      , Space
+      , Str "propiedades"
+      , Space
+      , Str "de"
+      , Space
+      , Str "la"
+      , SoftBreak
+      , Str "definici\243n"
+      , Space
+      , Str "de"
+      , Space
+      , Emph [ Str "m\233trica" ]
+      , Space
+      , Str "es"
+      , Space
+      , Str "del"
+      , Space
+      , Str "tipo"
+      , Space
+      , Emph [ Str "closure" ]
+      , Str "."
+      ]
+  , Header
+      1
+      ( "segunda-secci\243n" , [] , [] )
+      [ Str "1.2"
+      , Space
+      , Str "Segunda"
+      , Space
+      , Str "secci\243n"
+      ]
+  , Para
+      [ Str "La"
+      , Space
+      , Str "nueva"
+      , Space
+      , Str "funci\243n"
+      , Space
+      , Str "se"
+      , Space
+      , Str "comporta"
+      , Space
+      , Str "del"
+      , Space
+      , Str "mismo"
+      , Space
+      , Str "modo"
+      , Space
+      , Str "que"
+      , Space
+      , Str "la"
+      , Space
+      , Str "vieja,"
+      , Space
+      , Str "solo"
+      , Space
+      , Str "que"
+      , Space
+      , Str "en"
+      , Space
+      , Str "un"
+      , SoftBreak
+      , Str "dominio"
+      , Space
+      , Str "m\225s"
+      , Space
+      , Str "restringido."
+      ]
+  , Para
+      [ Math
+          DisplayMath
+          " \\begin{aligned}\n  \\delta: & & M \\times M & \\longrightarrow & & \\mathbb{R} \\\\\n    & & (x,y) & \\longmapsto & & \\delta(x,y)\n\\end{aligned} "
+      ]
+  , Para [ Str "mientras" , Space , Str "que" ]
+  , Para
+      [ Math
+          DisplayMath
+          " \\begin{aligned}\n  \\delta|_{M' \\times M'}: & & M' \\times M' & \\longrightarrow & & \\mathbb{R} \\\\\n   & & (x,y) & \\longmapsto & & \\delta|_{M' \\times M'}(x,y) = \\delta(x,y)\n\\end{aligned} "
+      ]
+  , Para
+      [ Str "En"
+      , Space
+      , Str "la"
+      , Space
+      , Str "demostraci\243n"
+      , Space
+      , Str "de"
+      , Space
+      , Str "este"
+      , Space
+      , Str "teorema,"
+      , Space
+      , Str "creo"
+      , Space
+      , Str "que,"
+      , Space
+      , Str "por"
+      , Space
+      , Str "hacerla"
+      , Space
+      , Str "m\225s"
+      , Space
+      , Str "completa,"
+      , SoftBreak
+      , Str "quiz\225s"
+      , Space
+      , Str "se"
+      , Space
+      , Str "deber\237a"
+      , Space
+      , Str "comentar"
+      , Space
+      , Str "tambi\233n"
+      , Space
+      , Str "que"
+      , Space
+      , Str "que"
+      , Space
+      , Str "ninguna"
+      , Space
+      , Str "de"
+      , Space
+      , Str "las"
+      , Space
+      , Str "propiedades"
+      , Space
+      , Str "de"
+      , Space
+      , Str "la"
+      , SoftBreak
+      , Str "definici\243n"
+      , Space
+      , Str "de"
+      , Space
+      , Emph [ Str "m\233trica" ]
+      , Space
+      , Str "es"
+      , Space
+      , Str "del"
+      , Space
+      , Str "tipo"
+      , Space
+      , Emph [ Str "closure" ]
+      , Str "."
+      ]
+  , Header
+      1
+      ( "referencias" , [ "unnumbered" ] , [] )
+      [ Str "Referencias" ]
+  , Div
+      ( "refs"
+      , [ "references" , "csl-bib-body" ]
+      , [ ( "entry-spacing" , "0" ) ]
+      )
+      [ Div
+          ( "ref-venema" , [ "csl-entry" ] , [] )
+          [ Para
+              [ Span
+                  ( "" , [ "csl-left-margin" ] , [] )
+                  [ Str "[1]" , Space ]
+              , Span
+                  ( "" , [ "csl-right-inline" ] , [] )
+                  [ Str "Gerard"
+                  , Space
+                  , Str "A."
+                  , Space
+                  , Str "Venema,"
+                  , Space
+                  , Emph
+                      [ Str "Foundations"
+                      , Space
+                      , Str "of"
+                      , Space
+                      , Str "Geometry"
+                      ]
+                  , Str ","
+                  , Space
+                  , Str "2.\170"
+                  , Space
+                  , Str "ed."
+                  , Space
+                  , Str "Pearson,"
+                  , Space
+                  , Str "2011."
+                  ]
+              ]
+          ]
+      ]
+  ]

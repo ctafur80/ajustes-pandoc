@@ -1,0 +1,17 @@
+author: "Carlos E. Tafur Egido"
+metad-author: "Carlos E. Tafur Egido"
+lang: es
+otherlangs: en
+title: "Apuntes de Geometría Básica"
+metad-title: "Apuntes de Geometría Básica"
+date: 02/08/2025
+metad-date: 02/08/2025
+description: "Apuntes de Geometría Básica."
+keywords:
+  - matemáticas
+  - geometría
+  - álgebra
+bibliography:
+  - ./referencias.yaml
+link-citations: true
+

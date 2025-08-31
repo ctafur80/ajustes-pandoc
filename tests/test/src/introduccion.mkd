@@ -51,12 +51,22 @@ Robert   $b$      $a$      $b$
 
 : Tabla de ejemplo
 
+pero también me gusta hacer tablas de este otro modo:
+
+```{=csv}
+uno,Exam 1,Exam 2,Exam 3
+John,dos,$a$,cuatro
+Mary,tres,$a$,$a$
+Robert,$b$,$a$,$b$
+```
+
+Esto se ve claramente en...
 
 ::: {.definition #def-metrica data-label="de Métrica"}
   Dado un conjunto $\mathbf{P}$ no vacío, una _métrica_ o _distancia_ es
   toda aplicación $d:\mathbf{P} \times \mathbf{P} \longrightarrow
-  \mathbb{R}^{+} \cup \left\{ 0 \right\}$ en la que para cualesquiera $x,y,z
-  \in \mathbf{P}$ se cumple:
+  \mathbb{R}^+ \cup \{0\}$ en la que para cualesquiera $x, y, z \in
+  \mathbf{P}$ se cumple:
 
   i. $d(x,y) = 0 \ \Longleftrightarrow \ x = y$.
   ii. $d(x,y) = d(y,x)$. (Simetría.)
@@ -117,6 +127,33 @@ $$ \begin{aligned}
 En la demostración de este teorema, creo que, por hacerla más completa,
 quizás se debería comentar también que que ninguna de las propiedades de la
 definición de _métrica_ es del tipo _closure_.
+
+\begin{align*}
+  a(-b) + ab
+    &= a[(-b) + b]
+    && \text{prop. distributiva} \\
+    &= a0
+    && \text{operamos en los corchetes} \\
+    &= 0
+    && \text{prop. 1} \\
+    &= ab - ab
+    && \text{def. de $0$} \\
+  [a(-b) + ab] - ab
+    &= (ab - ab) - ab
+    && \text{restamos $ab$} \\
+  a(-b) + (ab - ab)
+    &= (ab - ab) - ab
+    && \text{propiedad asociativa} \\
+  a(-b) + 0
+    &= 0 - ab
+    && \text{operamos en los paréntesis} \\
+  a(-b)
+    &= (-ab)
+    && \text{def. elemento neutro}
+\end{align*}
+
+Esto es simplemente una ecuación.
+
 
 
 
