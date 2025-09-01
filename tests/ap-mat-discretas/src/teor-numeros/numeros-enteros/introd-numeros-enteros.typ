@@ -1,15 +1,13 @@
+===== Introducción
+<introducción>
+A la teoría de números (#emph[number theory];) hay quien la define como
+las matemáticas de los números enteros, $bb(Z)$, y, aunque es verdad que
+ese es el conjunto más importante y sobre el que nos movemos con mayor
+frecuencia en esta materia, no llega a ser cierto del todo.
 
+Tal y como dije en la sección introductoria de estos apuntes, voy a
+poner las definiciones, teoremas, etc. algo distintas. Lo que haré será
+hacerlos lo más amplios posible, pues TKTK.
 
-A la teoría de números (_number theory_) hay quien la define como las
-matemáticas de los números enteros, $bb(Z)$, y, aunque es verdad que ese es
-el conjunto más importante y sobre el que nos movemos con mayor frecuencia
-en esta materia, no llega a ser cierto del todo.
-
-Tal y como dije en la sección introductoria de estos apuntes, voy a poner
-las definiciones, teoremas, etc. algo distintas. Lo que haré será hacerlos
-lo más amplios posible, pues TKTK.
-
-No obstante, es una buena idea comenzar presentando la estructura algebraica
-en $bb(Z)$ que seguiremos.
-
-
+No obstante, es una buena idea comenzar presentando la estructura
+algebraica en $bb(Z)$ que seguiremos.
