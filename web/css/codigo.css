@@ -33,6 +33,8 @@ pre {
     /* Barra sutil para hacer ver que el código se sale del ancho de la pantalla. */
     /* border-right: 1px solid #4a4646; */
     padding: 12px;
+    background: var(--code-bg-color);
+    border-radius: 7px;
 }
 
 code {
@@ -54,8 +56,6 @@ div.sourceCode,
 pre,
 code {
     /* color: var(--code-fg-color); */
-    background: var(--code-bg-color);
-    border-radius: 7px;
 }
 
 pre.sourceCode a {

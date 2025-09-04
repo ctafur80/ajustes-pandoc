@@ -25,7 +25,7 @@ en la que nos encontramos.
 
 3. Tres
 
-Esto es solo una prueba de código Python:
+Esto es solo una prueba de `código` Python:
 
 ``` python
 def funcion():
