@@ -52,6 +52,7 @@ code {
 pre code {
     display: block;
     /*min-width: 120%;*/
+    background: var(--code-bg-color);
 }
 
 
