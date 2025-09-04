@@ -4,7 +4,7 @@
 # cómoda la navegación por el documento, incluyendo referencias cruzadas.
 
 
-from: markdown+raw_attribute
+from: markdown
 to: html
 # to: native
 
@@ -23,7 +23,6 @@ standalone: true
 toc: true
 
 number-sections: false
-
 
 filters:
   - citeproc
@@ -50,16 +49,17 @@ section-divs: true
 html-math-method:
   method: mathml
 
-# email-obfuscation: javascript
+email-obfuscation: javascript
 
 tab-stop: 4
 preserve-tabs: true
 
+reference-links: true
 reference-location: document
 markdown-headings: atx
 
 resource-path:
-  - figuras
+  - figures
 
 
 html-q-tags: true
@@ -90,12 +90,12 @@ track-changes: accept
 include-before-body: ./ajustes-pandoc/salida-web/html/elemento-breadcrumbs.html
 include-after-body: ./ajustes-pandoc/salida-web/html/etiqueta-final-main.html
 include-in-header:
-   - ./ajustes-pandoc/salida-web/html/elemento-nav.html
-   - ./ajustes-pandoc/salida-web/html/elemento-boton-nav-bar.html
-   - ./ajustes-pandoc/salida-web/html/carga-breadcrumbs.html
-   - ./ajustes-pandoc/salida-web/html/carga-nav-bar.html
-   # - ./ajustes-pandoc/salida-web/html/nameref.html
-   # - ./ajustes-pandoc/salida-web/html/carga-ajustes-mathjax.html
+  - ./ajustes-pandoc/salida-web/html/elemento-nav.html
+  - ./ajustes-pandoc/salida-web/html/elemento-boton-nav-bar.html
+  - ./ajustes-pandoc/salida-web/html/carga-breadcrumbs.html
+  - ./ajustes-pandoc/salida-web/html/carga-nav-bar.html
+  # - ./ajustes-pandoc/salida-web/html/nameref.html
+  # - ./ajustes-pandoc/salida-web/html/carga-ajustes-mathjax.html
 
 
 
