@@ -130,7 +130,7 @@ definición de _métrica_ es del tipo _closure_.
 
 
 
-## 1.2 Segunda sección
+## Otra sección
 
 La nueva función se comporta del mismo modo que la vieja, solo que en un
 dominio más restringido.
