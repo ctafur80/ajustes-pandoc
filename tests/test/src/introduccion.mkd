@@ -1,12 +1,12 @@
 
 
 
-## Capítulo 1
+## Espacios métricos
 
 
 
 
-### 1.1 Introducción
+### Introducción
 
 Algo que conviene hacer en esta asignatura es siempre dibujar la situación.
 Aunque se trate de un caso particular y, por tanto, no sirva como
@@ -18,8 +18,8 @@ en la que nos encontramos.
 
 1. Uno
 
-   1.  otro
-   2.  otro más
+   1. otro
+   2. otro más
 
 2. Dos
 
@@ -31,6 +31,11 @@ Esto es solo una prueba de código Python:
 def funcion():
   print("Hola, mundo!!!")
 ```
+
+
+
+
+#### Sección interna
 
 Ahora, una ecuación:
 
@@ -60,6 +65,14 @@ Mary,tres,$a$,$a$
 Robert,$b$,$a$,$b$
 ```
 
+
+
+
+## Distancia o métrica
+
+
+### Introducción
+
 Esto se ve claramente en...
 
 ::: {.definition #def-metrica data-label="de Métrica"}
@@ -75,9 +88,19 @@ Esto se ve claramente en...
 
 Esto es lo que se explica en la [](#def-metrica) cuando se ve que...
 
+
+
+
+#### Anotación
+
 En cuanto a la notación, se podría usar también la notación usual para la
 restricción de una aplicación, que en este caso sería algo como $\delta|_{M'
 \times M'}$, para $M' \subseteq M$.
+
+
+
+
+##### Comentario
 
 Tal y como se explica en [@venema] se tiene que...
 

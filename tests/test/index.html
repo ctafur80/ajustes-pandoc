@@ -109,12 +109,12 @@
     div.csl-indent {
       margin-left: 2em;
     }  </style>
-  <link rel="stylesheet" href="./ajustes-pandoc/salida-web/css/variables/apuntes-asignaturas.css" />
-  <link rel="stylesheet" href="./ajustes-pandoc/salida-web/css/base-mobile-first.css" />
-  <link rel="stylesheet" href="./ajustes-pandoc/salida-web/css/tablas.css" />
-  <link rel="stylesheet" href="./ajustes-pandoc/salida-web/css/codigo.css" />
-  <link rel="stylesheet" href="./ajustes-pandoc/salida-web/css/matematicas.css" />
-  <link rel="stylesheet" href="./ajustes-pandoc/salida-web/css/desktop.css" />
+  <link rel="stylesheet" href="./pandoc/web/css/variables.css" />
+  <link rel="stylesheet" href="./pandoc/web/css/base-mobile-first.css" />
+  <link rel="stylesheet" href="./pandoc/web/css/tablas.css" />
+  <link rel="stylesheet" href="./pandoc/web/css/codigo.css" />
+  <link rel="stylesheet" href="./pandoc/web/css/matematicas.css" />
+  <link rel="stylesheet" href="./pandoc/web/css/desktop.css" />
   <nav id="nav">
     <!--<h2></h2>-->
     <ul id="menu">
@@ -136,20 +136,41 @@
 </header>
 <nav id="TOC" role="doc-toc">
 <ul>
-<li><a href="#capítulo-1" id="toc-capítulo-1">Capítulo 1</a>
+<li><a href="#espacios-métricos" id="toc-espacios-métricos"><span
+class="toc-section-number">1</span> Espacios métricos</a>
 <ul>
-<li><a href="#introducción" id="toc-introducción">1.1
-Introducción</a></li>
+<li><a href="#introducción" id="toc-introducción"><span
+class="toc-section-number">1.1</span> Introducción</a>
+<ul>
+<li><a href="#sección-interna" id="toc-sección-interna"><span
+class="toc-section-number">1.1.1</span> Sección interna</a></li>
 </ul></li>
-<li><a href="#segunda-sección" id="toc-segunda-sección">1.2 Segunda
-sección</a></li>
+</ul></li>
+<li><a href="#distancia-o-métrica" id="toc-distancia-o-métrica"><span
+class="toc-section-number">2</span> Distancia o métrica</a>
+<ul>
+<li><a href="#introducción-1" id="toc-introducción-1"><span
+class="toc-section-number">2.1</span> Introducción</a>
+<ul>
+<li><a href="#anotación" id="toc-anotación"><span
+class="toc-section-number">2.1.1</span> Anotación</a>
+<ul>
+<li><a href="#comentario" id="toc-comentario"><span
+class="toc-section-number">2.1.1.1</span> Comentario</a></li>
+</ul></li>
+</ul></li>
+</ul></li>
+<li><a href="#segunda-sección" id="toc-segunda-sección"><span
+class="toc-section-number">3</span> 1.2 Segunda sección</a></li>
 <li><a href="#referencias" id="toc-referencias">Referencias</a></li>
 </ul>
 </nav>
-<section id="capítulo-1" class="level1">
-<h1>Capítulo 1</h1>
-<section id="introducción" class="level2">
-<h2>1.1 Introducción</h2>
+<section id="espacios-métricos" class="level1" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span>
+Espacios métricos</h1>
+<section id="introducción" class="level2" data-number="1.1">
+<h2 data-number="1.1"><span class="header-section-number">1.1</span>
+Introducción</h2>
 <p>Algo que conviene hacer en esta asignatura es siempre dibujar la
 situación. Aunque se trate de un caso particular y, por tanto, no sirva
 como demostración ni como resolución de un ejercicio,<a href="#fn1"
@@ -169,6 +190,9 @@ la ofuscación en la que nos encontramos.</p>
 <div class="sourceCode" id="cb1"><pre
 class="sourceCode python"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> funcion():</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  <span class="bu">print</span>(<span class="st">&quot;Hola, mundo!!!&quot;</span>)</span></code></pre></div>
+<section id="sección-interna" class="level3" data-number="1.1.1">
+<h3 data-number="1.1.1"><span class="header-section-number">1.1.1</span>
+Sección interna</h3>
 <p>Ahora, una ecuación:</p>
 <p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msubsup><mo>∫</mo><mn>0</mn><mi>t</mi></msubsup><msup><mi>t</mi><mn>2</mn></msup><mspace width="0.222em"></mspace><mi>d</mi><mi>t</mi></mrow><annotation encoding="application/x-tex"> \int_0^t t^2 \ dt </annotation></semantics></math></p>
 <hr />
@@ -239,6 +263,15 @@ style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/M
 </tr>
 </tbody>
 </table>
+</section>
+</section>
+</section>
+<section id="distancia-o-métrica" class="level1" data-number="2">
+<h1 data-number="2"><span class="header-section-number">2</span>
+Distancia o métrica</h1>
+<section id="introducción-1" class="level2" data-number="2.1">
+<h2 data-number="2.1"><span class="header-section-number">2.1</span>
+Introducción</h2>
 <p>Esto se ve claramente en…</p>
 <div id="def-metrica" class="definition">
 <p><strong><em>Definición (de Métrica).—</em></strong> Dado un conjunto
@@ -259,11 +292,17 @@ cualesquiera
 </div>
 <p>Esto es lo que se explica en la <a href="#def-metrica">Definición (de
 Métrica)</a> cuando se ve que…</p>
+<section id="anotación" class="level3" data-number="2.1.1">
+<h3 data-number="2.1.1"><span class="header-section-number">2.1.1</span>
+Anotación</h3>
 <p>En cuanto a la notación, se podría usar también la notación usual
 para la restricción de una aplicación, que en este caso sería algo como
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>δ</mi><msub><mo stretchy="false" form="prefix">|</mo><mrow><msup><mi>M</mi><mo>′</mo></msup><mo>×</mo><msup><mi>M</mi><mo>′</mo></msup></mrow></msub></mrow><annotation encoding="application/x-tex">\delta|_{M&#39;
 \times M&#39;}</annotation></semantics></math>, para
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>M</mi><mo>′</mo></msup><mo>⊆</mo><mi>M</mi></mrow><annotation encoding="application/x-tex">M&#39; \subseteq M</annotation></semantics></math>.</p>
+<section id="comentario" class="level4" data-number="2.1.1.1">
+<h4 data-number="2.1.1.1"><span
+class="header-section-number">2.1.1.1</span> Comentario</h4>
 <p>Tal y como se explica en <span class="citation"
 data-cites="venema"><a href="#ref-venema"
 role="doc-biblioref">[1]</a></span> se tiene que…</p>
@@ -285,8 +324,11 @@ propiedades de la definición de <em>métrica</em> es del tipo
 <em>closure</em>.</p>
 </section>
 </section>
-<section id="segunda-sección" class="level1">
-<h1>1.2 Segunda sección</h1>
+</section>
+</section>
+<section id="segunda-sección" class="level1" data-number="3">
+<h1 data-number="3"><span class="header-section-number">3</span> 1.2
+Segunda sección</h1>
 <p>La nueva función se comporta del mismo modo que la vieja, solo que en
 un dominio más restringido.</p>
 <p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mtable><mtr><mtd columnalign="right" style="text-align: right; padding-right: 0"><mi>δ</mi><mo>:</mo></mtd><mtd columnalign="left" style="text-align: left; padding-left: 0"></mtd><mtd columnalign="right" style="text-align: right; padding-right: 0"><mi>M</mi><mo>×</mo><mi>M</mi></mtd><mtd columnalign="left" style="text-align: left; padding-left: 0"><mo>→</mo></mtd><mtd columnalign="right" style="text-align: right; padding-right: 0"></mtd><mtd columnalign="left" style="text-align: left; padding-left: 0"><mi>ℝ</mi></mtd></mtr><mtr><mtd columnalign="right" style="text-align: right; padding-right: 0"></mtd><mtd columnalign="left" style="text-align: left; padding-left: 0"></mtd><mtd columnalign="right" style="text-align: right; padding-right: 0"><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo stretchy="false" form="postfix">)</mo></mtd><mtd columnalign="left" style="text-align: left; padding-left: 0"><mo>↦</mo></mtd><mtd columnalign="right" style="text-align: right; padding-right: 0"></mtd><mtd columnalign="left" style="text-align: left; padding-left: 0"><mi>δ</mi><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo stretchy="false" form="postfix">)</mo></mtd></mtr></mtable><annotation encoding="application/x-tex"> \begin{aligned}
