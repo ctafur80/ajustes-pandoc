@@ -84,6 +84,30 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: var(--headings-font-weight);
 }
 
+h1 {
+    font-size: 16px;
+}
+
+h2 {
+    font-size: 14px;
+}
+
+h3 {
+    font-size: 12px;
+}
+
+h4 {
+    font-size: 10px;
+}
+
+h5 {
+    font-size: 9px;
+}
+
+h6 {
+    font-size: 8px;
+}
+
 
 
 strong {
