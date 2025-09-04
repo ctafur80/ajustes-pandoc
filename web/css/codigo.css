@@ -34,11 +34,12 @@ pre {
     overflow-x: auto;
     scrollbar-gutter: stable;
 
-    /* Barra sutil para hacer ver que el código se sale del ancho de la pantalla. */
     /* border-right: 1px solid #4a4646; */
     padding: 12px;
-    background: var(--code-bg-color);
     border-radius: 7px;
+
+    /* Doesn't work on the scroll-hidden code. */
+    background: var(--code-bg-color);
 }
 
 code {
@@ -52,7 +53,7 @@ code {
 pre code {
     display: block;
     /*min-width: 120%;*/
-    background: var(--code-bg-color);
+    /* background: var(--code-bg-color); */
 }
 
 
