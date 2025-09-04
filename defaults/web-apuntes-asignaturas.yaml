@@ -26,8 +26,8 @@ number-sections: false
 
 filters:
   - citeproc
-  - ajustes-pandoc/filtros/math-envs.lua
-  - ajustes-pandoc/filtros/csv-filter.py
+  - ajustes-pandoc/filters/math-envs.lua
+  - ajustes-pandoc/filters/csv-filter.py
 
 cite-method: citeproc
 csl: ajustes-pandoc/csl/ieee.csl
