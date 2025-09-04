@@ -32,6 +32,10 @@ def funcion():
   print("Hola, mundo!!!")
 ```
 
+Si introduce un ajuste de teclado como, por ejemplo, [Ctrl]{.kbd}, se ve
+que...
+
+
 
 
 
