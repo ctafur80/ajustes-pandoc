@@ -18,6 +18,13 @@ kbd {
     margin-right: 4px;
 }
 
+
+h3 > code {
+    font-weight: var(--code-font-strong-weight);
+}
+
+
+
 pre {
     max-width: 100%;
     overflow-x: auto;
