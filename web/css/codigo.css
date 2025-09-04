@@ -31,7 +31,9 @@ pre {
     scrollbar-gutter: stable;
 
     /* Barra sutil para hacer ver que el código se sale del ancho de la pantalla. */
-    border-right: 1px solid #4a4646;
+    /* border-right: 1px solid #4a4646; */
+    background-color: #4a4646;
+    border-radius: 5px;
 }
 
 code {
