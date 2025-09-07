@@ -26,7 +26,7 @@ filters:
   - citeproc
 
 cite-method: citeproc
-csl: ajustes-pandoc/csl/ieee.csl
+csl: pandoc/csl/ieee.csl
 
 verbosity: INFO
 log-file: log.json
