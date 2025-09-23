@@ -8,7 +8,6 @@ from: markdown
 to: pdf
 
 
-pdf-engine: typst
 
 output-file: index.pdf
 
