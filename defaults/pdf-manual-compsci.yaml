@@ -1,0 +1,78 @@
+
+
+# Archivo de defaults para manuales y otra documentación relacionada con las ciencias de la
+# computación.
+
+
+from: markdown
+to: pdf
+
+
+pdf-engine: typst
+
+output-file: index.pdf
+
+metadata-files:
+  - metadatos.yaml
+
+
+# Lo activo cuando deseo verlo también en otros dispositivos. Creo que en realidad no es
+# necesario para esto.
+# embed-resources: true
+
+standalone: true
+number-sections: true
+
+filters:
+  - citeproc
+
+cite-method: citeproc
+csl: pandoc/csl/ieee.csl
+
+verbosity: INFO
+log-file: log.json
+
+table-of-contents: true
+toc-depth: 4
+
+# strip-empty-paragraphs: false
+
+# eol: lf # lf, crlf, or native
+# strip-comments: false
+# ascii: true
+# default-image-extension: ".png"
+
+tab-stop: 4
+preserve-tabs: true
+
+reference-links: true
+reference-location: document
+markdown-headings: atx
+
+resource-path:
+  - figures
+
+
+html-q-tags: true
+
+
+highlight-style: ./pandoc/web/resaltado-codigo/zf-darker.theme
+
+
+fail-if-warnings: false
+dump-args: false
+ignore-args: false
+trace: false
+
+shift-heading-level-by: -1
+
+track-changes: accept
+
+
+
+defaults:
+  - toc.yaml
+
+
+
+
