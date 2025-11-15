@@ -7,6 +7,9 @@
 from: markdown
 to: pdf
 
+
+output-file: main.pdf
+
 standalone: true
 toc: true
 number-sections: true
