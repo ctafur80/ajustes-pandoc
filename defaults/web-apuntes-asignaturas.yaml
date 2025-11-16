@@ -22,6 +22,8 @@ standalone: true
 toc: true
 number-sections: true
 
+
+
 filters:
   - citeproc
   - pandoc/filters/math-envs.lua
@@ -55,6 +57,10 @@ preserve-tabs: true
 reference-links: true
 reference-location: document
 markdown-headings: atx
+
+
+table-caption-position: below
+
 
 resource-path:
   - figures

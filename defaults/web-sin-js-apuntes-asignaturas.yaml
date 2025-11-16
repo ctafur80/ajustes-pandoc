@@ -44,6 +44,10 @@ html-math-method:
 tab-stop: 4
 preserve-tabs: true
 
+
+table-caption-position: below
+
+
 reference-links: true
 reference-location: document
 markdown-headings: atx

@@ -54,6 +54,10 @@ reference-links: true
 reference-location: document
 markdown-headings: atx
 
+
+table-caption-position: below
+
+
 resource-path:
   - figures
 

@@ -56,6 +56,8 @@ html-q-tags: true
 
 highlight-style: ./pandoc/web/resaltado-codigo/zf-darker.theme
 
+table-caption-position: below
+
 
 fail-if-warnings: false
 dump-args: false
