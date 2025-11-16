@@ -60,6 +60,7 @@ markdown-headings: atx
 
 
 table-caption-position: below
+figure-caption-position: below
 
 
 resource-path:

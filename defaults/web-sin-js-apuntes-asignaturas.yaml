@@ -46,6 +46,7 @@ preserve-tabs: true
 
 
 table-caption-position: below
+figure-caption-position: below
 
 
 reference-links: true
