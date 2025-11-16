@@ -11,6 +11,7 @@ table {
     margin: 2rem auto;
     overflow-x: auto;
     border-spacing: 1rem 0;
+    border: 1px var(--main-fg-color);
 }
 
 table tr th,

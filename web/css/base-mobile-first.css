@@ -175,6 +175,7 @@ hr {
 
 hr::before {
     content: "\00a0\00a0\00a0\00a0*\00a0\00a0\00a0\00a0*\00a0\00a0\00a0\00a0*";
+    color: var(--main-fg-color);
     display: block;
     text-align: center;
     margin: 1em auto;
