@@ -17,6 +17,7 @@ table {
 
 table, th, td {
     border: 1px solid var(--main-fg-color);
+    padding: 10px;
 }
 
 table tr th,
