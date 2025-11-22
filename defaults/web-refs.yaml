@@ -22,7 +22,7 @@ filters:
 
 cite-method: citeproc
 # csl: pandoc/csl/ieee.csl # TODO Buscar uno que muestre el título
-csl: https://www.zotero.org/styles/chicago-fullnote-bibliography
+# csl: https://www.zotero.org/styles/chicago-fullnote-bibliography
 
 verbosity: INFO
 # log-file: log.json
