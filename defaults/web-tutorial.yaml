@@ -20,7 +20,7 @@ metadata-files:
 
 standalone: true
 toc: false
-number-sections: true
+number-sections: false
 
 filters:
   - citeproc
