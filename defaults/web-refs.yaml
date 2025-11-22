@@ -73,7 +73,7 @@ dump-args: false
 ignore-args: false
 trace: false
 
-shift-heading-level-by: -1
+# shift-heading-level-by: -1
 
 track-changes: accept
 
