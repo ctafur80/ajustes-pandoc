@@ -106,5 +106,12 @@ track-changes: accept
 #   - toc.yaml
 #
 
+input-files:
+  - src.mkd
+
+
+
+
+
 
 
