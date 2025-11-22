@@ -14,7 +14,7 @@ metadata-files:
 
 
 standalone: true
-toc: false
+toc: true
 number-sections: false
 
 filters:
@@ -27,7 +27,7 @@ cite-method: citeproc
 verbosity: INFO
 # log-file: log.json
 
-table-of-contents: false
+table-of-contents: true
 toc-depth: 2
 
 section-divs: true
