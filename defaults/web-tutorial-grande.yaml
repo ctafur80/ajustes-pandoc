@@ -1,0 +1,111 @@
+
+
+# Archivo de defaults para manuales y otra documentación relacionada con las ciencias de la
+# computación.
+
+
+from: markdown
+to: html
+
+
+output-file: index.html
+
+metadata-files:
+  - metad.yaml
+
+
+# Lo activo cuando deseo verlo también en otros dispositivos. Creo que en realidad no es
+# necesario para esto.
+# embed-resources: true
+
+standalone: true
+toc: true
+number-sections: true
+
+filters:
+  - citeproc
+
+cite-method: citeproc
+csl: pandoc/csl/ieee.csl
+
+verbosity: INFO
+log-file: log.json
+
+table-of-contents: true
+toc-depth: 4
+
+section-divs: true
+# strip-empty-paragraphs: false
+
+# eol: lf # lf, crlf, or native
+# strip-comments: false
+# ascii: true
+# default-image-extension: ".png"
+
+html-math-method:
+  method: mathml
+
+email-obfuscation: javascript
+
+tab-stop: 2
+preserve-tabs: true
+
+reference-links: true
+reference-location: document
+markdown-headings: atx
+
+
+table-caption-position: below
+figure-caption-position: below
+
+
+resource-path:
+  - figures
+
+
+html-q-tags: true
+
+css:
+  - ./pandoc/web/css/variables.css
+  - ./pandoc/web/css/base-mobile-first.css
+  - ./pandoc/web/css/tablas.css
+  - ./pandoc/web/css/tabla-contenidos.css
+  - ./pandoc/web/css/codigo.css
+  - ./pandoc/web/css/matematicas.css
+  - ./pandoc/web/css/desktop.css
+
+
+highlight-style: ./pandoc/web/resaltado-codigo/zf-darker.theme
+
+
+fail-if-warnings: false
+dump-args: false
+ignore-args: false
+trace: false
+
+shift-heading-level-by: -1
+
+track-changes: accept
+
+
+# Ajustes para la web de salida.
+include-before-body:
+  - ./pandoc/web/html/elemento-breadcrumbs.html
+include-after-body:
+  - ./pandoc/web/html/etiqueta-final-main.html
+include-in-header:
+  - ./pandoc/web/html/elemento-nav.html
+  - ./pandoc/web/html/elemento-boton-nav-bar.html
+  # - ./pandoc/web/html/carga-breadcrumbs.html
+  # - ./pandoc/web/html/carga-nav-bar.html
+  # - ./pandoc/web/html/nameref.html
+  # - ./pandoc/web/html/carga-ajustes-mathjax.html
+
+
+
+defaults:
+  - toc.yaml
+
+
+
+
