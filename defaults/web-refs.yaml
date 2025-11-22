@@ -9,8 +9,8 @@ to: html
 
 output-file: index.html
 
-# metadata-files:
-#   - metadatos.yaml
+metadata-files:
+  - metadatos.yaml
 
 
 # Lo activo cuando deseo verlo también en otros dispositivos. Creo que en realidad no es
