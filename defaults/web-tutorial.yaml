@@ -19,7 +19,7 @@ metadata-files:
 # embed-resources: true
 
 standalone: true
-toc: false
+toc: true
 number-sections: false
 
 filters:
@@ -31,7 +31,7 @@ csl: pandoc/csl/ieee.csl
 verbosity: INFO
 log-file: log.json
 
-table-of-contents: false
+table-of-contents: true
 toc-depth: 3
 
 section-divs: true
