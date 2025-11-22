@@ -19,7 +19,7 @@ metadata-files:
 # embed-resources: true
 
 standalone: true
-toc: true
+toc: false
 number-sections: true
 
 filters:
