@@ -78,8 +78,6 @@ shift-heading-level-by: -1
 track-changes: accept
 
 
-input-files:
-  - src.mkd
 
 
 
