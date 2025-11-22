@@ -47,7 +47,7 @@ html-math-method:
 
 email-obfuscation: javascript
 
-tab-stop: 4
+tab-stop: 2
 preserve-tabs: true
 
 reference-links: true
