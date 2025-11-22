@@ -31,8 +31,8 @@ csl: pandoc/csl/ieee.csl
 verbosity: INFO
 log-file: log.json
 
-table-of-contents: true
-toc-depth: 4
+table-of-contents: false
+toc-depth: 3
 
 section-divs: true
 # strip-empty-paragraphs: false
