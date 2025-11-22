@@ -50,7 +50,7 @@ tab-stop: 2
 preserve-tabs: true
 
 reference-links: true
-reference-location: document
+# reference-location: document
 markdown-headings: atx
 
 
@@ -102,9 +102,6 @@ track-changes: accept
 #
 
 
-# defaults:
-#   - toc.yaml
-#
 
 input-files:
   - src.mkd
