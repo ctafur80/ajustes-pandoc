@@ -9,8 +9,7 @@ to: html
 
 output-file: index.html
 
-metadata-files:
-  - metadatos.yaml
+metadata-files: metad.yaml
 
 
 standalone: true
